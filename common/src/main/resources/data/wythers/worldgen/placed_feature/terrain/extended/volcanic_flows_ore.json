@@ -1,0 +1,150 @@
+{
+  "feature": {
+    "type": "minecraft:ore",
+    "config": {
+      "size": 64,
+      "discard_chance_on_air_exposure": 0,
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:dripstone_block"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:deepslate"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:grass_block"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:dirt"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:coarse_dirt"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:podzol"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:packed_mud"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:rooted_dirt"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:sand"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:stone"
+          },
+          "state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:terracotta"
+          },
+          "state": {
+            "Name": "minecraft:gray_terracotta"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:orange_terracotta"
+          },
+          "state": {
+            "Name": "minecraft:brown_terracotta"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:red_terracotta"
+          },
+          "state": {
+            "Name": "minecraft:black_terracotta"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:yellow_terracotta"
+          },
+          "state": {
+            "Name": "minecraft:light_gray_terracotta"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    }
+  ]
+}

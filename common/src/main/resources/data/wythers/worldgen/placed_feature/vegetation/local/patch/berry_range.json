@@ -1,0 +1,31 @@
+{
+  "feature": "minecraft:patch_berry_bush",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 20
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_water_depth_filter",
+      "max_water_depth": 0
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 62
+        },
+        "max_inclusive": {
+          "absolute": 160
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

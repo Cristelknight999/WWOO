@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": "wythers:vegetation/thin_jungle_bamboo_patch",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "wythers:vegetation/tree/flowering_cassia",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "wythers:vegetation/tree/teak",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "wythers:vegetation/tree/sandalwood",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "wythers:vegetation/tree/rosewood",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.3,
+        "feature": {
+          "feature": "wythers:vegetation/tree/ebony",
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:vegetation/tree/jungle_palm",
+      "placement": []
+    }
+  }
+}

@@ -1,0 +1,424 @@
+{
+    "type": "minecraft:random_selector",
+    "config": {
+        "features": [
+            {
+                "chance": 0.25,
+                "feature": {
+                    "feature": {
+                        "type": "minecraft:block_column",
+                        "config": {
+                            "direction": "down",
+                            "allowed_placement": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:air"
+                            },
+                            "prioritize_tip": false,
+                            "layers": [
+                                {
+                                    "height": 1,
+                                    "provider": {
+                                        "type": "minecraft:simple_state_provider",
+                                        "state": {
+                                            "Name": "minecraft:glow_lichen",
+                                            "Properties": {
+                                                "down": "false",
+                                                "east": "true",
+                                                "north": "false",
+                                                "south": "false",
+                                                "up": "true",
+                                                "waterlogged": "false",
+                                                "west": "false"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "height": {
+                                        "type": "minecraft:uniform",
+                                        "min_inclusive": 1,
+                                        "max_inclusive": 2
+                                    },
+                                    "provider": {
+                                        "type": "minecraft:simple_state_provider",
+                                        "state": {
+                                            "Name": "minecraft:glow_lichen",
+                                            "Properties": {
+                                                "down": "false",
+                                                "east": "true",
+                                                "north": "false",
+                                                "south": "false",
+                                                "up": "false",
+                                                "waterlogged": "false",
+                                                "west": "false"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "placement": [
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:acacia_leaves",
+                                    "minecraft:acacia_wood",
+                                    "minecraft:oak_wood",
+                                    "minecraft:oak_leaves",
+                                    "minecraft:mangrove_roots",
+                                    "minecraft:dark_oak_wood"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:air"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -1,
+                                    0
+                                ],
+                                "blocks": "minecraft:air"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "chance": 0.25,
+                "feature": {
+                    "feature": {
+                        "type": "minecraft:block_column",
+                        "config": {
+                            "direction": "down",
+                            "allowed_placement": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:air"
+                            },
+                            "prioritize_tip": false,
+                            "layers": [
+                                {
+                                    "height": 1,
+                                    "provider": {
+                                        "type": "minecraft:simple_state_provider",
+                                        "state": {
+                                            "Name": "minecraft:glow_lichen",
+                                            "Properties": {
+                                                "down": "false",
+                                                "east": "false",
+                                                "north": "false",
+                                                "south": "false",
+                                                "up": "true",
+                                                "waterlogged": "false",
+                                                "west": "true"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "height": {
+                                        "type": "minecraft:uniform",
+                                        "min_inclusive": 1,
+                                        "max_inclusive": 2
+                                    },
+                                    "provider": {
+                                        "type": "minecraft:simple_state_provider",
+                                        "state": {
+                                            "Name": "minecraft:glow_lichen",
+                                            "Properties": {
+                                                "down": "false",
+                                                "east": "false",
+                                                "north": "false",
+                                                "south": "false",
+                                                "up": "false",
+                                                "waterlogged": "false",
+                                                "west": "true"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "placement": [
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:acacia_leaves",
+                                    "minecraft:acacia_wood",
+                                    "minecraft:oak_wood",
+                                    "minecraft:oak_leaves",
+                                    "minecraft:mangrove_roots",
+                                    "minecraft:dark_oak_wood"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:air"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -1,
+                                    0
+                                ],
+                                "blocks": "minecraft:air"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "chance": 0.25,
+                "feature": {
+                    "feature": {
+                        "type": "minecraft:block_column",
+                        "config": {
+                            "direction": "down",
+                            "allowed_placement": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:air"
+                            },
+                            "prioritize_tip": false,
+                            "layers": [
+                                {
+                                    "height": 1,
+                                    "provider": {
+                                        "type": "minecraft:simple_state_provider",
+                                        "state": {
+                                            "Name": "minecraft:glow_lichen",
+                                            "Properties": {
+                                                "down": "false",
+                                                "east": "false",
+                                                "north": "true",
+                                                "south": "false",
+                                                "up": "true",
+                                                "waterlogged": "false",
+                                                "west": "false"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "height": {
+                                        "type": "minecraft:uniform",
+                                        "min_inclusive": 1,
+                                        "max_inclusive": 2
+                                    },
+                                    "provider": {
+                                        "type": "minecraft:simple_state_provider",
+                                        "state": {
+                                            "Name": "minecraft:glow_lichen",
+                                            "Properties": {
+                                                "down": "false",
+                                                "east": "false",
+                                                "north": "true",
+                                                "south": "false",
+                                                "up": "false",
+                                                "waterlogged": "false",
+                                                "west": "false"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "placement": [
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:acacia_leaves",
+                                    "minecraft:acacia_wood",
+                                    "minecraft:oak_wood",
+                                    "minecraft:oak_leaves",
+                                    "minecraft:mangrove_roots",
+                                    "minecraft:dark_oak_wood"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:air"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -1,
+                                    0
+                                ],
+                                "blocks": "minecraft:air"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "default": {
+            "feature": {
+                "type": "minecraft:block_column",
+                "config": {
+                    "direction": "down",
+                    "allowed_placement": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": "minecraft:air"
+                    },
+                    "prioritize_tip": false,
+                    "layers": [
+                        {
+                            "height": 1,
+                            "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                    "Name": "minecraft:glow_lichen",
+                                    "Properties": {
+                                        "down": "false",
+                                        "east": "false",
+                                        "north": "false",
+                                        "south": "true",
+                                        "up": "true",
+                                        "waterlogged": "false",
+                                        "west": "false"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "height": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 1,
+                                "max_inclusive": 2
+                            },
+                            "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                    "Name": "minecraft:glow_lichen",
+                                    "Properties": {
+                                        "down": "false",
+                                        "east": "false",
+                                        "north": "false",
+                                        "south": "true",
+                                        "up": "false",
+                                        "waterlogged": "false",
+                                        "west": "false"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "placement": [
+                {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            1,
+                            0
+                        ],
+                        "blocks": [
+                            "minecraft:acacia_leaves",
+                            "minecraft:acacia_wood",
+                            "minecraft:oak_wood",
+                            "minecraft:oak_leaves",
+                            "minecraft:mangrove_roots",
+                            "minecraft:dark_oak_wood"
+                        ]
+                    }
+                },
+                {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "blocks": [
+                            "minecraft:air"
+                        ]
+                    }
+                },
+                {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            -1,
+                            0
+                        ],
+                        "blocks": "minecraft:air"
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,82 @@
+{
+  "feature": "minecraft:cherry_bees_005",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": -0.3
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 1000,
+      "noise_offset": 0.3
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 200,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 100,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 7
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 0
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -80,
+      "max_inclusive": -63
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:fern"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -2,
+            0
+          ],
+          "blocks": [
+            "minecraft:terracotta",
+            "minecraft:packed_mud"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

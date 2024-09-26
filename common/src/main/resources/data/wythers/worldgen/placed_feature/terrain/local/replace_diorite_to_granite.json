@@ -1,0 +1,41 @@
+{
+  "feature": {
+    "type": "minecraft:ore",
+    "config": {
+      "size": 64,
+      "discard_chance_on_air_exposure": 0,
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:diorite"
+          },
+          "state": {
+            "Name": "minecraft:granite"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": -5
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "feature": "wythers:vegetation/tree/tropical_forest",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 30
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": "minecraft:rooted_dirt"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -1,
+            0
+          ],
+          "blocks": "minecraft:coarse_dirt"
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

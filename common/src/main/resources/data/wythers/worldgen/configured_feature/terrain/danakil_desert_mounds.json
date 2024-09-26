@@ -1,0 +1,100 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.3,
+        "feature": {
+          "feature": "wythers:terrain/terracotta_mound_orange",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:orange_terracotta"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "wythers:terrain/terracotta_mound_red",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:red_terracotta"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:terrain/terracotta_mound_yellow",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:yellow_terracotta"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "fluids": "minecraft:water"
+          }
+        }
+      ]
+    }
+  }
+}

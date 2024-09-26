@@ -1,0 +1,58 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:campfire",
+            "Properties": {
+              "facing": "north",
+              "lit": "false",
+              "signal_fire": "false",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:campfire",
+            "Properties": {
+              "facing": "south",
+              "lit": "false",
+              "signal_fire": "false",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:campfire",
+            "Properties": {
+              "facing": "west",
+              "lit": "false",
+              "signal_fire": "false",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:campfire",
+            "Properties": {
+              "facing": "east",
+              "lit": "false",
+              "signal_fire": "false",
+              "waterlogged": "false"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "feature": {
+    "type": "minecraft:simple_random_selector",
+    "config": {
+      "features": [
+        "wythers:palm/coastal_palm_east",
+        "wythers:palm/coastal_palm_west",
+        "wythers:palm/coastal_palm_north",
+        "wythers:palm/coastal_palm_south"
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 40
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

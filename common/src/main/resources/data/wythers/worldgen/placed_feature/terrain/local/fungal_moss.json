@@ -1,0 +1,296 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:cobblestone"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:any_of",
+                                    "predicates": [
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                1,
+                                                0
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                -1,
+                                                0
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                1,
+                                                0,
+                                                0
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                -1,
+                                                0,
+                                                0
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                0,
+                                                1
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                0,
+                                                -1
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "minecraft:any_of",
+                                    "predicates": [
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "blocks": [
+                                                "minecraft:dead_brain_coral_block",
+                                                "minecraft:dead_bubble_coral_block",
+                                                "minecraft:dead_tube_coral_block"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:mossy_cobblestone"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:any_of",
+                                    "predicates": [
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                1,
+                                                0
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                -1,
+                                                0
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                1,
+                                                0,
+                                                0
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                -1,
+                                                0,
+                                                0
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                0,
+                                                1
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                0,
+                                                -1
+                                            ],
+                                            "blocks": [
+                                                "minecraft:air",
+                                                "minecraft:water"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "minecraft:any_of",
+                                    "predicates": [
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "blocks": [
+                                                "minecraft:mycelium",
+                                                "minecraft:dead_horn_coral_block",
+                                                "minecraft:dead_fire_coral_block"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:moss_block"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                    "minecraft:mycelium",
+                    "minecraft:dirt",
+                    "minecraft:prismarine",
+                    "minecraft:basalt",
+                    "minecraft:dripstone_block",
+                    "minecraft:dead_brain_coral",
+                    "minecraft:dead_fire_coral",
+                    "minecraft:dead_bubble_coral_block",
+                    "minecraft:dead_horn_coral_block",
+                    "minecraft:dead_tube_coral_block"
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 6
+            },
+            "half_height": 3
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": 1,
+            "noise_factor": 200,
+            "noise_offset": -0.2
+        },
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": 1,
+            "noise_factor": 500,
+            "noise_offset": -0.15
+        },
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": -1,
+            "noise_factor": 1000,
+            "noise_offset": -0.15
+        },
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": 1,
+            "noise_factor": 1000,
+            "noise_offset": 0.6
+        },
+        {
+            "type": "minecraft:count",
+            "count": 30
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 0
+            }
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:surface_relative_threshold_filter",
+            "heightmap": "OCEAN_FLOOR_WG",
+            "min_inclusive": -200,
+            "max_inclusive": -1
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR_WG"
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

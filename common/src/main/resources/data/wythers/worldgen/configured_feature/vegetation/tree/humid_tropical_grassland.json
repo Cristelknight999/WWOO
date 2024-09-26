@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "wythers:vegetation/tree/mahogany",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "wythers:vegetation/tree/ebony",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.5,
+        "feature": {
+          "feature": "wythers:vegetation/tree/flowering_azalea_bush",
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:vegetation/tree/jungle_palm",
+      "placement": []
+    }
+  }
+}

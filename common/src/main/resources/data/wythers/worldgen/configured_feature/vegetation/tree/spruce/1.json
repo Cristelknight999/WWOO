@@ -1,0 +1,414 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:simple_random_selector",
+          "config": {
+            "features": [
+              {
+                "feature": {
+                  "type": "minecraft:simple_random_selector",
+                  "config": {
+                    "features": [
+                      {
+                        "feature": {
+                          "type": "minecraft:tree",
+                          "config": {
+                            "ignore_vines": true,
+                            "force_dirt": false,
+                            "minimum_size": {
+                              "type": "minecraft:two_layers_feature_size",
+                              "limit": 1,
+                              "lower_size": 0,
+                              "upper_size": 0
+                            },
+                            "dirt_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:rooted_dirt"
+                              }
+                            },
+                            "trunk_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:spruce_log",
+                                "Properties": {
+                                  "axis": "y"
+                                }
+                              }
+                            },
+                            "foliage_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:spruce_leaves",
+                                "Properties": {
+                                  "distance": "1",
+                                  "persistent": "false",
+                                  "waterlogged": "false"
+                                }
+                              }
+                            },
+                            "trunk_placer": {
+                              "type": "minecraft:straight_trunk_placer",
+                              "base_height": 19,
+                              "height_rand_a": 0,
+                              "height_rand_b": 0
+                            },
+                            "foliage_placer": {
+                              "type": "minecraft:fancy_foliage_placer",
+                              "radius": 0,
+                              "offset": 3,
+                              "height": 5
+                            },
+                            "decorators": []
+                          }
+                        },
+                        "placement": []
+                      },
+                      {
+                        "feature": {
+                          "type": "minecraft:tree",
+                          "config": {
+                            "ignore_vines": true,
+                            "force_dirt": false,
+                            "minimum_size": {
+                              "type": "minecraft:two_layers_feature_size",
+                              "limit": 1,
+                              "lower_size": 0,
+                              "upper_size": 0
+                            },
+                            "dirt_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:rooted_dirt"
+                              }
+                            },
+                            "trunk_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:spruce_log",
+                                "Properties": {
+                                  "axis": "y"
+                                }
+                              }
+                            },
+                            "foliage_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:spruce_leaves",
+                                "Properties": {
+                                  "distance": "1",
+                                  "persistent": "false",
+                                  "waterlogged": "false"
+                                }
+                              }
+                            },
+                            "trunk_placer": {
+                              "type": "minecraft:straight_trunk_placer",
+                              "base_height": 19,
+                              "height_rand_a": 0,
+                              "height_rand_b": 0
+                            },
+                            "foliage_placer": {
+                              "type": "minecraft:blob_foliage_placer",
+                              "radius": 2,
+                              "offset": 0,
+                              "height": 1
+                            },
+                            "decorators": [
+                              {
+                                "type": "minecraft:attached_to_leaves",
+                                "probability": 0.075,
+                                "exclusion_radius_xz": 0,
+                                "exclusion_radius_y": 0,
+                                "required_empty_blocks": 2,
+                                "block_provider": {
+                                  "type": "minecraft:simple_state_provider",
+                                  "state": {
+                                    "Name": "minecraft:spruce_leaves",
+                                    "Properties": {
+                                      "distance": "2",
+                                      "persistent": "false",
+                                      "waterlogged": "false"
+                                    }
+                                  }
+                                },
+                                "directions": [
+                                  "down"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "placement": []
+                      },
+                      {
+                        "feature": {
+                          "type": "minecraft:tree",
+                          "config": {
+                            "ignore_vines": true,
+                            "force_dirt": false,
+                            "minimum_size": {
+                              "type": "minecraft:two_layers_feature_size",
+                              "limit": 1,
+                              "lower_size": 0,
+                              "upper_size": 0
+                            },
+                            "dirt_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:rooted_dirt"
+                              }
+                            },
+                            "trunk_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:spruce_log",
+                                "Properties": {
+                                  "axis": "y"
+                                }
+                              }
+                            },
+                            "foliage_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:spruce_leaves",
+                                "Properties": {
+                                  "distance": "1",
+                                  "persistent": "false",
+                                  "waterlogged": "false"
+                                }
+                              }
+                            },
+                            "trunk_placer": {
+                              "type": "minecraft:straight_trunk_placer",
+                              "base_height": 16,
+                              "height_rand_a": 0,
+                              "height_rand_b": 0
+                            },
+                            "foliage_placer": {
+                              "type": "minecraft:mega_pine_foliage_placer",
+                              "radius": 1,
+                              "offset": 4,
+                              "crown_height": 6
+                            },
+                            "decorators": [
+                              {
+                                "type": "minecraft:attached_to_leaves",
+                                "probability": 0.035,
+                                "exclusion_radius_xz": 0,
+                                "exclusion_radius_y": 0,
+                                "required_empty_blocks": 2,
+                                "block_provider": {
+                                  "type": "minecraft:simple_state_provider",
+                                  "state": {
+                                    "Name": "minecraft:spruce_leaves",
+                                    "Properties": {
+                                      "distance": "2",
+                                      "persistent": "false",
+                                      "waterlogged": "false"
+                                    }
+                                  }
+                                },
+                                "directions": [
+                                  "down"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "placement": []
+                      }
+                    ]
+                  }
+                },
+                "placement": [
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:replaceable"
+                    }
+                  },
+                  {
+                    "type": "minecraft:count",
+                    "count": 32
+                  }
+                ]
+              },
+              {
+                "feature": {
+                  "type": "minecraft:simple_random_selector",
+                  "config": {
+                    "features": [
+                      {
+                        "feature": "wythers:vegetation/tree/spruce/branch_set/1",
+                        "placement": [
+                          {
+                            "type": "minecraft:random_offset",
+                            "xz_spread": 0,
+                            "y_spread": 6
+                          }
+                        ]
+                      },
+                      {
+                        "feature": "wythers:vegetation/tree/spruce/branch_set/2",
+                        "placement": [
+                          {
+                            "type": "minecraft:random_offset",
+                            "xz_spread": 0,
+                            "y_spread": 11
+                          }
+                        ]
+                      },
+                      {
+                        "feature": "wythers:vegetation/tree/spruce/branch_set/3",
+                        "placement": [
+                          {
+                            "type": "minecraft:count",
+                            "count": 2
+                          },
+                          {
+                            "type": "minecraft:random_offset",
+                            "xz_spread": 0,
+                            "y_spread": 14
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "placement": [
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": "minecraft:spruce_log"
+                    }
+                  },
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:not",
+                      "predicate": {
+                        "type": "minecraft:any_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              1,
+                              14,
+                              0
+                            ],
+                            "blocks": "minecraft:spruce_log"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              14,
+                              1
+                            ],
+                            "blocks": "minecraft:spruce_log"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              14,
+                              0
+                            ],
+                            "blocks": "minecraft:spruce_log"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              14,
+                              -1
+                            ],
+                            "blocks": "minecraft:spruce_log"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:count",
+                    "count": 38
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/spruce/rooted_dirt",
+                "placement": [
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": "minecraft:spruce_log"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:any_of",
+              "predicates": [
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "Name": "minecraft:spruce_sapling",
+                    "Properties": {
+                      "stage": "0"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": [
+                        "minecraft:air",
+                        "minecraft:snow"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "blocks": "minecraft:snow_block"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -2,
+                        0
+                      ],
+                      "blocks": "minecraft:coarse_dirt"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "type": "minecraft:count",
+            "count": 64
+          }
+        ]
+      }
+    ]
+  }
+}

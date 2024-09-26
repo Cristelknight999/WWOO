@@ -1,0 +1,67 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:clay"
+          }
+        },
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": "minecraft:water"
+                  }
+                ]
+              }
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:coarse_dirt"
+              }
+            }
+          }
+        ]
+      },
+      "target": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:coarse_dirt"
+      },
+      "radius": 3,
+      "half_height": 2
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 80,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:count",
+      "count": 30
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    }
+  ]
+}

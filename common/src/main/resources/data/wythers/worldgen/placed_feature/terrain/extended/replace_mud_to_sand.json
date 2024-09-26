@@ -1,0 +1,39 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:sand"
+                    }
+                },
+                "rules": []
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:mud"
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 5,
+                "max_inclusive": 7
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 50
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR_WG"
+        }
+    ]
+}

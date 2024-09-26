@@ -1,0 +1,94 @@
+{
+  "feature": {
+    "type": "minecraft:simple_random_selector",
+    "config": {
+      "features": [
+        {
+          "feature": "wythers:vegetation/tree/huge_jungle/1",
+          "placement": []
+        },
+        {
+          "feature": "wythers:vegetation/tree/huge_jungle/2",
+          "placement": []
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 0
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -80,
+      "max_inclusive": -63
+    },
+    {
+      "type": "minecraft:surface_water_depth_filter",
+      "max_water_depth": 0
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:fern"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -2,
+            0
+          ],
+          "blocks": [
+            "minecraft:sand",
+            "minecraft:red_sand",
+            "minecraft:smooth_basalt"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -3,
+            0
+          ],
+          "blocks": [
+            "minecraft:smooth_basalt"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

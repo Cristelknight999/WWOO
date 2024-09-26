@@ -1,0 +1,45 @@
+{
+  "feature": {
+    "type": "minecraft:ore",
+    "config": {
+      "size": 64,
+      "discard_chance_on_air_exposure": 0,
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:dirt"
+          },
+          "state": {
+            "Name": "minecraft:blackstone"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:base_stone_overworld"
+          },
+          "state": {
+            "Name": "minecraft:blackstone"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 100
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

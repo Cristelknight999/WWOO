@@ -1,0 +1,278 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:air"
+          }
+        },
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "blocks": "minecraft:jungle_wood"
+            },
+            "then": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "2",
+                      "facing": "east"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "1",
+                      "facing": "east"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "0",
+                      "facing": "east"
+                    }
+                  }
+                },
+                {
+                  "weight": 3,
+                  "data": {
+                    "Name": "minecraft:air"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "blocks": "minecraft:jungle_wood"
+            },
+            "then": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "2",
+                      "facing": "west"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "1",
+                      "facing": "west"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "0",
+                      "facing": "west"
+                    }
+                  }
+                },
+                {
+                  "weight": 3,
+                  "data": {
+                    "Name": "minecraft:air"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "blocks": "minecraft:jungle_wood"
+            },
+            "then": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "2",
+                      "facing": "south"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "1",
+                      "facing": "south"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "0",
+                      "facing": "south"
+                    }
+                  }
+                },
+                {
+                  "weight": 3,
+                  "data": {
+                    "Name": "minecraft:air"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                -1
+              ],
+              "blocks": "minecraft:jungle_wood"
+            },
+            "then": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "2",
+                      "facing": "north"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "1",
+                      "facing": "north"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "0",
+                      "facing": "north"
+                    }
+                  }
+                },
+                {
+                  "weight": 3,
+                  "data": {
+                    "Name": "minecraft:air"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "target": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:azalea_leaves"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        ]
+      },
+      "radius": 8,
+      "half_height": 4
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": "minecraft:azalea_leaves"
+      }
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": -2
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

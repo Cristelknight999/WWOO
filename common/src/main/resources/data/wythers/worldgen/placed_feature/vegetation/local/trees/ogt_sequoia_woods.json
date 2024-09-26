@@ -1,0 +1,179 @@
+{
+    "feature": {
+        "config": {
+            "default": {
+                "feature": "wythers:vegetation/tree/huge_sequoia/5",
+                "placement": []
+            },
+            "features": [
+                {
+                    "chance": 0.005,
+                    "feature": {
+                        "feature": "wythers:vegetation/tree/huge_sequoia/dead",
+                        "placement": []
+                    }
+                },
+                {
+                    "chance": 0.1,
+                    "feature": {
+                        "feature": "wythers:vegetation/tree/huge_sequoia/1",
+                        "placement": []
+                    }
+                },
+                {
+                    "chance": 0.3,
+                    "feature": {
+                        "feature": "wythers:vegetation/tree/huge_sequoia/2",
+                        "placement": []
+                    }
+                },
+                {
+                    "chance": 0.6,
+                    "feature": {
+                        "feature": "wythers:vegetation/tree/huge_sequoia/3",
+                        "placement": []
+                    }
+                },
+                {
+                    "chance": 0.6,
+                    "feature": {
+                        "feature": "wythers:vegetation/tree/huge_sequoia/4",
+                        "placement": []
+                    }
+                }
+            ]
+        },
+        "type": "minecraft:random_selector"
+    },
+    "placement": [
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": 1,
+            "noise_factor": 1000,
+            "noise_offset": -0.5
+        },
+        {
+            "count": {
+                "distribution": [
+                    {
+                        "data": 1,
+                        "weight": 5
+                    },
+                    {
+                        "data": 2,
+                        "weight": 3
+                    }
+                ],
+                "type": "minecraft:weighted_list"
+            },
+            "type": "minecraft:count"
+        },
+        {
+            "xz_spread": {
+                "min_inclusive": 4,
+                "max_inclusive": 11,
+                "type": "minecraft:uniform"
+            },
+            "y_spread": 0,
+            "type": "minecraft:random_offset"
+        },
+        {
+            "heightmap": "MOTION_BLOCKING",
+            "type": "minecraft:heightmap"
+        },
+        {
+            "predicate": {
+                "predicates": [
+                    {
+                        "type": "minecraft:replaceable"
+                    },
+                    {
+                        "predicate": {
+                            "offset": [
+                                2,
+                                -2,
+                                0
+                            ],
+                            "type": "minecraft:replaceable"
+                        },
+                        "type": "minecraft:not"
+                    },
+                    {
+                        "predicate": {
+                            "offset": [
+                                0,
+                                -2,
+                                2
+                            ],
+                            "type": "minecraft:replaceable"
+                        },
+                        "type": "minecraft:not"
+                    },
+                    {
+                        "predicate": {
+                            "offset": [
+                                -2,
+                                -2,
+                                0
+                            ],
+                            "type": "minecraft:replaceable"
+                        },
+                        "type": "minecraft:not"
+                    },
+                    {
+                        "predicate": {
+                            "offset": [
+                                0,
+                                -2,
+                                -2
+                            ],
+                            "type": "minecraft:replaceable"
+                        },
+                        "type": "minecraft:not"
+                    },
+                    {
+                        "offset": [
+                            2,
+                            3,
+                            0
+                        ],
+                        "type": "minecraft:replaceable"
+                    },
+                    {
+                        "offset": [
+                            0,
+                            3,
+                            2
+                        ],
+                        "type": "minecraft:replaceable"
+                    },
+                    {
+                        "offset": [
+                            -2,
+                            3,
+                            0
+                        ],
+                        "type": "minecraft:replaceable"
+                    },
+                    {
+                        "offset": [
+                            0,
+                            3,
+                            -2
+                        ],
+                        "type": "minecraft:replaceable"
+                    }
+                ],
+                "type": "minecraft:all_of"
+            },
+            "type": "minecraft:block_predicate_filter"
+        },
+        {
+            "max_water_depth": 0,
+            "type": "minecraft:surface_water_depth_filter"
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:grass_block",
+                        "Properties": {
+                            "snowy": "false"
+                        }
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                                0,
+                                1,
+                                0
+                            ],
+                            "blocks": "minecraft:stone"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:stone"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:not",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:snow",
+                                    "minecraft:short_grass"
+                                ]
+                            }
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:coarse_dirt"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                    "minecraft:snow_block",
+                    "minecraft:powder_snow",
+                    "minecraft:coarse_dirt"
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 8,
+                "max_inclusive": 8
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 30
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR"
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

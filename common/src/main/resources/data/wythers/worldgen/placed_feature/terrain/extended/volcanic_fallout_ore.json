@@ -1,0 +1,87 @@
+{
+  "feature": {
+    "type": "minecraft:ore",
+    "config": {
+      "size": 64,
+      "discard_chance_on_air_exposure": 0,
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:grass_block"
+          },
+          "state": {
+            "Name": "minecraft:mud"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:dirt"
+          },
+          "state": {
+            "Name": "minecraft:mud"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:coarse_dirt"
+          },
+          "state": {
+            "Name": "minecraft:mud"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:podzol"
+          },
+          "state": {
+            "Name": "minecraft:mud"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:rooted_dirt"
+          },
+          "state": {
+            "Name": "minecraft:mud"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:sand"
+          },
+          "state": {
+            "Name": "minecraft:mud"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:stone"
+          },
+          "state": {
+            "Name": "minecraft:deepslate"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    }
+  ]
+}

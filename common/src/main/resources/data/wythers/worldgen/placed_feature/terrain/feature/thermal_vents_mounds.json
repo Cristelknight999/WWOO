@@ -1,0 +1,101 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "config": {
+      "features": [
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": "wythers:terrain/dripstone_spikes_1",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 5
+              }
+            ]
+          }
+        },
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": "wythers:terrain/dripstone_spikes_2",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 10
+              }
+            ]
+          }
+        },
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": "wythers:terrain/dripstone_spikes_3",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 20
+              }
+            ]
+          }
+        },
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": "wythers:terrain/dripstone_spikes_4",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 40
+              }
+            ]
+          }
+        }
+      ],
+      "default": {
+        "feature": "wythers:terrain/dripstone_spikes_5",
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 60
+          }
+        ]
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 5
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:soul_sand",
+          "minecraft:dripstone_block"
+        ]
+      }
+    }
+  ]
+}

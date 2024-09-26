@@ -1,0 +1,85 @@
+{
+  "feature": {
+    "type": "minecraft:random_patch",
+    "config": {
+      "tries": 32,
+      "xz_spread": 8,
+      "y_spread": 8,
+      "feature": {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:seagrass"
+              }
+            }
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:water"
+                },
+                {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "tag": "minecraft:logs_that_burn"
+                    },
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "tag": "minecraft:planks"
+                    },
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "tag": "minecraft:wooden_trapdoors"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 80
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

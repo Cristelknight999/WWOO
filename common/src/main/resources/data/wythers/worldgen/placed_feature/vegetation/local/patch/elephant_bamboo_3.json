@@ -1,0 +1,159 @@
+{
+    "feature": {
+        "type": "minecraft:random_patch",
+        "config": {
+            "tries": 48,
+            "xz_spread": 3,
+            "y_spread": 3,
+            "feature": {
+                "feature": {
+                    "type": "minecraft:block_column",
+                    "config": {
+                        "direction": "up",
+                        "allowed_placement": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": [
+                                "minecraft:air"
+                            ]
+                        },
+                        "prioritize_tip": true,
+                        "layers": [
+                            {
+                                "height": {
+                                    "type": "minecraft:uniform",
+                                    "min_inclusive": 3,
+                                    "max_inclusive": 13
+                                },
+                                "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                        "Name": "minecraft:bamboo",
+                                        "Properties": {
+                                            "age": "1",
+                                            "leaves": "none",
+                                            "stage": "1"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "height": 1,
+                                "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                        "Name": "minecraft:bamboo",
+                                        "Properties": {
+                                            "age": "1",
+                                            "leaves": "small",
+                                            "stage": "1"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "height": 2,
+                                "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                        "Name": "minecraft:bamboo",
+                                        "Properties": {
+                                            "age": "1",
+                                            "leaves": "large",
+                                            "stage": "1"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "height": {
+                                    "type": "minecraft:uniform",
+                                    "min_inclusive": 3,
+                                    "max_inclusive": 4
+                                },
+                                "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                        "Name": "minecraft:azalea_leaves",
+                                        "Properties": {
+                                            "distance": "1",
+                                            "persistent": "false",
+                                            "waterlogged": "false"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "placement": [
+                    {
+                        "type": "minecraft:block_predicate_filter",
+                        "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                                0,
+                                -1,
+                                0
+                            ],
+                            "blocks": [
+                                "minecraft:grass_block",
+                                "minecraft:podzol"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "minecraft:block_predicate_filter",
+                        "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:air"
+                        }
+                    },
+                    {
+                        "type": "minecraft:block_predicate_filter",
+                        "predicate": {
+                            "type": "minecraft:not",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -2,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:sand",
+                                    "minecraft:red_sand",
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:packed_mud"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": -1,
+            "noise_factor": 1000,
+            "noise_offset": 0.32
+        },
+        {
+            "noise_to_count_ratio": 10,
+            "noise_factor": 80.0,
+            "noise_offset": 0.3,
+            "type": "minecraft:noise_based_count"
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "heightmap": "MOTION_BLOCKING",
+            "type": "minecraft:heightmap"
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

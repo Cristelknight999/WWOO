@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 24,
+    "xz_spread": 5,
+    "y_spread": 3,
+    "feature": {
+      "feature": "wythers:vegetation/column/melons_and_stems",
+      "placement": [
+        {
+          "type": "minecraft:heightmap",
+          "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "minecraft:bamboo_sapling"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

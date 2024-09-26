@@ -1,0 +1,57 @@
+{
+  "feature": {
+    "type": "minecraft:ore",
+    "config": {
+      "size": 32,
+      "discard_chance_on_air_exposure": 0,
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:dirt"
+          },
+          "state": {
+            "Name": "minecraft:tuff"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone"
+          },
+          "state": {
+            "Name": "minecraft:tuff"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": 0.7
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 250,
+      "noise_offset": 0.1
+    },
+    {
+      "type": "minecraft:count",
+      "count": 1
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

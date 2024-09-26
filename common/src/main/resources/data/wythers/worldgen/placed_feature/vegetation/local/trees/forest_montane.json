@@ -1,0 +1,77 @@
+{
+  "feature": "wythers:vegetation/tree/montane_forest_spruce",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 0
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -200,
+      "max_inclusive": -125
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:fern"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -2,
+            0
+          ],
+          "blocks": [
+            "minecraft:rooted_dirt",
+            "minecraft:coarse_dirt",
+            "minecraft:red_sand"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -3,
+            0
+          ],
+          "blocks": [
+            "minecraft:smooth_basalt",
+            "minecraft:tuff"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

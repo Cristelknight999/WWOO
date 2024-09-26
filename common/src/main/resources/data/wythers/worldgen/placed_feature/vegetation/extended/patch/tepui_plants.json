@@ -1,0 +1,693 @@
+{
+  "feature": {
+    "type": "minecraft:random_patch",
+    "config": {
+      "tries": 40,
+      "xz_spread": 7,
+      "y_spread": 4,
+      "feature": {
+        "feature": {
+          "type": "minecraft:random_selector",
+          "config": {
+            "features": [
+              {
+                "chance": 0.002,
+                "feature": {
+                  "feature": {
+                    "type": "minecraft:simple_block",
+                    "config": {
+                      "to_place": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "minecraft:sniffer_egg",
+                          "Properties": {
+                            "hatch": "0"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:deepslate",
+                              "minecraft:tuff",
+                              "minecraft:dripstone_block"
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "chance": 0.1,
+                "feature": {
+                  "feature": {
+                    "type": "minecraft:simple_block",
+                    "config": {
+                      "to_place": {
+                        "type": "minecraft:weighted_state_provider",
+                        "entries": [
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:small_amethyst_bud"
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:medium_amethyst_bud"
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:large_amethyst_bud"
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:amethyst_cluster"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:deepslate",
+                              "minecraft:tuff"
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "chance": 0.3,
+                "feature": {
+                  "feature": {
+                    "type": "minecraft:simple_block",
+                    "config": {
+                      "to_place": {
+                        "type": "minecraft:weighted_state_provider",
+                        "entries": [
+                          {
+                            "weight": 5,
+                            "data": {
+                              "Name": "minecraft:blue_orchid"
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:torchflower"
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:pitcher_plant",
+                              "Properties": {
+                                "half": "lower"
+                              }
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:small_dripleaf",
+                              "Properties": {
+                                "facing": "north",
+                                "half": "lower",
+                                "waterlogged": "false"
+                              }
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:small_dripleaf",
+                              "Properties": {
+                                "facing": "south",
+                                "half": "lower",
+                                "waterlogged": "false"
+                              }
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:small_dripleaf",
+                              "Properties": {
+                                "facing": "west",
+                                "half": "lower",
+                                "waterlogged": "false"
+                              }
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:small_dripleaf",
+                              "Properties": {
+                                "facing": "east",
+                                "half": "lower",
+                                "waterlogged": "false"
+                              }
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:sea_pickle",
+                              "Properties": {
+                                "pickles": "1",
+                                "waterlogged": "false"
+                              }
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:sea_pickle",
+                              "Properties": {
+                                "pickles": "2",
+                                "waterlogged": "false"
+                              }
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "Name": "minecraft:sea_pickle",
+                              "Properties": {
+                                "pickles": "3",
+                                "waterlogged": "false"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": "minecraft:moss_block"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              1,
+                              0,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              0,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              1
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              -1
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "chance": 0.05,
+                "feature": {
+                  "feature": {
+                    "type": "minecraft:simple_random_selector",
+                    "config": {
+                      "features": [
+                        {
+                          "feature": {
+                            "type": "minecraft:block_column",
+                            "config": {
+                              "direction": "up",
+                              "allowed_placement": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:cave_air"
+                              },
+                              "prioritize_tip": true,
+                              "layers": [
+                                {
+                                  "height": 1,
+                                  "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:pitcher_crop",
+                                      "Properties": {
+                                        "age": "1",
+                                        "half": "lower"
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "placement": []
+                        },
+                        {
+                          "feature": {
+                            "type": "minecraft:block_column",
+                            "config": {
+                              "direction": "up",
+                              "allowed_placement": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:cave_air"
+                              },
+                              "prioritize_tip": true,
+                              "layers": [
+                                {
+                                  "height": 1,
+                                  "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:pitcher_crop",
+                                      "Properties": {
+                                        "age": "2",
+                                        "half": "lower"
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "placement": []
+                        },
+                        {
+                          "feature": {
+                            "type": "minecraft:block_column",
+                            "config": {
+                              "direction": "up",
+                              "allowed_placement": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:cave_air"
+                              },
+                              "prioritize_tip": true,
+                              "layers": [
+                                {
+                                  "height": 1,
+                                  "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:pitcher_crop",
+                                      "Properties": {
+                                        "age": "3",
+                                        "half": "lower"
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "height": 1,
+                                  "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:pitcher_crop",
+                                      "Properties": {
+                                        "age": "3",
+                                        "half": "upper"
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "placement": []
+                        },
+                        {
+                          "feature": {
+                            "type": "minecraft:block_column",
+                            "config": {
+                              "direction": "up",
+                              "allowed_placement": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:cave_air"
+                              },
+                              "prioritize_tip": true,
+                              "layers": [
+                                {
+                                  "height": 1,
+                                  "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:pitcher_crop",
+                                      "Properties": {
+                                        "age": "4",
+                                        "half": "lower"
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "height": 1,
+                                  "provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:pitcher_crop",
+                                      "Properties": {
+                                        "age": "4",
+                                        "half": "upper"
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "placement": []
+                        }
+                      ]
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              2,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": "minecraft:moss_block"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              1,
+                              0,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              0,
+                              0
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              1
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              -1
+                            ],
+                            "blocks": "minecraft:cave_air"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "default": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+                    "entries": [
+                      {
+                        "weight": 1,
+                        "data": {
+                          "Name": "minecraft:small_dripleaf",
+                          "Properties": {
+                            "facing": "north",
+                            "half": "lower",
+                            "waterlogged": "true"
+                          }
+                        }
+                      },
+                      {
+                        "weight": 1,
+                        "data": {
+                          "Name": "minecraft:small_dripleaf",
+                          "Properties": {
+                            "facing": "south",
+                            "half": "lower",
+                            "waterlogged": "true"
+                          }
+                        }
+                      },
+                      {
+                        "weight": 1,
+                        "data": {
+                          "Name": "minecraft:small_dripleaf",
+                          "Properties": {
+                            "facing": "west",
+                            "half": "lower",
+                            "waterlogged": "true"
+                          }
+                        }
+                      },
+                      {
+                        "weight": 1,
+                        "data": {
+                          "Name": "minecraft:small_dripleaf",
+                          "Properties": {
+                            "facing": "east",
+                            "half": "lower",
+                            "waterlogged": "true"
+                          }
+                        }
+                      },
+                      {
+                        "weight": 1,
+                        "data": {
+                          "Name": "minecraft:sea_pickle",
+                          "Properties": {
+                            "pickles": "1",
+                            "waterlogged": "true"
+                          }
+                        }
+                      },
+                      {
+                        "weight": 1,
+                        "data": {
+                          "Name": "minecraft:sea_pickle",
+                          "Properties": {
+                            "pickles": "2",
+                            "waterlogged": "true"
+                          }
+                        }
+                      },
+                      {
+                        "weight": 1,
+                        "data": {
+                          "Name": "minecraft:sea_pickle",
+                          "Properties": {
+                            "pickles": "3",
+                            "waterlogged": "true"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "blocks": "minecraft:cave_air"
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "blocks": "minecraft:light"
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          0
+                        ],
+                        "blocks": "minecraft:mud"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "placement": []
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 194
+      }
+    }
+  ]
+}

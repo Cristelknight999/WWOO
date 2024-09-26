@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 48,
+    "xz_spread": 3,
+    "y_spread": 3,
+    "feature": {
+  "feature": "wythers:vegetation/column/mix_thin_jungle_bamboo",
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:bamboo_sapling"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      }
+    }
+  ]
+}
+
+  }
+}

@@ -1,0 +1,89 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:rooted_dirt"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:any_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        0,
+                                        1,
+                                        0
+                                    ],
+                                    "blocks": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        0,
+                                        2,
+                                        0
+                                    ],
+                                    "blocks": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        0,
+                                        3,
+                                        0
+                                    ],
+                                    "blocks": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        0,
+                                        4,
+                                        0
+                                    ],
+                                    "blocks": "minecraft:water"
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:mud"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:rooted_dirt"
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 5,
+                "max_inclusive": 7
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 50
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR_WG"
+        }
+    ]
+}

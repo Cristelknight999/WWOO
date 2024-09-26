@@ -1,0 +1,57 @@
+{
+  "feature": {
+    "type": "minecraft:lake",
+    "config": {
+      "fluid": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:water",
+          "Properties": {
+            "level": "0"
+          }
+        }
+      },
+      "barrier": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:deepslate",
+          "Properties": {
+            "axis": "y"
+          }
+        }
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 234
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": [
+          "minecraft:tuff",
+          "minecraft:deepslate",
+          "minecraft:smooth_basalt",
+          "minecraft:mud"
+        ]
+      }
+    }
+  ]
+}

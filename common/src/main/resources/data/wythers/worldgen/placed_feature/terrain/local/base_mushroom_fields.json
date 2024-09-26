@@ -1,0 +1,65 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:deepslate",
+            "Properties": {
+              "axis": "y"
+            }
+          }
+        },
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "minecraft:basalt"
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:basalt",
+                "Properties": {
+                  "axis": "y"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "target": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:mycelium",
+          "minecraft:dirt"
+        ]
+      },
+      "radius": 8,
+      "half_height": 4
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 30
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

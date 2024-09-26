@@ -1,0 +1,45 @@
+{
+  "feature": "minecraft:flower_cherry",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": -0.32
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 1000,
+      "noise_offset": 0.32
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 200,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 100,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:noise_threshold_count",
+      "above_noise": 10,
+      "below_noise": 5,
+      "noise_level": -0.8
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

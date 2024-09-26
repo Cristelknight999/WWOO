@@ -1,0 +1,288 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:water",
+                        "Properties": {
+                            "level": "0"
+                        }
+                    }
+                },
+                "rules": []
+            },
+            "target": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "tag": "wythers:river_carver_replaceables"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "blocks": "minecraft:water"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                ],
+                                "blocks": "minecraft:water"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "blocks": "minecraft:water"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                ],
+                                "blocks": "minecraft:water"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    2,
+                                    0
+                                ],
+                                "blocks": "minecraft:air"
+                            },
+                            {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "tag": "wythers:river_carver_replaceables"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:water",
+                                    "minecraft:short_grass",
+                                    "minecraft:seagrass",
+                                    "minecraft:tall_seagrass",
+                                    "minecraft:tall_grass",
+                                    "minecraft:fern",
+                                    "minecraft:large_fern"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    1,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:water",
+                                    "minecraft:short_grass",
+                                    "minecraft:seagrass",
+                                    "minecraft:tall_seagrass",
+                                    "minecraft:tall_grass",
+                                    "minecraft:fern",
+                                    "minecraft:large_fern"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    1,
+                                    1,
+                                    -1
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:water",
+                                    "minecraft:short_grass",
+                                    "minecraft:seagrass",
+                                    "minecraft:tall_seagrass",
+                                    "minecraft:tall_grass",
+                                    "minecraft:fern",
+                                    "minecraft:large_fern"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    1
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:water",
+                                    "minecraft:short_grass",
+                                    "minecraft:seagrass",
+                                    "minecraft:tall_seagrass",
+                                    "minecraft:tall_grass",
+                                    "minecraft:fern",
+                                    "minecraft:large_fern"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:water",
+                                    "minecraft:short_grass",
+                                    "minecraft:seagrass",
+                                    "minecraft:tall_grass",
+                                    "minecraft:fern",
+                                    "minecraft:large_fern"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    -1
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:water",
+                                    "minecraft:short_grass",
+                                    "minecraft:seagrass",
+                                    "minecraft:tall_seagrass",
+                                    "minecraft:tall_grass",
+                                    "minecraft:fern",
+                                    "minecraft:large_fern"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    -1,
+                                    1,
+                                    1
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:water",
+                                    "minecraft:short_grass",
+                                    "minecraft:seagrass",
+                                    "minecraft:tall_seagrass",
+                                    "minecraft:tall_grass",
+                                    "minecraft:fern",
+                                    "minecraft:large_fern"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    -1,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:water",
+                                    "minecraft:short_grass",
+                                    "minecraft:seagrass",
+                                    "minecraft:tall_seagrass",
+                                    "minecraft:tall_grass",
+                                    "minecraft:fern",
+                                    "minecraft:large_fern"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    -1,
+                                    1,
+                                    -1
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:water",
+                                    "minecraft:short_grass",
+                                    "minecraft:seagrass",
+                                    "minecraft:tall_seagrass",
+                                    "minecraft:tall_grass",
+                                    "minecraft:fern",
+                                    "minecraft:large_fern"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 5,
+                "max_inclusive": 7
+            },
+            "half_height": 0
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 0
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "type": "minecraft:uniform",
+                "min_inclusive": {
+                    "absolute": 60
+                },
+                "max_inclusive": {
+                    "absolute": 62
+                }
+            }
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

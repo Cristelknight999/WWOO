@@ -1,0 +1,66 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:crimson_nylium"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:not",
+                            "predicate": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": "minecraft:air"
+                            }
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:mud"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                    "minecraft:mud",
+                    "minecraft:grass_block"
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 6
+            },
+            "half_height": 2
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:rarity_filter",
+            "chance": 4
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

@@ -1,0 +1,165 @@
+{
+  "feature": "wythers:vegetation/column/spanish_moss",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 5
+    },
+    {
+      "type": "minecraft:count",
+      "count": 256
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "above_bottom": 65
+        },
+        "max_inclusive": {
+          "absolute": 90
+        }
+      }
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "up",
+      "max_steps": 12,
+      "target_condition": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:acacia_wood",
+          "minecraft:acacia_leaves",
+          "minecraft:dark_oak_wood",
+          "minecraft:dark_oak_leaves",
+          "minecraft:mangrove_roots"
+        ]
+      },
+      "allowed_search_condition": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      }
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": -1
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -5,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -6,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -7,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -8,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -9,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -10,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -11,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -12,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -13,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -14,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -15,
+                0
+              ],
+              "blocks": "minecraft:rooted_dirt"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

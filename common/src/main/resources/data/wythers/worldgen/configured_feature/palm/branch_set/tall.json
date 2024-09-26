@@ -1,0 +1,23 @@
+{
+  "config": {
+    "features": [
+      {
+        "feature": "wythers:palm/branch/tall_east",
+        "placement": []
+      },
+      {
+        "feature": "wythers:palm/branch/tall_south",
+        "placement": []
+      },
+      {
+        "feature": "wythers:palm/branch/tall_west",
+        "placement": []
+      },
+      {
+        "feature": "wythers:palm/branch/tall_north",
+        "placement": []
+      }
+    ]
+  },
+  "type": "minecraft:simple_random_selector"
+}

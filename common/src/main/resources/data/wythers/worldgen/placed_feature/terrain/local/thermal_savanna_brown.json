@@ -1,0 +1,235 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:brown_terracotta"
+          }
+        },
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      2,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -2,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      2
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -2
+                    ],
+                    "blocks": [
+                      "minecraft:coarse_dirt",
+                      "minecraft:brown_terracotta",
+                      "minecraft:air",
+                      "minecraft:gray_terracotta"
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:coarse_dirt"
+              }
+            }
+          }
+        ]
+      },
+      "target": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:coarse_dirt"
+      },
+      "radius": 4,
+      "half_height": 4
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": 0.6
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 80,
+      "noise_offset": 0.3
+    },
+    {
+      "type": "minecraft:count",
+      "count": 30
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

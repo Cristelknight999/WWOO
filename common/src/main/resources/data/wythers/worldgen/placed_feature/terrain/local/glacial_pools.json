@@ -1,0 +1,308 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:water"
+                    }
+                },
+                "rules": []
+            },
+            "target": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:gravel"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": "minecraft:air"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    1,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:packed_ice",
+                                    "minecraft:blue_ice"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    -1,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:packed_ice",
+                                    "minecraft:blue_ice"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    1
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:packed_ice",
+                                    "minecraft:blue_ice"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    -1
+                                ],
+                                "blocks": [
+                                    "minecraft:air",
+                                    "minecraft:packed_ice",
+                                    "minecraft:blue_ice"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -1,
+                                    0
+                                ],
+                                "blocks": "minecraft:gravel"
+                            },
+                            {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            -1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "minecraft:all_of",
+                                "predicates": [
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:gravel",
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:gravel",
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            -1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:gravel",
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:gravel",
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            -1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:gravel",
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:gravel",
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:gravel",
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            -1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:gravel",
+                                            "minecraft:water",
+                                            "minecraft:packed_ice",
+                                            "minecraft:blue_ice"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 7
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 120
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 0
+            }
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:surface_relative_threshold_filter",
+            "heightmap": "WORLD_SURFACE_WG",
+            "min_inclusive": -85,
+            "max_inclusive": -75
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

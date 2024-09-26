@@ -1,0 +1,403 @@
+{
+    "config": {
+        "features": [
+            {
+                "feature": {
+                    "config": {
+                        "features": [
+                            {
+                                "feature": "wythers:vegetation/tree/spruce/branch/1_east",
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "predicates": [
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -1,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -1,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -1,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -2,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -2,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -2,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                }
+                                            ],
+                                            "type": "minecraft:all_of"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    }
+                                ]
+                            },
+                            {
+                                "feature": "wythers:vegetation/tree/spruce/branch/1_south",
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "predicates": [
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        -1,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -1,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -1,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        -2,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -2,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -2,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                }
+                                            ],
+                                            "type": "minecraft:all_of"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    }
+                                ]
+                            },
+                            {
+                                "feature": "wythers:vegetation/tree/spruce/branch/1_west",
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "predicates": [
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -1,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -1,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -1,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -2,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -2,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -2,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                }
+                                            ],
+                                            "type": "minecraft:all_of"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    }
+                                ]
+                            },
+                            {
+                                "feature": "wythers:vegetation/tree/spruce/branch/1_north",
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "predicates": [
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        -1,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -1,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -1,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        -2,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        -2,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        -2,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                }
+                                            ],
+                                            "type": "minecraft:all_of"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "minecraft:simple_random_selector"
+                },
+                "placement": [
+                    {
+                        "xz_spread": {
+                            "min_inclusive": 0,
+                            "max_inclusive": 1,
+                            "type": "minecraft:uniform"
+                        },
+                        "y_spread": 0,
+                        "type": "minecraft:random_offset"
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "minecraft:simple_random_selector"
+}

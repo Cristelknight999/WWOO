@@ -1,0 +1,259 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:dirt"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:smooth_basalt"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:dirt"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                                0,
+                                1,
+                                0
+                            ],
+                            "blocks": "minecraft:air"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:grass_block"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:deepslate"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:smooth_basalt"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:deepslate"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:dirt",
+                                    "minecraft:mud"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:smooth_basalt"
+                            },
+                            {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            1,
+                                            0
+                                        ],
+                                        "blocks": "minecraft:water"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            2,
+                                            0
+                                        ],
+                                        "blocks": "minecraft:air"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": [
+                                    "minecraft:mud"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -1,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:smooth_basalt"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -2,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:smooth_basalt"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -3,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:smooth_basalt"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -4,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:smooth_basalt"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -5,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:smooth_basalt"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -6,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:smooth_basalt"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -7,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:smooth_basalt"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -8,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:smooth_basalt"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -9,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:smooth_basalt"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 8
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 50
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR"
+        },
+        {
+            "type": "minecraft:random_offset",
+            "xz_spread": 0,
+            "y_spread": {
+                "type": "minecraft:uniform",
+                "min_inclusive": -5,
+                "max_inclusive": 0
+            }
+        }
+    ]
+}

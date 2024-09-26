@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.01,
+        "feature": {
+          "feature": "wythers:vegetation/thin_jungle_bamboo_patch",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": "wythers:vegetation/tree/stick_plant_small",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "wythers:vegetation/tree/marula",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "wythers:vegetation/tree/red_ivorywood",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.3,
+        "feature": {
+          "feature": "wythers:vegetation/tree/mpingo",
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:vegetation/tree/acacia_forest",
+      "placement": []
+    }
+  }
+}

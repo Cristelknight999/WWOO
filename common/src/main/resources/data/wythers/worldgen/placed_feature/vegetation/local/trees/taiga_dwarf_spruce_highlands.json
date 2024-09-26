@@ -1,0 +1,159 @@
+{
+  "feature": "wythers:vegetation/tree/cold_pine_medium",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 3
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 0
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -150,
+      "max_inclusive": -135
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:fern"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -2,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -3,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -4,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -5,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -6,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -7,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -8,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -9,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -3,
+          0
+        ],
+        "blocks": "minecraft:dirt"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

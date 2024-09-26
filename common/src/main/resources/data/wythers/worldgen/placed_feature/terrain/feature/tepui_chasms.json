@@ -1,0 +1,360 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:cave_air"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        0,
+                                        1,
+                                        0
+                                    ],
+                                    "blocks": "minecraft:dripstone_block"
+                                },
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": "minecraft:deepslate"
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:dripstone_block"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": [
+                                        "minecraft:deepslate"
+                                    ]
+                                },
+                                {
+                                    "type": "minecraft:not",
+                                    "predicate": {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            1,
+                                            0
+                                        ],
+                                        "blocks": "minecraft:cave_air"
+                                    }
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:weighted_state_provider",
+                            "entries": [
+                                {
+                                    "weight": 498,
+                                    "data": {
+                                        "Name": "minecraft:deepslate",
+                                        "Properties": {
+                                            "axis": "y"
+                                        }
+                                    }
+                                },
+                                {
+                                    "weight": 1,
+                                    "data": {
+                                        "Name": "minecraft:deepslate_emerald_ore"
+                                    }
+                                },
+                                {
+                                    "weight": 1,
+                                    "data": {
+                                        "Name": "minecraft:infested_deepslate",
+                                        "Properties": {
+                                            "axis": "y"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": [
+                                        "minecraft:smooth_basalt"
+                                    ]
+                                },
+                                {
+                                    "type": "minecraft:not",
+                                    "predicate": {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            1,
+                                            0
+                                        ],
+                                        "blocks": "minecraft:cave_air"
+                                    }
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:weighted_state_provider",
+                            "entries": [
+                                {
+                                    "weight": 499,
+                                    "data": {
+                                        "Name": "minecraft:smooth_basalt"
+                                    }
+                                },
+                                {
+                                    "weight": 1,
+                                    "data": {
+                                        "Name": "minecraft:deepslate_emerald_ore"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": [
+                                        "minecraft:stone",
+                                        "minecraft:blackstone"
+                                    ]
+                                },
+                                {
+                                    "type": "minecraft:not",
+                                    "predicate": {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            1,
+                                            0
+                                        ],
+                                        "blocks": "minecraft:cave_air"
+                                    }
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:deepslate",
+                                "Properties": {
+                                    "axis": "y"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:any_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                        1,
+                                        0,
+                                        0
+                                    ],
+                                    "fluids": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                        -1,
+                                        0,
+                                        0
+                                    ],
+                                    "fluids": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "fluids": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                        0,
+                                        0,
+                                        -1
+                                    ],
+                                    "fluids": "minecraft:water"
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:sea_pickle",
+                                "Properties": {
+                                    "pickles": "1",
+                                    "waterlogged": "true"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:cave_air"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": [
+                                    "minecraft:deepslate",
+                                    "minecraft:tuff",
+                                    "minecraft:dripstone_block",
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:blackstone",
+                                    "minecraft:stone",
+                                    "minecraft:deepslate_emerald_ore",
+                                    "minecraft:deepslate_coal_ore",
+                                    "minecraft:infested_deepslate"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": [
+                                    "minecraft:stone",
+                                    "minecraft:deepslate",
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:blackstone"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            0
+                                        ],
+                                        "blocks": "minecraft:cave_air"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            0
+                                        ],
+                                        "blocks": "minecraft:cave_air"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            1
+                                        ],
+                                        "blocks": "minecraft:cave_air"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            -1
+                                        ],
+                                        "blocks": "minecraft:cave_air"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 4,
+                "max_inclusive": 4
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": 1,
+            "noise_factor": 100,
+            "noise_offset": 0.1
+        },
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": -1,
+            "noise_factor": 100,
+            "noise_offset": -0.1
+        },
+        {
+            "type": "minecraft:count",
+            "count": 40
+        },
+        {
+            "type": "minecraft:count",
+            "count": 128
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "type": "minecraft:uniform",
+                "min_inclusive": {
+                    "absolute": -50
+                },
+                "max_inclusive": {
+                    "absolute": 194
+                }
+            }
+        }
+    ]
+}

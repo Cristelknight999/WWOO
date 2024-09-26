@@ -1,0 +1,171 @@
+{
+    "config": {
+        "features": [
+            {
+                "feature": {
+                    "config": {
+                        "layers": [
+                            {
+                                "height": {
+                                    "min_inclusive": 1,
+                                    "max_inclusive": 2,
+                                    "type": "minecraft:uniform"
+                                },
+                                "provider": {
+                                    "entries": [
+                                        {
+                                            "data": {
+                                                "Properties": {
+                                                    "axis": "y"
+                                                },
+                                                "Name": "minecraft:stripped_acacia_wood"
+                                            },
+                                            "weight": 5
+                                        },
+                                        {
+                                            "data": {
+                                                "Properties": {
+                                                    "axis": "y"
+                                                },
+                                                "Name": "minecraft:stripped_acacia_wood"
+                                            },
+                                            "weight": 3
+                                        }
+                                    ],
+                                    "type": "minecraft:weighted_state_provider"
+                                }
+                            }
+                        ],
+                        "direction": "up",
+                        "allowed_placement": {
+                            "type": "minecraft:replaceable"
+                        },
+                        "prioritize_tip": false
+                    },
+                    "type": "minecraft:block_column"
+                },
+                "placement": [
+                    {
+                        "count": 64,
+                        "type": "minecraft:count"
+                    },
+                    {
+                        "xz_spread": {
+                            "type": "minecraft:uniform",
+                            "min_inclusive": -3,
+                            "max_inclusive": 3
+                        },
+                        "y_spread": {
+                            "type": "minecraft:uniform",
+                            "min_inclusive": -2,
+                            "max_inclusive": 3
+                        },
+                        "type": "minecraft:random_offset"
+                    },
+                    {
+                        "predicate": {
+                            "predicates": [
+                                {
+                                    "type": "minecraft:replaceable"
+                                },
+                                {
+                                    "predicates": [
+                                        {
+                                            "offset": [
+                                                0,
+                                                -1,
+                                                0
+                                            ],
+                                            "blocks": "#wythers:dirt",
+                                            "type": "minecraft:matching_blocks"
+                                        },
+                                        {
+                                            "offset": [
+                                                0,
+                                                -1,
+                                                0
+                                            ],
+                                            "blocks": [
+                                                "minecraft:stripped_acacia_wood",
+                                                "minecraft:stripped_acacia_wood"
+                                            ],
+                                            "type": "minecraft:matching_blocks"
+                                        }
+                                    ],
+                                    "type": "minecraft:any_of"
+                                }
+                            ],
+                            "type": "minecraft:all_of"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    },
+                    {
+                        "predicate": {
+                            "predicates": [
+                                {
+                                    "offset": [
+                                        1,
+                                        3,
+                                        0
+                                    ],
+                                    "blocks": [
+                                        "minecraft:stripped_acacia_log",
+                                        "minecraft:stripped_acacia_log",
+                                        "minecraft:stripped_acacia_wood",
+                                        "minecraft:stripped_acacia_wood"
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "offset": [
+                                        0,
+                                        3,
+                                        1
+                                    ],
+                                    "blocks": [
+                                        "minecraft:stripped_acacia_log",
+                                        "minecraft:stripped_acacia_log",
+                                        "minecraft:stripped_acacia_wood",
+                                        "minecraft:stripped_acacia_wood"
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "offset": [
+                                        -1,
+                                        3,
+                                        0
+                                    ],
+                                    "blocks": [
+                                        "minecraft:stripped_acacia_log",
+                                        "minecraft:stripped_acacia_log",
+                                        "minecraft:stripped_acacia_wood",
+                                        "minecraft:stripped_acacia_wood"
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "offset": [
+                                        0,
+                                        3,
+                                        -1
+                                    ],
+                                    "blocks": [
+                                        "minecraft:stripped_acacia_log",
+                                        "minecraft:stripped_acacia_log",
+                                        "minecraft:stripped_acacia_wood",
+                                        "minecraft:stripped_acacia_wood"
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                }
+                            ],
+                            "type": "minecraft:any_of"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "minecraft:simple_random_selector"
+}

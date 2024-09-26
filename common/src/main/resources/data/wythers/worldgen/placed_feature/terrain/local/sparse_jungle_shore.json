@@ -1,0 +1,99 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:sand"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                                0,
+                                1,
+                                0
+                            ],
+                            "blocks": [
+                                "minecraft:short_grass",
+                                "minecraft:fern"
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:grass_block"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:any_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_block_tag",
+                                "tag": "minecraft:dirt"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:packed_mud"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            1,
+                            0
+                        ],
+                        "blocks": [
+                            "minecraft:air",
+                            "minecraft:short_grass",
+                            "minecraft:fern"
+                        ]
+                    }
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 5,
+                "max_inclusive": 7
+            },
+            "half_height": 0
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 50
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 62
+            }
+        },
+        {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+                "type": "minecraft:matching_fluids",
+                "fluids": "minecraft:water"
+            }
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:dead_brain_coral_block"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:any_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        0,
+                                        1,
+                                        0
+                                    ],
+                                    "blocks": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                        1,
+                                        0,
+                                        0
+                                    ],
+                                    "fluids": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        -1,
+                                        0,
+                                        0
+                                    ],
+                                    "blocks": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "blocks": "minecraft:water"
+                                },
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        0,
+                                        0,
+                                        -1
+                                    ],
+                                    "blocks": "minecraft:water"
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:fire_coral_block"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                    "minecraft:mycelium",
+                    "minecraft:dirt",
+                    "minecraft:sand",
+                    "minecraft:clay",
+                    "minecraft:gravel"
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 6
+            },
+            "half_height": 3
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": -1,
+            "noise_factor": 200,
+            "noise_offset": -0.2
+        },
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": 1,
+            "noise_factor": 500,
+            "noise_offset": 0
+        },
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": -1,
+            "noise_factor": 1000,
+            "noise_offset": 0
+        },
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": 1,
+            "noise_factor": 1000,
+            "noise_offset": 0.6
+        },
+        {
+            "type": "minecraft:count",
+            "count": 30
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 0
+            }
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:surface_relative_threshold_filter",
+            "heightmap": "OCEAN_FLOOR_WG",
+            "min_inclusive": -67,
+            "max_inclusive": -1
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR_WG"
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

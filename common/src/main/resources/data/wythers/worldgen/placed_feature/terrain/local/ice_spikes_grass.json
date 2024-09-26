@@ -1,0 +1,97 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:coarse_dirt"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                                0,
+                                1,
+                                0
+                            ],
+                            "blocks": "minecraft:snow"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:grass_block",
+                                "Properties": {
+                                    "snowy": "true"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                                0,
+                                1,
+                                0
+                            ],
+                            "blocks": [
+                                "minecraft:air"
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:grass_block",
+                                "Properties": {
+                                    "snowy": "false"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:snow_block"
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 7
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 30
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 0
+            }
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:surface_relative_threshold_filter",
+            "heightmap": "WORLD_SURFACE_WG",
+            "min_inclusive": -85,
+            "max_inclusive": -50
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

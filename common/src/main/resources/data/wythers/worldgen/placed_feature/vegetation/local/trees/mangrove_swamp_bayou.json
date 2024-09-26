@@ -1,0 +1,152 @@
+{
+  "feature": "wythers:vegetation/tree/bayou",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": -0.1
+    },
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:mangrove_propagule",
+          "Properties": {
+            "waterlogged": "false",
+            "stage": "0",
+            "hanging": "false",
+            "age": "0"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:mud"
+            ]
+          },
+          {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -2,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:smooth_basalt"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -3,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:smooth_basalt"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -4,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:smooth_basalt"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -5,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:smooth_basalt"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -6,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:smooth_basalt"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -7,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:smooth_basalt"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -8,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:smooth_basalt"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -9,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:smooth_basalt"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

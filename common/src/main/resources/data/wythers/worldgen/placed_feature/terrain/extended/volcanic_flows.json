@@ -1,0 +1,164 @@
+{
+    "feature": {
+        "type": "minecraft:simple_random_selector",
+        "config": {
+            "features": [
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:smooth_basalt"
+                            },
+                            "target": {
+                                "Name": "minecraft:grass_block"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:smooth_basalt"
+                            },
+                            "target": {
+                                "Name": "minecraft:dirt"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:smooth_basalt"
+                            },
+                            "target": {
+                                "Name": "minecraft:packed_mud"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:smooth_basalt"
+                            },
+                            "target": {
+                                "Name": "minecraft:coarse_dirt"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:smooth_basalt"
+                            },
+                            "target": {
+                                "Name": "minecraft:rooted_dirt"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:smooth_basalt"
+                            },
+                            "target": {
+                                "Name": "minecraft:sand"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:deepslate",
+                                "Properties": {
+                                    "axis": "y"
+                                }
+                            },
+                            "target": {
+                                "Name": "minecraft:stone"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                }
+            ]
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 50
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:count",
+            "count": 6
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 300
+            }
+        }
+    ]
+}

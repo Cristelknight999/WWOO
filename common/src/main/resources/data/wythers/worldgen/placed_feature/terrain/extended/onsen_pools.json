@@ -1,0 +1,256 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:light",
+                        "Properties": {
+                            "level": "1",
+                            "waterlogged": "true"
+                        }
+                    }
+                },
+                "rules": []
+            },
+            "target": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            1,
+                            0,
+                            0
+                        ],
+                        "blocks": [
+                            "minecraft:deepslate",
+                            "minecraft:calcite",
+                            "minecraft:light"
+                        ]
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            -1,
+                            0,
+                            0
+                        ],
+                        "blocks": [
+                            "minecraft:deepslate",
+                            "minecraft:calcite",
+                            "minecraft:light"
+                        ]
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "blocks": [
+                            "minecraft:deepslate",
+                            "minecraft:calcite"
+                        ]
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            0,
+                            1
+                        ],
+                        "blocks": [
+                            "minecraft:deepslate",
+                            "minecraft:calcite",
+                            "minecraft:light"
+                        ]
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "blocks": [
+                            "minecraft:deepslate",
+                            "minecraft:calcite",
+                            "minecraft:light"
+                        ]
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            1,
+                            0,
+                            1
+                        ],
+                        "blocks": [
+                            "minecraft:deepslate",
+                            "minecraft:calcite",
+                            "minecraft:light"
+                        ]
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            1,
+                            0,
+                            -1
+                        ],
+                        "blocks": [
+                            "minecraft:deepslate",
+                            "minecraft:calcite",
+                            "minecraft:light"
+                        ]
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            -1,
+                            0,
+                            1
+                        ],
+                        "blocks": [
+                            "minecraft:deepslate",
+                            "minecraft:calcite",
+                            "minecraft:light"
+                        ]
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            -1,
+                            0,
+                            -1
+                        ],
+                        "blocks": [
+                            "minecraft:deepslate",
+                            "minecraft:calcite",
+                            "minecraft:light"
+                        ]
+                    },
+                    {
+                        "type": "minecraft:has_sturdy_face",
+                        "offset": [
+                            0,
+                            -1,
+                            0
+                        ],
+                        "direction": "up"
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "blocks": "minecraft:air"
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "blocks": "minecraft:air"
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            1,
+                            1,
+                            -1
+                        ],
+                        "blocks": "minecraft:air"
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            1,
+                            1
+                        ],
+                        "blocks": "minecraft:air"
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            1,
+                            0
+                        ],
+                        "blocks": "minecraft:air"
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            0,
+                            1,
+                            -1
+                        ],
+                        "blocks": "minecraft:air"
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            -1,
+                            1,
+                            1
+                        ],
+                        "blocks": "minecraft:air"
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            -1,
+                            1,
+                            0
+                        ],
+                        "blocks": "minecraft:air"
+                    },
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                            -1,
+                            1,
+                            -1
+                        ],
+                        "blocks": "minecraft:air"
+                    }
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 2,
+                "max_inclusive": 4
+            },
+            "half_height": 1
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": 1,
+            "noise_factor": 100,
+            "noise_offset": -0.3
+        },
+        {
+            "type": "minecraft:count",
+            "count": 30
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR"
+        }
+    ]
+}

@@ -1,0 +1,199 @@
+{
+  "feature": {
+    "type": "minecraft:random_patch",
+    "config": {
+      "tries": 8,
+      "xz_spread": 4,
+      "y_spread": 1,
+      "feature": {
+        "feature": "wythers:vegetation/saguaro",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:red_sand",
+                    "minecraft:sand"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    2,
+                    0,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -2,
+                    0,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    2
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    -2
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    0,
+                    1
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    1,
+                    -1
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    0,
+                    1
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    0,
+                    -1
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": 0.3
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 10,
+      "noise_factor": 30,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    }
+  ]
+}

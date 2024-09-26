@@ -1,0 +1,63 @@
+{
+  "feature": {
+    "type": "minecraft:ore",
+    "config": {
+      "size": 64,
+      "discard_chance_on_air_exposure": 0,
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:grass_block"
+          },
+          "state": {
+            "Name": "minecraft:smooth_red_sandstone"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:coarse_dirt"
+          },
+          "state": {
+            "Name": "minecraft:smooth_red_sandstone"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": -0.4
+    },
+    {
+      "type": "minecraft:count",
+      "count": 128
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 0
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -250,
+      "max_inclusive": -100
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

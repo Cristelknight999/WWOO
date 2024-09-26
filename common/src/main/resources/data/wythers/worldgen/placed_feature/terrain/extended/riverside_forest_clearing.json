@@ -1,0 +1,53 @@
+{
+  "feature": {
+    "type": "minecraft:ore",
+    "config": {
+      "size": 32,
+      "discard_chance_on_air_exposure": 0,
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:stone"
+          },
+          "state": {
+            "Name": "minecraft:andesite"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:granite"
+          },
+          "state": {
+            "Name": "minecraft:andesite"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 500,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:count",
+      "count": 100
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": -5
+    }
+  ]
+}

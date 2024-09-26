@@ -1,0 +1,266 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:calcite"
+          }
+        },
+        "rules": []
+      },
+      "target": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:any_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_fluids",
+                  "offset": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "fluids": "minecraft:water"
+                },
+                {
+                  "type": "minecraft:matching_fluids",
+                  "offset": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "fluids": "minecraft:water"
+                },
+                {
+                  "type": "minecraft:matching_fluids",
+                  "offset": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "fluids": "minecraft:water"
+                },
+                {
+                  "type": "minecraft:matching_fluids",
+                  "offset": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "fluids": "minecraft:water"
+                },
+                {
+                  "type": "minecraft:matching_fluids",
+                  "offset": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "fluids": "minecraft:water"
+                }
+              ]
+            }
+          },
+          {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:dirt"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:any_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:air",
+                          "minecraft:calcite"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          0,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:calcite"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          0,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:calcite"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          0,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:calcite"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          0,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:calcite"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          0
+                        ],
+                        "blocks": "minecraft:calcite"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:stone"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:any_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:dirt",
+                          "minecraft:grass_block",
+                          "minecraft:calcite"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          0,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:dirt",
+                          "minecraft:grass_block",
+                          "minecraft:calcite"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          0,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:dirt",
+                          "minecraft:grass_block",
+                          "minecraft:calcite"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          0,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:dirt",
+                          "minecraft:grass_block",
+                          "minecraft:calcite"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          0,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:dirt",
+                          "minecraft:grass_block",
+                          "minecraft:calcite"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "radius": 8,
+      "half_height": 4
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    }
+  ]
+}

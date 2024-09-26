@@ -1,0 +1,92 @@
+{
+  "feature": {
+    "type": "minecraft:flower",
+    "config": {
+      "tries": 32,
+      "xz_spread": 6,
+      "y_spread": 2,
+      "feature": {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:dual_noise_provider",
+              "seed": 2345,
+              "noise": {
+                "firstOctave": -3,
+                "amplitudes": [
+                  1
+                ]
+              },
+              "scale": 1,
+              "variety": {
+                "min_inclusive": 1,
+                "max_inclusive": 1
+              },
+              "slow_noise": {
+                "firstOctave": -10,
+                "amplitudes": [
+                  1
+                ]
+              },
+              "slow_scale": 1,
+              "states": [
+                {
+                  "Name": "minecraft:lily_of_the_valley"
+                },
+                {
+                  "Name": "minecraft:azure_bluet"
+                },
+                {
+                  "Name": "minecraft:cornflower"
+                },
+                {
+                  "Name": "minecraft:oxeye_daisy"
+                },
+                {
+                  "Name": "minecraft:short_grass"
+                }
+              ]
+            }
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -3,
+            0
+          ],
+          "blocks": "minecraft:tuff"
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

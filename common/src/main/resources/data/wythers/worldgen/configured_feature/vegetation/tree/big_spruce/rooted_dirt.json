@@ -1,0 +1,63 @@
+{
+    "config": {
+        "features": [
+            {
+                "feature": {
+                    "config": {
+                        "to_place": {
+                            "state": {
+                                "Name": "minecraft:rooted_dirt"
+                            },
+                            "type": "minecraft:simple_state_provider"
+                        }
+                    },
+                    "type": "minecraft:simple_block"
+                },
+                "placement": [
+                    {
+                        "count": 11,
+                        "type": "minecraft:count"
+                    },
+                    {
+                        "xz_spread": {
+                            "min_inclusive": -1,
+                            "max_inclusive": 2,
+                            "type": "minecraft:uniform"
+                        },
+                        "y_spread": {
+                            "min_inclusive": -2,
+                            "max_inclusive": 2,
+                            "type": "minecraft:uniform"
+                        },
+                        "type": "minecraft:random_offset"
+                    },
+                    {
+                        "predicate": {
+                            "predicates": [
+                                {
+                                    "blocks": "#wythers:dirt",
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "predicate": {
+                                        "blocks": "#wythers:dirt",
+                                        "offset": [
+                                            0,
+                                            1,
+                                            0
+                                        ],
+                                        "type": "minecraft:matching_blocks"
+                                    },
+                                    "type": "minecraft:not"
+                                }
+                            ],
+                            "type": "minecraft:all_of"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "minecraft:simple_random_selector"
+}

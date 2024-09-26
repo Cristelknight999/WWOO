@@ -1,0 +1,808 @@
+{
+    "config": {
+        "features": [
+            {
+                "feature": {
+                    "config": {
+                        "features": [
+                            {
+                                "feature": {
+                                    "config": {
+                                        "features": [
+                                            {
+                                                "feature": {
+                                                    "config": {
+                                                        "features": [
+                                                            {
+                                                                "feature": {
+                                                                    "config": {
+                                                                        "decorators": [],
+                                                                        "dirt_provider": {
+                                                                            "state": {
+                                                                                "Name": "minecraft:rooted_dirt"
+                                                                            },
+                                                                            "type": "minecraft:simple_state_provider"
+                                                                        },
+                                                                        "foliage_placer": {
+                                                                            "height": 1,
+                                                                            "offset": 0,
+                                                                            "radius": 2,
+                                                                            "type": "minecraft:blob_foliage_placer"
+                                                                        },
+                                                                        "foliage_provider": {
+                                                                            "state": {
+                                                                                "Name": "minecraft:spruce_log",
+                                                                                "Properties": {
+                                                                                    "axis": "y"
+                                                                                }
+                                                                            },
+                                                                            "type": "minecraft:simple_state_provider"
+                                                                        },
+                                                                        "force_dirt": false,
+                                                                        "ignore_vines": true,
+                                                                        "minimum_size": {
+                                                                            "limit": 3,
+                                                                            "lower_size": 1,
+                                                                            "upper_size": 1,
+                                                                            "type": "minecraft:two_layers_feature_size"
+                                                                        },
+                                                                        "trunk_placer": {
+                                                                            "base_height": 1,
+                                                                            "height_rand_a": 5,
+                                                                            "height_rand_b": 0,
+                                                                            "type": "minecraft:straight_trunk_placer"
+                                                                        },
+                                                                        "trunk_provider": {
+                                                                            "state": {
+                                                                                "Name": "minecraft:spruce_log",
+                                                                                "Properties": {
+                                                                                    "axis": "y"
+                                                                                }
+                                                                            },
+                                                                            "type": "minecraft:simple_state_provider"
+                                                                        }
+                                                                    },
+                                                                    "type": "minecraft:tree"
+                                                                },
+                                                                "placement": [
+                                                                    {
+                                                                        "predicate": {
+                                                                            "type": "minecraft:replaceable"
+                                                                        },
+                                                                        "type": "minecraft:block_predicate_filter"
+                                                                    },
+                                                                    {
+                                                                        "count": 64,
+                                                                        "type": "minecraft:count"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "feature": {
+                                                                    "config": {
+                                                                        "depth": 1,
+                                                                        "extra_bottom_block_chance": 0.0,
+                                                                        "extra_edge_column_chance": 0.0,
+                                                                        "ground_state": {
+                                                                            "state": {
+                                                                                "Name": "minecraft:spruce_log",
+                                                                                "Properties": {
+                                                                                    "axis": "y"
+                                                                                }
+                                                                            },
+                                                                            "type": "minecraft:simple_state_provider"
+                                                                        },
+                                                                        "replaceable": "#wythers:spruce_stuff",
+                                                                        "surface": "floor",
+                                                                        "vegetation_chance": 1.0,
+                                                                        "vegetation_feature": {
+                                                                            "feature": {
+                                                                                "config": {
+                                                                                    "allowed_placement": {
+                                                                                        "blocks": "#wythers:tree_branch_replaceable",
+                                                                                        "type": "minecraft:matching_blocks"
+                                                                                    },
+                                                                                    "direction": "up",
+                                                                                    "layers": [
+                                                                                        {
+                                                                                            "height": {
+                                                                                                "min_inclusive": 25,
+                                                                                                "max_inclusive": 26,
+                                                                                                "type": "minecraft:uniform"
+                                                                                            },
+                                                                                            "provider": {
+                                                                                                "state": {
+                                                                                                    "Name": "minecraft:spruce_log",
+                                                                                                    "Properties": {
+                                                                                                        "axis": "y"
+                                                                                                    }
+                                                                                                },
+                                                                                                "type": "minecraft:simple_state_provider"
+                                                                                            }
+                                                                                        }
+                                                                                    ],
+                                                                                    "prioritize_tip": false
+                                                                                },
+                                                                                "type": "minecraft:block_column"
+                                                                            },
+                                                                            "placement": []
+                                                                        },
+                                                                        "vertical_range": 2,
+                                                                        "xz_radius": 1
+                                                                    },
+                                                                    "type": "minecraft:vegetation_patch"
+                                                                },
+                                                                "placement": [
+                                                                    {
+                                                                        "predicate": {
+                                                                            "predicates": [
+                                                                                {
+                                                                                    "blocks": "minecraft:spruce_log",
+                                                                                    "type": "minecraft:matching_blocks"
+                                                                                },
+                                                                                {
+                                                                                    "offset": [
+                                                                                        0,
+                                                                                        10,
+                                                                                        0
+                                                                                    ],
+                                                                                    "type": "minecraft:replaceable"
+                                                                                }
+                                                                            ],
+                                                                            "type": "minecraft:all_of"
+                                                                        },
+                                                                        "type": "minecraft:block_predicate_filter"
+                                                                    },
+                                                                    {
+                                                                        "direction_of_search": "up",
+                                                                        "max_steps": 8,
+                                                                        "target_condition": {
+                                                                            "blocks": "minecraft:air",
+                                                                            "offset": [
+                                                                                0,
+                                                                                1,
+                                                                                0
+                                                                            ],
+                                                                            "type": "minecraft:matching_blocks"
+                                                                        },
+                                                                        "type": "minecraft:environment_scan"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "type": "minecraft:simple_random_selector"
+                                                },
+                                                "placement": [
+                                                    {
+                                                        "predicate": {
+                                                            "type": "minecraft:replaceable"
+                                                        },
+                                                        "type": "minecraft:block_predicate_filter"
+                                                    },
+                                                    {
+                                                        "count": 28,
+                                                        "type": "minecraft:count"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "feature": {
+                                                    "config": {
+                                                        "features": [
+                                                            {
+                                                                "feature": {
+                                                                    "config": {
+                                                                        "decorators": [],
+                                                                        "dirt_provider": {
+                                                                            "state": {
+                                                                                "Name": "minecraft:spruce_log",
+                                                                                "Properties": {
+                                                                                    "axis": "y"
+                                                                                }
+                                                                            },
+                                                                            "type": "minecraft:simple_state_provider"
+                                                                        },
+                                                                        "foliage_placer": {
+                                                                            "height": 16,
+                                                                            "offset": 0,
+                                                                            "radius": 1,
+                                                                            "type": "minecraft:fancy_foliage_placer"
+                                                                        },
+                                                                        "foliage_provider": {
+                                                                            "state": {
+                                                                                "Name": "minecraft:spruce_log",
+                                                                                "Properties": {
+                                                                                    "axis": "y"
+                                                                                }
+                                                                            },
+                                                                            "type": "minecraft:simple_state_provider"
+                                                                        },
+                                                                        "force_dirt": false,
+                                                                        "ignore_vines": true,
+                                                                        "minimum_size": {
+                                                                            "limit": 1,
+                                                                            "lower_size": 0,
+                                                                            "upper_size": 0,
+                                                                            "type": "minecraft:two_layers_feature_size"
+                                                                        },
+                                                                        "trunk_placer": {
+                                                                            "base_height": 6,
+                                                                            "height_rand_a": 15,
+                                                                            "height_rand_b": 0,
+                                                                            "type": "minecraft:straight_trunk_placer"
+                                                                        },
+                                                                        "trunk_provider": {
+                                                                            "state": {
+                                                                                "Name": "minecraft:spruce_log",
+                                                                                "Properties": {
+                                                                                    "axis": "y"
+                                                                                }
+                                                                            },
+                                                                            "type": "minecraft:simple_state_provider"
+                                                                        }
+                                                                    },
+                                                                    "type": "minecraft:tree"
+                                                                },
+                                                                "placement": [
+                                                                    {
+                                                                        "predicate": {
+                                                                            "offset": [
+                                                                                0,
+                                                                                10,
+                                                                                0
+                                                                            ],
+                                                                            "type": "minecraft:replaceable"
+                                                                        },
+                                                                        "type": "minecraft:block_predicate_filter"
+                                                                    },
+                                                                    {
+                                                                        "count": 12,
+                                                                        "type": "minecraft:count"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "feature": {
+                                                                    "config": {
+                                                                        "features": [
+                                                                            {
+                                                                                "feature": "wythers:vegetation/tree/huge_spruce/branch_set/3",
+                                                                                "placement": [
+                                                                                    {
+                                                                                        "count": 2,
+                                                                                        "type": "minecraft:count"
+                                                                                    },
+                                                                                    {
+                                                                                        "xz_spread": 0,
+                                                                                        "y_spread": {
+                                                                                            "min_inclusive": -14,
+                                                                                            "max_inclusive": -12,
+                                                                                            "type": "minecraft:uniform"
+                                                                                        },
+                                                                                        "type": "minecraft:random_offset"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "feature": "wythers:vegetation/tree/huge_spruce/branch_set/3",
+                                                                                "placement": [
+                                                                                    {
+                                                                                        "xz_spread": 0,
+                                                                                        "y_spread": {
+                                                                                            "min_inclusive": -7,
+                                                                                            "max_inclusive": -5,
+                                                                                            "type": "minecraft:uniform"
+                                                                                        },
+                                                                                        "type": "minecraft:random_offset"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "feature": "wythers:vegetation/tree/huge_spruce/branch_set/4",
+                                                                                "placement": [
+                                                                                    {
+                                                                                        "xz_spread": 0,
+                                                                                        "y_spread": {
+                                                                                            "min_inclusive": 0,
+                                                                                            "max_inclusive": 2,
+                                                                                            "type": "minecraft:uniform"
+                                                                                        },
+                                                                                        "type": "minecraft:random_offset"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "feature": "wythers:vegetation/tree/huge_spruce/branch_set/4",
+                                                                                "placement": [
+                                                                                    {
+                                                                                        "xz_spread": 0,
+                                                                                        "y_spread": {
+                                                                                            "min_inclusive": 6,
+                                                                                            "max_inclusive": 8,
+                                                                                            "type": "minecraft:uniform"
+                                                                                        },
+                                                                                        "type": "minecraft:random_offset"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "type": "minecraft:simple_random_selector"
+                                                                },
+                                                                "placement": [
+                                                                    {
+                                                                        "count": 2,
+                                                                        "type": "minecraft:count"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "feature": {
+                                                                    "config": {
+                                                                        "features": [
+                                                                            {
+                                                                                "feature": {
+                                                                                    "config": {
+                                                                                        "decorators": [
+                                                                                            {
+                                                                                                "block_provider": {
+                                                                                                    "state": {
+                                                                                                        "Name": "minecraft:spruce_leaves",
+                                                                                                        "Properties": {
+                                                                                                            "distance": "2",
+                                                                                                            "persistent": "false",
+                                                                                                            "waterlogged": "false"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "type": "minecraft:simple_state_provider"
+                                                                                                },
+                                                                                                "directions": [
+                                                                                                    "down"
+                                                                                                ],
+                                                                                                "exclusion_radius_xz": 0,
+                                                                                                "exclusion_radius_y": 0,
+                                                                                                "probability": 0.35,
+                                                                                                "required_empty_blocks": 1,
+                                                                                                "type": "minecraft:attached_to_leaves"
+                                                                                            },
+                                                                                            {
+                                                                                                "block_provider": {
+                                                                                                    "state": {
+                                                                                                        "Name": "minecraft:spruce_leaves",
+                                                                                                        "Properties": {
+                                                                                                            "distance": "2",
+                                                                                                            "persistent": "false",
+                                                                                                            "waterlogged": "false"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "type": "minecraft:simple_state_provider"
+                                                                                                },
+                                                                                                "directions": [
+                                                                                                    "east"
+                                                                                                ],
+                                                                                                "exclusion_radius_xz": 0,
+                                                                                                "exclusion_radius_y": 0,
+                                                                                                "probability": 0.75,
+                                                                                                "required_empty_blocks": 1,
+                                                                                                "type": "minecraft:attached_to_leaves"
+                                                                                            },
+                                                                                            {
+                                                                                                "block_provider": {
+                                                                                                    "state": {
+                                                                                                        "Name": "minecraft:spruce_leaves",
+                                                                                                        "Properties": {
+                                                                                                            "distance": "2",
+                                                                                                            "persistent": "false",
+                                                                                                            "waterlogged": "false"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "type": "minecraft:simple_state_provider"
+                                                                                                },
+                                                                                                "directions": [
+                                                                                                    "south"
+                                                                                                ],
+                                                                                                "exclusion_radius_xz": 0,
+                                                                                                "exclusion_radius_y": 0,
+                                                                                                "probability": 0.75,
+                                                                                                "required_empty_blocks": 1,
+                                                                                                "type": "minecraft:attached_to_leaves"
+                                                                                            },
+                                                                                            {
+                                                                                                "block_provider": {
+                                                                                                    "state": {
+                                                                                                        "Name": "minecraft:spruce_leaves",
+                                                                                                        "Properties": {
+                                                                                                            "distance": "2",
+                                                                                                            "persistent": "false",
+                                                                                                            "waterlogged": "false"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "type": "minecraft:simple_state_provider"
+                                                                                                },
+                                                                                                "directions": [
+                                                                                                    "west"
+                                                                                                ],
+                                                                                                "exclusion_radius_xz": 0,
+                                                                                                "exclusion_radius_y": 0,
+                                                                                                "probability": 0.75,
+                                                                                                "required_empty_blocks": 1,
+                                                                                                "type": "minecraft:attached_to_leaves"
+                                                                                            },
+                                                                                            {
+                                                                                                "block_provider": {
+                                                                                                    "state": {
+                                                                                                        "Name": "minecraft:spruce_leaves",
+                                                                                                        "Properties": {
+                                                                                                            "distance": "2",
+                                                                                                            "persistent": "false",
+                                                                                                            "waterlogged": "false"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "type": "minecraft:simple_state_provider"
+                                                                                                },
+                                                                                                "directions": [
+                                                                                                    "north"
+                                                                                                ],
+                                                                                                "exclusion_radius_xz": 0,
+                                                                                                "exclusion_radius_y": 0,
+                                                                                                "probability": 0.75,
+                                                                                                "required_empty_blocks": 1,
+                                                                                                "type": "minecraft:attached_to_leaves"
+                                                                                            }
+                                                                                        ],
+                                                                                        "dirt_provider": {
+                                                                                            "state": {
+                                                                                                "Name": "minecraft:spruce_log",
+                                                                                                "Properties": {
+                                                                                                    "axis": "y"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "minecraft:simple_state_provider"
+                                                                                        },
+                                                                                        "foliage_placer": {
+                                                                                            "crown_height": 8,
+                                                                                            "offset": 3,
+                                                                                            "radius": 1,
+                                                                                            "type": "minecraft:mega_pine_foliage_placer"
+                                                                                        },
+                                                                                        "foliage_provider": {
+                                                                                            "state": {
+                                                                                                "Name": "minecraft:spruce_leaves",
+                                                                                                "Properties": {
+                                                                                                    "distance": "1",
+                                                                                                    "persistent": "false",
+                                                                                                    "waterlogged": "false"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "minecraft:simple_state_provider"
+                                                                                        },
+                                                                                        "force_dirt": false,
+                                                                                        "ignore_vines": true,
+                                                                                        "minimum_size": {
+                                                                                            "limit": 0,
+                                                                                            "lower_size": 0,
+                                                                                            "upper_size": 0,
+                                                                                            "type": "minecraft:two_layers_feature_size"
+                                                                                        },
+                                                                                        "trunk_placer": {
+                                                                                            "base_height": 5,
+                                                                                            "height_rand_a": 0,
+                                                                                            "height_rand_b": 0,
+                                                                                            "type": "minecraft:straight_trunk_placer"
+                                                                                        },
+                                                                                        "trunk_provider": {
+                                                                                            "state": {
+                                                                                                "Name": "minecraft:spruce_log",
+                                                                                                "Properties": {
+                                                                                                    "axis": "y"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "minecraft:simple_state_provider"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "minecraft:tree"
+                                                                                },
+                                                                                "placement": [
+                                                                                    {
+                                                                                        "predicate": {
+                                                                                            "predicate": {
+                                                                                                "blocks": "minecraft:spruce_leaves",
+                                                                                                "offset": [
+                                                                                                    0,
+                                                                                                    6,
+                                                                                                    0
+                                                                                                ],
+                                                                                                "type": "minecraft:matching_blocks"
+                                                                                            },
+                                                                                            "type": "minecraft:not"
+                                                                                        },
+                                                                                        "type": "minecraft:block_predicate_filter"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "feature": {
+                                                                                    "config": {
+                                                                                        "features": [
+                                                                                            {
+                                                                                                "feature": "wythers:vegetation/tree/huge_spruce/branch_set/5",
+                                                                                                "placement": [
+                                                                                                    {
+                                                                                                        "xz_spread": 0,
+                                                                                                        "y_spread": {
+                                                                                                            "min_inclusive": -8,
+                                                                                                            "max_inclusive": -6,
+                                                                                                            "type": "minecraft:uniform"
+                                                                                                        },
+                                                                                                        "type": "minecraft:random_offset"
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "feature": "wythers:vegetation/tree/huge_spruce/branch_set/5",
+                                                                                                "placement": [
+                                                                                                    {
+                                                                                                        "xz_spread": 0,
+                                                                                                        "y_spread": {
+                                                                                                            "min_inclusive": -2,
+                                                                                                            "max_inclusive": 0,
+                                                                                                            "type": "minecraft:uniform"
+                                                                                                        },
+                                                                                                        "type": "minecraft:random_offset"
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    "type": "minecraft:simple_random_selector"
+                                                                                },
+                                                                                "placement": [
+                                                                                    {
+                                                                                        "count": 2,
+                                                                                        "type": "minecraft:count"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "type": "minecraft:simple_random_selector"
+                                                                },
+                                                                "placement": [
+                                                                    {
+                                                                        "predicate": {
+                                                                            "blocks": "minecraft:spruce_log",
+                                                                            "offset": [
+                                                                                0,
+                                                                                10,
+                                                                                0
+                                                                            ],
+                                                                            "type": "minecraft:matching_blocks"
+                                                                        },
+                                                                        "type": "minecraft:block_predicate_filter"
+                                                                    },
+                                                                    {
+                                                                        "xz_spread": 0,
+                                                                        "y_spread": 10,
+                                                                        "type": "minecraft:random_offset"
+                                                                    },
+                                                                    {
+                                                                        "direction_of_search": "up",
+                                                                        "max_steps": 15,
+                                                                        "target_condition": {
+                                                                            "predicates": [
+                                                                                {
+                                                                                    "blocks": "minecraft:air",
+                                                                                    "offset": [
+                                                                                        0,
+                                                                                        1,
+                                                                                        0
+                                                                                    ],
+                                                                                    "type": "minecraft:matching_blocks"
+                                                                                },
+                                                                                {
+                                                                                    "blocks": "minecraft:spruce_log",
+                                                                                    "type": "minecraft:matching_blocks"
+                                                                                }
+                                                                            ],
+                                                                            "type": "minecraft:all_of"
+                                                                        },
+                                                                        "type": "minecraft:environment_scan"
+                                                                    },
+                                                                    {
+                                                                        "count": 40,
+                                                                        "type": "minecraft:count"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "type": "minecraft:simple_random_selector"
+                                                },
+                                                "placement": [
+                                                    {
+                                                        "predicate": {
+                                                            "blocks": "minecraft:spruce_log",
+                                                            "type": "minecraft:matching_blocks"
+                                                        },
+                                                        "type": "minecraft:block_predicate_filter"
+                                                    },
+                                                    {
+                                                        "xz_spread": 0,
+                                                        "y_spread": 15,
+                                                        "type": "minecraft:random_offset"
+                                                    },
+                                                    {
+                                                        "xz_spread": 0,
+                                                        "y_spread": 12,
+                                                        "type": "minecraft:random_offset"
+                                                    },
+                                                    {
+                                                        "direction_of_search": "up",
+                                                        "max_steps": 8,
+                                                        "target_condition": {
+                                                            "predicates": [
+                                                                {
+                                                                    "blocks": "minecraft:air",
+                                                                    "offset": [
+                                                                        0,
+                                                                        1,
+                                                                        0
+                                                                    ],
+                                                                    "type": "minecraft:matching_blocks"
+                                                                },
+                                                                {
+                                                                    "blocks": "minecraft:spruce_log",
+                                                                    "type": "minecraft:matching_blocks"
+                                                                }
+                                                            ],
+                                                            "type": "minecraft:all_of"
+                                                        },
+                                                        "type": "minecraft:environment_scan"
+                                                    },
+                                                    {
+                                                        "count": 96,
+                                                        "type": "minecraft:count"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "type": "minecraft:simple_random_selector"
+                                },
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "type": "minecraft:replaceable"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    },
+                                    {
+                                        "count": 28,
+                                        "type": "minecraft:count"
+                                    }
+                                ]
+                            },
+                            {
+                                "feature": "wythers:vegetation/tree/huge_spruce/roots/5",
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "blocks": "minecraft:spruce_log",
+                                            "type": "minecraft:matching_blocks"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    }
+                                ]
+                            },
+                            {
+                                "feature": "wythers:vegetation/tree/huge_spruce/rooted_dirt/2",
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "blocks": "minecraft:spruce_log",
+                                            "type": "minecraft:matching_blocks"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "minecraft:simple_random_selector"
+                },
+                "placement": [
+                    {
+                        "predicate": {
+                            "state": {
+                                "Name": "minecraft:spruce_sapling",
+                                "Properties": {
+                                    "stage": "0"
+                                }
+                            },
+                            "type": "minecraft:would_survive"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    },
+                    {
+                        "predicate": {
+                            "predicates": [
+                                {
+                                    "offset": [
+                                        1,
+                                        -2,
+                                        0
+                                    ],
+                                    "type": "minecraft:solid"
+                                },
+                                {
+                                    "offset": [
+                                        1,
+                                        -2,
+                                        1
+                                    ],
+                                    "type": "minecraft:solid"
+                                },
+                                {
+                                    "offset": [
+                                        0,
+                                        -2,
+                                        1
+                                    ],
+                                    "type": "minecraft:solid"
+                                },
+                                {
+                                    "offset": [
+                                        -1,
+                                        -2,
+                                        1
+                                    ],
+                                    "type": "minecraft:solid"
+                                },
+                                {
+                                    "offset": [
+                                        -1,
+                                        -2,
+                                        0
+                                    ],
+                                    "type": "minecraft:solid"
+                                },
+                                {
+                                    "offset": [
+                                        -1,
+                                        -2,
+                                        -1
+                                    ],
+                                    "type": "minecraft:solid"
+                                },
+                                {
+                                    "offset": [
+                                        0,
+                                        -2,
+                                        -1
+                                    ],
+                                    "type": "minecraft:solid"
+                                },
+                                {
+                                    "offset": [
+                                        1,
+                                        -2,
+                                        -1
+                                    ],
+                                    "type": "minecraft:solid"
+                                }
+                            ],
+                            "type": "minecraft:all_of"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    },
+                    {
+                        "count": 64,
+                        "type": "minecraft:count"
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "minecraft:simple_random_selector"
+}

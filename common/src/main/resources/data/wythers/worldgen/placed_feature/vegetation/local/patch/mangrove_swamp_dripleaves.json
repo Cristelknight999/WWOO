@@ -1,0 +1,108 @@
+{
+  "feature": {
+    "type": "minecraft:random_patch",
+    "config": {
+      "tries": 32,
+      "xz_spread": 5,
+      "y_spread": 1,
+      "feature": {
+        "feature": "minecraft:dripleaf",
+        "placement": [
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE"
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -1,
+                0
+              ],
+              "blocks": "minecraft:mud"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": -0.45
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 1000,
+      "noise_offset": 0.45
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 150,
+      "noise_offset": 0.3
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "weight": 1,
+            "data": 10
+          },
+          {
+            "weight": 5,
+            "data": 5
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "blocks": "minecraft:air"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": "minecraft:mud"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "feature": {
+    "type": "minecraft:flower",
+    "config": {
+      "tries": 64,
+      "xz_spread": 7,
+      "y_spread": 3,
+      "feature": {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 2,
+                  "data": {
+                    "Name": "minecraft:red_tulip"
+                  }
+                },
+                {
+                  "weight": 2,
+                  "data": {
+                    "Name": "minecraft:orange_tulip"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:dandelion"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:poppy"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -1,
+                0
+              ],
+              "blocks": "minecraft:grass_block"
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 6
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    }
+  ]
+}

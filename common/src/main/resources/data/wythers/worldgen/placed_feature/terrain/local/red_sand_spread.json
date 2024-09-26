@@ -1,0 +1,149 @@
+{
+  "feature": {
+    "type": "minecraft:random_patch",
+    "config": {
+      "tries": 256,
+      "xz_spread": 5,
+      "y_spread": 3,
+      "feature": {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:red_sand"
+              }
+            }
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": [
+                    "minecraft:grass_block"
+                  ]
+                },
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      0
+                    ],
+                    "blocks": "minecraft:air"
+                  }
+                },
+                {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:red_sand"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:red_sand"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:red_sand"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:red_sand"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:red_sand"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:red_sand"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "blocks": "minecraft:red_sand"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        -1
+                      ],
+                      "blocks": "minecraft:red_sand"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 20
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": 0
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

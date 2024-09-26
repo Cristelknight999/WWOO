@@ -1,0 +1,54 @@
+{
+  "feature": "wythers:vegetation/tree/bayou",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": -0.45
+    },
+    {
+      "type": "minecraft:count",
+      "count": 25
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:mangrove_propagule",
+          "Properties": {
+            "waterlogged": "false",
+            "stage": "0",
+            "hanging": "false",
+            "age": "0"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": [
+          "minecraft:dirt"
+        ]
+      }
+    }
+  ]
+}

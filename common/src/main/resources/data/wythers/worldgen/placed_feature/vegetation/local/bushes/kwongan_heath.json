@@ -1,0 +1,276 @@
+{
+  "feature": {
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.01,
+        "feature": {
+          "feature": "wythers:vegetation/tree/acacia_forest",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:grass_block",
+                  "minecraft:packed_mud",
+                  "minecraft:sand",
+                  "minecraft:red_sand"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.01,
+        "feature": {
+          "feature": "wythers:vegetation/tree/olive",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:grass_block",
+                  "minecraft:packed_mud",
+                  "minecraft:sand",
+                  "minecraft:red_sand"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.3,
+        "feature": {
+          "feature": "wythers:vegetation/tree/scrub_birch",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:grass_block",
+                  "minecraft:packed_mud",
+                  "minecraft:sand",
+                  "minecraft:red_sand"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "wythers:vegetation/tree/scrub_azalea",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:grass_block",
+                  "minecraft:packed_mud",
+                  "minecraft:sand",
+                  "minecraft:red_sand"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.3,
+        "feature": {
+          "feature": "wythers:vegetation/tree/scrub_jungle",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:grass_block",
+                  "minecraft:packed_mud",
+                  "minecraft:sand",
+                  "minecraft:red_sand"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:vegetation/tree/scrub_acacia",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "blocks": "minecraft:air"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:grass_block",
+              "minecraft:packed_mud",
+              "minecraft:sand",
+              "minecraft:red_sand"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+,
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 30,
+      "noise_factor": 50,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:surface_water_depth_filter",
+      "max_water_depth": 0
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:grass_block",
+              "minecraft:packed_mud",
+              "minecraft:red_sand"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

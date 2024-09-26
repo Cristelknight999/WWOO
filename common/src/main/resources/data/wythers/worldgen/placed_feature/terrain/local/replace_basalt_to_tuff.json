@@ -1,0 +1,60 @@
+{
+  "feature": {
+    "type": "minecraft:ore",
+    "config": {
+      "size": 64,
+      "discard_chance_on_air_exposure": 0,
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:smooth_basalt"
+          },
+          "state": {
+            "Name": "minecraft:tuff"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:blackstone"
+          },
+          "state": {
+            "Name": "minecraft:tuff"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block_state": {
+              "Name": "minecraft:blackstone_slab",
+              "Properties": {
+                "type": "double",
+                "waterlogged": "false"
+              }
+            }
+          },
+          "state": {
+            "Name": "minecraft:tuff"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 100
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

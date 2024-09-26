@@ -1,0 +1,82 @@
+{
+  "feature": {
+    "type": "minecraft:ore",
+    "config": {
+      "size": 32,
+      "discard_chance_on_air_exposure": 0,
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:basalt"
+          },
+          "state": {
+            "Name": "minecraft:cave_air"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:deepslate"
+          },
+          "state": {
+            "Name": "minecraft:cave_air"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:stone"
+          },
+          "state": {
+            "Name": "minecraft:cave_air"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 256
+    },
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 10
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE",
+      "min_inclusive": -90,
+      "max_inclusive": -60
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 120,
+      "noise_offset": 0.05
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 120,
+      "noise_offset": -0.05
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

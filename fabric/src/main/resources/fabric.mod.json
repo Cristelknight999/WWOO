@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "William Wythers",
+    "Cristelknight"
+  ],
+  "contact": {
+    "homepage": "${homepage}"
+  },
+  "entrypoints": {
+    "main": [
+      "de.cristelknight.wwoo.fabric.WWOOFabric"
+    ]
+  },
+  "license": "${mod_license}",
+  "icon": "pack.png",
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "${discord}"
+      }
+    }
+  },
+  "environment": "*",
+  "depends": {
+    "fabricloader": ">=${fabric_loader_min_version}",
+    "fabric": "*",
+    "minecraft": ">=${minecraft_version}"
+  }
+}

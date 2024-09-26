@@ -1,0 +1,194 @@
+{
+  "feature": {
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 16,
+    "xz_spread": 6,
+    "y_spread": 3,
+    "feature": {
+      "feature": {
+        "type": "minecraft:random_selector",
+        "config": {
+          "features": [
+            {
+              "chance": 0.3,
+              "feature": {
+                "feature": "wythers:vegetation/column/tall_grass",
+                "placement": [
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:air"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:sand",
+                            "minecraft:red_sand",
+                            "minecraft:packed_mud"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "blocks": "minecraft:air"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            0
+                          ],
+                          "blocks": "minecraft:air"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:air"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:air"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "default": {
+            "feature": "wythers:vegetation/column/grass",
+            "placement": [
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:air"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:sand",
+                        "minecraft:red_sand",
+                            "minecraft:packed_mud"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:air"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      },
+      "placement": []
+    }
+  }
+}
+,
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 80,
+      "noise_offset": 0.3
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 10,
+      "noise_factor": 20,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

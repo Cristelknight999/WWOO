@@ -1,0 +1,179 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:packed_mud"
+                    }
+                },
+                "rules": []
+            },
+            "target": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": "minecraft:mud"
+                    },
+                    {
+                        "type": "minecraft:any_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": "minecraft:packed_mud"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -1,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:cobbled_deepslate",
+                                    "minecraft:smooth_sandstone",
+                                    "minecraft:packed_mud",
+                                    "minecraft:sand"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -2,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:smooth_sandstone"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -3,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:smooth_sandstone"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -4,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:smooth_sandstone"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -5,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:smooth_sandstone"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -6,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:smooth_sandstone"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -7,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:smooth_sandstone"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -8,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:smooth_sandstone"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    -9,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:smooth_sandstone"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 8,
+                "max_inclusive": 8
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": -1,
+            "noise_factor": 1000,
+            "noise_offset": 0.45
+        },
+        {
+            "type": "minecraft:count",
+            "count": 30
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR"
+        },
+        {
+            "type": "minecraft:random_offset",
+            "xz_spread": 0,
+            "y_spread": -5
+        }
+    ]
+}

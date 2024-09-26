@@ -1,0 +1,152 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:moss_block"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                                0,
+                                1,
+                                0
+                            ],
+                            "blocks": "minecraft:light"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:mud"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": "minecraft:cave_air"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:deepslate"
+                            },
+                            {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:light",
+                                            "minecraft:moss_block"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            0
+                                        ],
+                                        "blocks": [
+                                            "minecraft:light",
+                                            "minecraft:moss_block"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:light",
+                                            "minecraft:moss_block"
+                                        ]
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            -1
+                                        ],
+                                        "blocks": [
+                                            "minecraft:light",
+                                            "minecraft:moss_block"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:deepslate"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": "minecraft:light"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 8
+            },
+            "half_height": 2
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 3
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "type": "minecraft:constant",
+                "value": {
+                    "absolute": 194
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,888 @@
+{
+    "feature": {
+        "type": "minecraft:simple_random_selector",
+        "config": {
+            "features": [
+                {
+                    "feature": {
+                        "type": "minecraft:simple_block",
+                        "config": {
+                            "to_place": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                    "Name": "minecraft:jungle_wood",
+                                    "Properties": {
+                                        "axis": "y"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "placement": [
+                        {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                                "type": "minecraft:all_of",
+                                "predicates": [
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -1,
+                                            0
+                                        ],
+                                        "blocks": "minecraft:grass_block"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -1,
+                                            -1
+                                        ],
+                                        "blocks": "minecraft:sand"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -1,
+                                            -5
+                                        ],
+                                        "blocks": "minecraft:water"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -1,
+                                            -6
+                                        ],
+                                        "blocks": "minecraft:water"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -1,
+                                            -7
+                                        ],
+                                        "blocks": "minecraft:water"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                            0,
+                                            -1,
+                                            -8
+                                        ],
+                                        "blocks": "minecraft:water"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            2,
+                                            0,
+                                            2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            2,
+                                            0,
+                                            1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            2,
+                                            0,
+                                            0
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            2,
+                                            0,
+                                            -1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            2,
+                                            0,
+                                            -2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            0
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            -1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            1,
+                                            0,
+                                            -2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            -1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            0,
+                                            0,
+                                            -2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            0
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            -1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -1,
+                                            0,
+                                            -2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -2,
+                                            0,
+                                            2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -2,
+                                            0,
+                                            1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -2,
+                                            0,
+                                            0
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -2,
+                                            0,
+                                            -1
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                        "type": "minecraft:matching_block_tag",
+                                        "offset": [
+                                            -2,
+                                            0,
+                                            -2
+                                        ],
+                                        "tag": "wythers:air_and_plants"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:random_patch",
+                        "config": {
+                            "tries": 64,
+                            "xz_spread": 16,
+                            "y_spread": 5,
+                            "feature": {
+                                "feature": {
+                                    "type": "minecraft:simple_random_selector",
+                                    "config": {
+                                        "features": [
+                                            {
+                                                "feature": {
+                                                    "type": "minecraft:block_column",
+                                                    "config": {
+                                                        "direction": "north",
+                                                        "allowed_placement": {
+                                                            "type": "minecraft:matching_blocks",
+                                                            "blocks": "minecraft:air"
+                                                        },
+                                                        "prioritize_tip": false,
+                                                        "layers": [
+                                                            {
+                                                                "height": {
+                                                                    "type": "minecraft:biased_to_bottom",
+                                                                    "min_inclusive": 3,
+                                                                    "max_inclusive": 5
+                                                                },
+                                                                "provider": {
+                                                                    "type": "minecraft:simple_state_provider",
+                                                                    "state": {
+                                                                        "Name": "minecraft:jungle_wood",
+                                                                        "Properties": {
+                                                                            "axis": "z"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "placement": [
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:matching_blocks",
+                                                            "offset": [
+                                                                0,
+                                                                -1,
+                                                                3
+                                                            ],
+                                                            "blocks": "minecraft:jungle_wood"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:not",
+                                                            "predicate": {
+                                                                "type": "minecraft:matching_block_tag",
+                                                                "offset": [
+                                                                    0,
+                                                                    -3,
+                                                                    0
+                                                                ],
+                                                                "tag": "wythers:air_and_plants"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:not",
+                                                            "predicate": {
+                                                                "type": "minecraft:any_of",
+                                                                "predicates": [
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -1,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    },
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -2,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    },
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -3,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    },
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -4,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "feature": {
+                                                    "type": "minecraft:block_column",
+                                                    "config": {
+                                                        "direction": "north",
+                                                        "allowed_placement": {
+                                                            "type": "minecraft:matching_blocks",
+                                                            "blocks": "minecraft:air"
+                                                        },
+                                                        "prioritize_tip": false,
+                                                        "layers": [
+                                                            {
+                                                                "height": {
+                                                                    "type": "minecraft:biased_to_bottom",
+                                                                    "min_inclusive": 3,
+                                                                    "max_inclusive": 4
+                                                                },
+                                                                "provider": {
+                                                                    "type": "minecraft:simple_state_provider",
+                                                                    "state": {
+                                                                        "Name": "minecraft:jungle_wood",
+                                                                        "Properties": {
+                                                                            "axis": "z"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "placement": [
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:matching_block_tag",
+                                                            "offset": [
+                                                                0,
+                                                                -1,
+                                                                2
+                                                            ],
+                                                            "tag": "wythers:air_and_plants"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:not",
+                                                            "predicate": {
+                                                                "type": "minecraft:matching_block_tag",
+                                                                "offset": [
+                                                                    0,
+                                                                    -2,
+                                                                    0
+                                                                ],
+                                                                "tag": "wythers:air_and_plants"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:matching_block_tag",
+                                                            "offset": [
+                                                                0,
+                                                                0,
+                                                                2
+                                                            ],
+                                                            "tag": "wythers:air_and_plants"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:matching_block_tag",
+                                                            "offset": [
+                                                                1,
+                                                                0,
+                                                                1
+                                                            ],
+                                                            "tag": "wythers:air_and_plants"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:matching_block_tag",
+                                                            "offset": [
+                                                                -1,
+                                                                0,
+                                                                1
+                                                            ],
+                                                            "tag": "wythers:air_and_plants"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:not",
+                                                            "predicate": {
+                                                                "type": "minecraft:any_of",
+                                                                "predicates": [
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -1,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    },
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -2,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    },
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -3,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    },
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -4,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "feature": {
+                                                    "type": "minecraft:block_column",
+                                                    "config": {
+                                                        "direction": "north",
+                                                        "allowed_placement": {
+                                                            "type": "minecraft:matching_blocks",
+                                                            "blocks": "minecraft:air"
+                                                        },
+                                                        "prioritize_tip": false,
+                                                        "layers": [
+                                                            {
+                                                                "height": 2,
+                                                                "provider": {
+                                                                    "type": "minecraft:simple_state_provider",
+                                                                    "state": {
+                                                                        "Name": "minecraft:jungle_wood",
+                                                                        "Properties": {
+                                                                            "axis": "z"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "placement": [
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:matching_blocks",
+                                                            "offset": [
+                                                                0,
+                                                                -1,
+                                                                4
+                                                            ],
+                                                            "blocks": "minecraft:jungle_wood"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:not",
+                                                            "predicate": {
+                                                                "type": "minecraft:matching_block_tag",
+                                                                "offset": [
+                                                                    0,
+                                                                    -3,
+                                                                    0
+                                                                ],
+                                                                "tag": "wythers:air_and_plants"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:not",
+                                                            "predicate": {
+                                                                "type": "minecraft:any_of",
+                                                                "predicates": [
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -1,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    },
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -2,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    },
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -3,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    },
+                                                                    {
+                                                                        "type": "minecraft:matching_blocks",
+                                                                        "offset": [
+                                                                            0,
+                                                                            -4,
+                                                                            0
+                                                                        ],
+                                                                        "blocks": "minecraft:grass_block"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "feature": {
+                                                    "type": "minecraft:tree",
+                                                    "config": {
+                                                        "ignore_vines": true,
+                                                        "force_dirt": false,
+                                                        "minimum_size": {
+                                                            "type": "minecraft:two_layers_feature_size",
+                                                            "min_clipped_height": 10,
+                                                            "limit": 1,
+                                                            "lower_size": 0,
+                                                            "upper_size": 2
+                                                        },
+                                                        "dirt_provider": {
+                                                            "type": "minecraft:simple_state_provider",
+                                                            "state": {
+                                                                "Name": "minecraft:air"
+                                                            }
+                                                        },
+                                                        "trunk_provider": {
+                                                            "type": "minecraft:simple_state_provider",
+                                                            "state": {
+                                                                "Name": "minecraft:jungle_wood",
+                                                                "Properties": {
+                                                                    "axis": "y"
+                                                                }
+                                                            }
+                                                        },
+                                                        "foliage_provider": {
+                                                            "type": "minecraft:simple_state_provider",
+                                                            "state": {
+                                                                "Name": "minecraft:azalea_leaves",
+                                                                "Properties": {
+                                                                    "distance": "7",
+                                                                    "persistent": "false",
+                                                                    "waterlogged": "false"
+                                                                }
+                                                            }
+                                                        },
+                                                        "trunk_placer": {
+                                                            "type": "minecraft:straight_trunk_placer",
+                                                            "base_height": 2,
+                                                            "height_rand_a": 0,
+                                                            "height_rand_b": 0
+                                                        },
+                                                        "foliage_placer": {
+                                                            "type": "minecraft:cherry_foliage_placer",
+                                                            "radius": 4,
+                                                            "offset": 0,
+                                                            "height": 4,
+                                                            "wide_bottom_layer_hole_chance": 1,
+                                                            "corner_hole_chance": 1,
+                                                            "hanging_leaves_chance": 0.5,
+                                                            "hanging_leaves_extension_chance": 1
+                                                        },
+                                                        "decorators": []
+                                                    }
+                                                },
+                                                "placement": [
+                                                    {
+                                                        "type": "minecraft:block_predicate_filter",
+                                                        "predicate": {
+                                                            "type": "minecraft:all_of",
+                                                            "predicates": [
+                                                                {
+                                                                    "type": "minecraft:matching_blocks",
+                                                                    "offset": [
+                                                                        0,
+                                                                        -1,
+                                                                        2
+                                                                    ],
+                                                                    "blocks": "minecraft:jungle_wood"
+                                                                },
+                                                                {
+                                                                    "type": "minecraft:matching_blocks",
+                                                                    "offset": [
+                                                                        0,
+                                                                        -1,
+                                                                        1
+                                                                    ],
+                                                                    "blocks": "minecraft:jungle_wood"
+                                                                },
+                                                                {
+                                                                    "type": "minecraft:matching_blocks",
+                                                                    "offset": [
+                                                                        0,
+                                                                        -1,
+                                                                        0
+                                                                    ],
+                                                                    "blocks": "minecraft:air"
+                                                                },
+                                                                {
+                                                                    "type": "minecraft:matching_blocks",
+                                                                    "offset": [
+                                                                        0,
+                                                                        -2,
+                                                                        0
+                                                                    ],
+                                                                    "blocks": "minecraft:air"
+                                                                },
+                                                                {
+                                                                    "type": "minecraft:matching_blocks",
+                                                                    "offset": [
+                                                                        0,
+                                                                        -3,
+                                                                        0
+                                                                    ],
+                                                                    "blocks": "minecraft:air"
+                                                                },
+                                                                {
+                                                                    "type": "minecraft:matching_blocks",
+                                                                    "offset": [
+                                                                        0,
+                                                                        0,
+                                                                        1
+                                                                    ],
+                                                                    "blocks": "minecraft:air"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                },
+                                "placement": [
+                                    {
+                                        "type": "minecraft:count",
+                                        "count": 8
+                                    },
+                                    {
+                                        "type": "minecraft:block_predicate_filter",
+                                        "predicate": {
+                                            "type": "minecraft:all_of",
+                                            "predicates": [
+                                                {
+                                                    "type": "minecraft:matching_block_tag",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        0
+                                                    ],
+                                                    "tag": "wythers:air_and_plants"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        0,
+                                                        -1,
+                                                        1
+                                                    ],
+                                                    "blocks": "minecraft:jungle_wood"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_block_tag",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "tag": "wythers:air_and_plants"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_block_tag",
+                                                    "offset": [
+                                                        0,
+                                                        -1,
+                                                        0
+                                                    ],
+                                                    "tag": "wythers:air_and_plants"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "placement": [
+                        {
+                            "type": "minecraft:count",
+                            "count": 25
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 1
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+        },
+        {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                    "Name": "minecraft:fern"
+                }
+            }
+        },
+        {
+            "type": "minecraft:count",
+            "count": 30
+        }
+    ]
+}

@@ -1,0 +1,223 @@
+{
+    "config": {
+        "features": [
+            {
+                "feature": {
+                    "config": {
+                        "allowed_placement": {
+                            "blocks": "#wythers:tree_branch_replaceable",
+                            "type": "minecraft:matching_blocks"
+                        },
+                        "direction": "east",
+                        "layers": [
+                            {
+                                "height": {
+                                    "min_inclusive": 1,
+                                    "max_inclusive": 2,
+                                    "type": "minecraft:uniform"
+                                },
+                                "provider": {
+                                    "state": {
+                                        "Name": "minecraft:spruce_log",
+                                        "Properties": {
+                                            "axis": "x"
+                                        }
+                                    },
+                                    "type": "minecraft:simple_state_provider"
+                                }
+                            }
+                        ],
+                        "prioritize_tip": false
+                    },
+                    "type": "minecraft:block_column"
+                },
+                "placement": [
+                    {
+                        "xz_spread": {
+                            "min_inclusive": 0,
+                            "max_inclusive": 1,
+                            "type": "minecraft:uniform"
+                        },
+                        "y_spread": 0,
+                        "type": "minecraft:random_offset"
+                    },
+                    {
+                        "predicate": {
+                            "blocks": "minecraft:spruce_log",
+                            "offset": [
+                                -1,
+                                -1,
+                                0
+                            ],
+                            "type": "minecraft:matching_blocks"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    }
+                ]
+            },
+            {
+                "feature": {
+                    "config": {
+                        "allowed_placement": {
+                            "blocks": "#wythers:tree_branch_replaceable",
+                            "type": "minecraft:matching_blocks"
+                        },
+                        "direction": "south",
+                        "layers": [
+                            {
+                                "height": {
+                                    "min_inclusive": 1,
+                                    "max_inclusive": 2,
+                                    "type": "minecraft:uniform"
+                                },
+                                "provider": {
+                                    "state": {
+                                        "Name": "minecraft:spruce_log",
+                                        "Properties": {
+                                            "axis": "z"
+                                        }
+                                    },
+                                    "type": "minecraft:simple_state_provider"
+                                }
+                            }
+                        ],
+                        "prioritize_tip": false
+                    },
+                    "type": "minecraft:block_column"
+                },
+                "placement": [
+                    {
+                        "xz_spread": {
+                            "min_inclusive": 0,
+                            "max_inclusive": 1,
+                            "type": "minecraft:uniform"
+                        },
+                        "y_spread": 0,
+                        "type": "minecraft:random_offset"
+                    },
+                    {
+                        "predicate": {
+                            "blocks": "minecraft:spruce_log",
+                            "offset": [
+                                0,
+                                -1,
+                                -1
+                            ],
+                            "type": "minecraft:matching_blocks"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    }
+                ]
+            },
+            {
+                "feature": {
+                    "config": {
+                        "allowed_placement": {
+                            "blocks": "#wythers:tree_branch_replaceable",
+                            "type": "minecraft:matching_blocks"
+                        },
+                        "direction": "west",
+                        "layers": [
+                            {
+                                "height": {
+                                    "min_inclusive": 1,
+                                    "max_inclusive": 2,
+                                    "type": "minecraft:uniform"
+                                },
+                                "provider": {
+                                    "state": {
+                                        "Name": "minecraft:spruce_log",
+                                        "Properties": {
+                                            "axis": "x"
+                                        }
+                                    },
+                                    "type": "minecraft:simple_state_provider"
+                                }
+                            }
+                        ],
+                        "prioritize_tip": false
+                    },
+                    "type": "minecraft:block_column"
+                },
+                "placement": [
+                    {
+                        "xz_spread": {
+                            "min_inclusive": -1,
+                            "max_inclusive": 0,
+                            "type": "minecraft:uniform"
+                        },
+                        "y_spread": 0,
+                        "type": "minecraft:random_offset"
+                    },
+                    {
+                        "predicate": {
+                            "blocks": "minecraft:spruce_log",
+                            "offset": [
+                                1,
+                                -1,
+                                0
+                            ],
+                            "type": "minecraft:matching_blocks"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    }
+                ]
+            },
+            {
+                "feature": {
+                    "config": {
+                        "allowed_placement": {
+                            "blocks": "#wythers:tree_branch_replaceable",
+                            "type": "minecraft:matching_blocks"
+                        },
+                        "direction": "north",
+                        "layers": [
+                            {
+                                "height": {
+                                    "min_inclusive": 1,
+                                    "max_inclusive": 2,
+                                    "type": "minecraft:uniform"
+                                },
+                                "provider": {
+                                    "state": {
+                                        "Name": "minecraft:spruce_log",
+                                        "Properties": {
+                                            "axis": "z"
+                                        }
+                                    },
+                                    "type": "minecraft:simple_state_provider"
+                                }
+                            }
+                        ],
+                        "prioritize_tip": false
+                    },
+                    "type": "minecraft:block_column"
+                },
+                "placement": [
+                    {
+                        "xz_spread": {
+                            "min_inclusive": -1,
+                            "max_inclusive": 0,
+                            "type": "minecraft:uniform"
+                        },
+                        "y_spread": 0,
+                        "type": "minecraft:random_offset"
+                    },
+                    {
+                        "predicate": {
+                            "blocks": "minecraft:spruce_log",
+                            "offset": [
+                                0,
+                                -1,
+                                1
+                            ],
+                            "type": "minecraft:matching_blocks"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "minecraft:simple_random_selector"
+}

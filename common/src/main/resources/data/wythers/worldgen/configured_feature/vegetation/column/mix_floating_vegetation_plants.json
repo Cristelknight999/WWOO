@@ -1,0 +1,529 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "wythers:vegetation/column/floating_vegetation_mat_dripleaf_north",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  2,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:azalea_leaves"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:water"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:water"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "wythers:vegetation/column/floating_vegetation_mat_dripleaf_south",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  2,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:azalea_leaves"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:water"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:water"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "wythers:vegetation/column/floating_vegetation_mat_dripleaf_east",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  2,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:azalea_leaves"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:water"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:water"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "wythers:vegetation/column/floating_vegetation_mat_dripleaf_west",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  2,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:azalea_leaves"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:water"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:water"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:vegetation/column/floating_vegetation_mat_tall_grass",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              2,
+              0
+            ],
+            "blocks": "minecraft:air"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:air"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "blocks": "minecraft:azalea_leaves"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:water"
+            ]
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:any_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "blocks": "minecraft:water"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "blocks": "minecraft:water"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blocks": "minecraft:water"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "blocks": "minecraft:water"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

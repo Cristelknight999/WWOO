@@ -1,0 +1,350 @@
+{
+    "feature": {
+        "type": "minecraft:simple_random_selector",
+        "config": {
+            "features": [
+                {
+                    "feature": {
+                        "type": "minecraft:disk",
+                        "config": {
+                            "state_provider": {
+                                "fallback": {
+                                    "type": "minecraft:weighted_state_provider",
+                                    "entries": [
+                                        {
+                                            "weight": 1,
+                                            "data": {
+                                                "Name": "minecraft:deepslate_diamond_ore"
+                                            }
+                                        },
+                                        {
+                                            "weight": 2,
+                                            "data": {
+                                                "Name": "minecraft:deepslate_redstone_ore"
+                                            }
+                                        },
+                                        {
+                                            "weight": 5,
+                                            "data": {
+                                                "Name": "minecraft:deepslate_gold_ore"
+                                            }
+                                        },
+                                        {
+                                            "weight": 30,
+                                            "data": {
+                                                "Name": "minecraft:deepslate_iron_ore"
+                                            }
+                                        },
+                                        {
+                                            "weight": 1000,
+                                            "data": {
+                                                "Name": "minecraft:smooth_basalt"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "rules": [
+                                    {
+                                        "if_true": {
+                                            "type": "minecraft:any_of",
+                                            "predicates": [
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        0,
+                                                        1,
+                                                        0
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        0
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        0
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                }
+                                            ]
+                                        },
+                                        "then": {
+                                            "type": "minecraft:simple_state_provider",
+                                            "state": {
+                                                "Name": "minecraft:blackstone"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "target": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": [
+                                    "minecraft:deepslate",
+                                    "minecraft:tuff",
+                                    "minecraft:water"
+                                ]
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 6,
+                                "max_inclusive": 7
+                            },
+                            "half_height": 2
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:disk",
+                        "config": {
+                            "state_provider": {
+                                "fallback": {
+                                    "type": "minecraft:weighted_state_provider",
+                                    "entries": [
+                                        {
+                                            "weight": 1,
+                                            "data": {
+                                                "Name": "minecraft:deepslate_diamond_ore"
+                                            }
+                                        },
+                                        {
+                                            "weight": 2,
+                                            "data": {
+                                                "Name": "minecraft:deepslate_redstone_ore"
+                                            }
+                                        },
+                                        {
+                                            "weight": 5,
+                                            "data": {
+                                                "Name": "minecraft:deepslate_gold_ore"
+                                            }
+                                        },
+                                        {
+                                            "weight": 30,
+                                            "data": {
+                                                "Name": "minecraft:deepslate_iron_ore"
+                                            }
+                                        },
+                                        {
+                                            "weight": 1000,
+                                            "data": {
+                                                "Name": "minecraft:smooth_basalt"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "rules": [
+                                    {
+                                        "if_true": {
+                                            "type": "minecraft:any_of",
+                                            "predicates": [
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        0,
+                                                        1,
+                                                        0
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        0
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        0
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                },
+                                                {
+                                                    "type": "minecraft:matching_blocks",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "blocks": "minecraft:lava"
+                                                }
+                                            ]
+                                        },
+                                        "then": {
+                                            "type": "minecraft:simple_state_provider",
+                                            "state": {
+                                                "Name": "minecraft:blackstone"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "target": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": [
+                                    "minecraft:deepslate",
+                                    "minecraft:tuff",
+                                    "minecraft:water"
+                                ]
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 6,
+                                "max_inclusive": 7
+                            },
+                            "half_height": 3
+                        }
+                    },
+                    "placement": []
+                }
+            ]
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 20
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "type": "minecraft:uniform",
+                "min_inclusive": {
+                    "absolute": -55
+                },
+                "max_inclusive": {
+                    "absolute": -60
+                }
+            }
+        },
+        {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+                "type": "minecraft:matching_fluids",
+                "fluids": "minecraft:lava"
+            }
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

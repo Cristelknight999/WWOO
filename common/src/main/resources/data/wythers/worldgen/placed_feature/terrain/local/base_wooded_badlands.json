@@ -1,0 +1,106 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:smooth_red_sandstone"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:light_gray_terracotta"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:orange_terracotta"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:yellow_terracotta"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:orange_terracotta"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:white_terracotta"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:orange_terracotta"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:red_terracotta"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:brown_terracotta"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                    "minecraft:light_gray_terracotta",
+                    "minecraft:yellow_terracotta",
+                    "minecraft:white_terracotta",
+                    "minecraft:red_terracotta",
+                    "minecraft:terracotta"
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 8
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 90
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR"
+        },
+        {
+            "type": "minecraft:random_offset",
+            "xz_spread": 0,
+            "y_spread": {
+                "type": "minecraft:uniform",
+                "min_inclusive": -10,
+                "max_inclusive": 0
+            }
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

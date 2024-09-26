@@ -1,0 +1,23 @@
+{
+  "config": {
+    "features": [
+      {
+        "feature": "wythers:vegetation/tree/huge_sequoia/branch/2_east",
+        "placement": []
+      },
+      {
+        "feature": "wythers:vegetation/tree/huge_sequoia/branch/2_south",
+        "placement": []
+      },
+      {
+        "feature": "wythers:vegetation/tree/huge_sequoia/branch/2_west",
+        "placement": []
+      },
+      {
+        "feature": "wythers:vegetation/tree/huge_sequoia/branch/2_north",
+        "placement": []
+      }
+    ]
+  },
+  "type": "minecraft:simple_random_selector"
+}

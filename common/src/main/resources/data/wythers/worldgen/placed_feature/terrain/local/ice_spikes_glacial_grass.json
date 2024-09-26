@@ -1,0 +1,74 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:packed_ice"
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:stone"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:blue_ice"
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                    "minecraft:grass_block",
+                    "minecraft:dirt",
+                    "minecraft:coarse_dirt",
+                    "minecraft:gravel",
+                    "minecraft:mud",
+                    "minecraft:snow_block"
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 3,
+                "max_inclusive": 7
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 30
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 0
+            }
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:surface_relative_threshold_filter",
+            "heightmap": "WORLD_SURFACE_WG",
+            "min_inclusive": -250,
+            "max_inclusive": -84
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+        },
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

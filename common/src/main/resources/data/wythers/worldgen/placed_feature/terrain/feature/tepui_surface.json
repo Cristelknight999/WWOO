@@ -1,0 +1,351 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:deepslate",
+                        "Properties": {
+                            "axis": "y"
+                        }
+                    }
+                },
+                "rules": [
+                    {
+                        "if_true": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                                {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "blocks": "minecraft:deepslate"
+                                }
+                            ]
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:smooth_basalt"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:smooth_basalt"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:mud"
+                            }
+                        }
+                    },
+                    {
+                        "if_true": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:mud"
+                        },
+                        "then": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                                "Name": "minecraft:muddy_mangrove_roots",
+                                "Properties": {
+                                    "axis": "y"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "target": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": [
+                                    "minecraft:tuff"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:not",
+                                "predicate": {
+                                    "type": "minecraft:any_of",
+                                    "predicates": [
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                1,
+                                                -1,
+                                                0
+                                            ],
+                                            "blocks": "minecraft:air"
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                -1,
+                                                -1,
+                                                0
+                                            ],
+                                            "blocks": "minecraft:air"
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                -1,
+                                                1
+                                            ],
+                                            "blocks": "minecraft:air"
+                                        },
+                                        {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                                0,
+                                                -1,
+                                                -1
+                                            ],
+                                            "blocks": "minecraft:air"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "blocks": "minecraft:deepslate"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:deepslate",
+                                    "minecraft:smooth_basalt"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:deepslate",
+                                    "minecraft:smooth_basalt"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "blocks": [
+                                    "minecraft:deepslate",
+                                    "minecraft:smooth_basalt"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                ],
+                                "blocks": [
+                                    "minecraft:deepslate",
+                                    "minecraft:smooth_basalt"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "blocks": "minecraft:smooth_basalt"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:mud"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:mud"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:mud"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                ],
+                                "blocks": [
+                                    "minecraft:smooth_basalt",
+                                    "minecraft:mud"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "blocks": "minecraft:air"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "blocks": "minecraft:mud"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:mud",
+                                    "minecraft:muddy_mangrove_roots"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                ],
+                                "blocks": [
+                                    "minecraft:mud",
+                                    "minecraft:muddy_mangrove_roots"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "blocks": [
+                                    "minecraft:mud",
+                                    "minecraft:muddy_mangrove_roots"
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                ],
+                                "blocks": [
+                                    "minecraft:mud",
+                                    "minecraft:muddy_mangrove_roots"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 5,
+                "max_inclusive": 8
+            },
+            "half_height": 1
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": -1,
+            "noise_factor": 80,
+            "noise_offset": 0
+        },
+        {
+            "type": "minecraft:count",
+            "count": 30
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 234
+            }
+        }
+    ]
+}

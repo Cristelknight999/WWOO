@@ -1,0 +1,31 @@
+{
+  "feature": "minecraft:patch_grass",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 150
+    },
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 63
+        },
+        "max_inclusive": {
+          "absolute": 160
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

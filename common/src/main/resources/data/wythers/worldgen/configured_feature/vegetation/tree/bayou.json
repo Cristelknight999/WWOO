@@ -1,0 +1,238 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": "wythers:vegetation/tree/bamboo_palm",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:dead_bush"
+                }
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.25,
+        "feature": {
+          "feature": "wythers:vegetation/tree/bayou_cypress_shallow",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:mangrove_propagule",
+                  "Properties": {
+                    "waterlogged": "false",
+                    "stage": "0",
+                    "hanging": "false",
+                    "age": "0"
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:water"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  3,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.25,
+        "feature": {
+          "feature": "wythers:vegetation/tree/bayou_cypress_middle",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:mangrove_propagule",
+                  "Properties": {
+                    "waterlogged": "false",
+                    "stage": "0",
+                    "hanging": "false",
+                    "age": "0"
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:water"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  3,
+                  0
+                ],
+                "blocks": "minecraft:water"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  5,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.25,
+        "feature": {
+          "feature": "wythers:vegetation/tree/bayou_cypress_deep",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:mangrove_propagule",
+                  "Properties": {
+                    "waterlogged": "false",
+                    "stage": "0",
+                    "hanging": "false",
+                    "age": "0"
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:water"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  5,
+                  0
+                ],
+                "blocks": "minecraft:water"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  8,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.15,
+        "feature": {
+          "feature": "wythers:vegetation/tree/bayou_cypress_surface_2",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:mangrove_propagule",
+                  "Properties": {
+                    "waterlogged": "false",
+                    "stage": "0",
+                    "hanging": "false",
+                    "age": "0"
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:vegetation/tree/bayou_cypress_surface",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "minecraft:mangrove_propagule",
+              "Properties": {
+                "waterlogged": "false",
+                "stage": "0",
+                "hanging": "false",
+                "age": "0"
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        }
+      ]
+    }
+  }
+}

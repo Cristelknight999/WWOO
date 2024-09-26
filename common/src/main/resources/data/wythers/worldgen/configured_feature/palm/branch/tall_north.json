@@ -1,0 +1,212 @@
+{
+    "config": {
+        "features": [
+            {
+                "feature": {
+                    "config": {
+                        "features": [
+                            {
+                                "feature": {
+                                    "config": {
+                                        "allowed_placement": {
+                                            "blocks": "#wythers:tree_branch_replaceable",
+                                            "type": "minecraft:matching_blocks"
+                                        },
+                                        "direction": "up",
+                                        "layers": [
+                                            {
+                                                "height": {
+                                                    "min_inclusive": 3,
+                                                    "max_inclusive": 5,
+                                                    "type": "minecraft:biased_to_bottom"
+                                                },
+                                                "provider": {
+                                                    "state": {
+                                                        "Name": "minecraft:jungle_wood",
+                                                        "Properties": {
+                                                            "axis": "y"
+                                                        }
+                                                    },
+                                                    "type": "minecraft:simple_state_provider"
+                                                }
+                                            }
+                                        ],
+                                        "prioritize_tip": false
+                                    },
+                                    "type": "minecraft:block_column"
+                                },
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "blocks": "#wythers:tree_branch_replaceable",
+                                            "type": "minecraft:matching_blocks"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    }
+                                ]
+                            },
+                            {
+                                "feature": "wythers:palm/branch/tall_top",
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "blocks": "minecraft:jungle_wood",
+                                            "type": "minecraft:matching_blocks"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    },
+                                    {
+                                        "direction_of_search": "up",
+                                        "max_steps": 6,
+                                        "target_condition": {
+                                            "predicate": {
+                                                "blocks": "minecraft:jungle_wood",
+                                                "type": "minecraft:matching_blocks"
+                                            },
+                                            "type": "minecraft:not"
+                                        },
+                                        "type": "minecraft:environment_scan"
+                                    },
+                                    {
+                                        "count": 8,
+                                        "type": "minecraft:count"
+                                    },
+                                    {
+                                        "xz_spread": {
+                                            "min_inclusive": -1,
+                                            "max_inclusive": 0,
+                                            "type": "minecraft:uniform"
+                                        },
+                                        "y_spread": 0,
+                                        "type": "minecraft:random_offset"
+                                    },
+                                    {
+                                        "predicate": {
+                                            "predicates": [
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "minecraft:jungle_wood",
+                                                    "offset": [
+                                                        0,
+                                                        -1,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        -1,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                }
+                                            ],
+                                            "type": "minecraft:all_of"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    },
+                                    {
+                                        "count": 28,
+                                        "type": "minecraft:count"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "minecraft:simple_random_selector"
+                },
+                "placement": [
+                    {
+                        "count": 16,
+                        "type": "minecraft:count"
+                    },
+                    {
+                        "xz_spread": {
+                            "min_inclusive": -1,
+                            "max_inclusive": 0,
+                            "type": "minecraft:uniform"
+                        },
+                        "y_spread": 0,
+                        "type": "minecraft:random_offset"
+                    },
+                    {
+                        "predicate": {
+                            "predicates": [
+                                {
+                                    "blocks": "#wythers:tree_branch_replaceable",
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "minecraft:jungle_wood",
+                                    "offset": [
+                                        0,
+                                        -1,
+                                        1
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "minecraft:jungle_wood",
+                                    "offset": [
+                                        0,
+                                        -2,
+                                        1
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "minecraft:jungle_wood",
+                                    "offset": [
+                                        0,
+                                        -3,
+                                        1
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "#wythers:tree_branch_replaceable",
+                                    "offset": [
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "#wythers:tree_branch_replaceable",
+                                    "offset": [
+                                        0,
+                                        -1,
+                                        0
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                }
+                            ],
+                            "type": "minecraft:all_of"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    },
+                    {
+                        "count": 28,
+                        "type": "minecraft:count"
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "minecraft:simple_random_selector"
+}

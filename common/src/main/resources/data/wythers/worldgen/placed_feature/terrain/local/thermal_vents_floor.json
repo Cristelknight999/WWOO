@@ -1,0 +1,61 @@
+{
+    "feature": {
+        "type": "minecraft:disk",
+        "config": {
+            "state_provider": {
+                "fallback": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                        "Name": "minecraft:dripstone_block"
+                    }
+                },
+                "rules": []
+            },
+            "target": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                    "minecraft:diorite",
+                    "minecraft:andesite",
+                    "minecraft:granite",
+                    "minecraft:stone",
+                    "minecraft:deepslate",
+                    "minecraft:sand"
+                ]
+            },
+            "radius": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 2,
+                "max_inclusive": 5
+            },
+            "half_height": 4
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 30
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 0
+            }
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:surface_relative_threshold_filter",
+            "heightmap": "OCEAN_FLOOR_WG",
+            "min_inclusive": -33,
+            "max_inclusive": 60
+        },
+        {
+            "type": "minecraft:biome"
+        },
+        {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR"
+        }
+    ]
+}

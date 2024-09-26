@@ -1,0 +1,316 @@
+{
+    "config": {
+        "features": [
+            {
+                "feature": {
+                    "config": {
+                        "features": [
+                            {
+                                "feature": {
+                                    "config": {
+                                        "to_place": {
+                                            "state": {
+                                                "Properties": {
+                                                    "axis": "z"
+                                                },
+                                                "Name": "minecraft:stripped_acacia_log"
+                                            },
+                                            "type": "minecraft:simple_state_provider"
+                                        }
+                                    },
+                                    "type": "minecraft:simple_block"
+                                },
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "blocks": "#wythers:tree_branch_replaceable",
+                                            "type": "minecraft:matching_blocks"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    }
+                                ]
+                            },
+                            {
+                                "feature": {
+                                    "config": {
+                                        "features": [
+                                            {
+                                                "feature": {
+                                                    "config": {
+                                                        "to_place": {
+                                                            "state": {
+                                                                "Properties": {
+                                                                    "axis": "z"
+                                                                },
+                                                                "Name": "minecraft:stripped_acacia_log"
+                                                            },
+                                                            "type": "minecraft:simple_state_provider"
+                                                        }
+                                                    },
+                                                    "type": "minecraft:simple_block"
+                                                },
+                                                "placement": [
+                                                    {
+                                                        "predicate": {
+                                                            "blocks": "#wythers:tree_branch_replaceable",
+                                                            "type": "minecraft:matching_blocks"
+                                                        },
+                                                        "type": "minecraft:block_predicate_filter"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "feature": "wythers:vegetation/tree/huge_sequoia/branch/leaves_1_z",
+                                                "placement": [
+                                                    {
+                                                        "predicate": {
+                                                            "blocks": "minecraft:stripped_acacia_log",
+                                                            "type": "minecraft:matching_blocks"
+                                                        },
+                                                        "type": "minecraft:block_predicate_filter"
+                                                    },
+                                                    {
+                                                        "count": 8,
+                                                        "type": "minecraft:count"
+                                                    },
+                                                    {
+                                                        "xz_spread": {
+                                                            "min_inclusive": 0,
+                                                            "max_inclusive": 1,
+                                                            "type": "minecraft:uniform"
+                                                        },
+                                                        "y_spread": 0,
+                                                        "type": "minecraft:random_offset"
+                                                    },
+                                                    {
+                                                        "predicate": {
+                                                            "predicates": [
+                                                                {
+                                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                                    "type": "minecraft:matching_blocks"
+                                                                },
+                                                                {
+                                                                    "blocks": "minecraft:stripped_acacia_log",
+                                                                    "offset": [
+                                                                        0,
+                                                                        0,
+                                                                        -1
+                                                                    ],
+                                                                    "type": "minecraft:matching_blocks"
+                                                                },
+                                                                {
+                                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                                    "offset": [
+                                                                        0,
+                                                                        0,
+                                                                        -2
+                                                                    ],
+                                                                    "type": "minecraft:matching_blocks"
+                                                                },
+                                                                {
+                                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                                    "offset": [
+                                                                        1,
+                                                                        0,
+                                                                        0
+                                                                    ],
+                                                                    "type": "minecraft:matching_blocks"
+                                                                },
+                                                                {
+                                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                                    "offset": [
+                                                                        -1,
+                                                                        0,
+                                                                        0
+                                                                    ],
+                                                                    "type": "minecraft:matching_blocks"
+                                                                }
+                                                            ],
+                                                            "type": "minecraft:all_of"
+                                                        },
+                                                        "type": "minecraft:block_predicate_filter"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "type": "minecraft:simple_random_selector"
+                                },
+                                "placement": [
+                                    {
+                                        "predicate": {
+                                            "blocks": "minecraft:stripped_acacia_log",
+                                            "type": "minecraft:matching_blocks"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    },
+                                    {
+                                        "count": 8,
+                                        "type": "minecraft:count"
+                                    },
+                                    {
+                                        "xz_spread": {
+                                            "min_inclusive": 0,
+                                            "max_inclusive": 1,
+                                            "type": "minecraft:uniform"
+                                        },
+                                        "y_spread": -1,
+                                        "type": "minecraft:random_offset"
+                                    },
+                                    {
+                                        "predicate": {
+                                            "predicates": [
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "minecraft:stripped_acacia_log",
+                                                    "offset": [
+                                                        0,
+                                                        1,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        0,
+                                                        -1
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        0,
+                                                        1,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "minecraft:stripped_acacia_log",
+                                                    "offset": [
+                                                        0,
+                                                        1,
+                                                        -2
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        1,
+                                                        0,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                },
+                                                {
+                                                    "blocks": "#wythers:tree_branch_replaceable",
+                                                    "offset": [
+                                                        -1,
+                                                        0,
+                                                        0
+                                                    ],
+                                                    "type": "minecraft:matching_blocks"
+                                                }
+                                            ],
+                                            "type": "minecraft:all_of"
+                                        },
+                                        "type": "minecraft:block_predicate_filter"
+                                    },
+                                    {
+                                        "count": 28,
+                                        "type": "minecraft:count"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "minecraft:simple_random_selector"
+                },
+                "placement": [
+                    {
+                        "count": 24,
+                        "type": "minecraft:count"
+                    },
+                    {
+                        "xz_spread": {
+                            "type": "minecraft:uniform",
+                            "min_inclusive": -1,
+                            "max_inclusive": 1
+                        },
+                        "y_spread": -1,
+                        "type": "minecraft:random_offset"
+                    },
+                    {
+                        "predicate": {
+                            "predicates": [
+                                {
+                                    "blocks": "#wythers:tree_branch_replaceable",
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "minecraft:stripped_acacia_log",
+                                    "offset": [
+                                        0,
+                                        0,
+                                        -1
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "#wythers:tree_branch_replaceable",
+                                    "offset": [
+                                        1,
+                                        0,
+                                        0
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "#wythers:tree_branch_replaceable",
+                                    "offset": [
+                                        2,
+                                        0,
+                                        0
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "#wythers:tree_branch_replaceable",
+                                    "offset": [
+                                        -1,
+                                        0,
+                                        0
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": "#wythers:tree_branch_replaceable",
+                                    "offset": [
+                                        -2,
+                                        0,
+                                        0
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                }
+                            ],
+                            "type": "minecraft:all_of"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    },
+                    {
+                        "count": 28,
+                        "type": "minecraft:count"
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "minecraft:simple_random_selector"
+}

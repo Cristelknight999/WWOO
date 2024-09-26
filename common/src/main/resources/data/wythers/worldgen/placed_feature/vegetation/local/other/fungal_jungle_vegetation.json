@@ -1,0 +1,132 @@
+{
+  "feature": {
+    "type": "minecraft:tree",
+    "config": {
+      "ignore_vines": false,
+      "force_dirt": false,
+      "minimum_size": {
+        "type": "minecraft:two_layers_feature_size",
+        "limit": 1,
+        "lower_size": 1,
+        "upper_size": 2
+      },
+      "dirt_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:dirt"
+        }
+      },
+      "trunk_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:warped_stem",
+          "Properties": {
+            "axis": "y"
+          }
+        }
+      },
+      "foliage_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:warped_wart_block"
+        }
+      },
+      "trunk_placer": {
+        "type": "minecraft:mega_jungle_trunk_placer",
+        "base_height": 10,
+        "height_rand_a": 2,
+        "height_rand_b": 19
+      },
+      "foliage_placer": {
+        "type": "minecraft:acacia_foliage_placer",
+        "radius": 4,
+        "offset": 0
+      },
+      "decorators": [
+        {
+          "type": "minecraft:attached_to_leaves",
+          "probability": 1,
+          "exclusion_radius_xz": 0,
+          "exclusion_radius_y": 0,
+          "required_empty_blocks": 1,
+          "block_provider": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "minecraft:glow_lichen",
+              "Properties": {
+                "down": "false",
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "up": "true",
+                "waterlogged": "false",
+                "west": "false"
+              }
+            }
+          },
+          "directions": [
+            "down"
+          ]
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 500,
+      "noise_offset": 0.3
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 1000,
+      "noise_offset": 0.0
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": -0.4
+    },
+    {
+      "type": "minecraft:count",
+      "count": 5
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 0
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -79,
+      "max_inclusive": -72
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": "minecraft:mycelium"
+      }
+    }
+  ]
+}

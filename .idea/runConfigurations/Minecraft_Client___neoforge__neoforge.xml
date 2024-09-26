@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" factoryName="Application" name="Minecraft Client (:neoforge)" type="Application">
+    <option name="MAIN_CLASS_NAME" value="dev.architectury.transformer.TransformerRuntime"/>
+    <module name="wwoo.neoforge.main"/>
+    <option name="PROGRAM_PARAMETERS" value=""/>
+    <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\janni\Dokumente\Github\WWOO\neoforge\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -p C:\Users\janni\.gradle\caches\modules-2\files-2.1\cpw.mods\securejarhandler\3.0.4\d1ccf0d789aceaaf4b1c0fef68946a35a12e010b\securejarhandler-3.0.4.jar;C:\Users\janni\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.5\dc6ea1875f4d64fbc85e1691c95b96a3d8569c90\asm-9.5.jar;C:\Users\janni\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-commons\9.5\19ab5b5800a3910d30d3a3e64fdb00fd0cb42de0\asm-commons-9.5.jar;C:\Users\janni\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\9.5\fd33c8b6373abaa675be407082fdfda35021254a\asm-tree-9.5.jar;C:\Users\janni\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\9.5\64b5a1fc8c1b15ed2efd6a063e976bc8d3dc5ffe\asm-util-9.5.jar;C:\Users\janni\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\9.5\490bacc77de7cbc0be1a30bb3471072d705be4a4\asm-analysis-9.5.jar;C:\Users\janni\.gradle\caches\modules-2\files-2.1\net.neoforged\JarJarFileSystems\0.4.0\ef7e5716525bbe50c784a362f9393457a33e6daf\JarJarFileSystems-0.4.0.jar --add-modules ALL-MODULE-PATH --add-opens java.base/java.util.jar=cpw.mods.securejarhandler --add-opens java.base/java.lang.invoke=cpw.mods.securejarhandler --add-exports java.base/sun.security.util=cpw.mods.securejarhandler --add-exports jdk.naming.dns/com.sun.jndi.dns=java.naming -Dfabric.dli.main=cpw.mods.bootstraplauncher.BootstrapLauncher -Darchitectury.main.class=C:\Users\janni\Dokumente\Github\WWOO\neoforge\.gradle\architectury\.main_class -Darchitectury.runtime.transformer=C:\Users\janni\Dokumente\Github\WWOO\neoforge\.gradle\architectury\.transforms -Darchitectury.properties=C:\Users\janni\Dokumente\Github\WWOO\neoforge\.gradle\architectury\.properties -Djdk.attach.allowAttachSelf=true -javaagent:C:\Users\janni\Dokumente\Github\WWOO\.gradle\architectury\architectury-transformer-agent.jar"/>
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neoforge/run/"/>
+    <method v="2">
+      <option enabled="true" name="Make"/>
+    </method>
+    <envs>
+      <env name="MOD_CLASSES" value="main%%C:\Users\janni\Dokumente\Github\WWOO\neoforge\build\resources\main;main%%C:\Users\janni\Dokumente\Github\WWOO\neoforge\build\classes\java\main"/>
+    </envs>
+    <shortenClasspath name="ARGS_FILE"/>
+  <classpathModifications/></configuration>
+</component>

@@ -1,0 +1,123 @@
+{
+    "feature": {
+        "type": "minecraft:simple_random_selector",
+        "config": {
+            "features": [
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:gravel"
+                            },
+                            "target": {
+                                "Name": "minecraft:grass_block"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:gravel"
+                            },
+                            "target": {
+                                "Name": "minecraft:dirt"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:deepslate"
+                            },
+                            "target": {
+                                "Name": "minecraft:stone"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:mud"
+                            },
+                            "target": {
+                                "Name": "minecraft:gravel"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                },
+                {
+                    "feature": {
+                        "type": "minecraft:netherrack_replace_blobs",
+                        "config": {
+                            "state": {
+                                "Name": "minecraft:gravel"
+                            },
+                            "target": {
+                                "Name": "minecraft:mud"
+                            },
+                            "radius": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 7,
+                                "max_inclusive": 12
+                            }
+                        }
+                    },
+                    "placement": []
+                }
+            ]
+        }
+    },
+    "placement": [
+        {
+            "type": "minecraft:count",
+            "count": 10
+        },
+        {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:count",
+            "count": 3
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "absolute": 300
+            }
+        }
+    ]
+}

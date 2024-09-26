@@ -1,0 +1,187 @@
+{
+    "config": {
+        "features": [
+            {
+                "feature": {
+                    "config": {
+                        "allowed_placement": {
+                            "type": "minecraft:replaceable"
+                        },
+                        "direction": "up",
+                        "layers": [
+                            {
+                                "height": {
+                                    "min_inclusive": 1,
+                                    "max_inclusive": 2,
+                                    "type": "minecraft:uniform"
+                                },
+                                "provider": {
+                                    "state": {
+                                        "Name": "minecraft:spruce_wood",
+                                        "Properties": {
+                                            "axis": "y"
+                                        }
+                                    },
+                                    "type": "minecraft:simple_state_provider"
+                                }
+                            },
+                            {
+                                "height": {
+                                    "distribution": [
+                                        {
+                                            "data": 0,
+                                            "weight": 6
+                                        },
+                                        {
+                                            "data": 1,
+                                            "weight": 1
+                                        }
+                                    ],
+                                    "type": "minecraft:weighted_list"
+                                },
+                                "provider": {
+                                    "entries": [
+                                        {
+                                            "data": {
+                                                "Name": "minecraft:glow_lichen",
+                                                "Properties": {
+                                                    "down": "true",
+                                                    "east": "false",
+                                                    "north": "false",
+                                                    "south": "false",
+                                                    "up": "false",
+                                                    "waterlogged": "false",
+                                                    "west": "false"
+                                                }
+                                            },
+                                            "weight": 4
+                                        },
+                                        {
+                                            "data": {
+                                                "Name": "minecraft:moss_carpet"
+                                            },
+                                            "weight": 1
+                                        }
+                                    ],
+                                    "type": "minecraft:weighted_state_provider"
+                                }
+                            }
+                        ],
+                        "prioritize_tip": false
+                    },
+                    "type": "minecraft:block_column"
+                },
+                "placement": [
+                    {
+                        "count": 80,
+                        "type": "minecraft:count"
+                    },
+                    {
+                        "xz_spread": {
+                            "min_inclusive": -3,
+                            "max_inclusive": 3,
+                            "type": "minecraft:uniform"
+                        },
+                        "y_spread": {
+                            "min_inclusive": -2,
+                            "max_inclusive": 3,
+                            "type": "minecraft:uniform"
+                        },
+                        "type": "minecraft:random_offset"
+                    },
+                    {
+                        "predicate": {
+                            "predicates": [
+                                {
+                                    "type": "minecraft:replaceable"
+                                },
+                                {
+                                    "predicates": [
+                                        {
+                                            "blocks": "#wythers:dirt",
+                                            "offset": [
+                                                0,
+                                                -1,
+                                                0
+                                            ],
+                                            "type": "minecraft:matching_blocks"
+                                        },
+                                        {
+                                            "blocks": "minecraft:spruce_wood",
+                                            "offset": [
+                                                0,
+                                                -1,
+                                                0
+                                            ],
+                                            "type": "minecraft:matching_blocks"
+                                        }
+                                    ],
+                                    "type": "minecraft:any_of"
+                                }
+                            ],
+                            "type": "minecraft:all_of"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    },
+                    {
+                        "predicate": {
+                            "predicates": [
+                                {
+                                    "blocks": [
+                                        "minecraft:spruce_log",
+                                        "minecraft:spruce_wood"
+                                    ],
+                                    "offset": [
+                                        1,
+                                        3,
+                                        0
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": [
+                                        "minecraft:spruce_log",
+                                        "minecraft:spruce_wood"
+                                    ],
+                                    "offset": [
+                                        0,
+                                        3,
+                                        1
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": [
+                                        "minecraft:spruce_log",
+                                        "minecraft:spruce_wood"
+                                    ],
+                                    "offset": [
+                                        -1,
+                                        3,
+                                        0
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                    "blocks": [
+                                        "minecraft:spruce_log",
+                                        "minecraft:spruce_wood"
+                                    ],
+                                    "offset": [
+                                        0,
+                                        3,
+                                        -1
+                                    ],
+                                    "type": "minecraft:matching_blocks"
+                                }
+                            ],
+                            "type": "minecraft:any_of"
+                        },
+                        "type": "minecraft:block_predicate_filter"
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "minecraft:simple_random_selector"
+}

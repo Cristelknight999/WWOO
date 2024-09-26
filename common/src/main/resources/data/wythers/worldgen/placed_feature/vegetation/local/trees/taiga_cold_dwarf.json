@@ -1,0 +1,52 @@
+{
+  "feature": "wythers:vegetation/tree/cold_pine_medium",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 150,
+      "noise_offset": -0.15
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 150,
+      "noise_offset": 0.3
+    },
+    {
+      "type": "minecraft:count",
+      "count": 3
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:fern"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -3,
+          0
+        ],
+        "blocks": "minecraft:coarse_dirt"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

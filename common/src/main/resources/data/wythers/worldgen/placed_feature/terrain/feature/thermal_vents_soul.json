@@ -1,0 +1,155 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:soul_sand"
+          }
+        },
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:dripstone_block",
+                      "minecraft:soul_sand"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:dripstone_block",
+                      "minecraft:soul_sand"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:dripstone_block",
+                      "minecraft:soul_sand"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:dripstone_block",
+                      "minecraft:soul_sand"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:any_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          2,
+                          0
+                        ],
+                        "blocks": "minecraft:dripstone_block"
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          2,
+                          0
+                        ],
+                        "blocks": "minecraft:dripstone_block"
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          2,
+                          1
+                        ],
+                        "blocks": "minecraft:dripstone_block"
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          2,
+                          -1
+                        ],
+                        "blocks": "minecraft:dripstone_block"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:dripstone_block"
+              }
+            }
+          }
+        ]
+      },
+      "target": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:dripstone_block"
+      },
+      "radius": 3,
+      "half_height": 1
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 30
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    }
+  ]
+}
