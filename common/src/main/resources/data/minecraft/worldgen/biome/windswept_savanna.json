@@ -37,6 +37,9 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_sand_tropical_shore",
+      "wythers:terrain/local/disk_sand_floor",
+      "wythers:terrain/local/disk_dead_coral_shore",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -62,10 +65,7 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:ore_emerald",
-      "wythers:terrain/local/disk_sand_tropical_shore",
-      "wythers:terrain/local/disk_sand_floor",
-      "wythers:terrain/local/disk_dead_coral_shore"
+      "minecraft:ore_emerald"
     ],
     [],
     [
@@ -73,10 +73,10 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/trees/windswept_savanna_pines",
       "wythers:vegetation/local/trees/windswept_savanna_woods",
       "wythers:vegetation/local/patch/grass_standard",
+      "minecraft:glow_lichen",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",

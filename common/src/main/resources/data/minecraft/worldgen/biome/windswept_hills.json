@@ -163,6 +163,12 @@
       "wythers:terrain/extended/volcanic_fallout_ore"
     ],
     [
+      "wythers:ores/ore_iron_windswept",
+      "wythers:ores/ore_coal_windswept",
+      "wythers:ores/ore_redstone_windswept",
+      "wythers:ores/ore_gold_volcanic",
+      "wythers:ores/ore_diamond_volcanic",
+      "wythers:ores/ore_lava_volcanic",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -190,13 +196,7 @@
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "wythers:ores/ore_iron_windswept",
-      "wythers:ores/ore_coal_windswept",
-      "wythers:ores/ore_redstone_windswept",
-      "wythers:ores/ore_gold_volcanic",
-      "wythers:ores/ore_diamond_volcanic",
-      "wythers:ores/ore_lava_volcanic"
+      "minecraft:disk_gravel"
     ],
     [
       "minecraft:ore_infested"
@@ -211,8 +211,8 @@
       "minecraft:red_mushroom_normal"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:decor/sparse_steam"
+      "wythers:decor/sparse_steam",
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

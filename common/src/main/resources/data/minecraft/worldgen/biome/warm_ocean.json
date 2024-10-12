@@ -78,6 +78,8 @@
       "minecraft:spring_lava"
     ],
     [
+      "wythers:vegetation/local/patch/red_coral",
+      "wythers:terrain/feature/thermal_vents_mounds",
       "minecraft:glow_lichen",
       "minecraft:trees_water",
       "minecraft:flower_default",
@@ -86,16 +88,14 @@
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
-      "wythers:vegetation/local/patch/red_coral",
-      "minecraft:sea_pickle",
-      "wythers:terrain/feature/thermal_vents_mounds"
+      "minecraft:sea_pickle"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:vegetation/local/patch/red_coral_tall",
       "wythers:vegetation/local/patch/seagrass_wrecks",
       "wythers:terrain/feature/thermal_vents_soul",
-      "wythers:terrain/feature/thermal_vents_iron"
+      "wythers:terrain/feature/thermal_vents_iron",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

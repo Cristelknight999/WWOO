@@ -36,9 +36,9 @@
       "wythers:road/jungle"
     ],
     [
+      "wythers:terrain/extended/base_mangrove_swamp_jungle",
       "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface",
-      "wythers:terrain/extended/base_mangrove_swamp_jungle"
+      "minecraft:lake_lava_surface"
     ],
     [
       "minecraft:amethyst_geode"
@@ -50,6 +50,10 @@
     [],
     [],
     [
+      "wythers:terrain/extended/coastal_sand",
+      "wythers:terrain/extended/volcanic_jungle_mud_in_basalt",
+      "wythers:terrain/extended/volcanic_jungle_muddy_roots_on_basalt",
+      "wythers:terrain/extended/badlands_edge",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -77,11 +81,7 @@
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "wythers:terrain/extended/coastal_sand",
-      "wythers:terrain/extended/volcanic_jungle_mud_in_basalt",
-      "wythers:terrain/extended/volcanic_jungle_muddy_roots_on_basalt",
-      "wythers:terrain/extended/badlands_edge"
+      "minecraft:disk_gravel"
     ],
     [],
     [
@@ -89,7 +89,6 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/trees/jungle_mega",
       "wythers:vegetation/local/trees/jungle_lowland_rainforest",
       "wythers:vegetation/local/trees/jungle_midland",
@@ -99,13 +98,14 @@
       "wythers:vegetation/extended/trees/jungle_eucalyptus",
       "wythers:vegetation/extended/trees/jungle_volcanic",
       "wythers:vegetation/local/trees/jungle_mangroves",
+      "minecraft:glow_lichen",
       "minecraft:patch_grass_jungle",
       "minecraft:patch_waterlily",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
-      "minecraft:vines",
       "minecraft:seagrass_river",
+      "minecraft:vines",
       "minecraft:patch_melon"
     ],
     [

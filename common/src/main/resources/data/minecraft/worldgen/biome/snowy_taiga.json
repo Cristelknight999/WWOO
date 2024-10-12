@@ -163,6 +163,9 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_gravel_floor",
+      "wythers:terrain/local/disk_gravel_shore",
+      "wythers:terrain/extended/windswept_snow",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -188,10 +191,7 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:disk_clay",
-      "wythers:terrain/local/disk_gravel_floor",
-      "wythers:terrain/local/disk_gravel_shore",
-      "wythers:terrain/extended/windswept_snow"
+      "minecraft:disk_clay"
     ],
     [],
     [
@@ -199,7 +199,6 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/other/fallen_log_mix_taiga",
       "wythers:vegetation/local/trees/taiga_cold",
       "wythers:vegetation/local/trees/taiga_cold_dwarf",
@@ -214,17 +213,18 @@
       "wythers:vegetation/local/trees/taiga_birch",
       "wythers:vegetation/local/trees/taiga_thermal_aspen_woods",
       "wythers:vegetation/local/bushes/taiga",
+      "minecraft:glow_lichen",
       "minecraft:brown_mushroom_taiga",
       "minecraft:red_mushroom_taiga"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/snow_blocks",
       "wythers:terrain/local/snowy_ground",
       "wythers:terrain/local/snowy_leaves",
       "wythers:terrain/local/powder_snow",
       "wythers:terrain/local/snowy_slopes",
-      "wythers:terrain/local/snow_blocks_disk"
+      "wythers:terrain/local/snow_blocks_disk",
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

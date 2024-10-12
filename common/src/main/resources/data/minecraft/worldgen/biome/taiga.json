@@ -164,6 +164,8 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_gravel_floor",
+      "wythers:terrain/local/disk_gravel_shore",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -189,9 +191,7 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:disk_clay",
-      "wythers:terrain/local/disk_gravel_floor",
-      "wythers:terrain/local/disk_gravel_shore"
+      "minecraft:disk_clay"
     ],
     [],
     [
@@ -199,7 +199,6 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/other/fallen_log_mix_taiga",
       "wythers:vegetation/extended/trees/boreal_forest",
       "wythers:vegetation/local/trees/taiga_cold",
@@ -216,16 +215,17 @@
       "wythers:vegetation/local/trees/taiga_thermal_aspen_woods",
       "wythers:vegetation/local/bushes/taiga",
       "wythers:vegetation/local/patch/flower_taiga",
+      "minecraft:glow_lichen",
       "minecraft:brown_mushroom_taiga",
       "minecraft:red_mushroom_taiga"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/snow_blocks",
       "wythers:vegetation/local/patch/grass_and_ferns_range",
       "wythers:vegetation/local/patch/berry_range",
       "wythers:vegetation/local/patch/large_fern_taiga",
-      "wythers:decor/sparse_steam"
+      "wythers:decor/sparse_steam",
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

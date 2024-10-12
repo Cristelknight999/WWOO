@@ -42,6 +42,8 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_gravel_river",
+      "wythers:terrain/extended/windswept_snow",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -67,9 +69,7 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:disk_clay",
-      "wythers:terrain/local/disk_gravel_river",
-      "wythers:terrain/extended/windswept_snow"
+      "minecraft:disk_clay"
     ],
     [],
     [
@@ -77,19 +77,19 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/trees/tundra_woods",
       "wythers:vegetation/local/trees/tundra_dwarf_woods",
       "wythers:vegetation/local/bushes/tundra",
+      "minecraft:glow_lichen",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/snowy_ground",
       "wythers:terrain/local/snowy_leaves",
       "wythers:terrain/local/snowy_slopes",
-      "wythers:terrain/local/snow_blocks_disk"
+      "wythers:terrain/local/snow_blocks_disk",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

@@ -47,6 +47,7 @@
       "wythers:terrain/local/cave_disk_magma"
     ],
     [
+      "wythers:terrain/local/river_grass",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -74,8 +75,7 @@
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "wythers:terrain/local/river_grass"
+      "minecraft:disk_gravel"
     ],
     [
       "wythers:terrain/feature/dripstone_cluster",
@@ -86,14 +86,14 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/patch/grass_standard",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "minecraft:seagrass_river",
       "wythers:vegetation/extended/trees/river_oaks",
       "wythers:vegetation/extended/trees/river_acacias",
-      "wythers:vegetation/extended/trees/river_tropical"
+      "wythers:vegetation/extended/trees/river_tropical",
+      "minecraft:glow_lichen",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:seagrass_river"
     ],
     [
       "minecraft:freeze_top_layer"

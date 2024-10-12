@@ -31,8 +31,8 @@
       "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/feature/stone_forest_rock"
+      "wythers:terrain/feature/stone_forest_rock",
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
@@ -44,6 +44,10 @@
       "wythers:vegetation/extended/trees/giant_taiga_meadow"
     ],
     [
+      "wythers:terrain/local/disk_gravel_floor",
+      "wythers:terrain/local/disk_gravel_shore",
+      "wythers:terrain/local/disk_muddy_roots_in_podzol",
+      "wythers:terrain/local/disk_mud_in_muddy_roots",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -68,11 +72,7 @@
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
-      "minecraft:underwater_magma",
-      "wythers:terrain/local/disk_gravel_floor",
-      "wythers:terrain/local/disk_gravel_shore",
-      "wythers:terrain/local/disk_muddy_roots_in_podzol",
-      "wythers:terrain/local/disk_mud_in_muddy_roots"
+      "minecraft:underwater_magma"
     ],
     [],
     [
@@ -80,11 +80,11 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
-      "minecraft:patch_large_fern",
       "wythers:vegetation/local/trees/ogt_giant_redwood_woods",
       "wythers:vegetation/local/trees/ogt_sequoia_woods",
       "wythers:vegetation/local/trees/ogt_redwood_woods",
+      "minecraft:glow_lichen",
+      "minecraft:patch_large_fern",
       "minecraft:patch_grass_taiga",
       "minecraft:patch_dead_bush",
       "minecraft:brown_mushroom_old_growth",

@@ -166,6 +166,8 @@
       "wythers:terrain/extended/base_windswept_gravelly_hills"
     ],
     [
+      "wythers:ores/ore_iron_windswept",
+      "wythers:ores/ore_coal_windswept",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -193,9 +195,7 @@
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "wythers:ores/ore_iron_windswept",
-      "wythers:ores/ore_coal_windswept"
+      "minecraft:disk_gravel"
     ],
     [
       "minecraft:ore_infested"
@@ -205,10 +205,10 @@
       "minecraft:spring_lava"
     ],
     [
+      "wythers:terrain/feature/windswept_basalt_columns",
       "minecraft:glow_lichen",
       "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "wythers:terrain/feature/windswept_basalt_columns"
+      "minecraft:red_mushroom_normal"
     ],
     [
       "minecraft:freeze_top_layer"

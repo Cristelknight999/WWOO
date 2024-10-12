@@ -88,22 +88,22 @@
       "wythers:vegetation/extended/trees/ancient_beech_woods_2"
     ],
     [
-      "minecraft:spring_water",
-      "wythers:terrain/feature/spring_lava"
+      "wythers:terrain/feature/spring_lava",
+      "minecraft:spring_water"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:farm/harvest_fields_scarecrow",
       "wythers:farm/harvest_fields_hay",
       "wythers:farm/harvest_fields_hay_2",
       "wythers:farm/harvest_fields_pumpkin",
       "wythers:farm/harvest_fields_wheat",
       "wythers:farm/harvest_fields_wheat_2",
-      "minecraft:patch_tall_grass_2",
       "wythers:vegetation/local/patch/sunflower_birch_forest",
       "wythers:farm/harvest_fields_stumps",
       "wythers:vegetation/local/trees/harvest_fields_woods_1",
       "wythers:vegetation/local/trees/harvest_fields_woods_2",
+      "minecraft:glow_lichen",
+      "minecraft:patch_tall_grass_2",
       "minecraft:patch_grass_plain",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",

@@ -148,12 +148,12 @@
       "wythers:terrain/local/badlands_replace_most_red_sand_to_grass_block"
     ],
     [
-      "minecraft:lake_lava_underground",
-      "wythers:terrain/feature/lake_salt"
+      "wythers:terrain/feature/lake_salt",
+      "minecraft:lake_lava_underground"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/extended/terracotify_rooted_dirt"
+      "wythers:terrain/extended/terracotify_rooted_dirt",
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
@@ -198,26 +198,26 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/trees/pine_mesa",
       "wythers:vegetation/extended/trees/oak_badlands",
       "wythers:vegetation/local/patch/grass_badlands",
       "wythers:vegetation/local/patch/grass_standard",
+      "wythers:vegetation/local/patch/saguaros",
+      "minecraft:glow_lichen",
       "minecraft:patch_dead_bush_badlands",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane_badlands",
-      "minecraft:patch_pumpkin",
-      "wythers:vegetation/local/patch/saguaros"
+      "minecraft:patch_pumpkin"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/badlands_snow_blocks",
       "wythers:vegetation/local/patch/flower_badlands",
       "wythers:vegetation/local/patch/berries_badlands",
       "wythers:decor/badlands",
       "wythers:terrain/local/crust_salt",
-      "wythers:terrain/local/crust_packed_mud"
+      "wythers:terrain/local/crust_packed_mud",
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

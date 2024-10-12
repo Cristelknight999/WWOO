@@ -38,9 +38,9 @@
       "wythers:road/bamboo_jungle_old_2"
     ],
     [
+      "wythers:terrain/extended/base_mangrove_swamp_savanna",
       "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface",
-      "wythers:terrain/extended/base_mangrove_swamp_savanna"
+      "minecraft:lake_lava_surface"
     ],
     [
       "minecraft:amethyst_geode"
@@ -52,6 +52,9 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_sand_shore",
+      "wythers:terrain/extended/disk_clay_dirt_only",
+      "wythers:terrain/extended/badlands_edge",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -77,12 +80,9 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/disk_sand_shore",
-      "wythers:terrain/extended/disk_clay_dirt_only",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "wythers:terrain/extended/badlands_edge"
+      "minecraft:disk_gravel"
     ],
     [],
     [
@@ -90,7 +90,6 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/trees/banyans",
       "wythers:farm/paddy_cane",
       "wythers:vegetation/local/trees/jungle_sandy",
@@ -106,16 +105,17 @@
       "wythers:vegetation/local/patch/elephant_bamboo_3",
       "wythers:vegetation/local/patch/flower_peony",
       "wythers:vegetation/extended/patch/flower_dry_mediterranean",
+      "minecraft:glow_lichen",
       "minecraft:patch_grass_jungle",
       "minecraft:patch_waterlily",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:vines",
-      "minecraft:seagrass_river"
+      "minecraft:seagrass_river",
+      "minecraft:vines"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:vegetation/local/patch/banyan_vines"
+      "wythers:vegetation/local/patch/banyan_vines",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

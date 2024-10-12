@@ -142,9 +142,9 @@
       "wythers:terrain/extended/scree"
     ],
     [
+      "wythers:terrain/extended/base_mangrove_swamp_forest",
       "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface",
-      "wythers:terrain/extended/base_mangrove_swamp_forest"
+      "minecraft:lake_lava_surface"
     ],
     [
       "minecraft:amethyst_geode"
@@ -156,6 +156,10 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_sand_forest",
+      "wythers:terrain/local/disk_gravel_forest",
+      "wythers:terrain/extended/desert_edge",
+      "wythers:terrain/extended/badlands_edge",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -181,13 +185,9 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/disk_sand_forest",
-      "wythers:terrain/local/disk_gravel_forest",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "wythers:terrain/extended/desert_edge",
-      "wythers:terrain/extended/badlands_edge"
+      "minecraft:disk_gravel"
     ],
     [],
     [
@@ -195,7 +195,6 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/trees/forest_birch_grove",
       "wythers:vegetation/local/trees/forest_oak",
       "wythers:vegetation/local/trees/forest_pine",
@@ -213,20 +212,21 @@
       "wythers:vegetation/extended/bushes/oak_forest",
       "wythers:vegetation/extended/bushes/pine_forest",
       "wythers:vegetation/local/patch/flower_taiga",
+      "minecraft:glow_lichen",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/snow_blocks",
       "wythers:vegetation/local/patch/grass_forest",
       "wythers:vegetation/local/patch/fern_montane_forest",
       "wythers:vegetation/local/patch/large_fern_forest",
       "wythers:terrain/extended/volcanic_extinction",
       "wythers:terrain/local/replace_basalt_to_deepslate",
-      "wythers:terrain/extended/volcano_snow_blocks"
+      "wythers:terrain/extended/volcano_snow_blocks",
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

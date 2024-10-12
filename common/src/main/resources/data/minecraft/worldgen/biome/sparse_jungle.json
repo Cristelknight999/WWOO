@@ -39,9 +39,9 @@
       "wythers:terrain/local/tsingy_ore_2"
     ],
     [
+      "wythers:terrain/extended/base_mangrove_swamp_sparse_jungle",
       "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface",
-      "wythers:terrain/extended/base_mangrove_swamp_sparse_jungle"
+      "minecraft:lake_lava_surface"
     ],
     [
       "minecraft:amethyst_geode"
@@ -52,9 +52,11 @@
     ],
     [
       "wythers:terrain/feature/tuff_spikes"
-	],
+    ],
     [],
     [
+      "wythers:terrain/local/sparse_jungle_shore",
+      "wythers:terrain/extended/badlands_edge",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -82,9 +84,7 @@
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "wythers:terrain/local/sparse_jungle_shore",
-      "wythers:terrain/extended/badlands_edge"
+      "minecraft:disk_gravel"
     ],
     [],
     [
@@ -92,11 +92,11 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/trees/pink_lapacho",
       "wythers:vegetation/local/trees/sparse_jungle",
       "wythers:vegetation/local/trees/eucalyptus_savanna",
       "wythers:vegetation/local/patch/flower_tropical_roses",
+      "minecraft:glow_lichen",
       "minecraft:flower_warm",
       "minecraft:patch_grass_jungle",
       "minecraft:patch_waterlily",

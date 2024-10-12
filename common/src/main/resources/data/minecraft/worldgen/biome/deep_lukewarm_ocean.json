@@ -73,6 +73,7 @@
       "minecraft:spring_lava"
     ],
     [
+      "wythers:vegetation/local/other/coral_reef",
       "minecraft:glow_lichen",
       "minecraft:trees_water",
       "minecraft:flower_default",
@@ -81,10 +82,9 @@
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
-      "wythers:vegetation/local/other/coral_reef",
+      "minecraft:sea_pickle",
       "minecraft:seagrass_deep_warm",
       "minecraft:seagrass_simple",
-      "minecraft:sea_pickle",
       "minecraft:kelp_warm"
     ],
     [

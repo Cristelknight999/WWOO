@@ -45,20 +45,20 @@
       "wythers:terrain/local/oasis_clay"
     ],
     [
-      "minecraft:lake_lava_underground",
       "wythers:terrain/feature/lake_salt",
       "wythers:terrain/extended/base_mangrove_swamp_arid",
-      "wythers:terrain/extended/base_mangrove_swamp_sudd"
+      "wythers:terrain/extended/base_mangrove_swamp_sudd",
+      "minecraft:lake_lava_underground"
     ],
     [
       "minecraft:amethyst_geode"
     ],
     [
+      "wythers:terrain/extended/sandify_rooted_dirt",
       "minecraft:fossil_upper",
       "minecraft:fossil_lower",
       "minecraft:monster_room",
-      "minecraft:monster_room_deep",
-      "wythers:terrain/extended/sandify_rooted_dirt"
+      "minecraft:monster_room_deep"
     ],
     [
       "minecraft:desert_well"
@@ -104,22 +104,22 @@
     [
       "wythers:vegetation/local/trees/oasis_palms",
       "wythers:vegetation/local/patch/oasis_vegetation_moss",
-      "minecraft:glow_lichen",
       "wythers:terrain/feature/danakil_desert_mounds",
-      "minecraft:flower_default",
       "wythers:vegetation/local/patch/grass_desert",
       "wythers:vegetation/local/patch/grass_standard",
-      "minecraft:patch_dead_bush_2",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
       "wythers:vegetation/local/patch/sugar_cane_desert",
       "wythers:vegetation/local/other/cocoanuts",
-      "wythers:terrain/extended/replace_diorite_and_calcite_to_smooth_sandstone"
+      "wythers:terrain/extended/replace_diorite_and_calcite_to_smooth_sandstone",
+      "minecraft:glow_lichen",
+      "minecraft:flower_default",
+      "minecraft:patch_dead_bush_2",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:decor/dense_steam",
-      "wythers:decor/desert"
+      "wythers:decor/desert",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": false,

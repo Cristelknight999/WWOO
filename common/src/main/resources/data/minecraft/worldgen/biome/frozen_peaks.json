@@ -37,14 +37,14 @@
     [
       "wythers:terrain/extended/base_frozen_peaks",
       "wythers:terrain/extended/replace_stone_to_andesite"
-	],
+    ],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/local/cave_ice"
+      "wythers:terrain/local/cave_ice",
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
@@ -95,9 +95,9 @@
       "minecraft:glow_lichen"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/extended/base_frozen_peaks_snow",
-      "wythers:terrain/local/snowy_slopes"
+      "wythers:terrain/local/snowy_slopes",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

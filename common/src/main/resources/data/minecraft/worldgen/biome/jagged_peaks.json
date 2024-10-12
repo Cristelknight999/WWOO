@@ -87,8 +87,8 @@
       "minecraft:glow_lichen"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/local/de_snowify_stone"
+      "wythers:terrain/local/de_snowify_stone",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

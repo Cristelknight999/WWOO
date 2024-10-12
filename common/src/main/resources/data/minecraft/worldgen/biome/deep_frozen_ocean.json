@@ -89,10 +89,10 @@
       "minecraft:patch_pumpkin"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/snowy_ground",
       "wythers:terrain/local/crack_ice",
-      "wythers:terrain/local/pack_ice_snow"
+      "wythers:terrain/local/pack_ice_snow",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

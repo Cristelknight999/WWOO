@@ -31,8 +31,8 @@
       "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/local/replace_diorite_to_granite"
+      "wythers:terrain/local/replace_diorite_to_granite",
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
@@ -41,6 +41,8 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_sand_shore",
+      "wythers:terrain/extended/disk_clay_dirt_only",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -66,8 +68,6 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/disk_sand_shore",
-      "wythers:terrain/extended/disk_clay_dirt_only",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel"
@@ -78,15 +78,15 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/extended/trees/mediterranean_woods",
-      "minecraft:patch_tall_grass_2",
       "wythers:vegetation/extended/patch/sunflower",
       "wythers:vegetation/extended/trees/sclerophyllous_woods",
       "wythers:vegetation/extended/trees/savanna_mediterranean_woods",
       "wythers:vegetation/extended/trees/windbreak_1",
       "wythers:vegetation/extended/trees/windbreak_2",
       "wythers:vegetation/extended/patch/flower_humid_mediterranean",
+      "minecraft:glow_lichen",
+      "minecraft:patch_tall_grass_2",
       "minecraft:patch_grass_plain",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
@@ -94,8 +94,8 @@
       "minecraft:patch_pumpkin"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/extended/volcanic_extinction"
+      "wythers:terrain/extended/volcanic_extinction",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

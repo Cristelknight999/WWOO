@@ -153,13 +153,13 @@
       "wythers:terrain/extended/base_savanna"
     ],
     [
+      "wythers:terrain/extended/base_mangrove_swamp_savanna",
       "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface",
-      "wythers:terrain/extended/base_mangrove_swamp_savanna"
+      "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/extended/mangrove_swamp_savanna_filler"
+      "wythers:terrain/extended/mangrove_swamp_savanna_filler",
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
@@ -168,6 +168,12 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_packed_mud_shore",
+      "wythers:terrain/local/savanna_packed_mud",
+      "wythers:terrain/local/red_sand_spread",
+      "wythers:terrain/local/replace_packed_mud_to_moss",
+      "wythers:terrain/extended/coastal_sand",
+      "wythers:terrain/extended/badlands_edge",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -193,28 +199,21 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/disk_packed_mud_shore",
-      "minecraft:disk_clay",
-      "wythers:terrain/local/savanna_packed_mud",
-      "wythers:terrain/local/red_sand_spread",
-      "wythers:terrain/local/replace_packed_mud_to_moss",
-      "wythers:terrain/extended/coastal_sand",
-      "wythers:terrain/extended/badlands_edge"
+      "minecraft:disk_clay"
     ],
     [],
     [
-      "minecraft:spring_water",
-      "minecraft:spring_lava",
       "wythers:terrain/local/thermal_savanna_mud",
       "wythers:terrain/local/thermal_savanna_dirt",
       "wythers:terrain/local/thermal_savanna_brown",
       "wythers:terrain/local/thermal_savanna_gray",
       "wythers:terrain/local/thermal_savanna_soul",
       "wythers:terrain/local/thermal_savanna_dripstone",
-      "wythers:terrain/feature/thermal_savanna_block_spikes"
+      "wythers:terrain/feature/thermal_savanna_block_spikes",
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/patch/tall_grass_savanna",
       "wythers:vegetation/local/trees/savanna_mossy",
       "wythers:vegetation/local/trees/savanna_woodland",
@@ -225,19 +224,20 @@
       "wythers:vegetation/extended/trees/savanna_oaks",
       "wythers:vegetation/local/patch/fern_cane",
       "wythers:vegetation/local/patch/grass_savanna",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane",
       "wythers:vegetation/local/patch/floating_vegetation",
       "wythers:vegetation/local/patch/floating_vegetation_plants",
       "wythers:vegetation/local/patch/savanna_water_plants",
-      "wythers:terrain/feature/thermal_savanna_dripstone_spikes"
+      "wythers:terrain/feature/thermal_savanna_dripstone_spikes",
+      "minecraft:glow_lichen",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/replace_basalt_to_tuff",
       "wythers:decor/dense_steam",
-      "wythers:vegetation/local/other/baobab_interior"
+      "wythers:vegetation/local/other/baobab_interior",
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

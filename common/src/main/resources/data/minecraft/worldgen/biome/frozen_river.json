@@ -37,6 +37,7 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_gravel_river",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -62,8 +63,7 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:disk_clay",
-      "wythers:terrain/local/disk_gravel_river"
+      "minecraft:disk_clay"
     ],
     [],
     [
@@ -76,9 +76,9 @@
       "minecraft:red_mushroom_normal"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/snowy_ground",
-      "wythers:terrain/local/snowy_leaves"
+      "wythers:terrain/local/snowy_leaves",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

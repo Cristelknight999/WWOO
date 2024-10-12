@@ -142,6 +142,8 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_gravel_floor",
+      "wythers:terrain/local/disk_gravel_shore",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -167,9 +169,7 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:disk_clay",
-      "wythers:terrain/local/disk_gravel_floor",
-      "wythers:terrain/local/disk_gravel_shore"
+      "minecraft:disk_clay"
     ],
     [
       "minecraft:ore_infested"
@@ -179,15 +179,15 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/extended/trees/meadow_hillside_woods",
       "wythers:vegetation/local/trees/meadow_woods",
-      "wythers:vegetation/extended/patch/flower_meadow"
+      "wythers:vegetation/extended/patch/flower_meadow",
+      "minecraft:glow_lichen"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/snow_blocks",
-      "wythers:vegetation/local/patch/grass_forest"
+      "wythers:vegetation/local/patch/grass_forest",
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

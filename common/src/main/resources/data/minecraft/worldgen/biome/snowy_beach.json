@@ -23,7 +23,7 @@
   "features": [
     [
       "wythers:terrain/local/base_snowy_beach"
-     ],
+    ],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
@@ -82,8 +82,8 @@
       "minecraft:patch_pumpkin"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/local/snowy_ground"
+      "wythers:terrain/local/snowy_ground",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

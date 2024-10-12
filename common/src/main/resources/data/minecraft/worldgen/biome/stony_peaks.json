@@ -35,7 +35,6 @@
     [
       "wythers:terrain/local/replace_calcite_to_stone",
       "wythers:terrain/local/volcanic_resurfacing"
-    
     ],
     [
       "minecraft:lake_lava_underground",
@@ -95,12 +94,12 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
-      "wythers:vegetation/local/patch/grass_standard"
+      "wythers:vegetation/local/patch/grass_standard",
+      "minecraft:glow_lichen"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:decor/sparse_steam"
+      "wythers:decor/sparse_steam",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

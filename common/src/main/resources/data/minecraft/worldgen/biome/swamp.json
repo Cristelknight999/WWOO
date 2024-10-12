@@ -164,13 +164,14 @@
     ],
     [
       "wythers:terrain/local/swamp_pools"
-	],
+    ],
     [
       "wythers:terrain/local/cave_disk_basalt",
       "wythers:terrain/local/cave_disk_blackstone",
       "wythers:terrain/local/cave_disk_magma"
     ],
     [
+      "wythers:terrain/local/disk_mud_swamp",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -196,8 +197,7 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:disk_clay",
-      "wythers:terrain/local/disk_mud_swamp"
+      "minecraft:disk_clay"
     ],
     [
       "wythers:terrain/feature/dripstone_cluster",

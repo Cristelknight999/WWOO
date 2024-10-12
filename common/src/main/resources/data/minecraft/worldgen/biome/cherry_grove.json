@@ -137,7 +137,7 @@
       "wythers:terrain/local/cherry_pools_edge",
       "wythers:road/cherry_grove",
       "wythers:terrain/extended/replace_stone_to_andesite"
-	],
+    ],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
@@ -191,11 +191,8 @@
     ],
     [
       "wythers:decor/floating_lanterns_cherry",
-      "minecraft:glow_lichen",
       "wythers:farm/paddy_cane",
       "wythers:vegetation/local/patch/flower_peony",
-      "minecraft:patch_tall_grass_2",
-      "minecraft:patch_grass_plain",
       "wythers:vegetation/local/patch/waterlily_dense",
       "wythers:vegetation/local/patch/flower_cherry",
       "wythers:vegetation/local/trees/cherry",
@@ -204,7 +201,10 @@
       "wythers:vegetation/extended/trees/cherry_maple_snowy",
       "wythers:vegetation/extended/trees/cherry_huangshan_pine_snowy",
       "wythers:vegetation/local/trees/cherry_pools",
-      "wythers:vegetation/local/patch/elephant_bamboo_cherry"
+      "wythers:vegetation/local/patch/elephant_bamboo_cherry",
+      "minecraft:glow_lichen",
+      "minecraft:patch_tall_grass_2",
+      "minecraft:patch_grass_plain"
     ],
     [
       "minecraft:freeze_top_layer"

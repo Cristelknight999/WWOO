@@ -38,8 +38,8 @@
   },
   "features": [
     [
-	  "wythers:terrain/local/fungal_basalt_cliffs",
-	  "wythers:terrain/local/replace_stone_to_basalt",
+      "wythers:terrain/local/fungal_basalt_cliffs",
+      "wythers:terrain/local/replace_stone_to_basalt",
       "wythers:terrain/local/fungal_prismarine_shore",
       "wythers:terrain/local/fungal_fire_coral_shore",
       "wythers:terrain/local/fungal_fire_coral_shore_2",
@@ -63,6 +63,10 @@
     [],
     [],
     [
+      "wythers:terrain/local/fungal_mossy_shore",
+      "wythers:terrain/local/fungal_mossy_shore_2",
+      "wythers:terrain/local/fungal_coral_mycelium",
+      "wythers:terrain/local/fungal_moss",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -90,11 +94,7 @@
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "wythers:terrain/local/fungal_mossy_shore",
-      "wythers:terrain/local/fungal_mossy_shore_2",
-      "wythers:terrain/local/fungal_coral_mycelium",
-      "wythers:terrain/local/fungal_moss"
+      "minecraft:disk_gravel"
     ],
     [
       "wythers:vegetation/local/other/fungal_sculk_vein"
@@ -104,7 +104,6 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/other/fungal_sculk_growths",
       "wythers:vegetation/local/other/fungal_blood_woods",
       "wythers:vegetation/local/other/fungal_savanna_vegetation",
@@ -117,15 +116,16 @@
       "wythers:vegetation/local/other/fungal_twisted_kelp",
       "wythers:vegetation/local/other/fungal_weeping_growths",
       "wythers:vegetation/local/other/fungal_moss_sprouts",
-      "minecraft:brown_mushroom_taiga",
-      "minecraft:red_mushroom_taiga",
       "wythers:vegetation/local/patch/fungal_seagrass",
-      "wythers:vegetation/local/patch/fungal_sea_pickle"
+      "wythers:vegetation/local/patch/fungal_sea_pickle",
+      "minecraft:glow_lichen",
+      "minecraft:brown_mushroom_taiga",
+      "minecraft:red_mushroom_taiga"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:vegetation/local/other/fungal_vines",
-      "wythers:vegetation/local/other/fungal_glow"
+      "wythers:vegetation/local/other/fungal_glow",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

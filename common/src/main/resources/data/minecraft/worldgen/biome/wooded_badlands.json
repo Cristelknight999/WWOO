@@ -37,16 +37,16 @@
       "wythers:terrain/local/base_wooded_badlands"
     ],
     [
-      "minecraft:lake_lava_underground",
-      "wythers:terrain/feature/lake_salt"
+      "wythers:terrain/feature/lake_salt",
+      "minecraft:lake_lava_underground"
     ],
     [
       "minecraft:amethyst_geode"
     ],
     [
+      "wythers:terrain/extended/red_sandify_rooted_dirt",
       "minecraft:monster_room",
-      "minecraft:monster_room_deep",
-      "wythers:terrain/extended/red_sandify_rooted_dirt"
+      "minecraft:monster_room_deep"
     ],
     [],
     [],
@@ -87,10 +87,10 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/trees/eucalyptus_badlands",
       "wythers:vegetation/local/trees/eucalyptus_woodland",
       "wythers:vegetation/local/patch/grass_standard",
+      "minecraft:glow_lichen",
       "minecraft:patch_dead_bush_badlands",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
@@ -98,9 +98,9 @@
       "minecraft:patch_pumpkin"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/crust_salt",
-      "wythers:terrain/local/crust_packed_mud"
+      "wythers:terrain/local/crust_packed_mud",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": false,

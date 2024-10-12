@@ -47,6 +47,12 @@
       "wythers:vegetation/extended/trees/giant_taiga_meadow"
     ],
     [
+      "wythers:terrain/local/disk_gravel_floor",
+      "wythers:terrain/local/disk_gravel_shore",
+      "wythers:terrain/local/disk_muddy_roots_in_podzol",
+      "wythers:terrain/local/disk_mud_in_muddy_roots",
+      "wythers:terrain/local/disk_mossy_cobblestone_in_gravel",
+      "wythers:terrain/local/disk_moss_in_mossy_cobblestone",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -71,13 +77,7 @@
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
-      "minecraft:underwater_magma",
-      "wythers:terrain/local/disk_gravel_floor",
-      "wythers:terrain/local/disk_gravel_shore",
-      "wythers:terrain/local/disk_muddy_roots_in_podzol",
-      "wythers:terrain/local/disk_mud_in_muddy_roots",
-      "wythers:terrain/local/disk_mossy_cobblestone_in_gravel",
-      "wythers:terrain/local/disk_moss_in_mossy_cobblestone"
+      "minecraft:underwater_magma"
     ],
     [],
     [
@@ -85,23 +85,23 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/patch/large_ferns_dense_forests",
       "wythers:vegetation/local/trees/ogt_giant_redwood_woods",
       "wythers:vegetation/local/trees/old_growth_spruce_taiga",
+      "wythers:vegetation/local/patch/temperate_rainforest_undergrowth",
+      "minecraft:glow_lichen",
       "minecraft:patch_grass_taiga",
       "minecraft:patch_dead_bush",
       "minecraft:brown_mushroom_old_growth",
       "minecraft:red_mushroom_old_growth",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:patch_berry_common",
-      "wythers:vegetation/local/patch/temperate_rainforest_undergrowth"
+      "minecraft:patch_berry_common"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:vegetation/local/patch/temperate_rainforest_vines",
-      "wythers:terrain/local/replace_coarse_dirt_to_moss"
+      "wythers:terrain/local/replace_coarse_dirt_to_moss",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

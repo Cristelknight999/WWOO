@@ -142,6 +142,7 @@
     [],
     [],
     [
+      "wythers:terrain/local/beach_mossy_stone",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -166,8 +167,7 @@
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
-      "minecraft:underwater_magma",
-      "wythers:terrain/local/beach_mossy_stone"
+      "minecraft:underwater_magma"
     ],
     [],
     [

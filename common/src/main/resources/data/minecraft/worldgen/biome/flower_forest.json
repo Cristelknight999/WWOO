@@ -37,8 +37,8 @@
       "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/local/replace_granite_to_diorite"
+      "wythers:terrain/local/replace_granite_to_diorite",
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
@@ -51,6 +51,9 @@
       "wythers:terrain/local/cave_disk_magma"
     ],
     [
+      "wythers:terrain/local/disk_sand_shore",
+      "wythers:terrain/extended/disk_clay_dirt_only",
+      "wythers:terrain/local/replace_volcanics_flower_forest",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -76,12 +79,9 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/disk_sand_shore",
-      "wythers:terrain/extended/disk_clay_dirt_only",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-	  "wythers:terrain/local/replace_volcanics_flower_forest"
+      "minecraft:disk_gravel"
     ],
     [],
     [
@@ -89,7 +89,6 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/bushes/mediterranean",
       "wythers:vegetation/extended/trees/mediterranean_woods",
       "wythers:vegetation/local/patch/flower_mediterranean_lilacs",
@@ -99,16 +98,17 @@
       "wythers:vegetation/extended/trees/windbreak_2",
       "wythers:vegetation/extended/patch/flower_dry_mediterranean",
       "wythers:vegetation/local/patch/grass_standard",
+      "minecraft:glow_lichen",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal"
     ],
     [
-      "minecraft:freeze_top_layer",
       "wythers:terrain/local/pamukkale_diorite",
       "wythers:terrain/local/pamukkale_calcite",
       "wythers:terrain/local/pamukkale_pools",
       "wythers:terrain/extended/volcanic_extinction",
-      "wythers:decor/dense_steam"
+      "wythers:decor/dense_steam",
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,

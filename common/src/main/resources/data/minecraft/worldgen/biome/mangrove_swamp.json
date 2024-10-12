@@ -131,9 +131,9 @@
       "minecraft:lake_lava_surface"
     ],
     [
+      "wythers:terrain/local/base_mangrove_swamp_bayou_hills",
       "minecraft:amethyst_geode",
-      "minecraft:large_dripstone",
-      "wythers:terrain/local/base_mangrove_swamp_bayou_hills"
+      "minecraft:large_dripstone"
     ],
     [
       "minecraft:fossil_upper",
@@ -143,7 +143,7 @@
     ],
     [
       "wythers:terrain/local/swamp_pools"
-	],
+    ],
     [
       "wythers:terrain/local/cave_disk_basalt",
       "wythers:terrain/local/cave_disk_blackstone",
@@ -186,7 +186,6 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/patch/large_ferns_dense_forests",
       "wythers:vegetation/local/trees/mangrove_swamp_jungle",
       "wythers:vegetation/local/trees/mangrove_swamp_bayou",
@@ -196,13 +195,14 @@
       "wythers:vegetation/local/trees/mangrove_swamp_mangroves",
       "wythers:vegetation/local/patch/elephant_grass",
       "wythers:vegetation/local/patch/grass_standard",
+      "minecraft:glow_lichen",
       "minecraft:patch_waterlily",
       "minecraft:seagrass_swamp"
     ],
     [
       "wythers:vegetation/local/patch/mangrove_swamp_dripleaves",
-      "minecraft:freeze_top_layer",
-      "wythers:vegetation/local/patch/spanish_moss"
+      "wythers:vegetation/local/patch/spanish_moss",
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

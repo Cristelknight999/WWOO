@@ -34,10 +34,10 @@
       "wythers:terrain/local/atoll_grass"
     ],
     [
-      "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface",
       "wythers:terrain/extended/coral_pools",
-      "wythers:terrain/extended/coral_pools_edge"
+      "wythers:terrain/extended/coral_pools_edge",
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
     ],
     [
       "minecraft:amethyst_geode"
@@ -49,6 +49,7 @@
     [],
     [],
     [
+      "wythers:vegetation/local/other/coral_disks",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -73,8 +74,7 @@
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
-      "minecraft:underwater_magma",
-      "wythers:vegetation/local/other/coral_disks"
+      "minecraft:underwater_magma"
     ],
     [],
     [
@@ -82,18 +82,18 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/local/trees/jungle_island_bent",
       "wythers:vegetation/local/trees/jungle_island",
       "wythers:vegetation/local/patch/pineapples",
+      "wythers:vegetation/local/other/cocoanuts",
+      "minecraft:glow_lichen",
       "minecraft:patch_grass_jungle",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
       "minecraft:seagrass_warm",
-      "minecraft:sea_pickle",
-      "wythers:vegetation/local/other/cocoanuts"
+      "minecraft:sea_pickle"
     ],
     [
       "minecraft:freeze_top_layer"

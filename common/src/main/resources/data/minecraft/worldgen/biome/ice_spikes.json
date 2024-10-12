@@ -158,18 +158,18 @@
       "wythers:terrain/extended/thermal_savanna_forest_base"
     ],
     [
-      "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface",
       "wythers:terrain/local/ice_spikes_glacial_gravel",
       "wythers:terrain/local/thermal_steppe_dirt",
       "wythers:terrain/local/thermal_steppe_brown",
       "wythers:terrain/local/thermal_steppe_gray",
       "wythers:terrain/local/thermal_steppe_soul",
-      "wythers:terrain/local/thermal_steppe_dripstone"
+      "wythers:terrain/local/thermal_steppe_dripstone",
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/local/glacial_pools"
+      "wythers:terrain/local/glacial_pools",
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
@@ -178,6 +178,7 @@
     [],
     [],
     [
+      "wythers:terrain/local/disk_gravel_river",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
@@ -203,26 +204,25 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:disk_clay",
-      "wythers:terrain/local/disk_gravel_river"
+      "minecraft:disk_clay"
     ],
     [],
     [
+      "wythers:terrain/feature/thermal_savanna_block_spikes",
       "minecraft:spring_water",
-      "minecraft:spring_lava",
-      "wythers:terrain/feature/thermal_savanna_block_spikes"
+      "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen",
       "wythers:vegetation/extended/trees/ice_spikes",
       "wythers:vegetation/local/patch/grass_standard",
+      "wythers:terrain/feature/thermal_savanna_dripstone_spikes",
+      "minecraft:glow_lichen",
       "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "wythers:terrain/feature/thermal_savanna_dripstone_spikes"
+      "minecraft:red_mushroom_normal"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:decor/dense_steam"
+      "wythers:decor/dense_steam",
+      "minecraft:freeze_top_layer"
     ]
   ]
 }
