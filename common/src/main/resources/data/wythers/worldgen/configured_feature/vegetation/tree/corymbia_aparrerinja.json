@@ -12,7 +12,7 @@
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:birch_wood",
+        "Name": "minecraft:stripped_pale_oak_wood",
         "Properties": {
           "axis": "y"
         }
@@ -21,7 +21,7 @@
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:birch_wood",
+        "Name": "minecraft:stripped_pale_oak_wood",
         "Properties": {
           "axis": "y"
         }

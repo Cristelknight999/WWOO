@@ -1,62 +1,64 @@
 {
-    "config": {
-        "feature": {
-            "feature": {
-                "config": {
-                    "allowed_placement": {
-                        "blocks": "#wythers:dirt",
-                        "type": "minecraft:matching_blocks"
-                    },
-                    "direction": "down",
-                    "layers": [
-                        {
-                            "height": {
-                                "min_inclusive": 1,
-                                "max_inclusive": 2,
-                                "type": "minecraft:uniform"
-                            },
-                            "provider": {
-                                "state": {
-                                    "Name": "minecraft:rooted_dirt"
-                                },
-                                "type": "minecraft:simple_state_provider"
-                            }
-                        }
-                    ],
-                    "prioritize_tip": false
+  "config": {
+    "feature": {
+      "feature": {
+        "config": {
+          "allowed_placement": {
+            "blocks": "#wythers:dirt",
+            "type": "minecraft:matching_blocks"
+          },
+          "direction": "down",
+          "layers": [
+            {
+              "height": {
+                "value": {
+                  "min_inclusive": 1,
+                  "max_inclusive": 2
                 },
-                "type": "minecraft:block_column"
-            },
-            "placement": [
-                {
-                    "predicate": {
-                        "predicates": [
-                            {
-                                "blocks": "#wythers:dirt",
-                                "type": "minecraft:matching_blocks"
-                            },
-                            {
-                                "predicate": {
-                                    "blocks": "#wythers:dirt",
-                                    "offset": [
-                                        0,
-                                        1,
-                                        0
-                                    ],
-                                    "type": "minecraft:matching_blocks"
-                                },
-                                "type": "minecraft:not"
-                            }
-                        ],
-                        "type": "minecraft:all_of"
-                    },
-                    "type": "minecraft:block_predicate_filter"
-                }
-            ]
+                "type": "minecraft:uniform"
+              },
+              "provider": {
+                "state": {
+                  "Name": "minecraft:rooted_dirt"
+                },
+                "type": "minecraft:simple_state_provider"
+              }
+            }
+          ],
+          "prioritize_tip": false
         },
-        "tries": 12,
-        "xz_spread": 1,
-        "y_spread": 2
+        "type": "minecraft:block_column"
+      },
+      "placement": [
+        {
+          "predicate": {
+            "predicates": [
+              {
+                "blocks": "#wythers:dirt",
+                "type": "minecraft:matching_blocks"
+              },
+              {
+                "predicate": {
+                  "blocks": "#wythers:dirt",
+                  "offset": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "type": "minecraft:matching_blocks"
+                },
+                "type": "minecraft:not"
+              }
+            ],
+            "type": "minecraft:all_of"
+          },
+          "type": "minecraft:block_predicate_filter"
+        }
+      ]
     },
-    "type": "minecraft:random_patch"
+    "tries": 12,
+    "xz_spread": 1,
+    "y_spread": 2
+  },
+  "type": "minecraft:random_patch"
 }

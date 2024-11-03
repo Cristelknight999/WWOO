@@ -124,8 +124,10 @@
                         },
                         "branch_horizontal_length": {
                           "type": "minecraft:uniform",
-                          "min_inclusive": 3,
-                          "max_inclusive": 5
+                          "value": {
+                            "min_inclusive": 3,
+                            "max_inclusive": 5
+                          }
                         },
                         "branch_start_offset_from_top": {
                           "min_inclusive": -4,
@@ -133,8 +135,10 @@
                         },
                         "branch_end_offset_from_top": {
                           "type": "minecraft:uniform",
-                          "min_inclusive": -1,
-                          "max_inclusive": 0
+                          "value": {
+                            "min_inclusive": -1,
+                            "max_inclusive": 0
+                          }
                         }
                       },
                       "foliage_placer": {
@@ -209,8 +213,10 @@
                         },
                         "branch_horizontal_length": {
                           "type": "minecraft:uniform",
-                          "min_inclusive": 5,
-                          "max_inclusive": 7
+                          "value": {
+                            "min_inclusive": 5,
+                            "max_inclusive": 7
+                          }
                         },
                         "branch_start_offset_from_top": {
                           "min_inclusive": -4,
@@ -218,8 +224,10 @@
                         },
                         "branch_end_offset_from_top": {
                           "type": "minecraft:uniform",
-                          "min_inclusive": -1,
-                          "max_inclusive": 0
+                          "value": {
+                            "min_inclusive": -1,
+                            "max_inclusive": 0
+                          }
                         }
                       },
                       "foliage_placer": {
@@ -260,8 +268,10 @@
                       },
                       "radius": {
                         "type": "minecraft:uniform",
-                        "min_inclusive": 2,
-                        "max_inclusive": 3
+                        "value": {
+                          "min_inclusive": 0,
+                          "max_inclusive": 0
+                        }
                       },
                       "half_height": 3
                     }
@@ -328,9 +338,7 @@
                   "type": "minecraft:block_predicate_filter",
                   "predicate": {
                     "type": "minecraft:matching_blocks",
-                    "blocks": [
-                      "minecraft:dark_oak_wood"
-                    ]
+                    "blocks": "minecraft:dark_oak_wood"
                   }
                 }
               ]

@@ -25,7 +25,7 @@
               "trunk_provider": {
                 "type": "minecraft:simple_state_provider",
                 "state": {
-                  "Name": "minecraft:birch_wood",
+                  "Name": "minecraft:stripped_pale_oak_wood",
                   "Properties": {
                     "axis": "y"
                   }
@@ -43,7 +43,7 @@
                   {
                     "weight": 10,
                     "data": {
-                      "Name": "minecraft:birch_leaves",
+                      "Name": "minecraft:mangrove_leaves",
                       "Properties": {
                         "distance": "7",
                         "persistent": "false",
@@ -123,7 +123,7 @@
               "trunk_provider": {
                 "type": "minecraft:simple_state_provider",
                 "state": {
-                  "Name": "minecraft:birch_wood",
+                  "Name": "minecraft:stripped_pale_oak_wood",
                   "Properties": {
                     "axis": "y"
                   }
@@ -141,7 +141,7 @@
                   {
                     "weight": 10,
                     "data": {
-                      "Name": "minecraft:birch_leaves",
+                      "Name": "minecraft:mangrove_leaves",
                       "Properties": {
                         "distance": "7",
                         "persistent": "false",
@@ -220,7 +220,7 @@
           "trunk_provider": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "minecraft:birch_wood",
+              "Name": "minecraft:stripped_pale_oak_wood",
               "Properties": {
                 "axis": "y"
               }
@@ -238,7 +238,7 @@
               {
                 "weight": 10,
                 "data": {
-                  "Name": "minecraft:birch_leaves",
+                  "Name": "minecraft:mangrove_leaves",
                   "Properties": {
                     "distance": "7",
                     "persistent": "false",

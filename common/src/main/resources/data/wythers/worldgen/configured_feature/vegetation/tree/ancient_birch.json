@@ -124,8 +124,10 @@
                         },
                         "branch_horizontal_length": {
                           "type": "minecraft:uniform",
-                          "min_inclusive": 3,
-                          "max_inclusive": 5
+                          "value": {
+                            "min_inclusive": 3,
+                            "max_inclusive": 5
+                          }
                         },
                         "branch_start_offset_from_top": {
                           "min_inclusive": -4,
@@ -133,8 +135,10 @@
                         },
                         "branch_end_offset_from_top": {
                           "type": "minecraft:uniform",
-                          "min_inclusive": -1,
-                          "max_inclusive": 0
+                          "value": {
+                            "min_inclusive": -1,
+                            "max_inclusive": 0
+                          }
                         }
                       },
                       "foliage_placer": {
@@ -209,8 +213,10 @@
                         },
                         "branch_horizontal_length": {
                           "type": "minecraft:uniform",
-                          "min_inclusive": 5,
-                          "max_inclusive": 7
+                          "value": {
+                            "min_inclusive": 5,
+                            "max_inclusive": 7
+                          }
                         },
                         "branch_start_offset_from_top": {
                           "min_inclusive": -4,
@@ -218,8 +224,10 @@
                         },
                         "branch_end_offset_from_top": {
                           "type": "minecraft:uniform",
-                          "min_inclusive": -1,
-                          "max_inclusive": 0
+                          "value": {
+                            "min_inclusive": -1,
+                            "max_inclusive": 0
+                          }
                         }
                       },
                       "foliage_placer": {
@@ -270,7 +278,7 @@
                   },
                   "trunk_placer": {
                     "type": "minecraft:straight_trunk_placer",
-                    "base_height": 6,
+                    "base_height": 7,
                     "height_rand_a": 0,
                     "height_rand_b": 0
                   },
@@ -278,7 +286,7 @@
                     "type": "minecraft:random_spread_foliage_placer",
                     "radius": 2,
                     "offset": 0,
-                    "foliage_height": 8,
+                    "foliage_height": 9,
                     "leaf_placement_attempts": 256
                   },
                   "decorators": []
@@ -302,8 +310,12 @@
         },
         "placement": [
           {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+          },
+          {
             "type": "minecraft:count",
-            "count": 16
+            "count": 12
           }
         ]
       }
