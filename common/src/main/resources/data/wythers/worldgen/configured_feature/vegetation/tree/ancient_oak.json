@@ -58,7 +58,20 @@
                         "offset": 1,
                         "height": 1
                       },
-                      "decorators": []
+                      "decorators": [
+                    {
+                      "type": "minecraft:alter_ground",
+                      "provider": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "minecraft:podzol",
+                          "Properties": {
+                            "snowy": "false"
+                          }
+                        }
+                      }
+                    }
+                  ]
                     }
                   },
                   "placement": []
@@ -124,10 +137,8 @@
                         },
                         "branch_horizontal_length": {
                           "type": "minecraft:uniform",
-                          "value": {
-                            "min_inclusive": 3,
-                            "max_inclusive": 5
-                          }
+                          "min_inclusive": 3,
+                          "max_inclusive": 5
                         },
                         "branch_start_offset_from_top": {
                           "min_inclusive": -4,
@@ -135,10 +146,8 @@
                         },
                         "branch_end_offset_from_top": {
                           "type": "minecraft:uniform",
-                          "value": {
-                            "min_inclusive": -1,
-                            "max_inclusive": 0
-                          }
+                          "min_inclusive": -1,
+                          "max_inclusive": 0
                         }
                       },
                       "foliage_placer": {
@@ -147,7 +156,20 @@
                         "offset": 1,
                         "height": 1
                       },
-                      "decorators": []
+                      "decorators": [
+                    {
+                      "type": "minecraft:alter_ground",
+                      "provider": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "minecraft:podzol",
+                          "Properties": {
+                            "snowy": "false"
+                          }
+                        }
+                      }
+                    }
+                  ]
                     }
                   },
                   "placement": []
@@ -213,10 +235,8 @@
                         },
                         "branch_horizontal_length": {
                           "type": "minecraft:uniform",
-                          "value": {
-                            "min_inclusive": 5,
-                            "max_inclusive": 7
-                          }
+                          "min_inclusive": 5,
+                          "max_inclusive": 7
                         },
                         "branch_start_offset_from_top": {
                           "min_inclusive": -4,
@@ -224,10 +244,8 @@
                         },
                         "branch_end_offset_from_top": {
                           "type": "minecraft:uniform",
-                          "value": {
-                            "min_inclusive": -1,
-                            "max_inclusive": 0
-                          }
+                          "min_inclusive": -1,
+                          "max_inclusive": 0
                         }
                       },
                       "foliage_placer": {
@@ -236,44 +254,20 @@
                         "offset": 1,
                         "height": 1
                       },
-                      "decorators": []
-                    }
-                  },
-                  "placement": []
-                }
-              },
-              {
-                "chance": 0.25,
-                "feature": {
-                  "feature": {
-                    "type": "minecraft:disk",
-                    "config": {
-                      "state_provider": {
-                        "fallback": {
-                          "type": "minecraft:simple_state_provider",
-                          "state": {
-                            "Name": "minecraft:podzol",
-                            "Properties": {
-                              "snowy": "false"
-                            }
+                      "decorators": [
+                    {
+                      "type": "minecraft:alter_ground",
+                      "provider": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "minecraft:podzol",
+                          "Properties": {
+                            "snowy": "false"
                           }
-                        },
-                        "rules": []
-                      },
-                      "target": {
-                        "type": "minecraft:matching_blocks",
-                        "blocks": [
-                          "minecraft:grass_block"
-                        ]
-                      },
-                      "radius": {
-                        "type": "minecraft:uniform",
-                        "value": {
-                          "min_inclusive": 0,
-                          "max_inclusive": 0
                         }
-                      },
-                      "half_height": 3
+                      }
+                    }
+                  ]
                     }
                   },
                   "placement": []
@@ -326,7 +320,20 @@
                     "foliage_height": 9,
                     "leaf_placement_attempts": 256
                   },
-                  "decorators": []
+                  "decorators": [
+                    {
+                      "type": "minecraft:alter_ground",
+                      "provider": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "minecraft:podzol",
+                          "Properties": {
+                            "snowy": "false"
+                          }
+                        }
+                      }
+                    }
+                  ]
                 }
               },
               "placement": [
@@ -346,10 +353,6 @@
           }
         },
         "placement": [
-          {
-            "type": "minecraft:heightmap",
-            "heightmap": "WORLD_SURFACE_WG"
-          },
           {
             "type": "minecraft:count",
             "count": 16

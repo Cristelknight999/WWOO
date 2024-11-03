@@ -128,10 +128,8 @@
       },
       "radius": {
         "type": "minecraft:uniform",
-        "value": {
-          "min_inclusive": 2,
-          "max_inclusive": 5
-        }
+        "min_inclusive": 2,
+        "max_inclusive": 5
       },
       "half_height": 4
     }
