@@ -1,0 +1,96 @@
+{
+  "feature": {
+    "config": {
+      "features": [
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/colossal_mushroom_24",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/colossal_mushroom_26",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/colossal_mushroom_28",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/colossal_mushroom_30",
+            "placement": []
+          }
+        }
+      ],
+      "default": {
+        "feature": "wythers:vegetation/fungus/colossal_mushroom_32",
+        "placement": []
+      }
+    },
+    "type": "minecraft:random_selector"
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+        "blocks": "minecraft:moss_block"
+      }
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:red_mushroom"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": "minecraft:mycelium"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

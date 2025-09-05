@@ -1,0 +1,193 @@
+{
+  "feature": {
+    "type": "minecraft:simple_random_selector",
+    "config": {
+      "features": [
+        {
+          "feature": {
+            "type": "minecraft:disk",
+            "config": {
+              "state_provider": {
+                "fallback": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:brain_coral_block"
+                  }
+                },
+                "rules": []
+              },
+              "target": {
+                "type": "minecraft:matching_fluids",
+                "fluids": "#minecraft:water"
+              },
+              "radius": {
+                "type": "minecraft:biased_to_bottom",
+                "min_inclusive": 1,
+                "max_inclusive": 2
+              },
+              "half_height": 0
+            }
+          },
+          "placement": []
+        },
+        {
+          "feature": {
+            "type": "minecraft:disk",
+            "config": {
+              "state_provider": {
+                "fallback": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:fire_coral_block"
+                  }
+                },
+                "rules": []
+              },
+              "target": {
+                "type": "minecraft:matching_fluids",
+                "fluids": "#minecraft:water"
+              },
+              "radius": {
+                "type": "minecraft:biased_to_bottom",
+                "min_inclusive": 1,
+                "max_inclusive": 2
+              },
+              "half_height": 0
+            }
+          },
+          "placement": []
+        },
+        {
+          "feature": {
+            "type": "minecraft:disk",
+            "config": {
+              "state_provider": {
+                "fallback": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:horn_coral_block"
+                  }
+                },
+                "rules": []
+              },
+              "target": {
+                "type": "minecraft:matching_fluids",
+                "fluids": "#minecraft:water"
+              },
+              "radius": {
+                "type": "minecraft:biased_to_bottom",
+                "min_inclusive": 1,
+                "max_inclusive": 2
+              },
+              "half_height": 0
+            }
+          },
+          "placement": []
+        },
+        {
+          "feature": {
+            "type": "minecraft:disk",
+            "config": {
+              "state_provider": {
+                "fallback": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:bubble_coral_block"
+                  }
+                },
+                "rules": []
+              },
+              "target": {
+                "type": "minecraft:matching_fluids",
+                "fluids": "#minecraft:water"
+              },
+              "radius": {
+                "type": "minecraft:biased_to_bottom",
+                "min_inclusive": 1,
+                "max_inclusive": 2
+              },
+              "half_height": 0
+            }
+          },
+          "placement": []
+        },
+        {
+          "feature": {
+            "type": "minecraft:disk",
+            "config": {
+              "state_provider": {
+                "fallback": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:tube_coral_block"
+                  }
+                },
+                "rules": []
+              },
+              "target": {
+                "type": "minecraft:matching_fluids",
+                "fluids": "#minecraft:water"
+              },
+              "radius": {
+                "type": "minecraft:biased_to_bottom",
+                "min_inclusive": 1,
+                "max_inclusive": 2
+              },
+              "half_height": 0
+            }
+          },
+          "placement": []
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 20
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "minecraft:water"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:water"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:brain_coral_block",
+              "minecraft:bubble_coral_block",
+              "minecraft:fire_coral_block",
+              "minecraft:horn_coral_block",
+              "minecraft:tube_coral_block"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

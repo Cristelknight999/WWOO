@@ -1,0 +1,273 @@
+{
+  "feature": {
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:cocoa",
+                "Properties": {
+                  "age": "0",
+                  "facing": "north"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:cocoa",
+                "Properties": {
+                  "age": "1",
+                  "facing": "north"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:cocoa",
+                "Properties": {
+                  "age": "2",
+                  "facing": "north"
+                }
+              }
+            }
+          ]
+        },
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "blocks": [
+                "minecraft:jungle_wood"
+              ]
+            },
+            "then": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "0",
+                      "facing": "east"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "1",
+                      "facing": "east"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "2",
+                      "facing": "east"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "blocks": [
+                "minecraft:jungle_wood"
+              ]
+            },
+            "then": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "0",
+                      "facing": "west"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "1",
+                      "facing": "west"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "2",
+                      "facing": "west"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "blocks": [
+                "jungle_wood"
+              ]
+            },
+            "then": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "0",
+                      "facing": "south"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "1",
+                      "facing": "south"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:cocoa",
+                    "Properties": {
+                      "age": "2",
+                      "facing": "south"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "radius": 1,
+      "half_height": 0,
+      "target": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "air"
+        ]
+      }
+    },
+    "type": "minecraft:disk"
+  },
+  "placement": [
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "up",
+      "max_steps": 25,
+      "target_condition": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "jungle_wood"
+            ]
+          },
+          {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  1,
+                  1,
+                  0
+                ],
+                "blocks": [
+                  "jungle_wood"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  -1,
+                  1,
+                  0
+                ],
+                "blocks": [
+                  "jungle_wood"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  1
+                ],
+                "blocks": [
+                  "jungle_wood"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  -1
+                ],
+                "blocks": [
+                  "jungle_wood"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "allowed_search_condition": {
+        "type": "minecraft:true"
+      }
+    }
+  ]
+}

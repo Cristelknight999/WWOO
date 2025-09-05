@@ -1,0 +1,24 @@
+{
+  "feature": "wythers:terrain/local/lukewarm_ocean_caves_sand",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 20
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 0
+        },
+        "max_inclusive": {
+          "absolute": 50
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "assets": {
+    "angry": "minecraft:entity/wolf/wolf_woods_angry",
+    "tame": "minecraft:entity/wolf/wolf_woods_tame",
+    "wild": "minecraft:entity/wolf/wolf_woods"
+  },
+  "spawn_conditions": [
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands",
+    "minecraft:jungle",
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

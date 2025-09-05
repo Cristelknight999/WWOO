@@ -1,0 +1,444 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": {
+                  "type": "minecraft:tree",
+                  "config": {
+                    "decorators": [
+                      {
+                        "type": "minecraft:attached_to_leaves",
+                        "probability": 0.1,
+                        "exclusion_radius_xz": 1,
+                        "exclusion_radius_y": 1,
+                        "required_empty_blocks": 1,
+                        "block_provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:glow_lichen",
+                            "Properties": {
+                              "down": "false",
+                              "east": "false",
+                              "north": "false",
+                              "south": "false",
+                              "up": "true",
+                              "waterlogged": "false",
+                              "west": "false"
+                            }
+                          }
+                        },
+                        "directions": [
+                          "down"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:pale_moss",
+                        "leaves_probability": 0.25,
+                        "trunk_probability": 0.5,
+                        "ground_probability": 0
+                      }
+                    ],
+                    "dirt_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:rooted_dirt"
+                      }
+                    },
+                    "foliage_placer": {
+                      "type": "minecraft:jungle_foliage_placer",
+                      "offset": 1,
+                      "radius": 0,
+                      "height": 0
+                    },
+                    "foliage_provider": {
+                      "type": "minecraft:weighted_state_provider",
+                      "entries": [
+                        {
+                          "data": {
+                            "Name": "minecraft:acacia_leaves",
+                            "Properties": {
+                              "distance": "7",
+                              "persistent": "false",
+                              "waterlogged": "false"
+                            }
+                          },
+                          "weight": 3
+                        }
+                      ]
+                    },
+                    "force_dirt": true,
+                    "ignore_vines": false,
+                    "minimum_size": {
+                      "type": "minecraft:two_layers_feature_size",
+                      "limit": 1,
+                      "lower_size": 0,
+                      "upper_size": 1
+                    },
+                    "trunk_placer": {
+                      "type": "minecraft:bending_trunk_placer",
+                      "base_height": 7,
+                      "bend_length": {
+                        "type": "minecraft:uniform",
+                        "max_inclusive": 3,
+                        "min_inclusive": 3
+                      },
+                      "height_rand_a": 0,
+                      "height_rand_b": 0,
+                      "min_height_for_leaves": 7
+                    },
+                    "trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:acacia_wood",
+                        "Properties": {
+                          "axis": "y"
+                        }
+                      }
+                    }
+                  }
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "type": "minecraft:tree",
+                  "config": {
+                    "decorators": [
+                      {
+                        "type": "minecraft:attached_to_leaves",
+                        "probability": 0.1,
+                        "exclusion_radius_xz": 1,
+                        "exclusion_radius_y": 1,
+                        "required_empty_blocks": 1,
+                        "block_provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:glow_lichen",
+                            "Properties": {
+                              "down": "false",
+                              "east": "false",
+                              "north": "false",
+                              "south": "false",
+                              "up": "true",
+                              "waterlogged": "false",
+                              "west": "false"
+                            }
+                          }
+                        },
+                        "directions": [
+                          "down"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:pale_moss",
+                        "leaves_probability": 0.25,
+                        "trunk_probability": 0.5,
+                        "ground_probability": 0
+                      }
+                    ],
+                    "dirt_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:rooted_dirt"
+                      }
+                    },
+                    "foliage_placer": {
+                      "type": "minecraft:jungle_foliage_placer",
+                      "offset": 1,
+                      "radius": 0,
+                      "height": 0
+                    },
+                    "foliage_provider": {
+                      "type": "minecraft:weighted_state_provider",
+                      "entries": [
+                        {
+                          "data": {
+                            "Name": "minecraft:acacia_leaves",
+                            "Properties": {
+                              "distance": "7",
+                              "persistent": "false",
+                              "waterlogged": "false"
+                            }
+                          },
+                          "weight": 3
+                        }
+                      ]
+                    },
+                    "force_dirt": true,
+                    "ignore_vines": false,
+                    "minimum_size": {
+                      "type": "minecraft:two_layers_feature_size",
+                      "limit": 1,
+                      "lower_size": 0,
+                      "upper_size": 1
+                    },
+                    "trunk_placer": {
+                      "type": "minecraft:bending_trunk_placer",
+                      "base_height": 12,
+                      "bend_length": {
+                        "type": "minecraft:uniform",
+                        "max_inclusive": 4,
+                        "min_inclusive": 4
+                      },
+                      "height_rand_a": 0,
+                      "height_rand_b": 0,
+                      "min_height_for_leaves": 12
+                    },
+                    "trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:acacia_wood",
+                        "Properties": {
+                          "axis": "y"
+                        }
+                      }
+                    }
+                  }
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "type": "minecraft:tree",
+                  "config": {
+                    "decorators": [
+                      {
+                        "type": "minecraft:alter_ground",
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:rooted_dirt"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:attached_to_leaves",
+                        "probability": 0.1,
+                        "exclusion_radius_xz": 1,
+                        "exclusion_radius_y": 1,
+                        "required_empty_blocks": 1,
+                        "block_provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:glow_lichen",
+                            "Properties": {
+                              "down": "false",
+                              "east": "false",
+                              "north": "false",
+                              "south": "false",
+                              "up": "true",
+                              "waterlogged": "false",
+                              "west": "false"
+                            }
+                          }
+                        },
+                        "directions": [
+                          "down"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:pale_moss",
+                        "leaves_probability": 0.25,
+                        "trunk_probability": 0.5,
+                        "ground_probability": 0
+                      }
+                    ],
+                    "dirt_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:rooted_dirt"
+                      }
+                    },
+                    "foliage_placer": {
+                      "type": "minecraft:jungle_foliage_placer",
+                      "offset": 1,
+                      "radius": 0,
+                      "height": 0
+                    },
+                    "foliage_provider": {
+                      "type": "minecraft:weighted_state_provider",
+                      "entries": [
+                        {
+                          "data": {
+                            "Name": "minecraft:acacia_leaves",
+                            "Properties": {
+                              "distance": "7",
+                              "persistent": "false",
+                              "waterlogged": "false"
+                            }
+                          },
+                          "weight": 3
+                        }
+                      ]
+                    },
+                    "force_dirt": true,
+                    "ignore_vines": false,
+                    "minimum_size": {
+                      "type": "minecraft:two_layers_feature_size",
+                      "limit": 1,
+                      "lower_size": 0,
+                      "upper_size": 1
+                    },
+                    "trunk_placer": {
+                      "type": "minecraft:straight_trunk_placer",
+                      "base_height": 15,
+                      "height_rand_a": 0,
+                      "height_rand_b": 0
+                    },
+                    "trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:acacia_wood",
+                        "Properties": {
+                          "axis": "y"
+                        }
+                      }
+                    }
+                  }
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "config": {
+                    "tries": 128,
+                    "xz_spread": 1,
+                    "y_spread": 4,
+                    "feature": {
+                      "feature": {
+                        "config": {
+                          "to_place": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:acacia_wood"
+                            }
+                          }
+                        },
+                        "type": "minecraft:simple_block"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": [
+                                  "minecraft:air",
+                                  "minecraft:water",
+                                  "minecraft:pale_hanging_moss",
+                                  "minecraft:rooted_dirt",
+                                  "minecraft:dirt",
+                                  "minecraft:grass_block",
+                                  "minecraft:packed_mud",
+                                  "minecraft:mud",
+                                  "minecraft:soul_sand",
+                                  "minecraft:soul_soil"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_block_tag",
+                                    "offset": [
+                                      0,
+                                      -1,
+                                      0
+                                    ],
+                                    "tag": "dirt"
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      -1,
+                                      0
+                                    ],
+                                    "blocks": [
+                                      "minecraft:acacia_wood",
+                                      "minecraft:soul_sand"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      4,
+                                      0
+                                    ],
+                                    "blocks": "minecraft:acacia_wood"
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      4,
+                                      0
+                                    ],
+                                    "blocks": "minecraft:acacia_wood"
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      4,
+                                      1
+                                    ],
+                                    "blocks": "minecraft:acacia_wood"
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      4,
+                                      -1
+                                    ],
+                                    "blocks": "minecraft:acacia_wood"
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      1,
+                                      0
+                                    ],
+                                    "blocks": "minecraft:acacia_wood"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "type": "minecraft:random_patch"
+                },
+                "placement": []
+              }
+            ]
+          },
+          "type": "minecraft:simple_random_selector"
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 10
+          }
+        ]
+      }
+    ]
+  }
+}

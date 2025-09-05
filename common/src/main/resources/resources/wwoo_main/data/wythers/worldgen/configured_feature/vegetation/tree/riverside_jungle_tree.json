@@ -1,0 +1,493 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:simple_random_selector",
+          "config": {
+            "features": [
+              {
+                "feature": {
+                  "type": "minecraft:random_patch",
+                  "config": {
+                    "tries": 128,
+                    "xz_spread": 2,
+                    "y_spread": 2,
+                    "feature": {
+                      "feature": {
+                        "type": "minecraft:simple_random_selector",
+                        "config": {
+                          "features": [
+                            {
+                              "feature": {
+                                "type": "minecraft:tree",
+                                "config": {
+                                  "ignore_vines": true,
+                                  "force_dirt": true,
+                                  "minimum_size": {
+                                    "type": "minecraft:two_layers_feature_size",
+                                    "limit": 1,
+                                    "lower_size": 0,
+                                    "upper_size": 2
+                                  },
+                                  "dirt_provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:jungle_wood",
+                                      "Properties": {
+                                        "axis": "y"
+                                      }
+                                    }
+                                  },
+                                  "trunk_provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:jungle_wood",
+                                      "Properties": {
+                                        "axis": "y"
+                                      }
+                                    }
+                                  },
+                                  "foliage_provider": {
+                                    "type": "minecraft:weighted_state_provider",
+                                    "entries": [
+                                      {
+                                        "weight": 10,
+                                        "data": {
+                                          "Name": "minecraft:jungle_leaves",
+                                          "Properties": {
+                                            "distance": "7",
+                                            "persistent": "false",
+                                            "waterlogged": "false"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 0,
+                                        "data": {
+                                          "Name": "minecraft:air"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "trunk_placer": {
+                                    "type": "minecraft:cherry_trunk_placer",
+                                    "base_height": 22,
+                                    "height_rand_a": 5,
+                                    "height_rand_b": 0,
+                                    "branch_count": {
+                                      "type": "minecraft:weighted_list",
+                                      "distribution": [
+                                        {
+                                          "weight": 1,
+                                          "data": 2
+                                        },
+                                        {
+                                          "weight": 1,
+                                          "data": 3
+                                        }
+                                      ]
+                                    },
+                                    "branch_horizontal_length": {
+                                      "type": "minecraft:uniform",
+                                      "min_inclusive": 8,
+                                      "max_inclusive": 10
+                                    },
+                                    "branch_start_offset_from_top": {
+                                      "min_inclusive": -4,
+                                      "max_inclusive": -3
+                                    },
+                                    "branch_end_offset_from_top": {
+                                      "type": "minecraft:uniform",
+                                      "min_inclusive": -1,
+                                      "max_inclusive": 0
+                                    }
+                                  },
+                                  "foliage_placer": {
+                                    "type": "minecraft:cherry_foliage_placer",
+                                    "radius": {
+                                      "type": "minecraft:uniform",
+                                      "min_inclusive": 4,
+                                      "max_inclusive": 5
+                                    },
+                                    "offset": 1,
+                                    "height": 4,
+                                    "wide_bottom_layer_hole_chance": 1,
+                                    "corner_hole_chance": 1,
+                                    "hanging_leaves_chance": 0.5,
+                                    "hanging_leaves_extension_chance": 0
+                                  },
+                                  "decorators": [
+                                    {
+                                      "type": "minecraft:leave_vine",
+                                      "probability": 0.1
+                                    }
+                                  ]
+                                }
+                              },
+                              "placement": [
+                                {
+                                  "type": "minecraft:block_predicate_filter",
+                                  "predicate": {
+                                    "type": "minecraft:would_survive",
+                                    "state": {
+                                      "Name": "minecraft:fern"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "feature": {
+                                "config": {
+                                  "tries": 8,
+                                  "xz_spread": 16,
+                                  "y_spread": 0,
+                                  "feature": {
+                                    "feature": {
+                                      "config": {
+                                        "direction": "down",
+                                        "allowed_placement": {
+                                          "type": "minecraft:matching_blocks",
+                                          "blocks": [
+                                            "air"
+                                          ]
+                                        },
+                                        "prioritize_tip": true,
+                                        "layers": [
+                                          {
+                                            "height": {
+                                              "type": "minecraft:uniform",
+                                              "min_inclusive": 0,
+                                              "max_inclusive": 2
+                                            },
+                                            "provider": {
+                                              "type": "minecraft:simple_state_provider",
+                                              "state": {
+                                                "Name": "minecraft:pale_hanging_moss",
+                                                "Properties": {
+                                                  "tip": "false"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "height": 1,
+                                            "provider": {
+                                              "type": "minecraft:simple_state_provider",
+                                              "state": {
+                                                "Name": "minecraft:pale_hanging_moss",
+                                                "Properties": {
+                                                  "tip": "true"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "type": "minecraft:block_column"
+                                    },
+                                    "placement": [
+                                      {
+                                        "type": "minecraft:environment_scan",
+                                        "direction_of_search": "up",
+                                        "max_steps": 32,
+                                        "target_condition": {
+                                          "type": "minecraft:all_of",
+                                          "predicates": [
+                                            {
+                                              "type": "minecraft:matching_blocks",
+                                              "offset": [
+                                                0,
+                                                1,
+                                                0
+                                              ],
+                                              "blocks": [
+                                                "jungle_wood",
+                                                "jungle_leaves"
+                                              ]
+                                            },
+                                            {
+                                              "type": "minecraft:matching_blocks",
+                                              "blocks": [
+                                                "air"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        "allowed_search_condition": {
+                                          "type": "minecraft:true"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "type": "minecraft:random_patch"
+                              },
+                              "placement": []
+                            }
+                          ]
+                        }
+                      },
+                      "placement": []
+                    }
+                  }
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "type": "minecraft:random_patch",
+                  "config": {
+                    "tries": 128,
+                    "xz_spread": 1,
+                    "y_spread": 2,
+                    "feature": {
+                      "feature": {
+                        "type": "minecraft:simple_random_selector",
+                        "config": {
+                          "features": [
+                            {
+                              "feature": {
+                                "type": "minecraft:tree",
+                                "config": {
+                                  "ignore_vines": true,
+                                  "force_dirt": true,
+                                  "minimum_size": {
+                                    "type": "minecraft:two_layers_feature_size",
+                                    "limit": 1,
+                                    "lower_size": 0,
+                                    "upper_size": 2
+                                  },
+                                  "dirt_provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:jungle_wood",
+                                      "Properties": {
+                                        "axis": "y"
+                                      }
+                                    }
+                                  },
+                                  "trunk_provider": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:jungle_wood",
+                                      "Properties": {
+                                        "axis": "y"
+                                      }
+                                    }
+                                  },
+                                  "foliage_provider": {
+                                    "type": "minecraft:weighted_state_provider",
+                                    "entries": [
+                                      {
+                                        "weight": 10,
+                                        "data": {
+                                          "Name": "minecraft:jungle_leaves",
+                                          "Properties": {
+                                            "distance": "7",
+                                            "persistent": "false",
+                                            "waterlogged": "false"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 0,
+                                        "data": {
+                                          "Name": "minecraft:air"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "trunk_placer": {
+                                    "type": "minecraft:cherry_trunk_placer",
+                                    "base_height": 32,
+                                    "height_rand_a": 16,
+                                    "height_rand_b": 0,
+                                    "branch_count": {
+                                      "type": "minecraft:weighted_list",
+                                      "distribution": [
+                                        {
+                                          "weight": 1,
+                                          "data": 2
+                                        },
+                                        {
+                                          "weight": 1,
+                                          "data": 3
+                                        }
+                                      ]
+                                    },
+                                    "branch_horizontal_length": {
+                                      "type": "minecraft:uniform",
+                                      "min_inclusive": 8,
+                                      "max_inclusive": 10
+                                    },
+                                    "branch_start_offset_from_top": {
+                                      "min_inclusive": -4,
+                                      "max_inclusive": -3
+                                    },
+                                    "branch_end_offset_from_top": {
+                                      "type": "minecraft:uniform",
+                                      "min_inclusive": -1,
+                                      "max_inclusive": 0
+                                    }
+                                  },
+                                  "foliage_placer": {
+                                    "type": "minecraft:jungle_foliage_placer",
+                                    "radius": 2,
+                                    "offset": 0,
+                                    "height": 2
+                                  },
+                                  "decorators": [
+                                    {
+                                      "type": "minecraft:attached_to_leaves",
+                                      "probability": 0.3,
+                                      "exclusion_radius_xz": 0,
+                                      "exclusion_radius_y": 0,
+                                      "required_empty_blocks": 1,
+                                      "block_provider": {
+                                        "type": "minecraft:simple_state_provider",
+                                        "state": {
+                                          "Name": "minecraft:jungle_leaves",
+                                          "Properties": {
+                                            "distance": "7",
+                                            "persistent": "false",
+                                            "waterlogged": "false"
+                                          }
+                                        }
+                                      },
+                                      "directions": [
+                                        "down"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:leave_vine",
+                                      "probability": 0.1
+                                    }
+                                  ]
+                                }
+                              },
+                              "placement": [
+                                {
+                                  "type": "minecraft:block_predicate_filter",
+                                  "predicate": {
+                                    "type": "minecraft:would_survive",
+                                    "state": {
+                                      "Name": "minecraft:fern"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "feature": {
+                                "config": {
+                                  "tries": 8,
+                                  "xz_spread": 16,
+                                  "y_spread": 0,
+                                  "feature": {
+                                    "feature": {
+                                      "config": {
+                                        "direction": "down",
+                                        "allowed_placement": {
+                                          "type": "minecraft:matching_blocks",
+                                          "blocks": [
+                                            "air"
+                                          ]
+                                        },
+                                        "prioritize_tip": true,
+                                        "layers": [
+                                          {
+                                            "height": {
+                                              "type": "minecraft:uniform",
+                                              "min_inclusive": 0,
+                                              "max_inclusive": 2
+                                            },
+                                            "provider": {
+                                              "type": "minecraft:simple_state_provider",
+                                              "state": {
+                                                "Name": "minecraft:pale_hanging_moss",
+                                                "Properties": {
+                                                  "tip": "false"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "height": 1,
+                                            "provider": {
+                                              "type": "minecraft:simple_state_provider",
+                                              "state": {
+                                                "Name": "minecraft:pale_hanging_moss",
+                                                "Properties": {
+                                                  "tip": "true"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "type": "minecraft:block_column"
+                                    },
+                                    "placement": [
+                                      {
+                                        "type": "minecraft:environment_scan",
+                                        "direction_of_search": "up",
+                                        "max_steps": 32,
+                                        "target_condition": {
+                                          "type": "minecraft:all_of",
+                                          "predicates": [
+                                            {
+                                              "type": "minecraft:matching_blocks",
+                                              "offset": [
+                                                0,
+                                                1,
+                                                0
+                                              ],
+                                              "blocks": [
+                                                "jungle_wood",
+                                                "jungle_leaves"
+                                              ]
+                                            },
+                                            {
+                                              "type": "minecraft:matching_blocks",
+                                              "blocks": [
+                                                "air"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        "allowed_search_condition": {
+                                          "type": "minecraft:true"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "type": "minecraft:random_patch"
+                              },
+                              "placement": []
+                            }
+                          ]
+                        }
+                      },
+                      "placement": []
+                    }
+                  }
+                },
+                "placement": []
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 4
+          }
+        ]
+      }
+    ]
+  }
+}

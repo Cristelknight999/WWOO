@@ -1,0 +1,124 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": {
+                  "config": {
+                    "tries": 256,
+                    "xz_spread": 3,
+                    "y_spread": 0,
+                    "feature": {
+                      "feature": {
+                        "config": {
+                          "direction": "up",
+                          "allowed_placement": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": [
+                              "minecraft:air",
+                              "minecraft:mycelium"
+                            ]
+                          },
+                          "prioritize_tip": true,
+                          "layers": [
+                            {
+                              "height": 18,
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "calcite"
+                                }
+                              }
+                            },
+                            {
+                              "height": 1,
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:mycelium"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": "minecraft:block_column"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:environment_scan",
+                          "direction_of_search": "down",
+                          "max_steps": 17,
+                          "target_condition": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "mycelium"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  -1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:dirt"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "type": "minecraft:random_patch"
+                },
+                "placement": []
+              }
+            ]
+          },
+          "type": "minecraft:simple_random_selector"
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 5,
+              "max_inclusive": 10
+            }
+          },
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "absolute": 90
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

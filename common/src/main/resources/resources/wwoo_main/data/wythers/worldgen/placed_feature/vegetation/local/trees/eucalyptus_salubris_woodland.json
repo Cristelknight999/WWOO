@@ -1,0 +1,241 @@
+{
+  "feature": {
+    "config": {
+      "features": [
+        {
+          "chance": 0.5,
+          "feature": {
+            "feature": "wythers:vegetation/bush/pale",
+            "placement": []
+          }
+        }
+      ],
+      "default": {
+        "feature": "wythers:vegetation/tree/eucalyptus_salubris",
+        "placement": []
+      }
+    },
+    "type": "minecraft:random_selector"
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "minecraft:moss_block"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                2,
+                0
+              ],
+              "blocks": "minecraft:dripstone_block"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 2
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:sculk"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 700,
+      "noise_offset": -0.5
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 150,
+      "noise_offset": -0.3
+    },
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 0
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -100,
+      "max_inclusive": -64
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:dead_bush"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                1,
+                0,
+                1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                1,
+                0,
+                -1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -1,
+                0,
+                1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -1,
+                0,
+                -1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                2,
+                0,
+                0
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -2,
+                0,
+                0
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                0,
+                2
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                0,
+                -2
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                0,
+                -1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

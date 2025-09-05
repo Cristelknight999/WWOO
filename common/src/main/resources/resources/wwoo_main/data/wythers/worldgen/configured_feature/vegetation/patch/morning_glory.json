@@ -1,0 +1,1439 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "chance": 0.35,
+                "feature": {
+                  "feature": {
+                    "config": {
+                      "tries": 16,
+                      "xz_spread": 5,
+                      "y_spread": 3,
+                      "feature": {
+                        "feature": {
+                          "config": {
+                            "direction": "up",
+                            "allowed_placement": {
+                              "type": "minecraft:matching_blocks",
+                              "blocks": [
+                                "minecraft:sand",
+                                "minecraft:leaf_litter",
+                                "minecraft:air"
+                              ]
+                            },
+                            "prioritize_tip": false,
+                            "layers": [
+                              {
+                                "height": 1,
+                                "provider": {
+                                  "type": "minecraft:simple_state_provider",
+                                  "state": {
+                                    "Name": "minecraft:suspicious_sand",
+                                    "Properties": {
+                                      "dusted": "1"
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "height": 1,
+                                "provider": {
+                                  "type": "minecraft:weighted_state_provider",
+                                  "entries": [
+                                    {
+                                      "weight": 0,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "north",
+                                          "flower_amount": "1"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "north",
+                                          "flower_amount": "2"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "north",
+                                          "flower_amount": "3"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "north",
+                                          "flower_amount": "4"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 0,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "south",
+                                          "flower_amount": "1"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "south",
+                                          "flower_amount": "2"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "south",
+                                          "flower_amount": "3"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "south",
+                                          "flower_amount": "4"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 0,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "east",
+                                          "flower_amount": "1"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "east",
+                                          "flower_amount": "2"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "east",
+                                          "flower_amount": "3"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "east",
+                                          "flower_amount": "4"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 0,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "west",
+                                          "flower_amount": "1"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "west",
+                                          "flower_amount": "2"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "west",
+                                          "flower_amount": "3"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "weight": 1,
+                                      "data": {
+                                        "Name": "minecraft:pink_petals",
+                                        "Properties": {
+                                          "facing": "west",
+                                          "flower_amount": "4"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          "type": "minecraft:block_column"
+                        },
+                        "placement": [
+                          {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    1,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:leaf_litter",
+                                    "minecraft:air"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:sand"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:any_of",
+                                  "predicates": [
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        1,
+                                        1,
+                                        0
+                                      ],
+                                      "blocks": [
+                                        "minecraft:leaf_litter"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        -1,
+                                        1,
+                                        0
+                                      ],
+                                      "blocks": [
+                                        "minecraft:leaf_litter"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        0,
+                                        1,
+                                        1
+                                      ],
+                                      "blocks": [
+                                        "minecraft:leaf_litter"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        0,
+                                        1,
+                                        -1
+                                      ],
+                                      "blocks": [
+                                        "minecraft:leaf_litter"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:not",
+                                  "predicate": {
+                                    "type": "minecraft:any_of",
+                                    "predicates": [
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          1,
+                                          1,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:pink_petals"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          -1,
+                                          1,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:pink_petals"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          1,
+                                          1
+                                        ],
+                                        "blocks": [
+                                          "minecraft:pink_petals"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          1,
+                                          -1
+                                        ],
+                                        "blocks": [
+                                          "minecraft:pink_petals"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "type": "minecraft:random_patch"
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:sand"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "minecraft:count",
+                      "count": 5
+                    }
+                  ]
+                }
+              },
+              {
+                "chance": 0.5,
+                "feature": {
+                  "feature": {
+                    "config": {
+                      "tries": 128,
+                      "xz_spread": 5,
+                      "y_spread": 3,
+                      "feature": {
+                        "feature": {
+                          "config": {
+                            "to_place": {
+                              "type": "minecraft:weighted_state_provider",
+                              "entries": [
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:leaf_litter",
+                                    "Properties": {
+                                      "facing": "north",
+                                      "segment_amount": "4"
+                                    }
+                                  }
+                                },
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:leaf_litter",
+                                    "Properties": {
+                                      "facing": "south",
+                                      "segment_amount": "4"
+                                    }
+                                  }
+                                },
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:leaf_litter",
+                                    "Properties": {
+                                      "facing": "west",
+                                      "segment_amount": "4"
+                                    }
+                                  }
+                                },
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:leaf_litter",
+                                    "Properties": {
+                                      "facing": "east",
+                                      "segment_amount": "4"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "schedule_tick": false
+                          },
+                          "type": "minecraft:simple_block"
+                        },
+                        "placement": [
+                          {
+                            "type": "minecraft:block_predicate_filter",
+                            "predicate": {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    1,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:leaf_litter",
+                                    "minecraft:air"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:sand"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:leaf_litter",
+                                    "minecraft:pink_petals"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:leaf_litter",
+                                    "minecraft:pink_petals"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:leaf_litter",
+                                    "minecraft:pink_petals"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:leaf_litter",
+                                    "minecraft:pink_petals"
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "type": "minecraft:random_patch"
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:sand"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "minecraft:count",
+                      "count": 5
+                    }
+                  ]
+                }
+              }
+            ],
+            "default": {
+              "feature": {
+                "config": {
+                  "tries": 256,
+                  "xz_spread": 5,
+                  "y_spread": 3,
+                  "feature": {
+                    "feature": {
+                      "config": {
+                        "to_place": {
+                          "type": "minecraft:weighted_state_provider",
+                          "entries": [
+                            {
+                              "weight": 0,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "north",
+                                  "segment_amount": "1"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "north",
+                                  "segment_amount": "2"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "north",
+                                  "segment_amount": "3"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "north",
+                                  "segment_amount": "4"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 0,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "south",
+                                  "segment_amount": "1"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "south",
+                                  "segment_amount": "2"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "south",
+                                  "segment_amount": "3"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "south",
+                                  "segment_amount": "4"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 0,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "east",
+                                  "segment_amount": "1"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "east",
+                                  "segment_amount": "2"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "east",
+                                  "segment_amount": "3"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "east",
+                                  "segment_amount": "4"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 0,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "west",
+                                  "segment_amount": "1"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "west",
+                                  "segment_amount": "2"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "west",
+                                  "segment_amount": "3"
+                                }
+                              }
+                            },
+                            {
+                              "weight": 1,
+                              "data": {
+                                "Name": "minecraft:leaf_litter",
+                                "Properties": {
+                                  "facing": "west",
+                                  "segment_amount": "4"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "schedule_tick": false
+                      },
+                      "type": "minecraft:simple_block"
+                    },
+                    "placement": [
+                      {
+                        "type": "minecraft:block_predicate_filter",
+                        "predicate": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                0,
+                                0
+                              ],
+                              "blocks": [
+                                "minecraft:air"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                -1,
+                                0
+                              ],
+                              "blocks": [
+                                "minecraft:sand"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:not",
+                              "predicate": {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      0,
+                                      2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      0,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      0,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      0,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      0,
+                                      -2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      1,
+                                      0,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      1,
+                                      0,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      1,
+                                      0,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      -2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -1,
+                                      0,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -1,
+                                      0,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -1,
+                                      0,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      0,
+                                      2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      0,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      0,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      0,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      0,
+                                      -2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -1,
+                                      2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -1,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -1,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -1,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -1,
+                                      -2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      1,
+                                      -1,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      1,
+                                      -1,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      1,
+                                      -1,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      -1,
+                                      2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      -1,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      -1,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      -1,
+                                      -2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -1,
+                                      -1,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -1,
+                                      -1,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -1,
+                                      -1,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -1,
+                                      2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -1,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -1,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -1,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -1,
+                                      -2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -2,
+                                      2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -2,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -2,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -2,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      2,
+                                      -2,
+                                      -2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      1,
+                                      -2,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      1,
+                                      -2,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      1,
+                                      -2,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      -2,
+                                      2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      -2,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      -2,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      0,
+                                      -2,
+                                      -2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -1,
+                                      -2,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -1,
+                                      -2,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -1,
+                                      -2,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -2,
+                                      2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -2,
+                                      1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -2,
+                                      0
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -2,
+                                      -1
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_fluids",
+                                    "offset": [
+                                      -2,
+                                      -2,
+                                      -2
+                                    ],
+                                    "fluids": [
+                                      "minecraft:water"
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "type": "minecraft:random_patch"
+              },
+              "placement": []
+            }
+          },
+          "type": "minecraft:random_selector"
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 8
+          }
+        ]
+      }
+    ]
+  }
+}

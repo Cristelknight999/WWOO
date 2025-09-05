@@ -1,0 +1,72 @@
+{
+  "feature": {
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:polished_basalt"
+          }
+        },
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:oak_planks"
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:deepslate_tiles"
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:oak_fence"
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:polished_deepslate_wall"
+              }
+            }
+          }
+        ]
+      },
+      "radius": 8,
+      "half_height": 4,
+      "target": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:oak_log",
+          "minecraft:oak_planks",
+          "minecraft:oak_fence"
+        ]
+      }
+    },
+    "type": "minecraft:disk"
+  },
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 64
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_fluids",
+        "offset": [
+          0,
+          -3,
+          0
+        ],
+        "fluids": "minecraft:lava"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": {
+                  "type": "minecraft:tree",
+                  "config": {
+                    "decorators": [
+                      {
+                        "type": "minecraft:beehive",
+                        "probability": 0.05
+                      }
+                    ],
+                    "dirt_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:dirt"
+                      }
+                    },
+                    "foliage_placer": {
+                      "type": "minecraft:cherry_foliage_placer",
+                      "corner_hole_chance": 0.25,
+                      "hanging_leaves_chance": 0.16666667,
+                      "hanging_leaves_extension_chance": 0.33333334,
+                      "height": 5,
+                      "offset": 0,
+                      "radius": 4,
+                      "wide_bottom_layer_hole_chance": 0.25
+                    },
+                    "foliage_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:cherry_leaves",
+                        "Properties": {
+                          "distance": "7",
+                          "persistent": "false",
+                          "waterlogged": "false"
+                        }
+                      }
+                    },
+                    "force_dirt": false,
+                    "ignore_vines": true,
+                    "minimum_size": {
+                      "type": "minecraft:two_layers_feature_size",
+                      "limit": 1,
+                      "lower_size": 0,
+                      "upper_size": 2
+                    },
+                    "trunk_placer": {
+                      "type": "minecraft:cherry_trunk_placer",
+                      "base_height": 7,
+                      "branch_count": {
+                        "type": "minecraft:weighted_list",
+                        "distribution": [
+                          {
+                            "data": 1,
+                            "weight": 1
+                          },
+                          {
+                            "data": 2,
+                            "weight": 1
+                          },
+                          {
+                            "data": 3,
+                            "weight": 1
+                          }
+                        ]
+                      },
+                      "branch_end_offset_from_top": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": -1,
+                        "max_inclusive": 0
+                      },
+                      "branch_horizontal_length": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": 2,
+                        "max_inclusive": 4
+                      },
+                      "branch_start_offset_from_top": {
+                        "max_inclusive": -3,
+                        "min_inclusive": -4
+                      },
+                      "height_rand_a": 1,
+                      "height_rand_b": 0
+                    },
+                    "trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:cherry_log",
+                        "Properties": {
+                          "axis": "y"
+                        }
+                      }
+                    }
+                  }
+                },
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -2,
+                              0
+                            ],
+                            "tag": "minecraft:logs"
+                          }
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/pink_lapacho",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            -2,
+                            0
+                          ],
+                          "tag": "minecraft:acacia_logs"
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "minecraft:simple_random_selector"
+        },
+        "placement": [
+          {
+            "count": 24,
+            "type": "minecraft:count"
+          },
+          {
+            "predicate": {
+              "predicate": {
+                "type": "minecraft:solid"
+              },
+              "type": "minecraft:not"
+            },
+            "type": "minecraft:block_predicate_filter"
+          }
+        ]
+      }
+    ]
+  },
+  "type": "minecraft:simple_random_selector"
+}

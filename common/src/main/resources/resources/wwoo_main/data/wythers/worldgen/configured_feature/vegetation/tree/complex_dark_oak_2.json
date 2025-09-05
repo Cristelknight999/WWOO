@@ -1,0 +1,627 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "tries": 256,
+            "xz_spread": 1,
+            "y_spread": 2,
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_random_selector",
+                "config": {
+                  "features": [
+                    {
+                      "feature": {
+                        "config": {
+                          "tries": 10,
+                          "xz_spread": 1,
+                          "y_spread": 8,
+                          "feature": {
+                            "feature": {
+                              "config": {
+                                "ignore_vines": true,
+                                "force_dirt": true,
+                                "minimum_size": {
+                                  "type": "minecraft:two_layers_feature_size",
+                                  "min_clipped_height": 1,
+                                  "limit": 1,
+                                  "lower_size": 1,
+                                  "upper_size": 1
+                                },
+                                "dirt_provider": {
+                                  "type": "minecraft:simple_state_provider",
+                                  "state": {
+                                    "Name": "minecraft:dark_oak_wood"
+                                  }
+                                },
+                                "trunk_provider": {
+                                  "type": "minecraft:simple_state_provider",
+                                  "state": {
+                                    "Name": "minecraft:dark_oak_wood"
+                                  }
+                                },
+                                "foliage_provider": {
+                                  "type": "minecraft:simple_state_provider",
+                                  "state": {
+                                    "Name": "minecraft:dark_oak_leaves"
+                                  }
+                                },
+                                "trunk_placer": {
+      "type": "minecraft:forking_trunk_placer",
+      "base_height": 7,
+      "height_rand_a": 3,
+      "height_rand_b": 2
+    },
+                                "foliage_placer": {
+                                  "type": "minecraft:jungle_foliage_placer",
+                                  "radius": 0,
+                                  "offset": 0,
+                                  "height": 0
+                                },
+                                "decorators": [
+                            {
+                              "type": "minecraft:attached_to_leaves",
+                              "probability": 1,
+                              "exclusion_radius_xz": 1,
+                              "exclusion_radius_y": 1,
+                              "required_empty_blocks": 1,
+                              "block_provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:dark_oak_leaves",
+                                  "Properties": {
+                                    "distance": "7",
+                                    "persistent": "true",
+                                    "waterlogged": "false"
+                                  }
+                                }
+                              },
+                              "directions": [
+                                "down"
+                              ]
+                            }
+                          ]
+                              },
+                              "type": "minecraft:tree"
+                            },
+                            "placement": [
+                              {
+                                "type": "minecraft:environment_scan",
+                                "direction_of_search": "up",
+                                "max_steps": 20,
+                                "target_condition": {
+                                  "type": "minecraft:all_of",
+                                  "predicates": [
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "blocks": [
+                                        "dark_oak_log"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        0,
+                                        1,
+                                        0
+                                      ],
+                                      "blocks": [
+                                        "air"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "type": "minecraft:random_patch"
+                      },
+                      "placement": []
+                    },
+                    {
+                      "feature": {
+                        "config": {
+                          "tries": 10,
+                          "xz_spread": 8,
+                          "y_spread": 8,
+                          "feature": {
+                            "feature": {
+                              "config": {
+                                "ignore_vines": true,
+                                "force_dirt": true,
+                                "minimum_size": {
+                                  "type": "minecraft:two_layers_feature_size",
+                                  "min_clipped_height": 1,
+                                  "limit": 1,
+                                  "lower_size": 1,
+                                  "upper_size": 1
+                                },
+                                "dirt_provider": {
+                                  "type": "minecraft:simple_state_provider",
+                                  "state": {
+                                    "Name": "minecraft:dark_oak_wood"
+                                  }
+                                },
+                                "trunk_provider": {
+                                  "type": "minecraft:simple_state_provider",
+                                  "state": {
+                                    "Name": "minecraft:dark_oak_wood"
+                                  }
+                                },
+                                "foliage_provider": {
+                                  "type": "minecraft:simple_state_provider",
+                                  "state": {
+                                    "Name": "minecraft:dark_oak_leaves"
+                                  }
+                                },
+                                "trunk_placer": {
+      "type": "minecraft:forking_trunk_placer",
+      "base_height": 5,
+      "height_rand_a": 2,
+      "height_rand_b": 0
+    },
+                                "foliage_placer": {
+                                  "type": "minecraft:jungle_foliage_placer",
+                                  "radius": 0,
+                                  "offset": 0,
+                                  "height": 0
+                                },
+                                "decorators": [
+                            {
+                              "type": "minecraft:attached_to_leaves",
+                              "probability": 1,
+                              "exclusion_radius_xz": 1,
+                              "exclusion_radius_y": 1,
+                              "required_empty_blocks": 1,
+                              "block_provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:dark_oak_leaves",
+                                  "Properties": {
+                                    "distance": "7",
+                                    "persistent": "true",
+                                    "waterlogged": "false"
+                                  }
+                                }
+                              },
+                              "directions": [
+                                "down"
+                              ]
+                            }
+                          ]
+                              },
+                              "type": "minecraft:tree"
+                            },
+                            "placement": [
+                              {
+                                "type": "minecraft:environment_scan",
+                                "direction_of_search": "up",
+                                "max_steps": 20,
+                                "target_condition": {
+                                  "type": "minecraft:all_of",
+                                  "predicates": [
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "blocks": [
+                                        "dark_oak_log"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        0,
+                                        1,
+                                        0
+                                      ],
+                                      "blocks": [
+                                        "air"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "type": "minecraft:random_patch"
+                      },
+                      "placement": []
+                    },
+                    {
+                      "feature": {
+                        "type": "minecraft:tree",
+                        "config": {
+                          "ignore_vines": true,
+                          "force_dirt": true,
+                          "minimum_size": {
+                            "type": "minecraft:two_layers_feature_size",
+                            "limit": 1,
+                            "lower_size": 0,
+                            "upper_size": 0
+                          },
+                          "dirt_provider": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:dark_oak_wood",
+                              "Properties": {
+                                "axis": "y"
+                              }
+                            }
+                          },
+                          "trunk_provider": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:dark_oak_wood",
+                              "Properties": {
+                                "axis": "y"
+                              }
+                            }
+                          },
+                          "foliage_provider": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "dark_oak_log"
+                            }
+                          },
+                          "trunk_placer": {
+                            "type": "minecraft:cherry_trunk_placer",
+                            "base_height": 7,
+                            "height_rand_a": 0,
+                            "height_rand_b": 0,
+                            "branch_count": {
+                              "type": "minecraft:weighted_list",
+                              "distribution": [
+                                {
+                                  "weight": 1,
+                                  "data": 2
+                                },
+                                {
+                                  "weight": 1,
+                                  "data": 3
+                                }
+                              ]
+                            },
+                            "branch_horizontal_length": {
+                              "type": "minecraft:uniform",
+                              "min_inclusive": 2,
+                              "max_inclusive": 3
+                            },
+                            "branch_start_offset_from_top": {
+                              "min_inclusive": -4,
+                              "max_inclusive": -3
+                            },
+                            "branch_end_offset_from_top": {
+                              "type": "minecraft:uniform",
+                              "min_inclusive": -2,
+                              "max_inclusive": -2
+                            }
+                          },
+                          "foliage_placer": {
+                            "type": "minecraft:fancy_foliage_placer",
+                            "radius": {
+                              "type": "minecraft:constant",
+                              "value": 1
+                            },
+                            "offset": 0,
+                            "height": 1
+                          },
+                          "decorators": [
+                            {
+                              "type": "minecraft:place_on_ground",
+                              "block_state_provider": {
+                                "type": "minecraft:weighted_state_provider",
+                                "entries": [
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "segment_amount": "1"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "segment_amount": "1"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "segment_amount": "1"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "segment_amount": "1"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "segment_amount": "2"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "segment_amount": "2"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "segment_amount": "2"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "segment_amount": "2"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "segment_amount": "3"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "segment_amount": "3"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "segment_amount": "3"
+                                      }
+                                    },
+                                    "weight": 1
+                                  },
+                                  {
+                                    "data": {
+                                      "Name": "minecraft:leaf_litter",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "segment_amount": "3"
+                                      }
+                                    },
+                                    "weight": 1
+                                  }
+                                ]
+                              },
+                              "height": 4,
+                              "radius": 4,
+                              "tries": 200
+                            }
+                          ]
+                        }
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  0,
+                                  -1,
+                                  0
+                                ],
+                                "tag": "minecraft:dirt"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  2,
+                                  0,
+                                  2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  2,
+                                  0,
+                                  -2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  -2,
+                                  0,
+                                  2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  -2,
+                                  0,
+                                  -2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  2,
+                                  0,
+                                  0
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  -2,
+                                  0,
+                                  0
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  0,
+                                  0,
+                                  2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  2,
+                                  0,
+                                  1
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  2,
+                                  0,
+                                  -1
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  1,
+                                  0,
+                                  2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  1,
+                                  0,
+                                  -2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  -2
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  -2,
+                                  0,
+                                  1
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              },
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "offset": [
+                                  -2,
+                                  0,
+                                  -1
+                                ],
+                                "tag": "wythers:tree_replaceable"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "placement": []
+            }
+          }
+        },
+        "placement": []
+      }
+    ]
+  }
+}

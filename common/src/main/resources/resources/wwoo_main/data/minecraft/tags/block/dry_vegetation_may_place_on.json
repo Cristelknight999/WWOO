@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cactus",
+    "minecraft:gravel",
+    "minecraft:packed_mud",
+    "minecraft:tall_grass",
+    "minecraft:dirt_path",
+    "#minecraft:base_stone_overworld"
+	
+  ]
+}

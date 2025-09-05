@@ -1,0 +1,10 @@
+{
+    "pack": {
+        "pack_format": 81,
+        "supported_formats": [
+            26,
+            1000
+        ],
+        "description": "Discover a Lost World"
+    }
+}

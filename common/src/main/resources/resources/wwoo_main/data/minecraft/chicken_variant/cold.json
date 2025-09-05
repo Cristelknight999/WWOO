@@ -1,0 +1,21 @@
+{
+  "asset_id": "minecraft:entity/chicken/cold_chicken",
+  "model": "cold",
+  "spawn_conditions": [
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp",
+    "minecraft:jungle",
+    "minecraft:dark_forest",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:birch_forest",
+    "minecraft:old_growth_birch_forest"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

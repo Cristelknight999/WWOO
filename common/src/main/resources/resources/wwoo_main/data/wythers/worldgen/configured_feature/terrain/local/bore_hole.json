@@ -1,0 +1,110 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": {
+                  "config": {
+                    "state_provider": {
+                      "fallback": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "water"
+                        }
+                      },
+                      "rules": []
+                    },
+                    "radius": {
+                      "type": "minecraft:uniform",
+                      "min_inclusive": 2,
+                      "max_inclusive": 4
+                    },
+                    "half_height": 4,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "tag": "wythers:sink_hole_replaceables"
+                        },
+                        {
+                          "type": "minecraft:matching_fluids",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "fluids": [
+                            "minecraft:water"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "type": "minecraft:disk"
+                },
+                "placement": [
+                  {
+                    "type": "minecraft:environment_scan",
+                    "direction_of_search": "up",
+                    "max_steps": 30,
+                    "target_condition": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            1,
+                            0
+                          ],
+                          "tag": "wythers:sink_hole_replaceables"
+                        },
+                        {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_block_tag",
+                              "tag": "wythers:coral_blocks"
+                            },
+                            {
+                              "type": "minecraft:matching_fluids",
+                              "fluids": [
+                                "minecraft:water"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "allowed_search_condition": {
+                      "type": "minecraft:matching_fluids",
+                      "fluids": [
+                        "minecraft:water"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "minecraft:simple_random_selector"
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 30,
+              "max_inclusive": 30
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

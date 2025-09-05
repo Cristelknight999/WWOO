@@ -1,0 +1,63 @@
+{
+  "feature": {
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "deepslate"
+          }
+        },
+        "rules": []
+      },
+      "radius": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 3,
+        "max_inclusive": 7
+      },
+      "half_height": 4,
+      "target": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "gravel",
+          "minecraft:dirt",
+          "stone",
+          "packed_ice",
+          "gravel"
+        ]
+      }
+    },
+    "type": "minecraft:disk"
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 2
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "moss_block"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 60
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "feature": "wythers:terrain/local/coral_air_pockets",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 20
+    }
+  ]
+}

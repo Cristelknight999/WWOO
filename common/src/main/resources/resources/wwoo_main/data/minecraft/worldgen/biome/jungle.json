@@ -1,0 +1,291 @@
+{
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon"
+  ],
+  "downfall": 0.8,
+  "effects": {
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": [
+      {
+        "data": {
+          "max_delay": 24000,
+          "min_delay": 12000,
+          "replace_current_music": false,
+          "sound": "minecraft:music.overworld.jungle"
+        },
+        "weight": 1
+      }
+    ],
+    "music_volume": 1,
+    "dry_foliage_color": 5454882,
+    "sky_color": 6269917,
+    "fog_color": 15924890,
+    "water_color": 6388580,
+    "water_fog_color": 2302743,
+    "grass_color": 11122488,
+    "foliage_color": 6788387
+  },
+  "features": [
+    [
+      "wythers:placer/jungle",
+      "wythers:terrain/local/cliff",
+      "wythers:terrain/local/disk_mud_shore_jungle",
+      "wythers:road/sparse_jungle",
+      "wythers:road/rainforest",
+      "wythers:terrain/local/jungle_floor_1",
+      "wythers:terrain/local/jungle_floor_2",
+      "wythers:terrain/local/jungle_floor_3"
+    ],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface",
+      "wythers:terrain/extended/base_mangrove_swamp_jungle"
+    ],
+    [
+      "minecraft:amethyst_geode"
+    ],
+    [
+      "minecraft:monster_room",
+      "minecraft:monster_room_deep"
+    ],
+    [
+      "wythers:terrain/local/cloud_forest_terrain"
+      ],
+    [
+	  "wythers:terrain/local/cloud_forest_surface"
+    ],
+    [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_tuff",
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_iron_small",
+      "minecraft:ore_gold",
+      "minecraft:ore_gold_lower",
+      "minecraft:ore_redstone",
+      "minecraft:ore_redstone_lower",
+      "minecraft:ore_diamond",
+      "minecraft:ore_diamond_large",
+      "minecraft:ore_diamond_buried",
+      "minecraft:ore_lapis",
+      "minecraft:ore_lapis_buried",
+      "minecraft:ore_copper",
+      "minecraft:underwater_magma",
+      "wythers:terrain/local/sandy_forest",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel",
+      "wythers:terrain/extended/coastal_sand",
+      "wythers:terrain/extended/volcanic_jungle_mud_in_basalt",
+      "wythers:terrain/extended/volcanic_jungle_muddy_roots_on_basalt",
+      "wythers:terrain/extended/badlands_edge"
+    ],
+    [
+      "wythers:vegetation/local/trees/ancient_spring_woods"
+    ],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "minecraft:glow_lichen",
+      "wythers:vegetation/local/patch/water_grass_jungle",
+      "wythers:vegetation/local/patch/flower_sunny",
+      "wythers:vegetation/local/trees/spring_birch_forest",
+      "wythers:vegetation/extended/trees/jungle_edge_bushes",
+      "wythers:vegetation/local/trees/jungle_mega",
+      "wythers:vegetation/local/trees/jungle_lowland_rainforest",
+      "wythers:vegetation/local/trees/banyans",
+      "wythers:vegetation/local/trees/banyans_2",
+      "wythers:vegetation/local/trees/pink_lapacho",
+      "wythers:vegetation/local/trees/sparse_jungle",
+      "wythers:vegetation/local/trees/jungle_midland",
+      "wythers:vegetation/local/trees/jungle_upland",
+      "wythers:vegetation/local/trees/jungle_sandy",
+      "wythers:vegetation/local/trees/eucalyptus_rainforest",
+      "wythers:vegetation/extended/trees/jungle_volcanic",
+      "wythers:vegetation/local/trees/jungle_mangroves",
+      "wythers:vegetation/local/trees/jungle_mosaic",
+      "wythers:vegetation/local/patch/grass_jungle",
+      "wythers:vegetation/local/patch/floating_leaves",
+      "wythers:vegetation/local/patch/waterlily_jungle",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_firefly_bush_near_water",
+      "minecraft:vines",
+      "wythers:vegetation/local/patch/melon",
+      "wythers:vegetation/extended/patch/morning_glory",
+      "wythers:vegetation/extended/patch/tropical_water_plants",
+      "wythers:vegetation/local/patch/hanging_roots",
+      "wythers:vegetation/local/patch/flower_cloud_forest",
+      "wythers:vegetation/local/trees/jungle_undergrowth",
+      "wythers:vegetation/local/patch/giant_groundsels",
+      "wythers:vegetation/local/trees/cloud_forest"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
+    "axolotls": [
+      {
+        "type": "minecraft:axolotl",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "creature": [
+      {
+        "type": "minecraft:pig",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:chicken",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:chicken",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:parrot",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 40
+      },
+      {
+        "type": "minecraft:turtle",
+        "maxCount": 5,
+        "minCount": 2,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:armadillo",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 6
+      },
+      {
+        "type": "minecraft:wolf",
+        "maxCount": 8,
+        "minCount": 4,
+        "weight": 2
+      }
+    ],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:spider",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:zombie",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 95
+      },
+      {
+        "type": "minecraft:zombie_villager",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      },
+      {
+        "type": "minecraft:skeleton",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:creeper",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:slime",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:enderman",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:witch",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      },
+      {
+        "type": "minecraft:ocelot",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 2
+      }
+    ],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "minecraft:pufferfish",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 15
+      },
+      {
+        "type": "minecraft:tropical_fish",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 25
+      }
+    ],
+    "water_creature": []
+  },
+  "temperature": 0.7
+}

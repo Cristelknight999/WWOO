@@ -1,0 +1,47 @@
+{
+  "feature": {
+    "config": {
+      "state": {
+        "Name": "minecraft:basalt"
+      },
+      "radius": 12,
+      "target": {
+        "Name": "minecraft:packed_ice"
+      }
+    },
+    "type": "minecraft:netherrack_replace_blobs"
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 2
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:moss_block"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 20
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 150
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

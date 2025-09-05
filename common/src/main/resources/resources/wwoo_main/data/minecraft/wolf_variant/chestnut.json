@@ -1,0 +1,34 @@
+{
+  "assets": {
+    "angry": "minecraft:entity/wolf/wolf_chestnut_angry",
+    "tame": "minecraft:entity/wolf/wolf_chestnut_tame",
+    "wild": "minecraft:entity/wolf/wolf_chestnut"
+  },
+  "spawn_conditions": [
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands",
+    "minecraft:forest",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:plains",
+    "minecraft:birch_forest",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:taiga",
+    "minecraft:meadow",
+    "minecraft:flower_forest",
+    "minecraft:sunflower_plains",
+    "minecraft:beach",
+    "minecraft:mushroom_fields",
+    "minecraft:pale_garden",
+    "minecraft:lukewarm_ocean"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

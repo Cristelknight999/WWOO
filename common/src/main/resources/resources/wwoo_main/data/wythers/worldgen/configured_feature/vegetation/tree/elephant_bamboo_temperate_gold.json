@@ -1,0 +1,291 @@
+{
+    "type": "minecraft:tree",
+    "config": {
+      "ignore_vines": true,
+      "force_dirt": true,
+      "minimum_size": {
+        "type": "minecraft:two_layers_feature_size",
+        "limit": 3,
+        "lower_size": 0,
+        "upper_size": 2
+      },
+      "dirt_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:stripped_bamboo_block",
+          "Properties": {
+            "axis": "y"
+          }
+        }
+      },
+      "trunk_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:stripped_bamboo_block",
+          "Properties": {
+            "axis": "y"
+          }
+        }
+      },
+      "foliage_provider": {
+        "type": "minecraft:weighted_state_provider",
+        "entries": [
+          {
+            "weight": 6,
+            "data": {
+              "Name": "minecraft:birch_leaves",
+              "Properties": {
+                "distance": "7",
+                "persistent": "false",
+                "waterlogged": "false"
+              }
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "Name": "minecraft:air",
+              "Properties": {}
+            }
+          }
+        ]
+      },
+      "trunk_placer": {
+        "type": "minecraft:straight_trunk_placer",
+        "base_height": 12,
+        "height_rand_a": 1,
+        "height_rand_b": 9,
+        "extra_branch_steps": {
+          "type": "minecraft:uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 6
+          },
+          "min_inclusive": 1,
+          "max_inclusive": 6
+        },
+        "extra_branch_length": {
+          "type": "minecraft:uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 1
+          },
+          "min_inclusive": 0,
+          "max_inclusive": 1
+        },
+        "place_branch_per_log_probability": 0.5,
+        "can_grow_through": "#minecraft:mangrove_logs_can_grow_through"
+      },
+      "foliage_placer": {
+        "type": "minecraft:fancy_foliage_placer",
+        "radius": 1,
+        "offset": 1,
+        "height": 12
+      },
+      "decorators": [
+        {
+          "type": "minecraft:place_on_ground",
+          "block_state_provider": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "Name": "minecraft:bamboo_sapling"
+                }
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "north",
+                    "segment_amount": "1"
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "east",
+                    "segment_amount": "1"
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "south",
+                    "segment_amount": "1"
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "west",
+                    "segment_amount": "1"
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "north",
+                    "segment_amount": "2"
+                  }
+                },
+                "weight": 2
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "east",
+                    "segment_amount": "2"
+                  }
+                },
+                "weight": 2
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "south",
+                    "segment_amount": "2"
+                  }
+                },
+                "weight": 2
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "west",
+                    "segment_amount": "2"
+                  }
+                },
+                "weight": 2
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "north",
+                    "segment_amount": "3"
+                  }
+                },
+                "weight": 3
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "east",
+                    "segment_amount": "3"
+                  }
+                },
+                "weight": 3
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "south",
+                    "segment_amount": "3"
+                  }
+                },
+                "weight": 3
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "west",
+                    "segment_amount": "3"
+                  }
+                },
+                "weight": 3
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "north",
+                    "segment_amount": "4"
+                  }
+                },
+                "weight": 4
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "east",
+                    "segment_amount": "4"
+                  }
+                },
+                "weight": 4
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "south",
+                    "segment_amount": "4"
+                  }
+                },
+                "weight": 4
+              },
+              {
+                "data": {
+                  "Name": "minecraft:leaf_litter",
+                  "Properties": {
+                    "facing": "west",
+                    "segment_amount": "4"
+                  }
+                },
+                "weight": 4
+              }
+            ]
+          },
+          "height": 4,
+          "radius": 4,
+          "tries": 1000
+        },
+        {
+          "type": "minecraft:alter_ground",
+          "provider": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "Name": "minecraft:podzol",
+                  "Properties": {
+                    "snowy": "false"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "minecraft:grass_block",
+                  "Properties": {
+                    "snowy": "false"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

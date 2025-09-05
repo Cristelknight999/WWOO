@@ -1,0 +1,668 @@
+{
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": {
+                  "config": {
+                    "decorators": [],
+                    "dirt_provider": {
+                      "state": {
+                        "Name": "minecraft:dirt"
+                      },
+                      "type": "minecraft:simple_state_provider"
+                    },
+                    "foliage_placer": {
+                      "height": 3,
+                      "offset": 0,
+                      "radius": 2,
+                      "type": "minecraft:blob_foliage_placer"
+                    },
+                    "foliage_provider": {
+                      "state": {
+                        "Name": "minecraft:oak_leaves",
+                        "Properties": {
+                          "distance": "7",
+                          "persistent": "false",
+                          "waterlogged": "false"
+                        }
+                      },
+                      "type": "minecraft:simple_state_provider"
+                    },
+                    "force_dirt": false,
+                    "ignore_vines": true,
+                    "minimum_size": {
+                      "limit": 1,
+                      "lower_size": 0,
+                      "upper_size": 1,
+                      "type": "minecraft:two_layers_feature_size"
+                    },
+                    "trunk_placer": {
+                      "base_height": 4,
+                      "height_rand_a": 2,
+                      "height_rand_b": 0,
+                      "type": "minecraft:straight_trunk_placer"
+                    },
+                    "trunk_provider": {
+                      "state": {
+                        "Name": "minecraft:oak_log",
+                        "Properties": {
+                          "axis": "y"
+                        }
+                      },
+                      "type": "minecraft:simple_state_provider"
+                    }
+                  },
+                  "type": "minecraft:tree"
+                },
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:farmland"
+                          ]
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/oak",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:grass_block"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/forest_oak",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:rooted_dirt",
+                            "minecraft:dirt"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/swamp_forest_oak",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                -1,
+                                0
+                              ],
+                              "blocks": [
+                                "minecraft:mud",
+                                "minecraft:muddy_mangrove_roots",
+                                "minecraft:soul_soil"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:oak_sapling"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": {
+                  "config": {
+                    "features": [
+                      {
+                        "feature": "wythers:vegetation/tree/old_oak",
+                        "placement": []
+                      },
+                      {
+                        "feature": "wythers:vegetation/tree/complex_oak_1",
+                        "placement": []
+                      },
+                      {
+                        "feature": "wythers:vegetation/tree/complex_oak_2",
+                        "placement": []
+                      }
+                    ]
+                  },
+                  "type": "minecraft:simple_random_selector"
+                },
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:any_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:soul_sand"
+                          ]
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/ancient_oak",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:mud",
+                              "minecraft:muddy_mangrove_roots",
+                              "minecraft:soul_soil",
+                              "minecraft:soul_sand"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            0
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/old_swamp_oak",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:mud",
+                              "minecraft:muddy_mangrove_roots",
+                              "minecraft:soul_soil"
+                            ]
+                          },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            0
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:oak_sapling"
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "minecraft:simple_random_selector"
+        },
+        "placement": [
+          {
+            "count": 80,
+            "type": "minecraft:count"
+          },
+          {
+            "predicate": {
+              "predicate": {
+                "type": "minecraft:solid"
+              },
+              "type": "minecraft:not"
+            },
+            "type": "minecraft:block_predicate_filter"
+          }
+        ]
+      }
+    ]
+  },
+  "type": "minecraft:simple_random_selector"
+}

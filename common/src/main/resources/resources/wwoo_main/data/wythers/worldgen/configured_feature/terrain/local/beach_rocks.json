@@ -1,0 +1,783 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "targets": [
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:sand"
+                },
+                "state": {
+                  "Name": "stone"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:water"
+                },
+                "state": {
+                  "Name": "stone"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:air"
+                },
+                "state": {
+                  "Name": "stone"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:sand"
+                },
+                "state": {
+                  "Name": "stone"
+                }
+              }
+            ],
+            "size": 16,
+            "discard_chance_on_air_exposure": 0
+          },
+          "type": "minecraft:ore"
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 1,
+              "max_inclusive": 3
+            }
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR"
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:stone",
+                    "minecraft:sand"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": {
+                  "config": {
+                    "state_provider": {
+                      "fallback": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "stone"
+                        }
+                      },
+                      "rules": []
+                    },
+                    "radius": {
+                      "type": "minecraft:uniform",
+                      "min_inclusive": 4,
+                      "max_inclusive": 8
+                    },
+                    "half_height": 4,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:water",
+                            "minecraft:air",
+                            "minecraft:sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:stone"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "type": "minecraft:disk"
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "config": {
+                    "state_provider": {
+                      "fallback": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "stone"
+                        }
+                      },
+                      "rules": []
+                    },
+                    "radius": {
+                      "type": "minecraft:uniform",
+                      "min_inclusive": 4,
+                      "max_inclusive": 8
+                    },
+                    "half_height": 4,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:water",
+                            "minecraft:air",
+                            "minecraft:sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:sand",
+                            "minecraft:mossy_cobblestone",
+                            "minecraft:moss_block",
+                            "minecraft:stone"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "type": "minecraft:disk"
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "config": {
+                    "state_provider": {
+                      "fallback": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "stone"
+                        }
+                      },
+                      "rules": []
+                    },
+                    "radius": {
+                      "type": "minecraft:uniform",
+                      "min_inclusive": 4,
+                      "max_inclusive": 8
+                    },
+                    "half_height": 3,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:water",
+                            "minecraft:air",
+                            "minecraft:sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:sand",
+                            "minecraft:mossy_cobblestone",
+                            "minecraft:moss_block",
+                            "minecraft:stone"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "type": "minecraft:disk"
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "config": {
+                    "state_provider": {
+                      "fallback": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "stone"
+                        }
+                      },
+                      "rules": []
+                    },
+                    "radius": {
+                      "type": "minecraft:uniform",
+                      "min_inclusive": 4,
+                      "max_inclusive": 8
+                    },
+                    "half_height": 2,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:water",
+                            "minecraft:air",
+                            "minecraft:sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:sand",
+                            "minecraft:mossy_cobblestone",
+                            "minecraft:moss_block",
+                            "minecraft:stone"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "type": "minecraft:disk"
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "config": {
+                    "state_provider": {
+                      "fallback": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "stone"
+                        }
+                      },
+                      "rules": []
+                    },
+                    "radius": {
+                      "type": "minecraft:uniform",
+                      "min_inclusive": 4,
+                      "max_inclusive": 8
+                    },
+                    "half_height": 1,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:water",
+                            "minecraft:air",
+                            "minecraft:sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:sand",
+                            "minecraft:mossy_cobblestone",
+                            "minecraft:moss_block",
+                            "minecraft:stone"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "type": "minecraft:disk"
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "config": {
+                    "state_provider": {
+                      "fallback": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "stone"
+                        }
+                      },
+                      "rules": []
+                    },
+                    "radius": {
+                      "type": "minecraft:uniform",
+                      "min_inclusive": 4,
+                      "max_inclusive": 8
+                    },
+                    "half_height": 0.5,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:water",
+                            "minecraft:air",
+                            "minecraft:sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:sand",
+                            "minecraft:mossy_cobblestone",
+                            "minecraft:moss_block",
+                            "minecraft:stone"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:air"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "type": "minecraft:disk"
+                },
+                "placement": []
+              }
+            ]
+          },
+          "type": "minecraft:simple_random_selector"
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 5,
+              "max_inclusive": 10
+            }
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR"
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:stone",
+                    "minecraft:sand",
+                    "minecraft:mossy_cobblestone"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

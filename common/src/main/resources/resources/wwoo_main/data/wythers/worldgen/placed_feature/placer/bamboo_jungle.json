@@ -1,0 +1,105 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:bamboo_block"
+          }
+        },
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:smooth_red_sandstone"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:pale_oak_wood"
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:smooth_sandstone"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:stripped_bamboo_block"
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:birch_wood",
+              "minecraft:birch_log",
+              "minecraft:stripped_birch_wood"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "lime_concrete"
+              }
+            }
+          }
+        ]
+      },
+      "target": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:bedrock",
+              "minecraft:coarse_dirt",
+              "minecraft:rooted_dirt",
+              "minecraft:smooth_sandstone",
+              "minecraft:smooth_red_sandstone",
+              "minecraft:lime_terracotta",
+              "minecraft:oak_wood",
+              "minecraft:jungle_wood",
+              "minecraft:dark_oak_wood",
+              "minecraft:muddy_mangrove_roots",
+              "minecraft:birch_wood",
+              "minecraft:birch_log",
+              "minecraft:stripped_birch_wood"
+            ]
+          }
+        ]
+      },
+      "radius": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 7,
+        "max_inclusive": 7
+      },
+      "half_height": 0
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 60
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    }
+  ]
+}

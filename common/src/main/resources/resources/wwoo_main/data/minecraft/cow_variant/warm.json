@@ -1,0 +1,18 @@
+{
+  "asset_id": "minecraft:entity/cow/warm_cow",
+  "model": "warm",
+  "spawn_conditions": [
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands",
+    "minecraft:desert"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

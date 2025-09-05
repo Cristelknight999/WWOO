@@ -1,0 +1,58 @@
+{
+  "config": {
+    "direction": "up",
+    "allowed_placement": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:air"
+      ]
+    },
+    "prioritize_tip": false,
+    "layers": [
+      {
+        "height": 3,
+        "provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:mangrove_roots"
+          }
+        }
+      },
+      {
+        "height": 1,
+        "provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:moss_block"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "height": 1,
+        "provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:cactus_flower"
+              }
+            },
+            {
+              "weight": 5,
+              "data": {
+                "Name": "minecraft:bush"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "type": "minecraft:block_column"
+}

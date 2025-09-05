@@ -1,0 +1,229 @@
+{
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon"
+  ],
+  "downfall": 0.2,
+  "effects": {
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": [],
+    "music_volume": 1,
+    "dry_foliage_color": 9418552,
+    "grass_color": 9418552,
+    "sky_color": 6269917,
+    "fog_color": 12638463,
+    "water_color": 3570859,
+    "water_fog_color": 331305
+  },
+  "features": [
+    [
+      "wythers:placer/river",
+      "wythers:placer/river_extended",
+      "wythers:terrain/extended/desert_extender",
+      "wythers:placer/warm_ocean_extender_1",
+      "wythers:placer/warm_ocean_extender_2",
+      "wythers:placer/warm_ocean_extender_3",
+      "wythers:terrain/local/stone_cliffs_surface",
+      "wythers:terrain/local/stone_cliffs",
+      "wythers:terrain/extended/scree",
+      "wythers:terrain/local/disk_beach_sand"
+    ],
+    [
+      "minecraft:lake_lava_underground",
+      "wythers:terrain/extended/arroyo_badlands",
+      "wythers:terrain/extended/arroyo_badlands_red",
+      "wythers:terrain/extended/arroyo_badlands_desert",
+      "wythers:terrain/extended/badlands_muddy_canyon",
+      "wythers:terrain/extended/arroyo_savanna",
+      "wythers:terrain/extended/arroyo_red",
+      "wythers:terrain/extended/arroyo_white",
+      "wythers:terrain/local/savanna_sandy_wash",
+      "minecraft:lake_lava_surface"
+    ],
+    [
+      "minecraft:amethyst_geode",
+      "minecraft:large_dripstone",
+      "wythers:terrain/carver/river",
+      "wythers:terrain/carver/river_water"
+    ],
+    [
+      "wythers:terrain/local/packed_mud_canyons",
+      "minecraft:monster_room",
+      "minecraft:monster_room_deep"
+    ],
+    [],
+    [
+      "wythers:terrain/local/cave_disk_basalt",
+      "wythers:terrain/local/cave_disk_blackstone",
+      "wythers:terrain/local/cave_disk_magma",
+      "wythers:terrain/local/riverbank_sand",
+      "wythers:terrain/local/riverbank_red_sand",
+      "wythers:terrain/local/riverbank_packed_mud",
+      "wythers:terrain/local/river_boulders_mossy"
+    ],
+    [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_tuff",
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_iron_small",
+      "minecraft:ore_gold",
+      "minecraft:ore_gold_lower",
+      "minecraft:ore_redstone",
+      "minecraft:ore_redstone_lower",
+      "minecraft:ore_diamond",
+      "minecraft:ore_diamond_large",
+      "minecraft:ore_diamond_buried",
+      "minecraft:ore_lapis",
+      "minecraft:ore_lapis_buried",
+      "minecraft:ore_copper",
+      "minecraft:underwater_magma",
+      "wythers:terrain/local/disk_gravel_birch_forest",
+      "wythers:terrain/local/river_grass",
+      "wythers:terrain/extended/river_soil",
+      "wythers:terrain/extended/river_gravel",
+      "wythers:terrain/local/river_clay"
+    ],
+    [
+      "wythers:terrain/feature/dripstone_cluster",
+      "wythers:terrain/feature/pointed_dripstone",
+      "wythers:terrain/extended/arroyo_red_salt_pan",
+      "wythers:terrain/extended/arroyo_red_salt_pan_2",
+      "wythers:terrain/local/danakil_mud",
+      "wythers:terrain/local/danakil_terracotta",
+      "wythers:terrain/local/danakil_red",
+      "wythers:terrain/local/danakil_orange",
+      "wythers:terrain/local/danakil_yellow",
+      "wythers:terrain/local/danakil_yellow_2",
+      "wythers:terrain/local/danakil_water",
+      "wythers:terrain/local/oasis_moss"
+    ],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "minecraft:glow_lichen",
+      "wythers:terrain/feature/danakil_desert_mounds",
+      "wythers:vegetation/local/patch/grass_standard",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "wythers:vegetation/extended/trees/live_oaks",
+      "wythers:vegetation/local/trees/jungle_river",
+      "wythers:vegetation/extended/trees/river_acacias",
+      "wythers:vegetation/extended/trees/river_tropical",
+      "wythers:vegetation/extended/patch/beach_reeds_dense",
+      "wythers:vegetation/extended/patch/seagrass_jungle"
+    ],
+    [
+      "minecraft:freeze_top_layer",
+      "wythers:decor/dense_steam",
+      "wythers:vegetation/local/patch/water_grass_tropical_river",
+      "wythers:vegetation/local/patch/duckweed_tropical_river"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:spider",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:zombie",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 95
+      },
+      {
+        "type": "minecraft:zombie_villager",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      },
+      {
+        "type": "minecraft:skeleton",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:creeper",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:slime",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:enderman",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:witch",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      },
+      {
+        "type": "minecraft:drowned",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 100
+      }
+    ],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "minecraft:salmon",
+        "maxCount": 5,
+        "minCount": 1,
+        "weight": 5
+      }
+    ],
+    "water_creature": []
+  },
+  "temperature": 0.8
+}

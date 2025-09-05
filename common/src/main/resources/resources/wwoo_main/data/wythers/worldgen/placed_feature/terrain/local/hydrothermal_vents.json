@@ -1,0 +1,81 @@
+{
+  "feature": {
+    "config": {
+      "features": [
+        {
+          "chance": 0.1,
+          "feature": {
+            "feature": "wythers:other/giant_tubeworm_1",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.1,
+          "feature": {
+            "feature": "wythers:other/giant_tubeworm_2",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.1,
+          "feature": {
+            "feature": "wythers:other/giant_tubeworm_3",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.1,
+          "feature": {
+            "feature": "wythers:other/giant_tubeworm_4",
+            "placement": []
+          }
+        }
+      ],
+      "default": {
+        "feature": "wythers:other/hydrothermal_vent",
+        "placement": []
+      }
+    },
+    "type": "minecraft:random_selector"
+  },
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 0
+        },
+        "max_inclusive": {
+          "absolute": 30
+        }
+      }
+    },
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 2
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "down",
+      "max_steps": 30,
+      "target_condition": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "blocks": [
+          "minecraft:mud"
+        ]
+      },
+      "allowed_search_condition": {
+        "type": "minecraft:true"
+      }
+    }
+  ]
+}

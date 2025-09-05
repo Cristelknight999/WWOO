@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:dripstone_block"
+        }
+      },
+      "rules": []
+    },
+    "radius": 8,
+    "half_height": 4,
+    "target": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "stone",
+        "granite",
+        "andesite",
+        "diorite"
+      ]
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "feature": "wythers:terrain/local/bore_hole",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 1
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 10
+      }
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "up",
+      "max_steps": 30,
+      "target_condition": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "tag": "wythers:sink_hole_replaceables"
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              0,
+              -5,
+              0
+            ],
+            "fluids": [
+              "minecraft:water"
+            ]
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              3,
+              0,
+              0
+            ],
+            "fluids": [
+              "minecraft:water"
+            ]
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              -3,
+              0,
+              0
+            ],
+            "fluids": [
+              "minecraft:water"
+            ]
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              0,
+              0,
+              3
+            ],
+            "fluids": [
+              "minecraft:water"
+            ]
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              0,
+              0,
+              -3
+            ],
+            "fluids": [
+              "minecraft:water"
+            ]
+          }
+        ]
+      },
+      "allowed_search_condition": {
+        "type": "minecraft:true"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "assets": {
+    "angry": "minecraft:entity/wolf/wolf_rusty_angry",
+    "tame": "minecraft:entity/wolf/wolf_rusty_tame",
+    "wild": "minecraft:entity/wolf/wolf_rusty"
+  },
+  "spawn_conditions": [
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands",
+    "minecraft:sparse_jungle",
+    "minecraft:bamboo_jungle",
+    "minecraft:savanna_plateau",
+    "minecraft:birch_forest",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:lukewarm_ocean"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

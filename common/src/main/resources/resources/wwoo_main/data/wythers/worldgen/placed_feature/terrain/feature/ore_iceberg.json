@@ -1,0 +1,68 @@
+{
+  "feature": {
+    "config": {
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:air"
+          },
+          "state": {
+            "Name": "minecraft:packed_ice"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:water"
+          },
+          "state": {
+            "Name": "minecraft:blue_ice"
+          }
+        }
+      ],
+      "size": 32,
+      "discard_chance_on_air_exposure": 0
+    },
+    "type": "minecraft:ore"
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 50,
+      "noise_offset": -0.4
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 4
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": [
+          "minecraft:water",
+          "minecraft:blue_ice",
+          "minecraft:packed_ice"
+        ]
+      }
+    }
+  ]
+}

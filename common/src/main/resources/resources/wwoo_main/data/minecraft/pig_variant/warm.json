@@ -1,0 +1,29 @@
+{
+  "asset_id": "minecraft:entity/pig/warm_pig",
+  "spawn_conditions": [
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands",
+    "minecraft:windswept_savanna",
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "minecraft:sparse_jungle",
+    "minecraft:bamboo_jungle",
+    "minecraft:jungle",
+    "minecraft:swamp",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:birch_forest",
+    "minecraft:dark_forest",
+    "minecraft:forest",
+    "minecraft:taiga",
+    "minecraft:lukewarm_ocean"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

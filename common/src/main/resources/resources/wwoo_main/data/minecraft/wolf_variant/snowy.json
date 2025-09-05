@@ -1,0 +1,24 @@
+{
+  "assets": {
+    "angry": "minecraft:entity/wolf/wolf_snowy_angry",
+    "tame": "minecraft:entity/wolf/wolf_snowy_tame",
+    "wild": "minecraft:entity/wolf/wolf_snowy"
+  },
+  "spawn_conditions": [
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:snowy_plains",
+    "minecraft:snowy_taiga",
+    "minecraft:snowy_slopes",
+    "minecraft:frozen_peaks",
+    "minecraft:jagged_peaks",
+    "minecraft:ice_spikes",
+    "minecraft:pale_garden"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

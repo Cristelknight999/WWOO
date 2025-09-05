@@ -1,0 +1,190 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "chance": 0.2,
+                "feature": {
+                  "feature": "wythers:vegetation/column/saguaro_core",
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "minecraft:air"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "chance": 0.4,
+                "feature": {
+              "feature": {
+                "config": {
+                  "tries": 64,
+                  "xz_spread": 1,
+                  "y_spread": 0,
+                  "feature": {
+                    "feature": "wythers:vegetation/column/saguaro_arm_short_base",
+                    "placement": [
+                      {
+                        "type": "minecraft:environment_scan",
+                        "direction_of_search": "up",
+                        "max_steps": 6,
+                        "target_condition": {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:air"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    1,
+                                    1,
+                                    1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:bamboo_block"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    1,
+                                    2,
+                                    1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:cactus"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "type": "minecraft:random_patch"
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": [
+                      "minecraft:bamboo_block"
+                    ]
+                  }
+                }
+              ]
+            }
+              }
+            ],
+            "default": {
+              "feature": {
+                "config": {
+                  "tries": 64,
+                  "xz_spread": 1,
+                  "y_spread": 0,
+                  "feature": {
+                    "feature": "wythers:vegetation/column/saguaro_arm_long_base",
+                    "placement": [
+                      {
+                        "type": "minecraft:environment_scan",
+                        "direction_of_search": "up",
+                        "max_steps": 6,
+                        "target_condition": {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:air"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    -1,
+                                    0,
+                                    -1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:bamboo_block"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    -1,
+                                    1,
+                                    -1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:cactus"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "type": "minecraft:random_patch"
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": [
+                      "minecraft:bamboo_block"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "type": "minecraft:random_selector"
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 15
+          }
+        ]
+      }
+    ]
+  }
+}

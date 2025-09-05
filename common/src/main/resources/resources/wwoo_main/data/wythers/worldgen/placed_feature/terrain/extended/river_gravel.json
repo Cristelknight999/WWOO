@@ -1,0 +1,106 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:gravel"
+              }
+            }
+          ]
+        },
+        "rules": []
+      },
+      "radius": 8,
+      "half_height": 4,
+      "target": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_block_tag",
+            "tag": "minecraft:dirt"
+          },
+          {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_fluids",
+                "offset": [
+                  0,
+                  3,
+                  0
+                ],
+                "fluids": "minecraft:water"
+              }
+            ]
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:moss_block",
+                "minecraft:mossy_cobblestone",
+                "minecraft:mud",
+                "minecraft:soul_soil"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:any_of",
+        "predicates": [
+          {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:oak_wood",
+                  "minecraft:birch_log",
+                  "minecraft:stripped_birch_wood",
+                  "minecraft:dark_oak_log",
+                  "minecraft:stripped_dark_oak_wood",
+                  "minecraft:spruce_log",
+                  "minecraft:stripped_spruce_wood",
+                  "minecraft:dirt",
+                  "minecraft:coarse_dirt",
+                  "minecraft:rooted_dirt",
+                  "minecraft:lime_concrete"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    }
+  ]
+}

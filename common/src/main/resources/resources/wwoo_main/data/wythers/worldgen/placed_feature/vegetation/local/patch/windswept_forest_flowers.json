@@ -1,0 +1,99 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "config": {
+      "features": [
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": {
+              "config": {
+                "tries": 12,
+                "xz_spread": 4,
+                "y_spread": 4,
+                "feature": {
+                  "feature": {
+                    "config": {
+                      "to_place": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "minecraft:azalea"
+                        }
+                      }
+                    },
+                    "type": "minecraft:simple_block"
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:would_survive",
+                        "state": {
+                          "Name": "fern"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "type": "minecraft:random_patch"
+            },
+            "placement": []
+          }
+        }
+      ],
+      "default": {
+        "feature": {
+          "config": {
+            "tries": 32,
+            "xz_spread": 4,
+            "y_spread": 4,
+            "feature": {
+              "feature": {
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                      "Name": "minecraft:lily_of_the_valley"
+                    }
+                  },
+                  "schedule_tick": false
+                },
+                "type": "minecraft:simple_block"
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:would_survive",
+                    "state": {
+                      "Name": "fern"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "type": "minecraft:random_patch"
+        },
+        "placement": []
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

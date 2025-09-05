@@ -1,0 +1,145 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:coarse_dirt"
+          }
+        },
+        "rules": []
+      },
+      "target": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "fluids": [
+              "minecraft:water"
+            ]
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "fluids": [
+              "minecraft:water"
+            ]
+          },
+          {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      1,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:smooth_red_sandstone",
+                      "minecraft:coarse_dirt"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      1,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:smooth_red_sandstone",
+                      "minecraft:coarse_dirt"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:smooth_red_sandstone",
+                      "minecraft:coarse_dirt"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:smooth_red_sandstone",
+                      "minecraft:coarse_dirt"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:coarse_dirt"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "radius": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 7,
+        "max_inclusive": 7
+      },
+      "half_height": 4
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 30
+    },
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    }
+  ]
+}

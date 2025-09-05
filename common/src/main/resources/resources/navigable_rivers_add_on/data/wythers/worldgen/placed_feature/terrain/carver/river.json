@@ -1,0 +1,280 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:air"
+          }
+        },
+        "rules": []
+      },
+      "target": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:any_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": "minecraft:hanging_roots"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:air"
+                }
+              ]
+            }
+          },
+          {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "tag": "wythers:river_carver_replaceables"
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  1,
+                  2,
+                  0
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  -1,
+                  2,
+                  0
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  2,
+                  1
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  2,
+                  -1
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "blocks": "minecraft:air"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": "minecraft:air"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": "minecraft:air"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": "minecraft:air"
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "fluids": "minecraft:water"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "radius": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 3,
+        "max_inclusive": 4
+      },
+      "half_height": 4
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": "acacia_wood"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "minecraft:dripstone_block"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:orange_terracotta"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:smooth_red_sandstone",
+                "minecraft:smooth_sandstone",
+                "minecraft:cut_sandstone",
+                "minecraft:chiseled_sandstone"
+              ]
+            },
+            {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:moss_block"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 90
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

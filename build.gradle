@@ -1,5 +1,5 @@
 plugins {
-    id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
+    id 'dev.architectury.loom' version '1.10-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
 }
@@ -24,6 +24,9 @@ subprojects {
     }
 
     repositories {
+        flatDir {
+            dirs 'lib'
+        }
         // Add repositories to retrieve artifacts from in here.
         // You should only use this when depending on other mods because
         // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -31,9 +34,16 @@ subprojects {
         // for more information about repositories.
     }
 
+    loom {
+        silentMojangMappingsLicense()
+    }
+
     dependencies {
         minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
         mappings loom.officialMojangMappings()
+
+        modImplementation "lib:cristellib-fabric-2.0.3"
+        implementation("blue.endless:jankson:${rootProject.jankson_version}")
     }
 
     java {

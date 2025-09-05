@@ -1,0 +1,134 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "config": {
+      "features": [
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/giant_muscaria",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.1,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/medium_muscaria",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.15,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/patch_morel",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.1,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/patch_enoki",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.05,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/giant_matsutake",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.012,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/giant_omphalotus_illudens",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.02,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/fungal_forest_gray",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.02,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/fungal_forest_red",
+            "placement": []
+          }
+        },
+        {
+          "chance": 0.02,
+          "feature": {
+            "feature": "wythers:vegetation/fungus/fungal_forest_brown",
+            "placement": []
+          }
+        }
+      ],
+      "default": {
+        "feature": "minecraft:mushroom_island_vegetation",
+        "placement": []
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            1,
+            0
+          ],
+          "blocks": "minecraft:moss_block"
+        }
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 3
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:fern"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": "minecraft:mycelium"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

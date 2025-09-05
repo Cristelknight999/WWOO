@@ -1,0 +1,23 @@
+{
+  "values": [
+    "#minecraft:flowers",
+    "#minecraft:saplings",
+    "minecraft:air",
+    "minecraft:short_grass",
+    "minecraft:fern",
+    "minecraft:tall_grass",
+    "minecraft:large_fern",
+    "minecraft:dead_bush",
+    "minecraft:stone_button",
+    "minecraft:bamboo",
+    "minecraft:leaf_litter",
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "minecraft:pale_hanging_moss",
+    "minecraft:bush",
+    "minecraft:firefly_bush",
+    "minecraft:short_dry_grass",
+    "minecraft:tall_dry_grass",
+    "minecraft:sugar_cane"
+  ]
+}

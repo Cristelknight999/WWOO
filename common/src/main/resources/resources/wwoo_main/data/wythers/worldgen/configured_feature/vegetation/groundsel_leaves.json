@@ -1,0 +1,189 @@
+{
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "state_provider": {
+              "fallback": {
+                "type": "minecraft:simple_state_provider",
+                "state": {
+                  "Name": "minecraft:big_dripleaf",
+                  "Properties": {
+                    "facing": "west",
+                    "tilt": "none",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              "rules": [
+                {
+                  "if_true": {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": "minecraft:moss_block"
+                  },
+                  "then": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                      "Name": "minecraft:big_dripleaf",
+                      "Properties": {
+                        "facing": "east",
+                        "tilt": "none",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "if_true": {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": "minecraft:moss_block"
+                  },
+                  "then": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                      "Name": "minecraft:big_dripleaf",
+                      "Properties": {
+                        "facing": "north",
+                        "tilt": "none",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "if_true": {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": "minecraft:moss_block"
+                  },
+                  "then": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                      "Name": "minecraft:big_dripleaf",
+                      "Properties": {
+                        "facing": "south",
+                        "tilt": "none",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "radius": 8,
+            "half_height": 4,
+            "target": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:air"
+                },
+                {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:moss_block"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:moss_block"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:moss_block"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:moss_block"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        -1,
+                        0
+                      ],
+                      "blocks": "minecraft:mangrove_roots"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        -1,
+                        0
+                      ],
+                      "blocks": "minecraft:mangrove_roots"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        1
+                      ],
+                      "blocks": "minecraft:mangrove_roots"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        -1
+                      ],
+                      "blocks": "minecraft:mangrove_roots"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "minecraft:disk"
+        },
+        "placement": []
+      }
+    ]
+  },
+  "type": "minecraft:simple_random_selector"
+}

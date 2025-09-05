@@ -1,0 +1,211 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:ore",
+          "config": {
+            "targets": [
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:water"
+                },
+                "state": {
+                  "Name": "granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:dirt_path"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "minecraft:dirt"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "wythers:air_and_plants"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              }
+            ],
+            "size": 64,
+            "discard_chance_on_air_exposure": 0
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:ore",
+          "config": {
+            "targets": [
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:dirt_path"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "minecraft:dirt"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "wythers:air_and_plants"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              }
+            ],
+            "size": 48,
+            "discard_chance_on_air_exposure": 0
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:ore",
+          "config": {
+            "targets": [
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:dirt_path"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "minecraft:dirt"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "wythers:air_and_plants"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              }
+            ],
+            "size": 32,
+            "discard_chance_on_air_exposure": 0
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:ore",
+          "config": {
+            "targets": [
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:dirt_path"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "minecraft:dirt"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "wythers:air_and_plants"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              }
+            ],
+            "size": 24,
+            "discard_chance_on_air_exposure": 0
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:ore",
+          "config": {
+            "targets": [
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:dirt_path"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "minecraft:dirt"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "wythers:air_and_plants"
+                },
+                "state": {
+                  "Name": "minecraft:granite"
+                }
+              }
+            ],
+            "size": 16,
+            "discard_chance_on_air_exposure": 0
+          }
+        },
+        "placement": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "feature": "wythers:terrain/local/cold_island",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 200,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 8
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 62
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_fluids",
+          "offset": [
+            0,
+            -8,
+            0
+          ],
+          "fluids": [
+            "minecraft:water"
+          ]
+        }
+      }
+    }
+  ]
+}

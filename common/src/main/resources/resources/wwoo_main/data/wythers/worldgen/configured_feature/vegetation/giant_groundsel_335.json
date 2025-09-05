@@ -1,0 +1,323 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "chance": 0.2,
+                "feature": {
+                  "feature": "wythers:vegetation/column/groundsel_core",
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "minecraft:air"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "chance": 0.2,
+                "feature": {
+                  "feature": {
+                    "config": {
+                      "tries": 64,
+                      "xz_spread": 1,
+                      "y_spread": 0,
+                      "feature": {
+                        "feature": "wythers:vegetation/column/groundsel_arm_1",
+                        "placement": [
+                          {
+                            "type": "minecraft:environment_scan",
+                            "direction_of_search": "up",
+                            "max_steps": 8,
+                            "target_condition": {
+                              "type": "minecraft:any_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:all_of",
+                                  "predicates": [
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "blocks": [
+                                        "minecraft:air"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        -1,
+                                        -2,
+                                        -1
+                                      ],
+                                      "blocks": [
+                                        "minecraft:mangrove_wood"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        -1,
+                                        -1,
+                                        -1
+                                      ],
+                                      "blocks": [
+                                        "minecraft:mangrove_roots"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "type": "minecraft:random_patch"
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "minecraft:mangrove_wood"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "chance": 0.2,
+                "feature": {
+                  "feature": {
+                    "config": {
+                      "tries": 64,
+                      "xz_spread": 1,
+                      "y_spread": 0,
+                      "feature": {
+                        "feature": "wythers:vegetation/column/groundsel_arm_3",
+                        "placement": [
+                          {
+                            "type": "minecraft:environment_scan",
+                            "direction_of_search": "up",
+                            "max_steps": 8,
+                            "target_condition": {
+                              "type": "minecraft:any_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:all_of",
+                                  "predicates": [
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "blocks": [
+                                        "minecraft:air"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        1,
+                                        -1,
+                                        -1
+                                      ],
+                                      "blocks": [
+                                        "minecraft:mangrove_wood"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        1,
+                                        0,
+                                        -1
+                                      ],
+                                      "blocks": [
+                                        "minecraft:mangrove_roots"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "type": "minecraft:random_patch"
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "minecraft:mangrove_wood"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "chance": 0.2,
+                "feature": {
+                  "feature": {
+                    "config": {
+                      "tries": 64,
+                      "xz_spread": 1,
+                      "y_spread": 0,
+                      "feature": {
+                        "feature": "wythers:vegetation/column/groundsel_arm_3",
+                        "placement": [
+                          {
+                            "type": "minecraft:environment_scan",
+                            "direction_of_search": "up",
+                            "max_steps": 8,
+                            "target_condition": {
+                              "type": "minecraft:any_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:all_of",
+                                  "predicates": [
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "blocks": [
+                                        "minecraft:air"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        0,
+                                        -2,
+                                        1
+                                      ],
+                                      "blocks": [
+                                        "minecraft:mangrove_wood"
+                                      ]
+                                    },
+                                    {
+                                      "type": "minecraft:matching_blocks",
+                                      "offset": [
+                                        0,
+                                        -1,
+                                        1
+                                      ],
+                                      "blocks": [
+                                        "minecraft:mangrove_roots"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "type": "minecraft:random_patch"
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "minecraft:mangrove_wood"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "default": {
+              "feature": "wythers:vegetation/groundsel_leaves",
+              "placement": [
+                {
+                  "type": "minecraft:environment_scan",
+                  "direction_of_search": "up",
+                  "max_steps": 8,
+                  "target_condition": {
+                    "type": "minecraft:any_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:air"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -2,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:mangrove_wood"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:mangrove_roots"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "type": "minecraft:random_selector"
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 30
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:smooth_sandstone"
+          }
+        },
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:coarse_dirt",
+                "minecraft:rooted_dirt"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:cut_sandstone"
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:acacia_wood"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:chiseled_sandstone"
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:orange_terracotta"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:light_gray_terracotta"
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:smooth_red_sandstone"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:gray_terracotta"
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:muddy_mangrove_roots"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:stripped_mangrove_wood"
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:jungle_wood",
+                "minecraft:lime_terracotta"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:stripped_jungle_wood"
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:bamboo_block"
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:stripped_bamboo_block"
+              }
+            }
+          }
+        ]
+      },
+      "target": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:bedrock",
+              "minecraft:coarse_dirt",
+              "minecraft:rooted_dirt",
+              "minecraft:acacia_wood",
+              "minecraft:jungle_wood",
+              "minecraft:bamboo_block",
+              "minecraft:lime_terracotta",
+              "minecraft:muddy_mangrove_roots",
+              "minecraft:orange_terracotta",
+              "minecraft:smooth_red_sandstone"
+            ]
+          }
+        ]
+      },
+      "radius": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 7,
+        "max_inclusive": 7
+      },
+      "half_height": 0
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 60
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    }
+  ]
+}

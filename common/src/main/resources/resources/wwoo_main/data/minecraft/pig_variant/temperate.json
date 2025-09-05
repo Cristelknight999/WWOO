@@ -1,0 +1,18 @@
+{
+  "asset_id": "minecraft:entity/pig/temperate_pig",
+  "spawn_conditions": [
+    {
+      "priority": 0
+    },
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:birch_forest",
+    "minecraft:old_growth_birch_forest"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

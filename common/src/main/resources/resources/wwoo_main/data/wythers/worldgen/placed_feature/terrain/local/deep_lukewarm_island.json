@@ -1,0 +1,42 @@
+{
+  "feature": "wythers:terrain/local/island",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 20,
+        "max_inclusive": 30
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 62
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_fluids",
+          "offset": [
+            0,
+            -10,
+            0
+          ],
+          "fluids": [
+            "minecraft:water"
+          ]
+        }
+      }
+    }
+  ]
+}

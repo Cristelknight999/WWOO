@@ -1,0 +1,27 @@
+{
+  "asset_id": "minecraft:entity/pig/cold_pig",
+  "model": "cold",
+  "spawn_conditions": [
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:swamp",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:birch_forest",
+    "minecraft:desert",
+    "minecraft:beach",
+    "minecraft:forest",
+    "minecraft:snowy_plains",
+    "minecraft:snowy_taiga",
+    "minecraft:snowy_slopes",
+    "minecraft:frozen_peaks",
+    "minecraft:jagged_peaks",
+    "minecraft:ice_spikes",
+    "minecraft:pale_garden"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

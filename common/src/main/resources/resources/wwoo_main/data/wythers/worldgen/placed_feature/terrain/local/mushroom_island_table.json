@@ -1,0 +1,37 @@
+{
+  "feature": "wythers:terrain/local/mushroom_island_table",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 50,
+      "noise_factor": 100,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 62
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            8,
+            0
+          ],
+          "blocks": [
+            "minecraft:air"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "feature": "wythers:vegetation/patch/leaf_litter",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 65
+      }
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "down",
+      "max_steps": 4,
+      "target_condition": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:water"
+        ]
+      },
+      "allowed_search_condition": {
+        "type": "minecraft:true"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

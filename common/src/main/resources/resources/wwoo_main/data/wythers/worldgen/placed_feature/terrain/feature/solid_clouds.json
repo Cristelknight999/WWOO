@@ -1,0 +1,101 @@
+{
+  "feature": {
+    "type": "minecraft:geode",
+    "config": {
+      "blocks": {
+        "alternate_inner_layer_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:powder_snow"
+          }
+        },
+        "cannot_replace": "#wythers:not_air",
+        "filling_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:powder_snow"
+          }
+        },
+        "inner_layer_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:powder_snow"
+          }
+        },
+        "inner_placements": [
+          {
+            "Name": "minecraft:powder_snow",
+            "Properties": {}
+          }
+        ],
+        "invalid_blocks": "#wythers:not_air",
+        "middle_layer_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:powder_snow"
+          }
+        },
+        "outer_layer_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:powder_snow"
+          }
+        }
+      },
+      "crack": {
+        "base_crack_size": 3,
+        "crack_point_offset": 2,
+        "generate_crack_chance": 0
+      },
+      "distribution_points": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 3,
+        "max_inclusive": 3
+      },
+      "invalid_blocks_threshold": 255,
+      "layers": {
+        "filling": 2,
+        "inner_layer": 2,
+        "middle_layer": 2,
+        "outer_layer": 2
+      },
+      "max_gen_offset": 15,
+      "min_gen_offset": -15,
+      "noise_multiplier": 0.035,
+      "placements_require_layer0_alternate": true,
+      "point_offset": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 5,
+        "max_inclusive": 8
+      },
+      "use_alternate_layer0_chance": 0.085,
+      "use_potential_placements_chance": 0.35
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 20,
+      "noise_factor": 150,
+      "noise_offset": 0.9
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 250
+        },
+        "max_inclusive": {
+          "absolute": 256
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

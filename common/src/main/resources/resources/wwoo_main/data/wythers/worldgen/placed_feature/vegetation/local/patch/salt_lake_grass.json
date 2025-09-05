@@ -1,0 +1,95 @@
+{
+  "feature": {
+    "config": {
+      "features": [
+        {
+          "feature": {
+            "config": {
+              "state_provider": {
+                "fallback": {
+                  "type": "minecraft:weighted_state_provider",
+                  "entries": [
+                    {
+                      "weight": 1,
+                      "data": {
+                        "Name": "minecraft:short_dry_grass"
+                      }
+                    },
+                    {
+                      "weight": 1,
+                      "data": {
+                        "Name": "minecraft:tall_dry_grass"
+                      }
+                    }
+                  ]
+                },
+                "rules": []
+              },
+              "radius": 3,
+              "half_height": 0,
+              "target": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": [
+                      "air"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "offset": [
+                      0,
+                      -1,
+                      0
+                    ],
+                    "tag": "minecraft:dry_vegetation_may_place_on"
+                  }
+                ]
+              }
+            },
+            "type": "minecraft:disk"
+          },
+          "placement": [
+            {
+              "type": "minecraft:height_range",
+              "height": {
+                "absolute": 63
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "type": "minecraft:simple_random_selector"
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 62
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:calcite",
+          "minecraft:white_concrete_powder"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon"
+  ],
+  "downfall": 0.5,
+  "effects": {
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music_volume": 1.0,
+    "sky_color": 6269917,
+    "fog_color": 12638463,
+    "water_color": 4562649,
+    "water_fog_color": 331305
+  },
+  "features": [
+    [
+      "wythers:terrain/local/mushroom_fields_shore",
+      "wythers:terrain/local/mushroom_fields_grass_surface"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:glow_lichen",
+      "wythers:vegetation/local/other/colossal_mushrooms_rare",
+      "wythers:vegetation/local/other/colossal_mushrooms_very_rare",
+      "wythers:vegetation/local/other/mushroom_fields_vegetation",
+      "wythers:vegetation/local/other/mushroom_fields_fungal_forest",
+      "wythers:vegetation/local/patch/grass_mushroom_fields",
+      "wythers:vegetation/local/patch/mushrooms",
+      "wythers:vegetation/local/patch/hanging_roots"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:mooshroom",
+        "maxCount": 8,
+        "minCount": 4,
+        "weight": 8
+      }
+    ],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.85
+}

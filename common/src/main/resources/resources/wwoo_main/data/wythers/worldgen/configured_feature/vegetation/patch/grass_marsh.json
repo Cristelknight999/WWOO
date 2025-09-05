@@ -1,0 +1,75 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "weight": 0,
+                "data": {
+                  "Name": "minecraft:short_grass"
+                }
+              },
+              {
+                "weight": 6,
+                "data": {
+                  "Name": "minecraft:tall_grass"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "minecraft:dead_bush"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "bush"
+                }
+              },
+              {
+                "weight": 0,
+                "data": {
+                  "Name": "minecraft:firefly_bush"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "dirt",
+              "minecraft:grass_block",
+              "rooted_dirt"
+            ]
+          }
+        }
+      ]
+    },
+    "tries": 32,
+    "xz_spread": 7,
+    "y_spread": 3
+  }
+}

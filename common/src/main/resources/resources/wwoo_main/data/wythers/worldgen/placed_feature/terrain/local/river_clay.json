@@ -1,0 +1,80 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "config": {
+      "half_height": 1,
+      "radius": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 3,
+        "min_inclusive": 2
+      },
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:clay"
+          }
+        },
+        "rules": []
+      },
+      "target": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:gravel",
+          "minecraft:soul_soil"
+        ]
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_fluids",
+            "fluids": "water"
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "fluids": "water"
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              0,
+              2,
+              0
+            ],
+            "fluids": "water"
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "offset": [
+              0,
+              3,
+              0
+            ],
+            "fluids": "water"
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

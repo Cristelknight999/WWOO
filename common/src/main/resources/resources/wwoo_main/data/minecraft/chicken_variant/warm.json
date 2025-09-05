@@ -1,0 +1,28 @@
+{
+  "asset_id": "minecraft:entity/chicken/warm_chicken",
+  "spawn_conditions": [
+    {
+      "condition": {
+        "type": "minecraft:biome",
+        "biomes": [
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands",
+    "minecraft:windswept_savanna",
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "minecraft:sparse_jungle",
+    "minecraft:bamboo_jungle",
+    "minecraft:jungle",
+    "minecraft:desert",
+    "minecraft:beach",
+    "minecraft:birch_forest",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:swamp",
+    "minecraft:lukewarm_ocean"
+  ]
+      },
+      "priority": 1
+    }
+  ]
+}

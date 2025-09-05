@@ -1,0 +1,76 @@
+{
+  "feature": {
+    "config": {
+      "state_provider": {
+        "fallback": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "air"
+          }
+        },
+        "rules": []
+      },
+      "radius": 8,
+      "half_height": 4,
+      "target": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "packed_ice",
+          "blue_ice",
+          "snow_block",
+          "water"
+        ]
+      }
+    },
+    "type": "minecraft:disk"
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:blue_ice"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            2,
+            0
+          ],
+          "blocks": "minecraft:moss_block"
+        }
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 123
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

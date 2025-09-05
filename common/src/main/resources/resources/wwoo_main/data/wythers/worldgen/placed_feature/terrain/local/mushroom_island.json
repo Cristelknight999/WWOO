@@ -1,0 +1,25 @@
+{
+  "feature": "wythers:terrain/local/mushroom_island",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 40,
+        "max_inclusive": 60
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 73
+      }
+    }
+  ]
+}

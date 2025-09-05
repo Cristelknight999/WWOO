@@ -1,0 +1,511 @@
+{
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": {
+                  "config": {
+                    "decorators": [],
+                    "dirt_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:rooted_dirt"
+                      }
+                    },
+                    "foliage_placer": {
+                      "type": "minecraft:random_spread_foliage_placer",
+                      "foliage_height": 2,
+                      "leaf_placement_attempts": 50,
+                      "offset": 0,
+                      "radius": 3
+                    },
+                    "foliage_provider": {
+                      "type": "minecraft:weighted_state_provider",
+                      "entries": [
+                        {
+                          "data": {
+                            "Name": "minecraft:azalea_leaves",
+                            "Properties": {
+                              "distance": "7",
+                              "persistent": "false",
+                              "waterlogged": "false"
+                            }
+                          },
+                          "weight": 3
+                        },
+                        {
+                          "data": {
+                            "Name": "minecraft:flowering_azalea_leaves",
+                            "Properties": {
+                              "distance": "7",
+                              "persistent": "false",
+                              "waterlogged": "false"
+                            }
+                          },
+                          "weight": 1
+                        }
+                      ]
+                    },
+                    "force_dirt": true,
+                    "ignore_vines": false,
+                    "minimum_size": {
+                      "type": "minecraft:two_layers_feature_size",
+                      "limit": 1,
+                      "lower_size": 0,
+                      "upper_size": 1
+                    },
+                    "trunk_placer": {
+                      "type": "minecraft:bending_trunk_placer",
+                      "base_height": 4,
+                      "bend_length": {
+                        "type": "minecraft:uniform",
+                        "max_inclusive": 2,
+                        "min_inclusive": 1
+                      },
+                      "height_rand_a": 2,
+                      "height_rand_b": 0,
+                      "min_height_for_leaves": 3
+                    },
+                    "trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:oak_log",
+                        "Properties": {
+                          "axis": "y"
+                        }
+                      }
+                    }
+                  },
+                  "type": "minecraft:tree"
+                },
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:mud",
+                              "minecraft:muddy_mangrove_roots",
+                              "minecraft:soul_soil"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -2,
+                              0
+                            ],
+                            "tag": "minecraft:logs"
+                          }
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea",
+                                  "minecraft:flowering_azalea"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea",
+                                  "minecraft:flowering_azalea"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea",
+                                  "minecraft:flowering_azalea"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea",
+                                  "minecraft:flowering_azalea"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea",
+                                  "minecraft:flowering_azalea"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea",
+                                  "minecraft:flowering_azalea"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea",
+                                  "minecraft:flowering_azalea"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea",
+                                  "minecraft:flowering_azalea"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/azalea_birch",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            -2,
+                            0
+                          ],
+                          "tag": "minecraft:birch_logs"
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/desert_fan_palm_tall",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            -2,
+                            0
+                          ],
+                          "tag": "minecraft:mangrove_logs"
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": "minecraft:coarse_dirt"
+                          }
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/desert_fan_palm",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            -2,
+                            0
+                          ],
+                          "tag": "minecraft:mangrove_logs"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": "minecraft:coarse_dirt"
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/sparse_jungle_palm",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            -2,
+                            0
+                          ],
+                          "tag": "minecraft:jungle_logs"
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/giant_magnolia",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -2,
+                              0
+                            ],
+                            "tag": "minecraft:logs"
+                          }
+                        },
+                        {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                1,
+                                0,
+                                1
+                              ],
+                              "blocks": [
+                                "minecraft:azalea",
+                                "minecraft:flowering_azalea"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                1,
+                                0,
+                                0
+                              ],
+                              "blocks": [
+                                "minecraft:azalea",
+                                "minecraft:flowering_azalea"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                1,
+                                0,
+                                -1
+                              ],
+                              "blocks": [
+                                "minecraft:azalea",
+                                "minecraft:flowering_azalea"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                0,
+                                1
+                              ],
+                              "blocks": [
+                                "minecraft:azalea",
+                                "minecraft:flowering_azalea"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                0,
+                                -1
+                              ],
+                              "blocks": [
+                                "minecraft:azalea",
+                                "minecraft:flowering_azalea"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                -1,
+                                0,
+                                1
+                              ],
+                              "blocks": [
+                                "minecraft:azalea",
+                                "minecraft:flowering_azalea"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                -1,
+                                0,
+                                0
+                              ],
+                              "blocks": [
+                                "minecraft:azalea",
+                                "minecraft:flowering_azalea"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                -1,
+                                0,
+                                -1
+                              ],
+                              "blocks": [
+                                "minecraft:azalea",
+                                "minecraft:flowering_azalea"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              },
+              {
+                "feature": "wythers:vegetation/tree/willow",
+                "placement": [
+                  {
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:mud",
+                            "minecraft:muddy_mangrove_roots",
+                            "minecraft:soul_soil"
+                          ]
+                        }
+                      ]
+                    },
+                    "type": "minecraft:block_predicate_filter"
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "minecraft:simple_random_selector"
+        },
+        "placement": [
+          {
+            "count": 32,
+            "type": "minecraft:count"
+          },
+          {
+            "predicate": {
+              "predicate": {
+                "type": "minecraft:solid"
+              },
+              "type": "minecraft:not"
+            },
+            "type": "minecraft:block_predicate_filter"
+          }
+        ]
+      }
+    ]
+  },
+  "type": "minecraft:simple_random_selector"
+}
