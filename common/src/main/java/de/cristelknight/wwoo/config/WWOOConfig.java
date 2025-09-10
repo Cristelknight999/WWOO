@@ -67,6 +67,5 @@ public record WWOOConfig(
     public static void register() {
         ConfigRegistry.registerWithScreen(WWOOConfig.class, SETTINGS,
                 WWOO.MOD_ID, "Auto-config", () -> {});
-        ConfigRegistry.get(WWOOConfig.class);
     }
 }
