@@ -1,5 +1,6 @@
 package de.cristelknight.wwoo;
 
+import de.cristelknight.wwoo.config.WWOOConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,5 +10,6 @@ public final class WWOO {
 
     public static void init() {
         LOGGER.debug("Loading WWOO");
+        WWOOConfig.register();
     }
 }

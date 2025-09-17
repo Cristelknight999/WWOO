@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:mangrove_roots",
+    "minecraft:bamboo",
+    "minecraft:bamboo_block",
+    "minecraft:stripped_bamboo_block"
+  ]
+}

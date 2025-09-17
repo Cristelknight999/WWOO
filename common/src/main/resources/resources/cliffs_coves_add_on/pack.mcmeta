@@ -1,0 +1,10 @@
+{
+    "pack": {
+        "pack_format": 61,
+        "supported_formats": [
+            26,
+            61
+        ],
+        "description": "Comb the Coast"
+    }
+}
