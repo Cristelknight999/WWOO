@@ -11,14 +11,14 @@ import java.util.HashMap;
 
 public record WWOOConfig(
         boolean navigableRivers,
-        boolean cliffsAndCoves,
+        /*boolean cliffsAndCoves,*/
         boolean toweringTepuis
 ) {
 
     public static final Codec<WWOOConfig> CODEC = RecordCodecBuilder.create(builder ->
             builder.group(
                     Codec.BOOL.fieldOf("navigableRivers").forGetter(WWOOConfig::navigableRivers),
-                    Codec.BOOL.fieldOf("cliffsAndCoves").forGetter(WWOOConfig::cliffsAndCoves),
+                    //Codec.BOOL.fieldOf("cliffsAndCoves").forGetter(WWOOConfig::cliffsAndCoves),
                     Codec.BOOL.fieldOf("toweringTepuis").forGetter(WWOOConfig::toweringTepuis)
             ).apply(builder, WWOOConfig::new)
     );
@@ -38,7 +38,7 @@ public record WWOOConfig(
         public WWOOConfig getDefault() {
             return new WWOOConfig(
                     false,
-                    false,
+                    /*false,*/
                     false
             );
         }

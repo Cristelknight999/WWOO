@@ -1,10 +1,8 @@
 {
-    "pack": {
-        "pack_format": 81,
-        "supported_formats": [
-            26,
-            1000
-        ],
-        "description": "Discover a Lost World"
-    }
+  "pack": {
+    "pack_format": 88,
+    "min_format": 88,
+    "max_format": 1000,
+    "description": "Discover a Lost World"
+  }
 }

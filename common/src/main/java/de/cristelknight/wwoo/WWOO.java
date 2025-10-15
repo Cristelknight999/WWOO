@@ -9,7 +9,7 @@ public final class WWOO {
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     public static void init() {
-        LOGGER.warn("Loading WWOO");
+        LOGGER.debug("Loading WWOO");
         WWOOConfig.register();
     }
 }
