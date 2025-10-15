@@ -32,6 +32,7 @@
   "depends": {
     "fabricloader": ">=${fabric_loader_min_version}",
     "fabric": "*",
-    "minecraft": ">=${minecraft_version}"
+    "minecraft": ">=${minecraft_version}",
+    "cristellib": ">=${cristellib_version}"
   }
 }

@@ -1,5 +1,5 @@
 plugins {
-    id 'dev.architectury.loom' version '1.10-SNAPSHOT' apply false
+    id 'dev.architectury.loom' version '1.11-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
 }
@@ -62,6 +62,7 @@ subprojects {
                 neo_version         : neoforge_version,
 
                 version: mod_version,
+                cristellib_version  : cristellib_version,
 
 
                 neo_loader_version_range: neo_loader_version_range,
