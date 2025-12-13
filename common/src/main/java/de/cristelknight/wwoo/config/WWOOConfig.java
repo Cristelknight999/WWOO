@@ -1,25 +1,30 @@
 package de.cristelknight.wwoo.config;
 
+import blue.endless.jankson.JsonPrimitive;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import de.cristelknight.cristellib.builtinpacks.BuiltInPackConfig;
 import de.cristelknight.cristellib.config.simple.ConfigRegistry;
 import de.cristelknight.cristellib.config.simple.ConfigSettings;
+import de.cristelknight.cristellib.config.simple.datafixer.DataFixer;
 import de.cristelknight.wwoo.WWOO;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 
 import java.util.HashMap;
 
 public record WWOOConfig(
         boolean navigableRivers,
         /*boolean cliffsAndCoves,*/
-        boolean toweringTepuis
+        boolean toweringTepuis,
+        boolean removeOres
 ) {
 
     public static final Codec<WWOOConfig> CODEC = RecordCodecBuilder.create(builder ->
             builder.group(
                     Codec.BOOL.fieldOf("navigableRivers").forGetter(WWOOConfig::navigableRivers),
                     //Codec.BOOL.fieldOf("cliffsAndCoves").forGetter(WWOOConfig::cliffsAndCoves),
-                    Codec.BOOL.fieldOf("toweringTepuis").forGetter(WWOOConfig::toweringTepuis)
+                    Codec.BOOL.fieldOf("toweringTepuis").forGetter(WWOOConfig::toweringTepuis),
+                    Codec.BOOL.fieldOf("removeOres").forGetter(WWOOConfig::removeOres)
             ).apply(builder, WWOOConfig::new)
     );
 
@@ -39,15 +44,16 @@ public record WWOOConfig(
             return new WWOOConfig(
                     false,
                     /*false,*/
-                    false
+                    false,
+                    true
             );
         }
 
         @Override
         public String getHeader() {
             return """
-                   WWOO add-on Config
-                   The config to enable various add-ons for William Wythers' Overhauled Overworld!
+                   WWOO Config
+                   The config to mainly enable add-ons for William Wythers' Overhauled Overworld!
                    """;
         }
 
@@ -60,11 +66,19 @@ public record WWOOConfig(
                     This add-on makes coastlines more interesting, creating nice flat beached coves, rugged rocky escarpments, and rocky pools.""");
                 map.put("toweringTepuis", """
                     This add-on adds tepuis to mountainous regions bordering the Jungle biome.""");
+                map.put("removeOres", """
+                    This removes underground ores like andesite, diorite, granite, gravel and dirt. But these can always be found in dedicated (sub)biomes!""");
             });
         }
     };
 
     public static void register() {
+        DataFixer.register(WWOOConfig.class, jsonObject -> {
+            if(jsonObject.containsKey("removeOres")) return false;
+            jsonObject.put("removeOres", new JsonPrimitive(SETTINGS.getDefault().removeOres()));
+            return true;
+        });
+
         ConfigRegistry.registerWithScreen(WWOOConfig.class, SETTINGS,
                 WWOO.MOD_ID, "Auto-config", () -> {});
     }

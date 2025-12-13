@@ -1,5 +1,5 @@
 plugins {
-    id 'dev.architectury.loom' version '1.11-SNAPSHOT' apply false
+    id 'dev.architectury.loom' version '1.13-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
 }
@@ -24,8 +24,16 @@ subprojects {
     }
 
     repositories {
-        flatDir {
-            dirs 'lib'
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "Modrinth"
+                    url = "https://api.modrinth.com/maven"
+                }
+            }
+            filter {
+                includeGroup "maven.modrinth"
+            }
         }
         // Add repositories to retrieve artifacts from in here.
         // You should only use this when depending on other mods because
@@ -42,7 +50,6 @@ subprojects {
         minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
         mappings loom.officialMojangMappings()
 
-        modImplementation "lib:cristellib-fabric-2.0.3"
         implementation("blue.endless:jankson:${rootProject.jankson_version}")
     }
 
