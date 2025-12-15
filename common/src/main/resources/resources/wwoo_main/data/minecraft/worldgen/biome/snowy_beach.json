@@ -1,4 +1,19 @@
 {
+  "attributes": {
+    "minecraft:audio/background_music": {},
+    "minecraft:visual/sky_color": 16777215,
+    "minecraft:visual/fog_color": 13224393,
+    "minecraft:visual/water_fog_color": 2171215,
+    "minecraft:audio/music_volume": 1.0,
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "block_search_extent": 8,
+        "offset": 2.0,
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000
+      }
+    }
+  },
   "carvers": [
     "minecraft:cave",
     "minecraft:cave_extra_underground",
@@ -6,26 +21,15 @@
   ],
   "downfall": 0.3,
   "effects": {
-    "mood_sound": {
-      "block_search_extent": 8,
-      "offset": 2.0,
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000
-    },
-    "music": [],
-    "music_volume": 1.0,
     "dry_foliage_color": 12638463,
-    "sky_color": 16777215,
-    "fog_color": 13224393,
     "water_color": 4562649,
-    "water_fog_color": 2171215,
     "grass_color": 13081978
   },
   "features": [
     [
       "wythers:terrain/local/base_snowy_beach",
       "wythers:terrain/local/gravelly_beach_rocks"
-     ],
+    ],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
@@ -105,7 +109,7 @@
         "minCount": 1,
         "weight": 1
       }
-	],
+    ],
     "misc": [],
     "monster": [
       {

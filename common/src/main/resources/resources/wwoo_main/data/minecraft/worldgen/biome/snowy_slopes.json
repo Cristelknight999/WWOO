@@ -1,37 +1,34 @@
 {
+  "attributes": {
+    "minecraft:gameplay/increased_fire_burnout": true,
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.overworld.snowy_slopes"
+      }
+    },
+    "minecraft:visual/sky_color": 10858685,
+    "minecraft:visual/fog_color": 14145761,
+    "minecraft:visual/water_fog_color": 270131,
+    "minecraft:audio/music_volume": 1.0,
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000,
+        "block_search_extent": 8,
+        "offset": 2
+      }
+    }
+  },
   "temperature": 0.0,
   "downfall": 0.8,
   "has_precipitation": true,
   "effects": {
     "dry_foliage_color": 12638463,
-    "sky_color": 10858685,
-    "fog_color": 14145761,
     "water_color": 10217203,
-    "water_fog_color": 270131,
     "grass_color": 16765810,
-    "foliage_color": 11012890,
-    "additions_sound": {
-      "sound": "minecraft:ambient.soul_sand_valley.additions",
-      "tick_chance": 0.0111
-    },
-    "mood_sound": {
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000,
-      "block_search_extent": 8,
-      "offset": 2
-    },
-    "music": [
-      {
-        "data": {
-          "max_delay": 24000,
-          "min_delay": 12000,
-          "replace_current_music": false,
-          "sound": "minecraft:music.overworld.meadow"
-        },
-        "weight": 1
-      }
-    ],
-    "music_volume": 1.0
+    "foliage_color": 11012890
   },
   "spawners": {
     "ambient": [

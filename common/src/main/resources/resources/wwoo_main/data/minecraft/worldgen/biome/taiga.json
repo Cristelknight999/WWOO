@@ -1,22 +1,26 @@
 {
+  "attributes": {
+    "minecraft:audio/background_music": {},
+    "minecraft:visual/sky_color": 6269917,
+    "minecraft:visual/fog_color": 12638463,
+    "minecraft:visual/water_fog_color": 331305,
+    "minecraft:audio/music_volume": 1.0,
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000,
+        "block_search_extent": 8,
+        "offset": 2
+      }
+    }
+  },
   "temperature": 0.25,
   "downfall": 0.8,
   "has_precipitation": true,
   "effects": {
-    "sky_color": 6269917,
-    "fog_color": 12638463,
     "water_color": 4562649,
-    "water_fog_color": 331305,
     "grass_color": 7574355,
-    "foliage_color": 16764226,
-    "music": [],
-    "music_volume": 1.0,
-    "mood_sound": {
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000,
-      "block_search_extent": 8,
-      "offset": 2
-    }
+    "foliage_color": 16764226
   },
   "spawners": {
     "monster": [
@@ -167,7 +171,7 @@
       "wythers:terrain/local/cave_disk_basalt",
       "wythers:terrain/local/cave_disk_blackstone",
       "wythers:terrain/local/cave_disk_magma"
-	],
+    ],
     [
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",

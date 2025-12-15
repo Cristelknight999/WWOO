@@ -1,22 +1,26 @@
 {
+  "attributes": {
+    "minecraft:audio/background_music": {},
+    "minecraft:visual/sky_color": 12830407,
+    "minecraft:visual/fog_color": 13882581,
+    "minecraft:visual/water_fog_color": 4341314,
+    "minecraft:audio/music_volume": 1,
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "block_search_extent": 8,
+        "offset": 2,
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000
+      }
+    }
+  },
   "temperature": 2,
   "downfall": 0,
   "has_precipitation": true,
   "effects": {
-    "sky_color": 12830407,
-    "fog_color": 13882581,
     "water_color": 7499128,
-    "water_fog_color": 4341314,
     "grass_color": 8286834,
-    "foliage_color": 8286834,
-    "mood_sound": {
-      "block_search_extent": 8,
-      "offset": 2,
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000
-    },
-    "music": [],
-    "music_volume": 1
+    "foliage_color": 8286834
   },
   "spawners": {
     "ambient": [

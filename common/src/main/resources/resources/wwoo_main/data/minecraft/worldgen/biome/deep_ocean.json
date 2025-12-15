@@ -1,22 +1,41 @@
 {
+  "attributes": {
+    "minecraft:audio/background_music": {
+      "creative": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.creative"
+      },
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.game"
+      },
+      "underwater": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.under_water"
+      }
+    },
+    "minecraft:visual/sky_color": 6269917,
+    "minecraft:visual/fog_color": 12638463,
+    "minecraft:visual/water_fog_color": 331305,
+    "minecraft:audio/music_volume": 1.0,
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000,
+        "block_search_extent": 8,
+        "offset": 2
+      }
+    }
+  },
   "temperature": 0.5,
   "downfall": 0.5,
   "has_precipitation": true,
   "effects": {
     "dry_foliage_color": 8033086,
-    "sky_color": 6269917,
-    "fog_color": 12638463,
-    "water_color": 3239574,
-    "water_fog_color": 331305,
-    "ambient_sound": "minecraft:ambient.underwater.loop",
-    "music": [],
-    "music_volume": 1.0,
-    "mood_sound": {
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000,
-      "block_search_extent": 8,
-      "offset": 2
-    }
+    "water_color": 3239574
   },
   "spawners": {
     "ambient": [
@@ -125,7 +144,7 @@
   ],
   "features": [
     [
-	  "wythers:terrain/local/ocean_bore_holes",
+      "wythers:terrain/local/ocean_bore_holes",
       "wythers:terrain/local/volcanic_flooded_cavern_mud",
       "wythers:terrain/local/ocean_rock"
     ],

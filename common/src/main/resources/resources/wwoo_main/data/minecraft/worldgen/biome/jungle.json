@@ -1,4 +1,26 @@
 {
+  "attributes": {
+    "minecraft:gameplay/increased_fire_burnout": true,
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.overworld.jungle"
+      }
+    },
+    "minecraft:visual/sky_color": 6269917,
+    "minecraft:visual/fog_color": 15924890,
+    "minecraft:visual/water_fog_color": 2302743,
+    "minecraft:audio/music_volume": 1,
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "block_search_extent": 8,
+        "offset": 2,
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000
+      }
+    }
+  },
   "carvers": [
     "minecraft:cave",
     "minecraft:cave_extra_underground",
@@ -6,29 +28,8 @@
   ],
   "downfall": 0.8,
   "effects": {
-    "mood_sound": {
-      "block_search_extent": 8,
-      "offset": 2,
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000
-    },
-    "music": [
-      {
-        "data": {
-          "max_delay": 24000,
-          "min_delay": 12000,
-          "replace_current_music": false,
-          "sound": "minecraft:music.overworld.jungle"
-        },
-        "weight": 1
-      }
-    ],
-    "music_volume": 1,
     "dry_foliage_color": 5454882,
-    "sky_color": 6269917,
-    "fog_color": 15924890,
     "water_color": 6388580,
-    "water_fog_color": 2302743,
     "grass_color": 11122488,
     "foliage_color": 6788387
   },
@@ -57,9 +58,9 @@
     ],
     [
       "wythers:terrain/local/cloud_forest_terrain"
-      ],
+    ],
     [
-	  "wythers:terrain/local/cloud_forest_surface"
+      "wythers:terrain/local/cloud_forest_surface"
     ],
     [
       "minecraft:ore_dirt",

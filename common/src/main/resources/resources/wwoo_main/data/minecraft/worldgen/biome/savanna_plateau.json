@@ -1,21 +1,26 @@
 {
+  "attributes": {
+    "minecraft:gameplay/snow_golem_melts": true,
+    "minecraft:audio/background_music": {},
+    "minecraft:visual/sky_color": 7782102,
+    "minecraft:visual/fog_color": 13880215,
+    "minecraft:visual/water_fog_color": 5077600,
+    "minecraft:audio/music_volume": 1.0,
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000,
+        "block_search_extent": 8,
+        "offset": 2
+      }
+    }
+  },
   "temperature": 2.0,
   "downfall": 0.1,
   "has_precipitation": true,
   "effects": {
-    "sky_color": 7782102,
-    "fog_color": 13880215,
     "water_color": 3832426,
-    "water_fog_color": 5077600,
-    "foliage_color": 9285927,
-    "music": [],
-    "music_volume": 1.0,
-    "mood_sound": {
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000,
-      "block_search_extent": 8,
-      "offset": 2
-    }
+    "foliage_color": 9285927
   },
   "spawners": {
     "monster": [

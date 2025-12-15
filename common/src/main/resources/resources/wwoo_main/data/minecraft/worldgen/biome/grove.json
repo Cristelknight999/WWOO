@@ -1,22 +1,32 @@
 {
+  "attributes": {
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.overworld.grove"
+      }
+    },
+    "minecraft:visual/sky_color": 12638463,
+    "minecraft:visual/fog_color": 14872061,
+    "minecraft:visual/water_fog_color": 270131,
+    "minecraft:audio/music_volume": 1.0,
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000,
+        "block_search_extent": 8,
+        "offset": 2
+      }
+    }
+  },
   "temperature": 0.225,
   "downfall": 0,
   "has_precipitation": true,
   "effects": {
-    "sky_color": 12638463,
-    "fog_color": 14872061,
     "water_color": 10217203,
-    "water_fog_color": 270131,
     "grass_color": 16693074,
-    "foliage_color": 16695614,
-    "music": [],
-    "music_volume": 1.0,
-    "mood_sound": {
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000,
-      "block_search_extent": 8,
-      "offset": 2
-    }
+    "foliage_color": 16695614
   },
   "spawners": {
     "monster": [
