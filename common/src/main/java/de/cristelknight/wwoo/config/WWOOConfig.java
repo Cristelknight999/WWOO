@@ -67,7 +67,8 @@ public record WWOOConfig(
                 map.put("toweringTepuis", """
                     This add-on adds tepuis to mountainous regions bordering the Jungle biome.""");
                 map.put("removeOres", """
-                    This removes underground ores like andesite, diorite, granite, gravel and dirt. But these can always be found in dedicated (sub)biomes!""");
+                    This removes underground ores like andesite, diorite, granite, gravel and dirt.
+                    Normally these can only be found in dedicated (sub)biomes!""");
             });
         }
     };

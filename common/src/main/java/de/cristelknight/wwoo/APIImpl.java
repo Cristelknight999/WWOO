@@ -13,8 +13,11 @@ public class APIImpl implements CristelLibAPI {
     @Override
     public void registerBuiltInPacks() {
         BuiltInDataPackLoader.registerAlwaysOnPack(OORL.create("resources/wwoo_main"), Component.literal("WWOO Main Worldgen Pack"));
+
         BuiltInDataPackLoader.registerPack(OORL.create("resources/towering_tepuis_add_on"), Component.literal("Towering Tepuis (WWOO add-on)"), () -> ConfigRegistry.get(WWOOConfig.class).toweringTepuis());
         BuiltInDataPackLoader.registerPack(OORL.create("resources/navigable_rivers_add_on"), Component.literal("Navigable Rivers (WWOO add-on)"), () -> ConfigRegistry.get(WWOOConfig.class).navigableRivers());
+
+        BuiltInDataPackLoader.registerPack(OORL.create("resources/wwoo_remove_ores"), Component.literal("WWOO remove ores"), () -> ConfigRegistry.get(WWOOConfig.class).removeOres());
     }
 
 }
