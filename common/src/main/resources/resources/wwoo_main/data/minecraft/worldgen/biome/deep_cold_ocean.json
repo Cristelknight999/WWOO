@@ -133,6 +133,12 @@
         "weight": 3,
         "minCount": 1,
         "maxCount": 4
+      },
+      {
+        "type": "minecraft:nautilus",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 2
       }
     ]
   },
