@@ -57,9 +57,9 @@
     ],
     [
       "wythers:terrain/local/cloud_forest_terrain"
-      ],
+    ],
     [
-	  "wythers:terrain/local/cloud_forest_surface"
+      "wythers:terrain/local/cloud_forest_surface"
     ],
     [
       "minecraft:ore_dirt",
@@ -128,8 +128,8 @@
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
-      "minecraft:vines",
       "minecraft:patch_firefly_bush_near_water",
+      "minecraft:vines",
       "wythers:vegetation/local/patch/melon",
       "wythers:vegetation/extended/patch/morning_glory",
       "wythers:vegetation/extended/patch/tropical_water_plants",
