@@ -1,0 +1,38 @@
+{
+  "packs": [
+    {
+      "location": "wwoo:resources/navigable_rivers_add_on",
+      "display_name": "Navigable Rivers (WWOO add-on)",
+      "condition": {
+        "type": "config_value",
+        "class_name": "de.cristelknight.wwoo.config.WWOOConfig",
+        "key": "navigableRivers",
+        "expected": true
+      }
+    },
+    {
+      "location": "wwoo:resources/towering_tepuis_add_on",
+      "display_name": "Towering Tepuis (WWOO add-on)",
+      "condition": {
+        "type": "config_value",
+        "class_name": "de.cristelknight.wwoo.config.WWOOConfig",
+        "key": "toweringTepuis",
+        "expected": true
+      }
+    },
+    {
+      "location": "wwoo:resources/wwoo_remove_ores",
+      "display_name": "WWOO remove ores",
+      "condition": {
+        "type": "config_value",
+        "class_name": "de.cristelknight.wwoo.config.WWOOConfig",
+        "key": "removeOres",
+        "expected": true
+      }
+    },
+    {
+      "location": "wwoo:resources/wwoo_main",
+      "display_name": "WWOO Main World-gen Pack"
+    }
+  ]
+}

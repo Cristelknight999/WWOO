@@ -3,7 +3,6 @@ package de.cristelknight.wwoo.config;
 import blue.endless.jankson.JsonPrimitive;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import de.cristelknight.cristellib.builtinpacks.BuiltInPackConfig;
 import de.cristelknight.cristellib.config.simple.ConfigRegistry;
 import de.cristelknight.cristellib.config.simple.ConfigSettings;
 import de.cristelknight.cristellib.config.simple.datafixer.DataFixer;

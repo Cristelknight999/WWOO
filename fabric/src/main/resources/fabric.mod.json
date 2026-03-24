@@ -14,9 +14,6 @@
   "entrypoints": {
     "main": [
       "de.cristelknight.wwoo.fabric.WWOOFabric"
-    ],
-    "cristellib": [
-      "de.cristelknight.wwoo.APIImpl"
     ]
   },
   "license": "${mod_license}",
