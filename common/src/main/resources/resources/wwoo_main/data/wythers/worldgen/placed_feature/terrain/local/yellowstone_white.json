@@ -15,9 +15,8 @@
         "type": "minecraft:matching_blocks",
         "blocks": [
           "minecraft:grass_block",
-          "minecraft:dirt",
-          "minecraft:dirt_path",
-          "minecraft:gravel"
+          "minecraft:mud",
+          "minecraft:dirt"
         ]
       },
       "radius": 4,
@@ -26,36 +25,16 @@
   },
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 1000,
+      "noise_offset": -0.45
     },
     {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:spruce_wood",
-              "minecraft:stripped_spruce_wood"
-            ]
-          },
-          {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
-              2,
-              0
-            ],
-            "blocks": [
-              "minecraft:dripstone_block"
-            ]
-          }
-        ]
-      }
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 80,
+      "noise_offset": -0.4
     },
     {
       "type": "minecraft:count",
@@ -73,12 +52,12 @@
     {
       "type": "minecraft:surface_relative_threshold_filter",
       "heightmap": "WORLD_SURFACE_WG",
-      "min_inclusive": -64,
-      "max_inclusive": -60
+      "min_inclusive": -75,
+      "max_inclusive": -66
     },
     {
       "type": "minecraft:heightmap",
-      "heightmap": "MOTION_BLOCKING"
+      "heightmap": "OCEAN_FLOOR"
     },
     {
       "type": "minecraft:biome"

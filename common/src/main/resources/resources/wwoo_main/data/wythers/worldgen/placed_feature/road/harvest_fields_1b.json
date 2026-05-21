@@ -358,21 +358,18 @@
     },
     "placement": [
         {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 2
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:matching_blocks",
-        "blocks": [
-          "minecraft:dripstone_block"
-        ]
-      }
-    },
-    {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": -1,
+            "noise_factor": 1000,
+            "noise_offset": -0.45
+        },
+        {
+            "type": "minecraft:noise_based_count",
+            "noise_to_count_ratio": 1,
+            "noise_factor": 1000,
+            "noise_offset": 0.45
+        },
+        {
             "type": "minecraft:count",
             "count": 90
         },

@@ -1,51 +1,33 @@
 {
-  "feature": "wythers:vegetation/tree/pink_lapacho",
+  "feature": "minecraft:cherry_bees_005",
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:lime_terracotta",
-              "minecraft:jungle_wood",
-              "minecraft:bamboo_block"
-            ]
-          },
-          {
-            "type": "minecraft:not",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "offset": [
-                0,
-                1,
-                0
-              ],
-              "blocks": [
-                "minecraft:moss_block"
-              ]
-            }
-          }
-        ]
-      }
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": -0.3
     },
     {
       "type": "minecraft:noise_based_count",
       "noise_to_count_ratio": 1,
-      "noise_factor": 250,
-      "noise_offset": -0.1
+      "noise_factor": 1000,
+      "noise_offset": 0.3
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 200,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 100,
+      "noise_offset": 0
     },
     {
       "type": "minecraft:rarity_filter",
-      "chance": 15
+      "chance": 7
     },
     {
       "type": "minecraft:height_range",
@@ -87,6 +69,7 @@
             0
           ],
           "blocks": [
+            "minecraft:terracotta",
             "minecraft:packed_mud"
           ]
         }

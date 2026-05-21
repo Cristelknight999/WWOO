@@ -1,26 +1,20 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 6269917,
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/water_fog_color": 331305,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    }
-  },
   "temperature": 0.25,
   "downfall": 0.8,
   "has_precipitation": true,
   "effects": {
+    "sky_color": 6269917,
+    "fog_color": 12638463,
     "water_color": 4562649,
+    "water_fog_color": 331305,
     "grass_color": 7574355,
-    "foliage_color": 16764226
+    "foliage_color": 16764226,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
   },
   "spawners": {
     "monster": [
@@ -139,39 +133,36 @@
     "misc": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
-      "wythers:placer/taiga",
-      "wythers:terrain/local/stone_boulders",
+      "wythers:terrain/feature/stone_pile",
+      "wythers:terrain/local/thermal_taiga_disk_terracotta_white",
+      "wythers:terrain/local/thermal_taiga_disk_terracotta_orange",
+      "wythers:terrain/local/thermal_taiga_disk_terracotta_yellow",
       "wythers:terrain/local/stone_cliffs",
-      "wythers:terrain/extended/scree"
+      "wythers:terrain/extended/scree",
+      "wythers:terrain/extended/base_taiga"
     ],
     [
-      "wythers:terrain/local/yellowstone_path",
-      "wythers:terrain/local/yellowstone_white",
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/local/yellowstone_pools"
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
     [],
-    [
-      "wythers:terrain/local/yellowstone_colours",
-      "wythers:terrain/local/cave_disk_basalt",
-      "wythers:terrain/local/cave_disk_blackstone",
-      "wythers:terrain/local/cave_disk_magma"
-    ],
+    [],
     [
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
@@ -205,17 +196,26 @@
     [],
     [
       "minecraft:spring_water",
-      "minecraft:spring_lava",
-      "wythers:terrain/local/boggy_moss",
-      "wythers:terrain/local/boggy_moss_shore"
+      "minecraft:spring_lava"
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/trees/taiga_larches",
-      "wythers:vegetation/local/trees/fallen_spruce",
-      "wythers:vegetation/local/trees/taiga_spruces_tall",
-      "wythers:vegetation/local/trees/taiga_spruces_tall_2",
-      "wythers:vegetation/local/patch/yellowstone_grass",
+      "wythers:vegetation/local/other/fallen_log_mix_taiga",
+      "wythers:vegetation/extended/trees/boreal_forest",
+      "wythers:vegetation/local/trees/taiga_cold",
+      "wythers:vegetation/local/trees/taiga_cold_dwarf",
+      "wythers:vegetation/local/trees/taiga_spruce",
+      "wythers:vegetation/local/trees/taiga_spruce_highlands",
+      "wythers:vegetation/local/trees/taiga_spruce_mountains",
+      "wythers:vegetation/local/trees/taiga_dwarf_spruce",
+      "wythers:vegetation/local/trees/taiga_dwarf_spruce_highlands",
+      "wythers:vegetation/local/trees/taiga_dwarf_spruce_mountains",
+      "wythers:vegetation/local/trees/taiga_thermal_pine_woods",
+      "wythers:vegetation/local/trees/taiga_pine",
+      "wythers:vegetation/local/trees/taiga_birch",
+      "wythers:vegetation/local/trees/taiga_thermal_aspen_woods",
+      "wythers:vegetation/local/bushes/taiga",
+      "wythers:vegetation/local/patch/flower_taiga",
       "minecraft:brown_mushroom_taiga",
       "minecraft:red_mushroom_taiga"
     ],
@@ -225,8 +225,7 @@
       "wythers:vegetation/local/patch/grass_and_ferns_range",
       "wythers:vegetation/local/patch/berry_range",
       "wythers:vegetation/local/patch/large_fern_taiga",
-      "wythers:decor/sparse_steam",
-      "wythers:terrain/local/underground_volcanifier"
+      "wythers:decor/sparse_steam"
     ]
   ]
 }

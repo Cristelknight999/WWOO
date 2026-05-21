@@ -1,66 +1,68 @@
 {
-  "attributes": {
-    "minecraft:gameplay/increased_fire_burnout": true,
-    "minecraft:audio/background_music": {
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.overworld.jungle"
-      }
-    },
-    "minecraft:visual/sky_color": "#5fabdd",
-    "minecraft:visual/fog_color": "#f2fe9a",
-    "minecraft:visual/water_fog_color": "#232317",
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    },
-    "minecraft:audio/music_volume": 1
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "downfall": 0.8,
   "effects": {
-    "dry_foliage_color": "#533c22",
-    "foliage_color": "#679523",
-    "grass_color": "#a9b738",
-    "water_color": "#617b64"
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.jungle"
+    },
+    "sky_color": 6269917,
+    "fog_color": 12638463,
+    "water_color": 6388580,
+    "water_fog_color": 2302743,
+    "grass_color": 12250712,
+    "grass_color_modifier": "dark_forest"
   },
   "features": [
     [
-      "wythers:placer/jungle",
-      "wythers:terrain/local/cliff",
+      "wythers:terrain/feature/tepui",
+      "wythers:terrain/extended/base_jungle",
+      "wythers:terrain/local/tepui_cap",
+      "wythers:terrain/extended/mudify_rooted_dirt",
       "wythers:terrain/local/disk_mud_shore_jungle",
-      "wythers:road/sparse_jungle",
-      "wythers:road/rainforest",
-      "wythers:terrain/local/jungle_floor_1",
-      "wythers:terrain/local/jungle_floor_2",
-      "wythers:terrain/local/jungle_floor_3"
+      "wythers:terrain/extended/replace_gravel_to_mud",
+      "wythers:road/jungle"
     ],
     [
+      "wythers:terrain/feature/tepui_filler",
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface",
       "wythers:terrain/extended/base_mangrove_swamp_jungle"
     ],
     [
-      "minecraft:amethyst_geode"
+      "minecraft:amethyst_geode",
+      "wythers:terrain/feature/tepui_basalt_layer",
+      "wythers:terrain/feature/tepui_tuff_layer"
     ],
     [
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
     [
-      "wythers:terrain/local/cloud_forest_terrain"
+      "wythers:terrain/feature/tepui_falls",
+      "wythers:terrain/feature/tepui_terrain",
+      "wythers:terrain/feature/tepui_caverns",
+      "wythers:terrain/feature/tepui_chasms"
     ],
     [
-      "wythers:terrain/local/cloud_forest_surface"
+	  "wythers:terrain/feature/tepui_lakes",
+      "wythers:terrain/feature/tepui_surface",
+      "wythers:terrain/feature/tepui_cavern_lakes",
+      "wythers:terrain/feature/tepui_cavern_moss"
     ],
     [
       "minecraft:ore_dirt",
@@ -88,7 +90,6 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/sandy_forest",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel",
@@ -97,48 +98,32 @@
       "wythers:terrain/extended/volcanic_jungle_muddy_roots_on_basalt",
       "wythers:terrain/extended/badlands_edge"
     ],
-    [
-      "wythers:vegetation/local/trees/ancient_spring_woods"
-    ],
+    [],
     [
       "minecraft:spring_water",
-      "minecraft:spring_lava"
+      "minecraft:spring_lava",
+      "wythers:terrain/feature/tepui_cavern_dripstone"
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/patch/water_grass_jungle",
-      "wythers:vegetation/local/patch/flower_sunny",
-      "wythers:vegetation/local/trees/spring_birch_forest",
-      "wythers:vegetation/extended/trees/jungle_edge_bushes",
       "wythers:vegetation/local/trees/jungle_mega",
       "wythers:vegetation/local/trees/jungle_lowland_rainforest",
-      "wythers:vegetation/local/trees/banyans",
-      "wythers:vegetation/local/trees/banyans_2",
-      "wythers:vegetation/local/trees/pink_lapacho",
-      "wythers:vegetation/local/trees/sparse_jungle",
       "wythers:vegetation/local/trees/jungle_midland",
       "wythers:vegetation/local/trees/jungle_upland",
       "wythers:vegetation/local/trees/jungle_sandy",
-      "wythers:vegetation/local/trees/eucalyptus_rainforest",
+      "wythers:vegetation/local/trees/jungle_eucalyptus",
+      "wythers:vegetation/extended/trees/jungle_eucalyptus",
       "wythers:vegetation/extended/trees/jungle_volcanic",
       "wythers:vegetation/local/trees/jungle_mangroves",
-      "wythers:vegetation/local/trees/jungle_mosaic",
-      "wythers:vegetation/local/patch/grass_jungle",
-      "wythers:vegetation/local/patch/floating_leaves",
-      "wythers:vegetation/local/patch/waterlily_jungle",
+      "wythers:vegetation/extended/patch/tepui_plants",
+      "minecraft:patch_grass_jungle",
+      "minecraft:patch_waterlily",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
-      "minecraft:patch_firefly_bush_near_water",
       "minecraft:vines",
-      "wythers:vegetation/local/patch/melon",
-      "wythers:vegetation/extended/patch/morning_glory",
-      "wythers:vegetation/extended/patch/tropical_water_plants",
-      "wythers:vegetation/local/patch/hanging_roots",
-      "wythers:vegetation/local/patch/flower_cloud_forest",
-      "wythers:vegetation/local/trees/jungle_undergrowth",
-      "wythers:vegetation/local/patch/giant_groundsels",
-      "wythers:vegetation/local/trees/cloud_forest"
+      "minecraft:seagrass_river",
+      "minecraft:patch_melon"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -155,15 +140,14 @@
         "weight": 10
       }
     ],
-    "axolotls": [
-      {
-        "type": "minecraft:axolotl",
-        "maxCount": 6,
-        "minCount": 4,
-        "weight": 10
-      }
-    ],
+    "axolotls": [],
     "creature": [
+      {
+        "type": "minecraft:sheep",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 12
+      },
       {
         "type": "minecraft:pig",
         "maxCount": 4,
@@ -175,6 +159,12 @@
         "maxCount": 4,
         "minCount": 4,
         "weight": 10
+      },
+      {
+        "type": "minecraft:cow",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 8
       },
       {
         "type": "minecraft:chicken",
@@ -189,22 +179,10 @@
         "weight": 40
       },
       {
-        "type": "minecraft:turtle",
-        "maxCount": 5,
-        "minCount": 2,
-        "weight": 50
-      },
-      {
-        "type": "minecraft:armadillo",
+        "type": "minecraft:panda",
         "maxCount": 2,
         "minCount": 1,
-        "weight": 6
-      },
-      {
-        "type": "minecraft:wolf",
-        "maxCount": 8,
-        "minCount": 4,
-        "weight": 2
+        "weight": 1
       }
     ],
     "misc": [],
@@ -272,20 +250,7 @@
         "weight": 10
       }
     ],
-    "water_ambient": [
-      {
-        "type": "minecraft:pufferfish",
-        "maxCount": 3,
-        "minCount": 1,
-        "weight": 15
-      },
-      {
-        "type": "minecraft:tropical_fish",
-        "maxCount": 8,
-        "minCount": 8,
-        "weight": 25
-      }
-    ],
+    "water_ambient": [],
     "water_creature": []
   },
   "temperature": 0.7

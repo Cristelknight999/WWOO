@@ -1,32 +1,26 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.overworld.forest"
-      }
-    },
-    "minecraft:visual/sky_color": 6269917,
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/water_fog_color": 331305,
-    "minecraft:audio/music_volume": 1,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    }
-  },
   "temperature": 0.5,
   "downfall": 0.4,
   "has_precipitation": true,
   "effects": {
+    "sky_color": 6269917,
+    "fog_color": 12638463,
     "water_color": 4562649,
-    "grass_color": 7903049,
-    "foliage_color": 8563789
+    "water_fog_color": 331305,
+    "grass_color": 6984520,
+    "foliage_color": 6984520,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.forest",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    }
   },
   "spawners": {
     "ambient": [
@@ -133,18 +127,17 @@
     "water_creature": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
-      "wythers:placer/forest",
-      "wythers:terrain/local/stone_boulders",
       "wythers:terrain/local/highland_stone_cliffs_surface",
       "wythers:terrain/local/highland_stone_cliffs",
-      "wythers:terrain/local/forest_floor",
       "wythers:terrain/local/stone_cliffs_sheer",
       "wythers:terrain/extended/scree"
     ],
@@ -188,12 +181,12 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/sandy_forest",
       "wythers:terrain/local/disk_sand_forest",
       "wythers:terrain/local/disk_gravel_forest",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel",
+      "wythers:terrain/extended/desert_edge",
       "wythers:terrain/extended/badlands_edge"
     ],
     [],
@@ -203,44 +196,37 @@
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/trees/fallen_oak",
-      "wythers:vegetation/local/trees/fallen_forest_pine",
-      "wythers:vegetation/local/trees/fallen_forest_birch",
-      "wythers:vegetation/local/trees/mangrove_swamp_live_oaks",
-      "wythers:vegetation/local/patch/flower_bluebells",
-      "wythers:vegetation/local/trees/spring_birch_forest",
       "wythers:vegetation/local/trees/forest_birch_grove",
       "wythers:vegetation/local/trees/forest_oak",
       "wythers:vegetation/local/trees/forest_pine",
-      "wythers:vegetation/local/trees/forest_mixed_pine",
-      "wythers:vegetation/local/trees/forest_oak_pine_mixed",
+      "wythers:vegetation/local/trees/forest_pine_2",
       "wythers:vegetation/local/trees/forest_birch",
+      "wythers:vegetation/local/trees/forest_birch_2",
+      "wythers:vegetation/extended/trees/forest_birch",
       "wythers:vegetation/local/trees/forest_eucalyptus",
       "wythers:vegetation/local/trees/forest_montane",
-      "wythers:vegetation/local/trees/forest_subtropical_dry",
-      "wythers:vegetation/local/trees/forest_montane_rainforest",
-      "wythers:vegetation/local/trees/forest_elephant_bamboo",
       "wythers:vegetation/local/trees/forest_tropical",
-      "wythers:vegetation/local/trees/forest_tropical_highlands",
-      "wythers:vegetation/local/trees/forest_badlands",
+      "wythers:vegetation/extended/trees/forest_cold",
+      "wythers:vegetation/extended/trees/forest_badlands",
+      "wythers:vegetation/extended/bushes/cold_forest",
+      "wythers:vegetation/extended/bushes/birch_forest",
+      "wythers:vegetation/extended/bushes/oak_forest",
+      "wythers:vegetation/extended/bushes/pine_forest",
       "wythers:vegetation/local/patch/flower_taiga",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:patch_pumpkin",
-      "wythers:vegetation/extended/patch/beach_reeds",
-      "wythers:vegetation/local/patch/beach_reeds"
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin"
     ],
     [
       "minecraft:freeze_top_layer",
-      "wythers:terrain/local/forest_floor_grass",
       "wythers:terrain/local/snow_blocks",
       "wythers:vegetation/local/patch/grass_forest",
       "wythers:vegetation/local/patch/fern_montane_forest",
       "wythers:vegetation/local/patch/large_fern_forest",
       "wythers:terrain/extended/volcanic_extinction",
       "wythers:terrain/local/replace_basalt_to_deepslate",
-      "wythers:terrain/extended/volcano_snow_blocks",
-      "wythers:terrain/local/forest_snow_blocks"
+      "wythers:terrain/extended/volcano_snow_blocks"
     ]
   ]
 }

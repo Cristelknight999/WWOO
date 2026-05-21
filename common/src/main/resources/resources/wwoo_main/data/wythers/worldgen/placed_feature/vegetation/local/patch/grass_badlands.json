@@ -37,7 +37,9 @@
                           0
                         ],
                         "blocks": [
-                          "minecraft:red_sand"
+                          "minecraft:sand",
+                          "minecraft:red_sand",
+                          "minecraft:packed_mud"
                         ]
                       },
                       {

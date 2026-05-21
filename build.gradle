@@ -67,7 +67,7 @@ subprojects {
     }
 
     tasks.withType(ProcessResources).configureEach {
-        var replaceProperties = [
+        var expandProps = [
                 minecraft_version   : minecraft_version,
                 neo_version         : neoforge_version,
 
@@ -80,16 +80,24 @@ subprojects {
 
                 fabric_loader_min_version: fabric_loader_min_version,
 
+                java                : "JAVA_" + String.valueOf(java_version).toUpperCase(),
+
                 mod_id              : archives_name, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version, mod_description: mod_description, homepage: homepage, discord: discord
         ]
-        inputs.properties replaceProperties
 
-        filesMatching(['META-INF/neoforge.mods.toml']) {
-            expand replaceProperties + [project: project]
+        var jsonExpandProps = expandProps.collectEntries {
+            key, value -> [(key): value instanceof String ? value.replace("\n", "\\\\n") : value]
         }
-        filesMatching(['fabric.mod.json']) {
-            expand replaceProperties + [project: project]
+
+        filesMatching(['META-INF/mods.toml', 'META-INF/neoforge.mods.toml']) {
+            expand expandProps
         }
+
+        filesMatching(['pack.mcmeta', 'fabric.mod.json', 'quilt.mod.json', '*.mixins.json']) {
+            expand jsonExpandProps
+        }
+
+        inputs.properties(expandProps)
     }
 
     tasks.withType(JavaCompile).configureEach {

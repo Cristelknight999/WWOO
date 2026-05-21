@@ -12,37 +12,36 @@
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:pale_oak_wood",
+        "Name": "minecraft:mushroom_stem",
         "Properties": {
-          "axis": "y"
+          "down": "false",
+          "up": "true",
+          "east": "true",
+          "north": "true",
+          "south": "true",
+          "west": "true"
         }
       }
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:pale_oak_wood",
+        "Name": "minecraft:mushroom_stem",
         "Properties": {
-          "axis": "y"
+          "down": "true",
+          "east": "true",
+          "north": "true",
+          "south": "true",
+          "up": "true",
+          "west": "true"
         }
       }
     },
     "foliage_provider": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
-        {
-          "weight": 2,
-          "data": {
-            "Name": "minecraft:shroomlight"
-          }
-        },
-        {
-          "weight": 3,
-          "data": {
-            "Name": "minecraft:resin_block"
-          }
-        }
-      ]
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:shroomlight"
+      }
     },
     "trunk_placer": {
       "type": "minecraft:forking_trunk_placer",
@@ -55,232 +54,6 @@
       "radius": 1,
       "offset": 1
     },
-    "decorators": [
-      {
-        "type": "minecraft:attached_to_logs",
-        "probability": 0.3,
-        "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
-        "required_empty_blocks": 1,
-        "block_provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:resin_clump",
-            "Properties": {
-              "down": "false",
-              "east": "true",
-              "north": "false",
-              "south": "false",
-              "up": "false",
-              "waterlogged": "false",
-              "west": "false"
-            }
-          }
-        },
-        "directions": [
-          "west"
-        ]
-      },
-      {
-        "type": "minecraft:attached_to_logs",
-        "probability": 0.3,
-        "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
-        "required_empty_blocks": 1,
-        "block_provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:resin_clump",
-            "Properties": {
-              "down": "false",
-              "east": "false",
-              "north": "false",
-              "south": "false",
-              "up": "false",
-              "waterlogged": "false",
-              "west": "true"
-            }
-          }
-        },
-        "directions": [
-          "east"
-        ]
-      },
-      {
-        "type": "minecraft:attached_to_logs",
-        "probability": 0.3,
-        "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
-        "required_empty_blocks": 1,
-        "block_provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:resin_clump",
-            "Properties": {
-              "down": "false",
-              "east": "false",
-              "north": "true",
-              "south": "false",
-              "up": "false",
-              "waterlogged": "false",
-              "west": "false"
-            }
-          }
-        },
-        "directions": [
-          "south"
-        ]
-      },
-      {
-        "type": "minecraft:attached_to_logs",
-        "probability": 0.3,
-        "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
-        "required_empty_blocks": 1,
-        "block_provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:resin_clump",
-            "Properties": {
-              "down": "false",
-              "east": "false",
-              "north": "false",
-              "south": "true",
-              "up": "false",
-              "waterlogged": "false",
-              "west": "false"
-            }
-          }
-        },
-        "directions": [
-          "north"
-        ]
-      },
-      {
-        "type": "minecraft:attached_to_leaves",
-        "probability": 0.3,
-        "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
-        "required_empty_blocks": 1,
-        "block_provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:resin_clump",
-            "Properties": {
-              "down": "false",
-              "east": "true",
-              "north": "false",
-              "south": "false",
-              "up": "false",
-              "waterlogged": "false",
-              "west": "false"
-            }
-          }
-        },
-        "directions": [
-          "west"
-        ]
-      },
-      {
-        "type": "minecraft:attached_to_leaves",
-        "probability": 0.3,
-        "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
-        "required_empty_blocks": 1,
-        "block_provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:resin_clump",
-            "Properties": {
-              "down": "false",
-              "east": "false",
-              "north": "false",
-              "south": "false",
-              "up": "false",
-              "waterlogged": "false",
-              "west": "true"
-            }
-          }
-        },
-        "directions": [
-          "east"
-        ]
-      },
-      {
-        "type": "minecraft:attached_to_leaves",
-        "probability": 0.3,
-        "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
-        "required_empty_blocks": 1,
-        "block_provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:resin_clump",
-            "Properties": {
-              "down": "false",
-              "east": "false",
-              "north": "true",
-              "south": "false",
-              "up": "false",
-              "waterlogged": "false",
-              "west": "false"
-            }
-          }
-        },
-        "directions": [
-          "south"
-        ]
-      },
-      {
-        "type": "minecraft:attached_to_leaves",
-        "probability": 0.3,
-        "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
-        "required_empty_blocks": 1,
-        "block_provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:resin_clump",
-            "Properties": {
-              "down": "false",
-              "east": "false",
-              "north": "false",
-              "south": "true",
-              "up": "false",
-              "waterlogged": "false",
-              "west": "false"
-            }
-          }
-        },
-        "directions": [
-          "north"
-        ]
-      },
-      {
-        "type": "minecraft:attached_to_leaves",
-        "probability": 0.3,
-        "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
-        "required_empty_blocks": 1,
-        "block_provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:resin_clump",
-            "Properties": {
-              "down": "true",
-              "east": "false",
-              "north": "false",
-              "south": "false",
-              "up": "false",
-              "waterlogged": "false",
-              "west": "false"
-            }
-          }
-        },
-        "directions": [
-          "up"
-        ]
-      }
-    ]
+    "decorators": []
   }
 }

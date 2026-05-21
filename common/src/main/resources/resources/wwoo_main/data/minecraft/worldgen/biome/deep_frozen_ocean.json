@@ -1,35 +1,31 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 2381962,
-    "minecraft:visual/fog_color": 13224393,
-    "minecraft:visual/water_fog_color": 2171215,
-    "minecraft:audio/music_volume": 1,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "downfall": 0.5,
   "effects": {
-    "dry_foliage_color": 12638463,
-    "water_color": 3778282
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.05
+    },
+    "ambient_sound": "minecraft:ambient.underwater.loop",
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 16777215,
+    "fog_color": 13224393,
+    "water_color": 5334160,
+    "water_fog_color": 2171215
   },
   "features": [
     [
-      "wythers:placer/deep_frozen_ocean",
-      "wythers:terrain/local/pelagic_clay",
-      "wythers:terrain/local/ocean_bore_holes",
-      "wythers:terrain/local/volcanic_flooded_cavern_mud",
       "wythers:terrain/local/ocean_rock"
     ],
     [
@@ -37,17 +33,17 @@
       "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/local/ice_shelf_1",
-      "wythers:terrain/local/ice_shelf_2",
-      "wythers:terrain/local/ice_shelf_3",
-      "wythers:terrain/local/ice_shelf_0"
+      "minecraft:iceberg_packed",
+      "minecraft:iceberg_blue",
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
-    [],
+    [
+      "minecraft:blue_ice"
+    ],
     [],
     [
       "minecraft:ore_dirt",
@@ -84,17 +80,19 @@
     ],
     [
       "minecraft:glow_lichen",
+      "minecraft:trees_water",
+      "minecraft:flower_default",
+      "minecraft:patch_grass_badlands",
       "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal"
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin"
     ],
     [
       "minecraft:freeze_top_layer",
-      "wythers:terrain/feature/crevasse",
-      "wythers:terrain/feature/ice_tunnel",
-      "wythers:terrain/feature/ice_tunnel_mid",
-      "wythers:terrain/local/ice_shelf_4",
-      "wythers:terrain/local/hydrothermal_vents",
-      "wythers:vegetation/local/patch/tube_worms"
+      "wythers:terrain/local/snowy_ground",
+      "wythers:terrain/local/crack_ice",
+      "wythers:terrain/local/pack_ice_snow"
     ]
   ],
   "has_precipitation": true,
@@ -188,12 +186,6 @@
         "maxCount": 5,
         "minCount": 1,
         "weight": 15
-      },
-      {
-        "type": "minecraft:cod",
-        "maxCount": 5,
-        "minCount": 1,
-        "weight": 15
       }
     ],
     "water_creature": [
@@ -202,21 +194,9 @@
         "maxCount": 4,
         "minCount": 1,
         "weight": 1
-      },
-      {
-        "type": "minecraft:dolphin",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 2
-      },
-      {
-        "type": "minecraft:nautilus",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 2
       }
     ]
   },
-  "temperature": 0,
+  "temperature": 0.0,
   "temperature_modifier": "frozen"
 }

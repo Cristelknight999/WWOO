@@ -40,21 +40,6 @@
   },
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:matching_blocks",
-        "blocks": [
-          "minecraft:snow_block"
-        ]
-      }
-    },
-    {
       "type": "minecraft:count",
       "count": 5
     },
@@ -72,6 +57,18 @@
         "state": {
           "Name": "minecraft:fern"
         }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -3,
+          0
+        ],
+        "blocks": "minecraft:coarse_dirt"
       }
     }
   ]

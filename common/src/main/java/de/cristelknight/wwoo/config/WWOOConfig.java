@@ -1,19 +1,17 @@
 package de.cristelknight.wwoo.config;
 
-import blue.endless.jankson.JsonPrimitive;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import de.cristelknight.cristellib.config.simple.ConfigRegistry;
 import de.cristelknight.cristellib.config.simple.ConfigSettings;
-import de.cristelknight.cristellib.config.simple.datafixer.DataFixer;
 import de.cristelknight.wwoo.WWOO;
-import net.minecraft.util.Util;
+import net.minecraft.Util;
 
 import java.util.HashMap;
 
 public record WWOOConfig(
         boolean navigableRivers,
-        /*boolean cliffsAndCoves,*/
+        boolean cliffsAndCoves,
         boolean toweringTepuis,
         boolean removeOres
 ) {
@@ -21,7 +19,7 @@ public record WWOOConfig(
     public static final Codec<WWOOConfig> CODEC = RecordCodecBuilder.create(builder ->
             builder.group(
                     Codec.BOOL.fieldOf("navigableRivers").forGetter(WWOOConfig::navigableRivers),
-                    //Codec.BOOL.fieldOf("cliffsAndCoves").forGetter(WWOOConfig::cliffsAndCoves),
+                    Codec.BOOL.fieldOf("cliffsAndCoves").forGetter(WWOOConfig::cliffsAndCoves),
                     Codec.BOOL.fieldOf("toweringTepuis").forGetter(WWOOConfig::toweringTepuis),
                     Codec.BOOL.fieldOf("removeOres").forGetter(WWOOConfig::removeOres)
             ).apply(builder, WWOOConfig::new)
@@ -42,7 +40,7 @@ public record WWOOConfig(
         public WWOOConfig getDefault() {
             return new WWOOConfig(
                     false,
-                    /*false,*/
+                    false,
                     false,
                     true
             );
@@ -73,12 +71,6 @@ public record WWOOConfig(
     };
 
     public static void register() {
-        DataFixer.register(WWOOConfig.class, jsonObject -> {
-            if(jsonObject.containsKey("removeOres")) return false;
-            jsonObject.put("removeOres", new JsonPrimitive(SETTINGS.getDefault().removeOres()));
-            return true;
-        });
-
         ConfigRegistry.registerWithScreen(WWOOConfig.class, SETTINGS,
                 WWOO.MOD_ID, "Auto-config", () -> {});
     }

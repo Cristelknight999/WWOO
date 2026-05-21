@@ -1,57 +1,52 @@
 {
-  "attributes": {
-    "minecraft:gameplay/snow_golem_melts": true,
-    "minecraft:audio/background_music": {
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.overworld.badlands"
-      }
-    },
-    "minecraft:visual/sky_color": 6269917,
-    "minecraft:visual/fog_color": 16697483,
-    "minecraft:visual/water_fog_color": 2302743,
-    "minecraft:audio/music_volume": 1,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
-  "downfall": 0,
+  "downfall": 0.0,
   "effects": {
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.badlands"
+    },
+    "sky_color": 6269917,
+    "fog_color": 12638463,
     "water_color": 6388580,
-    "grass_color": 13548644,
-    "dry_foliage_color": 9404502,
-    "foliage_color": 11123575
+    "water_fog_color": 2302743,
+    "grass_color": 14074721,
+    "foliage_color": 12642511
   },
   "features": [
     [
-      "wythers:placer/wooded_badlands",
-      "wythers:terrain/local/badlands_alpine_grassland",
+      "wythers:terrain/extended/red_sand",
+      "wythers:terrain/local/badlands_plateau_red_sand",
       "wythers:terrain/local/uluru_cap",
-      "wythers:terrain/local/wooded_badlands_replace_some_red_sand_to_grass_block",
-      "wythers:terrain/local/wooded_badlands_replace_most_red_sand_to_grass_block",
+      "wythers:terrain/local/badlands_replace_some_red_sand_to_grass_block",
+      "wythers:terrain/local/badlands_replace_most_red_sand_to_grass_block",
       "wythers:terrain/local/base_wooded_badlands"
     ],
     [
       "minecraft:lake_lava_underground",
-      "wythers:terrain/extended/arroyo_red"
+      "wythers:terrain/feature/lake_salt"
     ],
     [
       "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
-      "minecraft:monster_room_deep"
+      "minecraft:monster_room_deep",
+      "wythers:terrain/extended/red_sandify_rooted_dirt"
     ],
     [],
     [],
@@ -81,39 +76,31 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/riverbank_plains",
-      "minecraft:ore_gold_extra"
+      "minecraft:ore_gold_extra",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel"
     ],
-    [
-      "wythers:terrain/extended/arroyo_red_salt_pan_2"
-    ],
+    [],
     [
       "minecraft:spring_water",
       "minecraft:spring_lava"
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/trees/gum_swamp",
-      "wythers:vegetation/local/trees/forest_eucalyptus",
-      "wythers:vegetation/local/trees/outback_bushes",
-      "wythers:vegetation/local/trees/eucalyptus_forest",
-      "wythers:vegetation/local/trees/eucalyptus_forest_jungle_edge",
-      "wythers:vegetation/local/trees/alpine_eucalyptus_forest",
-      "wythers:vegetation/local/trees/alpine_eucalyptus_woods",
       "wythers:vegetation/local/trees/eucalyptus_badlands",
       "wythers:vegetation/local/trees/eucalyptus_woodland",
-      "wythers:vegetation/local/trees/eucalyptus_salubris_woodland",
-      "wythers:vegetation/local/trees/ghost_gum",
       "wythers:vegetation/local/patch/grass_standard",
-      "wythers:vegetation/local/patch/salt_lake_grass",
-      "minecraft:patch_dry_grass_badlands",
       "minecraft:patch_dead_bush_badlands",
       "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal"
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane_badlands",
+      "minecraft:patch_pumpkin"
     ],
     [
       "minecraft:freeze_top_layer",
-      "wythers:terrain/local/badlands_snow_blocks"
+      "wythers:terrain/local/crust_salt",
+      "wythers:terrain/local/crust_packed_mud"
     ]
   ],
   "has_precipitation": false,
@@ -158,12 +145,6 @@
         "maxCount": 6,
         "minCount": 2,
         "weight": 5
-      },
-      {
-        "type": "minecraft:camel",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 1
       }
     ],
     "misc": [],
@@ -228,5 +209,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.25
+  "temperature": 2.0
 }

@@ -1,35 +1,32 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 16777215,
-    "minecraft:visual/fog_color": 13224393,
-    "minecraft:visual/water_fog_color": 2171215,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2.0,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "creature_spawn_probability": 0.07,
   "downfall": 0.5,
   "effects": {
-    "dry_foliage_color": 12638463,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 16777215,
+    "fog_color": 13224393,
     "water_color": 5334160,
+    "water_fog_color": 2171215,
     "grass_color": 13081978,
     "foliage_color": 15405056
   },
   "features": [
     [
-      "wythers:terrain/local/stone_cliffs"
+      "wythers:terrain/local/stone_cliffs",
+      "wythers:terrain/extended/coarsify_dirt",
+      "wythers:terrain/extended/gravelify_packed_mud"
     ],
     [
       "minecraft:lake_lava_underground",
@@ -72,8 +69,7 @@
       "minecraft:underwater_magma",
       "minecraft:disk_clay",
       "wythers:terrain/local/disk_gravel_river",
-      "wythers:terrain/extended/windswept_snow",
-      "wythers:terrain/local/frozen_river"
+      "wythers:terrain/extended/windswept_snow"
     ],
     [],
     [
@@ -82,7 +78,6 @@
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/trees/forest_holly",
       "wythers:vegetation/local/trees/tundra_woods",
       "wythers:vegetation/local/trees/tundra_dwarf_woods",
       "wythers:vegetation/local/bushes/tundra",
@@ -92,8 +87,9 @@
     [
       "minecraft:freeze_top_layer",
       "wythers:terrain/local/snowy_ground",
+      "wythers:terrain/local/snowy_leaves",
       "wythers:terrain/local/snowy_slopes",
-      "wythers:terrain/local/snowy_edges"
+      "wythers:terrain/local/snow_blocks_disk"
     ]
   ],
   "has_precipitation": true,
@@ -177,12 +173,6 @@
         "maxCount": 4,
         "minCount": 4,
         "weight": 80
-      },
-      {
-        "type": "minecraft:zombie_horse",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
       }
     ],
     "underground_water_creature": [
@@ -196,5 +186,6 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.0
+  "temperature": 0.0,
+  "temperature_modifier": "frozen"
 }

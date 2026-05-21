@@ -1,34 +1,30 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.overworld.flower_forest"
-      }
-    },
-    "minecraft:visual/sky_color": 7391487,
-    "minecraft:visual/fog_color": 14598542,
-    "minecraft:visual/water_fog_color": 270131,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2.0,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "downfall": 0.0,
   "effects": {
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.flower_forest"
+    },
     "foliage_color": 11123575,
-    "water_color": 4445678
+    "sky_color": 7391487,
+    "fog_color": 14598542,
+    "water_color": 4445678,
+    "water_fog_color": 270131
   },
   "features": [
     [
@@ -85,7 +81,7 @@
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel",
-      "wythers:terrain/local/replace_volcanics_flower_forest"
+	  "wythers:terrain/local/replace_volcanics_flower_forest"
     ],
     [],
     [

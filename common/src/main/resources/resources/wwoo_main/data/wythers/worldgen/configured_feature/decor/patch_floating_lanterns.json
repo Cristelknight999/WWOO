@@ -1,7 +1,7 @@
 {
   "type": "minecraft:random_patch",
   "config": {
-    "tries": 5,
+    "tries": 3,
     "xz_spread": 5,
     "y_spread": 7,
     "feature": {
@@ -125,48 +125,6 @@
               -1
             ],
             "blocks": "minecraft:air"
-          }
-        },
-        {
-          "type": "minecraft:block_predicate_filter",
-          "predicate": {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
-              1,
-              0
-            ],
-            "blocks": [
-              "minecraft:air"
-            ]
-          }
-        },
-        {
-          "type": "minecraft:block_predicate_filter",
-          "predicate": {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
-              2,
-              0
-            ],
-            "blocks": [
-              "minecraft:air"
-            ]
-          }
-        },
-        {
-          "type": "minecraft:block_predicate_filter",
-          "predicate": {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
-              3,
-              0
-            ],
-            "blocks": [
-              "minecraft:air"
-            ]
           }
         },
         {

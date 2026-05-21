@@ -2,43 +2,17 @@
   "feature": "wythers:vegetation/tree/ancient_dark_oak",
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "dark_oak_wood"
-            ]
-          }
-        ]
-      }
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 250,
+      "noise_offset": -0.05
     },
     {
       "type": "minecraft:count",
       "count": 30
     },
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "absolute": 0
-      }
-    },
-    {
       "type": "minecraft:in_square"
-    },
-    {
-      "type": "minecraft:surface_relative_threshold_filter",
-      "heightmap": "WORLD_SURFACE_WG",
-      "min_inclusive": -75,
-      "max_inclusive": -60
     },
     {
       "type": "minecraft:heightmap",
@@ -57,6 +31,21 @@
           "Properties": {
             "stage": "0"
           }
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -2,
+            0
+          ],
+          "blocks": "minecraft:rooted_dirt"
         }
       }
     },

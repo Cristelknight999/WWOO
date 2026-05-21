@@ -1,41 +1,23 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {
-      "creative": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.creative"
-      },
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.game"
-      },
-      "underwater": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.under_water"
-      }
-    },
-    "minecraft:visual/sky_color": 6855345,
-    "minecraft:visual/fog_color": 12774399,
-    "minecraft:visual/water_fog_color": 331305,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    }
-  },
   "temperature": 0.5,
   "downfall": 0.5,
   "has_precipitation": true,
   "effects": {
-    "dry_foliage_color": 8033086,
-    "water_color": 2907261
+    "sky_color": 6855345,
+    "fog_color": 12774399,
+    "water_color": 2907261,
+    "water_fog_color": 331305,
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.05
+    },
+    "ambient_sound": "minecraft:ambient.underwater.loop",
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
   },
   "spawners": {
     "ambient": [
@@ -133,26 +115,19 @@
         "weight": 3,
         "minCount": 1,
         "maxCount": 4
-      },
-      {
-        "type": "minecraft:nautilus",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 2
       }
     ]
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
-      "wythers:placer/deep_cold_ocean",
-      "wythers:terrain/local/ocean_bore_holes",
-      "wythers:terrain/local/volcanic_flooded_cavern_mud",
       "wythers:terrain/local/ocean_rock"
     ],
     [
@@ -209,13 +184,14 @@
       "minecraft:patch_grass_badlands",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin",
       "minecraft:seagrass_deep_cold",
+      "minecraft:seagrass_simple",
       "minecraft:kelp_cold"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/local/hydrothermal_vents",
-      "wythers:vegetation/local/patch/tube_worms"
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

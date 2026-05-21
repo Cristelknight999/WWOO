@@ -1,26 +1,19 @@
 {
-  "attributes": {
-    "minecraft:gameplay/snow_golem_melts": true,
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 6269917,
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/water_fog_color": 2302743,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    }
-  },
   "temperature": 2,
   "downfall": 0,
   "has_precipitation": false,
   "effects": {
+    "sky_color": 6269917,
+    "fog_color": 12638463,
     "water_color": 6388580,
-    "grass_color": 14074721
+    "water_fog_color": 2302743,
+    "grass_color": 14074721,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
   },
   "spawners": {
     "ambient": [
@@ -131,12 +124,6 @@
         "weight": 5,
         "minCount": 1,
         "maxCount": 1
-      },
-      {
-        "type": "minecraft:zombie_horse",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
       }
     ],
     "underground_water_creature": [
@@ -151,15 +138,15 @@
     "water_creature": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
-      "wythers:placer/savanna",
-      "wythers:terrain/local/packed_mud_boulders",
       "wythers:terrain/local/stone_cliffs_surface",
       "wythers:terrain/local/stone_cliffs",
       "wythers:terrain/extended/scree",
@@ -167,7 +154,6 @@
     ],
     [
       "minecraft:lake_lava_underground",
-      "wythers:terrain/local/savanna_sandy_wash",
       "minecraft:lake_lava_surface",
       "wythers:terrain/extended/base_mangrove_swamp_savanna"
     ],
@@ -176,7 +162,6 @@
       "wythers:terrain/extended/mangrove_swamp_savanna_filler"
     ],
     [
-      "wythers:terrain/extended/arroyo_savanna",
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
@@ -208,9 +193,11 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/riverbank_plains",
+      "wythers:terrain/local/disk_packed_mud_shore",
+      "minecraft:disk_clay",
       "wythers:terrain/local/savanna_packed_mud",
       "wythers:terrain/local/red_sand_spread",
+      "wythers:terrain/local/replace_packed_mud_to_moss",
       "wythers:terrain/extended/coastal_sand",
       "wythers:terrain/extended/badlands_edge"
     ],
@@ -229,22 +216,22 @@
     [
       "minecraft:glow_lichen",
       "wythers:vegetation/local/patch/tall_grass_savanna",
-      "wythers:vegetation/local/trees/forest_tropical",
+      "wythers:vegetation/local/trees/savanna_mossy",
       "wythers:vegetation/local/trees/savanna_woodland",
       "wythers:vegetation/local/trees/savanna",
       "wythers:vegetation/local/trees/savanna_sparse",
       "wythers:vegetation/local/trees/savanna_rare",
       "wythers:vegetation/local/trees/savanna_baobabs",
-      "wythers:vegetation/local/trees/savanna_pines",
       "wythers:vegetation/extended/trees/savanna_oaks",
       "wythers:vegetation/local/patch/fern_cane",
       "wythers:vegetation/local/patch/grass_savanna",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
-      "wythers:terrain/feature/thermal_savanna_dripstone_spikes",
-      "wythers:vegetation/extended/patch/morning_glory",
-      "wythers:vegetation/extended/patch/tropical_water_plants"
+      "wythers:vegetation/local/patch/floating_vegetation",
+      "wythers:vegetation/local/patch/floating_vegetation_plants",
+      "wythers:vegetation/local/patch/savanna_water_plants",
+      "wythers:terrain/feature/thermal_savanna_dripstone_spikes"
     ],
     [
       "minecraft:freeze_top_layer",

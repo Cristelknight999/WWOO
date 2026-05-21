@@ -1,37 +1,30 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 6269917,
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/water_fog_color": 270131,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2.0,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "downfall": 0.0,
   "effects": {
-    "dry_foliage_color": 11983713,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 6269917,
+    "fog_color": 12638463,
     "water_color": 4445678,
-    "foliage_color": 11983713,
-    "grass_color": 14150267
+    "water_fog_color": 270131,
+    "foliage_color": 11123575,
+    "grass_color": 16765810
   },
   "features": [
     [
-      "wythers:placer/beach",
-      "wythers:terrain/extended/sea_cliff",
-      "wythers:terrain/extended/coastal_forest_sand",
-      "wythers:terrain/local/beach_rocks"
+      "wythers:terrain/extended/beach_cliffs",
+      "wythers:terrain/extended/disk_sand"
     ],
     [
       "minecraft:lake_lava_underground",
@@ -42,7 +35,8 @@
     ],
     [
       "minecraft:monster_room",
-      "minecraft:monster_room_deep"
+      "minecraft:monster_room_deep",
+      "wythers:terrain/extended/sandify_rooted_dirt"
     ],
     [],
     [],
@@ -85,6 +79,7 @@
     [
       "wythers:vegetation/local/bushes/kwongan_heath",
       "minecraft:glow_lichen",
+      "wythers:vegetation/local/patch/grass_beach",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal"
     ],

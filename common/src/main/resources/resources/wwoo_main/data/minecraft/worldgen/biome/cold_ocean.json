@@ -1,52 +1,36 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {
-      "creative": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.creative"
-      },
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.game"
-      },
-      "underwater": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.under_water"
-      }
-    },
-    "minecraft:visual/sky_color": 6855345,
-    "minecraft:visual/fog_color": 12774399,
-    "minecraft:visual/water_fog_color": 331305,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2.0,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "downfall": 0.5,
   "effects": {
-    "dry_foliage_color": 8033086,
-    "water_color": 3239574
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.05
+    },
+    "ambient_sound": "minecraft:ambient.underwater.loop",
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 6855345,
+    "fog_color": 12774399,
+    "water_color": 3239574,
+    "water_fog_color": 331305
   },
   "features": [
     [
-      "wythers:terrain/local/ocean_bore_holes",
-      "wythers:terrain/local/volcanic_flooded_cavern_mud",
-      "wythers:terrain/local/cold_ocean_gravel",
-      "wythers:terrain/local/ocean_rock",
-      "wythers:terrain/local/cold_island"
+      "wythers:terrain/carver/ocean",
+      "wythers:terrain/extended/ocean_beach_gravel",
+      "wythers:terrain/extended/cold_ocean_gravel",
+      "wythers:terrain/extended/dover_cliffs",
+      "wythers:terrain/local/ocean_rock"
     ],
     [
       "minecraft:lake_lava_underground",
@@ -88,8 +72,7 @@
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
       "minecraft:disk_gravel",
-      "wythers:terrain/local/beach_mossy_stone",
-      "wythers:terrain/local/cold_island_processor"
+      "wythers:terrain/local/beach_mossy_stone"
     ],
     [],
     [
@@ -103,17 +86,14 @@
       "minecraft:patch_grass_badlands",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin",
       "minecraft:seagrass_cold",
-      "minecraft:kelp_cold",
-      "wythers:vegetation/local/patch/cold_island_grass",
-      "wythers:vegetation/local/patch/cold_island_seaweed"
+      "minecraft:seagrass_simple",
+      "minecraft:kelp_cold"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/local/cold_island_mossy_cobblestone",
-      "wythers:decor/cold_ocean",
-      "wythers:terrain/local/hydrothermal_vents",
-      "wythers:vegetation/local/patch/tube_worms"
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
@@ -128,26 +108,7 @@
       }
     ],
     "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 40,
-        "minCount": 4,
-        "weight": 10000
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 40,
-        "minCount": 4,
-        "weight": 10000
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 40,
-        "minCount": 4,
-        "weight": 10000
-      }
-    ],
+    "creature": [],
     "misc": [],
     "monster": [
       {
@@ -233,12 +194,6 @@
         "maxCount": 4,
         "minCount": 1,
         "weight": 3
-      },
-      {
-        "type": "minecraft:nautilus",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 2
       }
     ]
   },

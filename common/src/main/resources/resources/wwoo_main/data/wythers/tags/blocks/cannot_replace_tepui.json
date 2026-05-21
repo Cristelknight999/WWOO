@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:grass_block",
-    "minecraft:short_grass",
-    "minecraft:tall_grass"
-  ]
-}

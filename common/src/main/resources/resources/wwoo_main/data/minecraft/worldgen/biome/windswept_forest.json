@@ -1,27 +1,25 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 11842740,
-    "minecraft:visual/fog_color": 13158600,
-    "minecraft:visual/water_fog_color": 4341314,
-    "minecraft:audio/music_volume": 1,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
-  },
   "temperature": 0.2,
   "downfall": 0.3,
   "has_precipitation": true,
   "effects": {
+    "sky_color": 11642049,
+    "fog_color": 15917301,
     "water_color": 7499128,
-    "grass_color_modifier": "swamp",
-    "foliage_color": 11983713,
-    "dry_foliage_color": 8082228
+    "water_fog_color": 4341314,
+    "grass_color": 9530990,
+    "foliage_color": 9530990,
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.0111
+    },
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.nether.soul_sand_valley"
+    }
   },
   "spawners": {
     "ambient": [
@@ -140,15 +138,16 @@
     "water_creature": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
-      "wythers:terrain/local/deepslate_cliffs",
-      "wythers:terrain/local/deepslate_boulders"
+      "wythers:terrain/local/deepslate_cliffs"
     ],
     [
       "minecraft:lake_lava_underground",
@@ -164,8 +163,8 @@
     [],
     [
       "wythers:terrain/local/volcanic_basalt_cliffs",
-      "wythers:terrain/local/volcanic_fallout",
-      "wythers:terrain/local/volcanic_fallout_ore"
+      "wythers:terrain/extended/volcanic_fallout",
+      "wythers:terrain/extended/volcanic_fallout_ore"
     ],
     [
       "minecraft:ore_dirt",
@@ -208,15 +207,12 @@
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/trees/mosswoods",
-      "wythers:vegetation/local/patch/grass_standard",
-      "wythers:vegetation/local/patch/windswept_forest_flowers",
       "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal"
+      "minecraft:red_mushroom_normal",
+      "wythers:terrain/feature/windswept_basalt_columns"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/extended/volcanic_extinction"
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

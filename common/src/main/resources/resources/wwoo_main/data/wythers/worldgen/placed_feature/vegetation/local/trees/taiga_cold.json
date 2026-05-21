@@ -40,29 +40,6 @@
   },
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:not",
-        "predicate": {
-          "type": "minecraft:matching_blocks",
-          "offset": [
-            0,
-            1,
-            0
-          ],
-          "blocks": [
-            "minecraft:moss_block"
-          ]
-        }
-      }
-    },
-    {
       "type": "minecraft:noise_based_count",
       "noise_to_count_ratio": 1,
       "noise_factor": 150,

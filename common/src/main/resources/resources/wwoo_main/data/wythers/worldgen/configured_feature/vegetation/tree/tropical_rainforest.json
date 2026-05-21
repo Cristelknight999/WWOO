@@ -18,7 +18,7 @@
         "feature": "wythers:vegetation/local/patch/thin_jungle_bamboo"
       },
       {
-        "chance": 0.0,
+        "chance": 0.0025,
         "feature": {
           "feature": "wythers:vegetation/melon_patch",
           "placement": []

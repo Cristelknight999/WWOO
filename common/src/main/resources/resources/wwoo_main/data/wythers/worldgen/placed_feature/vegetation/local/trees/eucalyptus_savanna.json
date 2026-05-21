@@ -2,40 +2,6 @@
   "feature": "wythers:vegetation/tree/forest_eucalyptus",
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:pale_oak_wood"
-            ]
-          },
-          {
-            "type": "minecraft:not",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "offset": [
-                0,
-                1,
-                0
-              ],
-              "blocks": [
-                "minecraft:moss_block"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
       "type": "minecraft:count",
       "count": 8
     },
@@ -65,6 +31,137 @@
         "state": {
           "Name": "minecraft:fern"
         }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                1,
+                0,
+                1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                1,
+                0,
+                -1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -1,
+                0,
+                1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -1,
+                0,
+                -1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                2,
+                0,
+                0
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -2,
+                0,
+                0
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                0,
+                2
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                0,
+                -2
+              ],
+              "tag": "minecraft:logs_that_burn"
+            },
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                0,
+                -1
+              ],
+              "tag": "minecraft:logs_that_burn"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": "minecraft:red_sand"
       }
     },
     {

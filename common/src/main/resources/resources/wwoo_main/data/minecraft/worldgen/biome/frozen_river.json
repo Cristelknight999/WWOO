@@ -1,65 +1,41 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {
-      "creative": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.creative"
-      },
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.game"
-      },
-      "underwater": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.under_water"
-      }
-    },
-    "minecraft:visual/sky_color": 16777215,
-    "minecraft:visual/fog_color": 13224393,
-    "minecraft:visual/water_fog_color": 2171215,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2.0,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "downfall": 0.5,
   "effects": {
-    "dry_foliage_color": 12638463,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 16777215,
+    "fog_color": 13224393,
     "water_color": 5334160,
-    "grass_color": 7574355
+    "water_fog_color": 2171215
   },
   "features": [
-    [],
+    [
+      "wythers:terrain/extended/gravelify_packed_mud"
+    ],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/local/glacier_1",
-      "wythers:terrain/local/glacier_0"
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
     [],
-    [
-      "wythers:terrain/local/riverbank_gravel"
-    ],
+    [],
     [
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
@@ -87,8 +63,7 @@
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
       "minecraft:disk_clay",
-      "wythers:terrain/local/disk_gravel_river",
-      "wythers:terrain/local/frozen_river"
+      "wythers:terrain/local/disk_gravel_river"
     ],
     [],
     [
@@ -101,7 +76,9 @@
       "minecraft:red_mushroom_normal"
     ],
     [
-      "minecraft:freeze_top_layer"
+      "minecraft:freeze_top_layer",
+      "wythers:terrain/local/snowy_ground",
+      "wythers:terrain/local/snowy_leaves"
     ]
   ],
   "has_precipitation": true,
@@ -190,7 +167,14 @@
         "weight": 5
       }
     ],
-    "water_creature": []
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 2
+      }
+    ]
   },
-  "temperature": 0.25
+  "temperature": 0.15
 }

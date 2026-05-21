@@ -1,8 +1,7 @@
 {
   "pack": {
     "pack_format": 88,
-    "min_format": 88,
-    "max_format": 1000,
+    "supported_formats": {"min_inclusive": 22, "max_inclusive": 1000},
     "description": "Disables underground generation of andesite, diorite, granite, gravel and dirt"
   }
 }

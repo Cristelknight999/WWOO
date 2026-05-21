@@ -9,27 +9,6 @@
             "feature": "wythers:vegetation/tree/forest_oak",
             "placement": []
           }
-        },
-        {
-          "chance": 0.05,
-          "feature": {
-            "feature": "wythers:vegetation/tree/old_oak",
-            "placement": []
-          }
-        },
-        {
-          "chance": 0.05,
-          "feature": {
-            "feature": "wythers:vegetation/tree/complex_oak_1",
-            "placement": []
-          }
-        },
-        {
-          "chance": 0.05,
-          "feature": {
-            "feature": "wythers:vegetation/tree/complex_oak_2",
-            "placement": []
-          }
         }
       ],
       "default": {
@@ -40,41 +19,16 @@
   },
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": -0.45
     },
     {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:oak_wood",
-              "minecraft:stripped_oak_wood",
-              "minecraft:mangrove_wood"
-            ]
-          },
-          {
-            "type": "minecraft:not",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "offset": [
-                0,
-                1,
-                0
-              ],
-              "blocks": [
-                "minecraft:dripstone_block",
-                "minecraft:moss_block"
-              ]
-            }
-          }
-        ]
-      }
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 1000,
+      "noise_offset": 0.35
     },
     {
       "type": "minecraft:noise_based_count",
@@ -112,6 +66,120 @@
         "state": {
           "Name": "minecraft:fern"
         }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -3,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite",
+                "minecraft:diorite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -4,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite",
+                "minecraft:diorite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -5,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite",
+                "minecraft:diorite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -6,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite",
+                "minecraft:diorite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -7,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite",
+                "minecraft:diorite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -8,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite",
+                "minecraft:diorite"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -9,
+                0
+              ],
+              "blocks": [
+                "minecraft:granite",
+                "minecraft:andesite",
+                "minecraft:diorite"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": "minecraft:dirt"
       }
     },
     {

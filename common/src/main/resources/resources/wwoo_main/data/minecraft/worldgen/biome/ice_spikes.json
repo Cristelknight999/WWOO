@@ -1,27 +1,21 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 16777215,
-    "minecraft:visual/fog_color": 13224393,
-    "minecraft:visual/water_fog_color": 270131,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    }
-  },
   "temperature": 0.15,
   "downfall": 0.5,
   "has_precipitation": true,
   "creature_spawn_probability": 0.07,
   "effects": {
+    "sky_color": 16777215,
+    "fog_color": 13224393,
     "water_color": 10217203,
+    "water_fog_color": 270131,
     "grass_color": 16765810,
-    "foliage_color": 14316854
+    "foliage_color": 14316854,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
   },
   "spawners": {
     "ambient": [
@@ -39,6 +33,12 @@
         "weight": 10,
         "minCount": 2,
         "maxCount": 3
+      },
+      {
+        "type": "minecraft:hoglin",
+        "weight": 8,
+        "minCount": 2,
+        "maxCount": 6
       },
       {
         "type": "minecraft:wolf",
@@ -140,14 +140,15 @@
     "water_creature": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
-      "wythers:placer/ice_spikes",
       "wythers:terrain/local/ice_spikes_grass",
       "wythers:terrain/local/ice_spikes_glacial_grass",
       "wythers:terrain/local/ice_spikes_glacial_dirt",

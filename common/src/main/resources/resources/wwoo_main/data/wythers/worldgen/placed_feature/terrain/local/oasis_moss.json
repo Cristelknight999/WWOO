@@ -9,65 +9,289 @@
             "Name": "minecraft:moss_block"
           }
         },
-        "rules": []
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:any_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "blocks": "minecraft:sand"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "blocks": "minecraft:sand"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blocks": "minecraft:sand"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "blocks": "minecraft:sand"
+                }
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:grass_block",
+                "Properties": {
+                  "snowy": "false"
+                }
+              }
+            }
+          },
+          {
+            "if_true": {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      2,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -2,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      2
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -2
+                    ],
+                    "blocks": [
+                      "minecraft:grass_block",
+                      "minecraft:moss_block",
+                      "minecraft:coarse_dirt",
+                      "minecraft:air",
+                      "minecraft:water"
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:grass_block",
+                "Properties": {
+                  "snowy": "false"
+                }
+              }
+            }
+          }
+        ]
       },
       "target": {
         "type": "minecraft:all_of",
         "predicates": [
           {
-            "type": "minecraft:matching_block_tag",
-            "offset": [
-              0,
-              1,
-              0
-            ],
-            "tag": "wythers:air_and_plants"
-          },
-          {
             "type": "minecraft:matching_blocks",
-            "blocks": "minecraft:sand"
+            "blocks": "minecraft:grass_block"
           }
         ]
       },
       "radius": {
         "type": "minecraft:uniform",
-        "min_inclusive": 2,
+        "min_inclusive": 3,
         "max_inclusive": 5
       },
-      "half_height": 1
+      "half_height": 3
     }
   },
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 1000,
+      "noise_offset": -0.6
     },
     {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:smooth_sandstone"
-            ]
-          },
-          {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
-              2,
-              0
-            ],
-            "blocks": [
-              "minecraft:moss_block"
-            ]
-          }
-        ]
-      }
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 80,
+      "noise_offset": 0
     },
     {
       "type": "minecraft:count",
@@ -85,12 +309,15 @@
     {
       "type": "minecraft:surface_relative_threshold_filter",
       "heightmap": "WORLD_SURFACE_WG",
-      "min_inclusive": -63,
+      "min_inclusive": -68,
       "max_inclusive": -62
     },
     {
       "type": "minecraft:heightmap",
-      "heightmap": "MOTION_BLOCKING"
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:biome"
     }
   ]
 }

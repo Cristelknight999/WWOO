@@ -23,6 +23,9 @@ displayTest="IGNORE_ALL_VERSION"
 
 description= '''${mod_description}'''
 
+[[mixins]]
+config="wwoo.mixins.json"
+
 [[dependencies.${mod_id}]]
 modId="neoforge"
 type="required"

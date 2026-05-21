@@ -2,28 +2,10 @@
   "feature": "wythers:vegetation/tree/savanna_oak",
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 1
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:not",
-        "predicate": {
-          "type": "minecraft:matching_blocks",
-          "blocks": [
-            "minecraft:dripstone_block"
-          ]
-        }
-      }
-    },
-    {
       "type": "minecraft:noise_based_count",
       "noise_to_count_ratio": 1,
-      "noise_factor": 400,
-      "noise_offset": 0
+      "noise_factor": 1000,
+      "noise_offset": -0.25
     },
     {
       "type": "minecraft:rarity_filter",

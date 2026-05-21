@@ -37,22 +37,6 @@
   },
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:matching_blocks",
-        "blocks": [
-          "minecraft:light_gray_terracotta",
-          "minecraft:gray_terracotta"
-        ]
-      }
-    },
-    {
       "type": "minecraft:count",
       "count": 50
     },

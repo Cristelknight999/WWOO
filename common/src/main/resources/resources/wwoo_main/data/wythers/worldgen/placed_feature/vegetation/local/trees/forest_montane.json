@@ -2,37 +2,6 @@
   "feature": "wythers:vegetation/tree/montane_forest_spruce",
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:oak_wood"
-            ]
-          },
-          {
-              "type": "minecraft:matching_blocks",
-              "offset": [
-                0,
-                1,
-                0
-              ],
-              "blocks": [
-                "minecraft:dripstone_block"
-              ]
-            }
-        ]
-      }
-    },
-    {
       "type": "minecraft:count",
       "count": 15
     },
@@ -49,7 +18,7 @@
       "type": "minecraft:surface_relative_threshold_filter",
       "heightmap": "WORLD_SURFACE_WG",
       "min_inclusive": -200,
-      "max_inclusive": -115
+      "max_inclusive": -125
     },
     {
       "type": "minecraft:heightmap",

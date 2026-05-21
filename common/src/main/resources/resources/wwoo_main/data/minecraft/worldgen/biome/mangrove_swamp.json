@@ -1,34 +1,19 @@
 {
-  "attributes": {
-    "minecraft:gameplay/increased_fire_burnout": true,
-    "minecraft:audio/background_music": {
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.overworld.swamp"
-      }
-    },
-    "minecraft:visual/sky_color": 7907327,
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/water_fog_color": 2178584,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    }
-  },
   "temperature": 1.2,
   "downfall": 0.2,
   "has_precipitation": true,
   "effects": {
-    "dry_foliage_color": 9285927,
+    "sky_color": 7907327,
+    "fog_color": 12638463,
     "water_color": 3829036,
+    "water_fog_color": 2178584,
     "foliage_color": 7441446,
-    "grass_color": 11122488
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
   },
   "spawners": {
     "monster": [
@@ -130,23 +115,16 @@
     "misc": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
-      "wythers:placer/mangrove_swamp",
-      "wythers:terrain/local/sandy_marsh_ground",
-      "wythers:terrain/local/sandy_marsh_hills",
-      "wythers:terrain/local/mangrove_swamp_carver",
-      "wythers:terrain/local/swamp_pools",
-      "wythers:terrain/local/mangrove_swamp_ground",
-      "wythers:terrain/local/sudd_marsh_ground",
-      "wythers:terrain/local/mangrove_swamp_hills",
-      "wythers:terrain/local/mangrove_swamp_carver_2",
-      "wythers:terrain/local/mangrove_swamp_stone_replacer"
+      "wythers:terrain/local/base_mangrove_swamp"
     ],
     [
       "minecraft:lake_lava_underground",
@@ -154,7 +132,8 @@
     ],
     [
       "minecraft:amethyst_geode",
-      "minecraft:large_dripstone"
+      "minecraft:large_dripstone",
+      "wythers:terrain/local/base_mangrove_swamp_bayou_hills"
     ],
     [
       "minecraft:fossil_upper",
@@ -162,7 +141,9 @@
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
-    [],
+    [
+      "wythers:terrain/local/swamp_pools"
+	],
     [
       "wythers:terrain/local/cave_disk_basalt",
       "wythers:terrain/local/cave_disk_blackstone",
@@ -206,28 +187,22 @@
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/patch/water_grass_mangrove_swamp",
-      "wythers:vegetation/local/patch/duckweed_flowering",
-      "wythers:vegetation/local/trees/bayou_hills",
-      "wythers:vegetation/local/trees/bayou",
-      "wythers:vegetation/local/trees/bayou_pine_forest",
-      "wythers:vegetation/local/trees/forest_tropical_pine",
-      "wythers:vegetation/local/trees/mangrove_swamp",
-      "wythers:vegetation/local/trees/pantanal",
-      "wythers:vegetation/local/trees/banyans_swamp",
-      "wythers:vegetation/local/trees/jungle_palms",
-      "wythers:vegetation/local/patch/sandy_marsh_dripleaf",
-      "wythers:vegetation/local/patch/duckweed",
-      "wythers:vegetation/local/patch/grass_mangrove_swamp",
-      "wythers:vegetation/local/patch/tall_grass_sudd_marsh",
-      "wythers:vegetation/local/patch/grass_sudd_marsh",
-      "wythers:vegetation/local/patch/grass_low_swamp",
-      "wythers:vegetation/local/patch/swamp_reeds",
-      "wythers:vegetation/local/patch/hanging_roots"
+      "wythers:vegetation/local/patch/large_ferns_dense_forests",
+      "wythers:vegetation/local/trees/mangrove_swamp_jungle",
+      "wythers:vegetation/local/trees/mangrove_swamp_bayou",
+      "wythers:vegetation/local/trees/mangrove_swamp_bayou_2",
+      "wythers:vegetation/local/trees/mangrove_swamp_birch",
+      "wythers:vegetation/local/trees/mangrove_swamp_tropical",
+      "wythers:vegetation/local/trees/mangrove_swamp_mangroves",
+      "wythers:vegetation/local/patch/elephant_grass",
+      "wythers:vegetation/local/patch/grass_standard",
+      "minecraft:patch_waterlily",
+      "minecraft:seagrass_swamp"
     ],
     [
+      "wythers:vegetation/local/patch/mangrove_swamp_dripleaves",
       "minecraft:freeze_top_layer",
-      "wythers:terrain/local/forest_floor_grass"
+      "wythers:vegetation/local/patch/spanish_moss"
     ]
   ]
 }

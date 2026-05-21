@@ -1,24 +1,15 @@
 {
-  "feature": "wythers:vegetation/tree/pale_dark_eucalyptus",
+  "feature": "wythers:vegetation/tree/forest_eucalyptus",
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 1
-      }
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 1000,
+      "noise_offset": -0.45
     },
     {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:matching_blocks",
-        "blocks": [
-          "minecraft:moss_block"
-        ]
-      }
-    },
-    {
-      "type": "minecraft:rarity_filter",
-      "chance": 3
+      "type": "minecraft:count",
+      "count": 1
     },
     {
       "type": "minecraft:height_range",
@@ -32,7 +23,7 @@
     {
       "type": "minecraft:surface_relative_threshold_filter",
       "heightmap": "WORLD_SURFACE_WG",
-      "min_inclusive": -110,
+      "min_inclusive": -150,
       "max_inclusive": -64
     },
     {

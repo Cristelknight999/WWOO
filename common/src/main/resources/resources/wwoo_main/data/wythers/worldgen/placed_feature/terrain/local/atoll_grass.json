@@ -21,24 +21,6 @@
             "type": "minecraft:matching_blocks",
             "offset": [
               0,
-              3,
-              0
-            ],
-            "blocks": "minecraft:air"
-          },
-          {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
-              2,
-              0
-            ],
-            "blocks": "minecraft:air"
-          },
-          {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
               1,
               0
             ],
@@ -46,10 +28,7 @@
           },
           {
             "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:sand",
-              "minecraft:suspicious_sand"
-            ]
+            "blocks": "minecraft:sand"
           },
           {
             "type": "minecraft:not",
@@ -417,7 +396,7 @@
     },
     {
       "type": "minecraft:heightmap",
-      "heightmap": "MOTION_BLOCKING"
+      "heightmap": "OCEAN_FLOOR"
     },
     {
       "type": "minecraft:biome"

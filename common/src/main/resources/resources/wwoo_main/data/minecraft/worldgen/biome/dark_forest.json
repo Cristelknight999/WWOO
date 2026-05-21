@@ -1,39 +1,29 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.overworld.forest"
-      }
-    },
-    "minecraft:visual/sky_color": 11842740,
-    "minecraft:visual/fog_color": 13158600,
-    "minecraft:visual/water_fog_color": 2302743,
-    "minecraft:audio/music_volume": 0.0
-  },
   "has_precipitation": true,
   "temperature": 0.7,
   "downfall": 0.8,
   "effects": {
-    "dry_foliage_color": 8082228,
+    "additions_sound": {
+      "sound": "minecraft:ambient.underwater.loop.additions.ultra_rare",
+      "tick_chance": 0.0011
+    },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
     "grass_color_modifier": "swamp",
     "foliage_color": 6975545,
-    "water_color": 6388580
+    "sky_color": 11842740,
+    "fog_color": 13158600,
+    "water_color": 6388580,
+    "water_fog_color": 2302743
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
-    [
-      "wythers:placer/dark_forest",
-      "wythers:terrain/local/deepslate_boulders",
-      "wythers:terrain/local/swamp_carver",
-      "wythers:terrain/local/swamp_ground",
-      "wythers:terrain/local/swamp_hills"
-    ],
+    [],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
@@ -48,7 +38,6 @@
     [],
     [
       "wythers:vegetation/local/trees/dark_jungle",
-      "wythers:vegetation/local/trees/dark_forest_river_oaks",
       "wythers:terrain/local/base_dark_forest"
     ],
     [
@@ -80,8 +69,7 @@
     ],
     [
       "wythers:vegetation/local/trees/dark_forest_1",
-      "wythers:vegetation/local/trees/dark_forest_2",
-      "wythers:vegetation/local/trees/dark_forest_live_oaks"
+      "wythers:vegetation/local/trees/dark_forest_2"
     ],
     [
       "minecraft:spring_water",

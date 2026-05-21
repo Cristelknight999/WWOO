@@ -1,33 +1,26 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.overworld.cherry_grove"
-      }
-    },
-    "minecraft:visual/sky_color": 8103167,
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/water_fog_color": 270131,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    }
-  },
   "temperature": 0.5,
   "downfall": 0.8,
   "has_precipitation": true,
   "effects": {
-    "dry_foliage_color": 16744620,
+    "sky_color": 8103167,
+    "fog_color": 12638463,
     "water_color": 4445678,
+    "water_fog_color": 270131,
     "grass_color": 11983713,
-    "foliage_color": 11012890
+    "foliage_color": 11012890,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.cherry_grove",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    }
   },
   "spawners": {
     "ambient": [
@@ -128,11 +121,13 @@
     "water_creature": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
       "wythers:terrain/local/cherry_pools",
@@ -142,7 +137,7 @@
       "wythers:terrain/local/cherry_pools_edge",
       "wythers:road/cherry_grove",
       "wythers:terrain/extended/replace_stone_to_andesite"
-    ],
+	],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"

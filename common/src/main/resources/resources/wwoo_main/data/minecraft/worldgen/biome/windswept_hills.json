@@ -1,26 +1,31 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 12830407,
-    "minecraft:visual/fog_color": 13882581,
-    "minecraft:visual/water_fog_color": 4341314,
-    "minecraft:audio/music_volume": 1,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
-  },
   "temperature": 2,
   "downfall": 0,
   "has_precipitation": true,
   "effects": {
+    "sky_color": 12830407,
+    "fog_color": 13882581,
     "water_color": 7499128,
+    "water_fog_color": 4341314,
     "grass_color": 8286834,
-    "foliage_color": 8286834
+    "foliage_color": 8286834,
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.0111
+    },
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.nether.soul_sand_valley"
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:ash"
+      },
+      "probability": 0.118093334
+    }
   },
   "spawners": {
     "ambient": [
@@ -127,11 +132,13 @@
     "water_creature": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
       "wythers:terrain/local/volcanic_resurfacing"
@@ -200,7 +207,6 @@
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/patch/grass_standard",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal"
     ],

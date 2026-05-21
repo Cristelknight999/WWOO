@@ -1,26 +1,19 @@
 {
-  "attributes": {
-    "minecraft:gameplay/snow_golem_melts": true,
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 7782102,
-    "minecraft:visual/fog_color": 13880215,
-    "minecraft:visual/water_fog_color": 5077600,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    }
-  },
   "temperature": 2.0,
   "downfall": 0.1,
   "has_precipitation": true,
   "effects": {
+    "sky_color": 7782102,
+    "fog_color": 13880215,
     "water_color": 3832426,
-    "foliage_color": 9285927
+    "water_fog_color": 5077600,
+    "foliage_color": 9285927,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
   },
   "spawners": {
     "monster": [
@@ -71,12 +64,6 @@
         "weight": 5,
         "minCount": 1,
         "maxCount": 1
-      },
-      {
-        "type": "minecraft:zombie_horse",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
       }
     ],
     "creature": [
@@ -127,13 +114,16 @@
     "misc": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
     [
+      "wythers:terrain/local/stone_cliffs_surface",
       "wythers:terrain/local/stone_cliffs",
       "wythers:terrain/extended/base_jungle"
     ],
@@ -179,8 +169,6 @@
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel",
-      "wythers:terrain/extended/volcanic_jungle_mud_in_basalt",
-      "wythers:terrain/extended/volcanic_jungle_muddy_roots_on_basalt",
       "wythers:terrain/extended/badlands_edge"
     ],
     [],
@@ -190,16 +178,15 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:flower_warm",
+      "minecraft:patch_tall_grass_2",
       "wythers:vegetation/local/trees/tropical_woods",
       "wythers:vegetation/local/trees/tropical_savanna",
       "wythers:vegetation/extended/trees/savanna_oaks",
-      "minecraft:patch_tall_grass_2",
       "minecraft:patch_grass_plain",
+      "minecraft:flower_warm",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane",
-      "wythers:vegetation/local/patch/giant_groundsels"
+      "minecraft:patch_sugar_cane"
     ],
     [
       "minecraft:freeze_top_layer"

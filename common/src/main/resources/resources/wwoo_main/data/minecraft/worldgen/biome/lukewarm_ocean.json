@@ -1,74 +1,46 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {
-      "creative": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.creative"
-      },
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.game"
-      },
-      "underwater": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.under_water"
-      }
-    },
-    "minecraft:visual/sky_color": 6269917,
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/water_fog_color": 270131,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2.0,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "downfall": 0.5,
   "effects": {
-    "dry_foliage_color": 8033086,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 6269917,
+    "fog_color": 12638463,
     "water_color": 4445678,
+    "water_fog_color": 270131,
     "grass_color": 11122488,
     "foliage_color": 9285927
   },
   "features": [
     [
-      "wythers:placer/lukewarm_ocean",
       "wythers:terrain/carver/ocean",
-      "wythers:terrain/extended/sea_cliff",
-      "wythers:terrain/local/ocean_bore_holes",
-      "wythers:terrain/local/lukewarm_ocean_caves",
-      "wythers:terrain/local/volcanic_flooded_cavern_mud",
       "wythers:terrain/extended/ocean_beach_sand",
       "wythers:terrain/extended/dead_coral_stone",
       "wythers:terrain/extended/dead_coral_stone_2",
       "wythers:terrain/extended/replace_gravel_to_sand",
       "wythers:terrain/extended/replace_dirt_to_sand",
-      "wythers:terrain/local/lukewarm_island",
-      "wythers:terrain/local/dead_coral_stack",
+      "wythers:terrain/extended/sandify_rooted_dirt",
+      "wythers:terrain/extended/replace_mud_to_sand",
       "wythers:terrain/local/atoll_grass"
     ],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface",
       "wythers:terrain/extended/coral_pools",
-      "wythers:terrain/local/lukewarm_ocean_caves_sand"
+      "wythers:terrain/extended/coral_pools_edge"
     ],
     [
-      "minecraft:amethyst_geode",
-      "wythers:terrain/local/dripstone_cluster",
-      "wythers:terrain/local/pointed_dripstone"
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
@@ -101,16 +73,8 @@
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
-      "wythers:terrain/local/suspicious_ore_wet",
-      "wythers:terrain/local/gravel_in_dead_coral",
       "minecraft:underwater_magma",
-      "wythers:vegetation/local/other/coral_disks",
-      "wythers:vegetation/local/other/coral_disks_ranged",
-      "wythers:vegetation/local/other/coral_disks_small",
-      "wythers:vegetation/local/other/coral_blobs",
-      "wythers:terrain/local/bore_hole_corals",
-      "wythers:terrain/local/sponge_disks",
-      "wythers:vegetation/local/patch/cave_kelp"
+      "wythers:vegetation/local/other/coral_disks"
     ],
     [],
     [
@@ -119,22 +83,20 @@
     ],
     [
       "minecraft:glow_lichen",
+      "wythers:vegetation/local/trees/jungle_island_bent",
       "wythers:vegetation/local/trees/jungle_island",
       "wythers:vegetation/local/patch/pineapples",
-      "wythers:vegetation/local/patch/island_grass",
+      "minecraft:patch_grass_jungle",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin",
       "minecraft:seagrass_warm",
-      "wythers:vegetation/local/other/cocoanuts",
-      "wythers:vegetation/local/patch/sea_vines"
+      "minecraft:sea_pickle",
+      "wythers:vegetation/local/other/cocoanuts"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/local/fan_corals",
-      "wythers:terrain/local/coral_air_pockets",
-      "wythers:terrain/local/hydrothermal_vents",
-      "wythers:vegetation/local/patch/tube_worms"
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
@@ -266,12 +228,6 @@
         "maxCount": 2,
         "minCount": 1,
         "weight": 2
-      },
-      {
-        "type": "minecraft:nautilus",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
       }
     ]
   },

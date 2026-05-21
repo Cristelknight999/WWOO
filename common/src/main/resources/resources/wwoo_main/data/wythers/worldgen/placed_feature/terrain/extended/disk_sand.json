@@ -2,22 +2,6 @@
   "feature": "minecraft:disk_sand",
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 1
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:not",
-        "predicate": {
-          "type": "minecraft:matching_blocks",
-          "blocks": "minecraft:moss_block"
-        }
-      }
-    },
-    {
       "type": "minecraft:count",
       "count": 15
     },

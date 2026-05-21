@@ -108,38 +108,6 @@
   },
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 0
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:smooth_sandstone",
-              "minecraft:cut_sandstone"
-            ]
-          },
-          {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
-              2,
-              0
-            ],
-            "blocks": [
-              "minecraft:dripstone_block"
-            ]
-          }
-        ]
-      }
-    },
-    {
       "type": "minecraft:noise_based_count",
       "noise_to_count_ratio": 1,
       "noise_factor": 80,
@@ -150,23 +118,11 @@
       "count": 30
     },
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "absolute": 0
-      }
-    },
-    {
       "type": "minecraft:in_square"
     },
     {
-      "type": "minecraft:surface_relative_threshold_filter",
-      "heightmap": "WORLD_SURFACE_WG",
-      "min_inclusive": -66,
-      "max_inclusive": -62
-    },
-    {
       "type": "minecraft:heightmap",
-      "heightmap": "MOTION_BLOCKING"
+      "heightmap": "OCEAN_FLOOR"
     },
     {
       "type": "minecraft:biome"

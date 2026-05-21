@@ -1,31 +1,78 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 12638463,
-    "minecraft:visual/fog_color": 14872061,
-    "minecraft:visual/water_fog_color": 270131,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    }
-  },
-  "temperature": 0.225,
-  "downfall": 0,
+  "temperature": 0.2,
+  "downfall": 0.3,
   "has_precipitation": true,
   "effects": {
-    "water_color": 10217203,
-    "grass_color": 16693074,
-    "foliage_color": 16695614
+    "sky_color": 11642049,
+    "fog_color": 15917301,
+    "water_color": 7499128,
+    "water_fog_color": 4341314,
+    "grass_color": 9530990,
+    "foliage_color": 9530990,
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.0111
+    },
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.nether.soul_sand_valley"
+    }
   },
   "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "weight": 10,
+        "minCount": 8,
+        "maxCount": 8
+      }
+    ],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:sheep",
+        "weight": 12,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:pig",
+        "weight": 10,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:chicken",
+        "weight": 10,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:cow",
+        "weight": 8,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:llama",
+        "weight": 5,
+        "minCount": 4,
+        "maxCount": 6
+      }
+    ],
+    "misc": [],
     "monster": [
       {
         "type": "minecraft:spider",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:cave_spider",
         "weight": 100,
         "minCount": 4,
         "maxCount": 4
@@ -44,6 +91,12 @@
       },
       {
         "type": "minecraft:skeleton",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:stray",
         "weight": 100,
         "minCount": 4,
         "maxCount": 4
@@ -73,47 +126,6 @@
         "maxCount": 1
       }
     ],
-    "creature": [
-      {
-        "type": "minecraft:sheep",
-        "weight": 12,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:pig",
-        "weight": 10,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:chicken",
-        "weight": 10,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:cow",
-        "weight": 8,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:wolf",
-        "weight": 5,
-        "minCount": 4,
-        "maxCount": 4
-      }
-    ],
-    "ambient": [
-      {
-        "type": "minecraft:bat",
-        "weight": 10,
-        "minCount": 8,
-        "maxCount": 8
-      }
-    ],
-    "axolotls": [],
     "underground_water_creature": [
       {
         "type": "minecraft:glow_squid",
@@ -122,21 +134,19 @@
         "maxCount": 6
       }
     ],
-    "water_creature": [],
     "water_ambient": [],
-    "misc": []
+    "water_creature": []
   },
   "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "features": [
-    [
-      "wythers:terrain/local/stone_cliffs",
-      "wythers:terrain/extended/scree"
-    ],
+    [],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
@@ -149,7 +159,12 @@
       "minecraft:monster_room_deep"
     ],
     [],
-    [],
+    [
+      "wythers:terrain/local/volcanic_basalt_cliffs",
+      "wythers:terrain/extended/volcanic_fallout",
+      "wythers:terrain/extended/volcanic_fallout_ore",
+      "wythers:terrain/extended/base_windswept_gravelly_hills"
+    ],
     [
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
@@ -176,21 +191,24 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
+      "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "wythers:terrain/local/shadow_snow",
-      "wythers:terrain/local/snow_spread"
+      "minecraft:disk_gravel",
+      "wythers:ores/ore_iron_windswept",
+      "wythers:ores/ore_coal_windswept"
     ],
-    [],
+    [
+      "minecraft:ore_infested"
+    ],
     [
       "minecraft:spring_water",
       "minecraft:spring_lava"
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/patch/grass_standard",
-      "wythers:vegetation/local/trees/spruce_grove",
       "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal"
+      "minecraft:red_mushroom_normal",
+      "wythers:terrain/feature/windswept_basalt_columns"
     ],
     [
       "minecraft:freeze_top_layer"

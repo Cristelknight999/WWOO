@@ -1,67 +1,47 @@
 {
-  "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 3099227,
-    "minecraft:visual/fog_color": 13224393,
-    "minecraft:visual/water_fog_color": 2171215,
-    "minecraft:audio/music_volume": 1,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    }
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
   },
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "downfall": 0.5,
   "effects": {
-    "dry_foliage_color": 12638463,
-    "water_color": 5407943,
-    "grass_color": 11122488
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 16777215,
+    "fog_color": 13224393,
+    "water_color": 5334160,
+    "water_fog_color": 2171215
   },
   "features": [
     [
-      "wythers:placer/frozen_ocean",
-      "wythers:terrain/local/ocean_bore_holes",
-      "wythers:terrain/local/volcanic_flooded_cavern_mud",
-      "wythers:terrain/local/deglaciator_00",
-      "wythers:terrain/local/deglaciator_0",
-      "wythers:terrain/local/deglaciator_01",
-      "wythers:terrain/local/deglaciator_1",
-      "wythers:terrain/local/deglaciator_2",
-      "wythers:terrain/local/deglaciator_3",
-      "wythers:terrain/local/deglaciator_4",
-      "wythers:terrain/local/deglaciator_5",
-      "wythers:terrain/local/deglaciator_6",
-      "wythers:terrain/local/deglaciator_7",
-      "wythers:terrain/local/deglaciator_8",
-      "wythers:terrain/local/deglaciator_9"
+      "wythers:terrain/carver/ocean",
+      "wythers:terrain/extended/ocean_beach_gravel",
+      "wythers:terrain/local/ocean_rock"
     ],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
     ],
     [
-      "wythers:terrain/feature/iceberg_packed",
-      "minecraft:amethyst_geode",
-      "wythers:terrain/local/icelandifier_1",
-      "wythers:terrain/local/icelandifier_2"
+      "minecraft:iceberg_packed",
+      "minecraft:iceberg_blue",
+      "minecraft:amethyst_geode"
     ],
     [
       "minecraft:monster_room",
-      "minecraft:monster_room_deep",
-      "wythers:terrain/local/iceland",
-      "wythers:terrain/local/iceland_moss",
-      "wythers:terrain/local/iceland_snow",
-      "wythers:terrain/local/frozen_ocean_land_replacer"
+      "minecraft:monster_room_deep"
     ],
-    [],
+    [
+      "minecraft:blue_ice"
+    ],
     [],
     [
       "minecraft:ore_dirt",
@@ -98,14 +78,19 @@
     ],
     [
       "minecraft:glow_lichen",
+      "minecraft:trees_water",
+      "minecraft:flower_default",
+      "minecraft:patch_grass_badlands",
       "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal"
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin"
     ],
     [
       "minecraft:freeze_top_layer",
-      "wythers:vegetation/local/patch/grass_iceland",
-      "wythers:terrain/local/hydrothermal_vents",
-      "wythers:vegetation/local/patch/tube_worms"
+      "wythers:terrain/local/snowy_ground",
+      "wythers:terrain/local/crack_ice",
+      "wythers:terrain/local/pack_ice_snow"
     ]
   ],
   "has_precipitation": true,
@@ -122,28 +107,10 @@
     "axolotls": [],
     "creature": [
       {
-        "type": "minecraft:sheep",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 12
-      },
-      {
         "type": "minecraft:polar_bear",
         "maxCount": 2,
         "minCount": 1,
         "weight": 1
-      },
-      {
-        "type": "minecraft:fox",
-        "weight": 8,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 40,
-        "minCount": 4,
-        "weight": 10
       }
     ],
     "misc": [],
@@ -217,12 +184,6 @@
         "maxCount": 5,
         "minCount": 1,
         "weight": 15
-      },
-      {
-        "type": "minecraft:cod",
-        "maxCount": 5,
-        "minCount": 1,
-        "weight": 15
       }
     ],
     "water_creature": [
@@ -231,21 +192,9 @@
         "maxCount": 4,
         "minCount": 1,
         "weight": 1
-      },
-      {
-        "type": "minecraft:dolphin",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 2
-      },
-      {
-        "type": "minecraft:nautilus",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 2
       }
     ]
   },
-  "temperature": 0,
+  "temperature": 0.0,
   "temperature_modifier": "frozen"
 }
