@@ -101,15 +101,6 @@
                   "snowy": "false"
                 }
               }
-            },
-            {
-              "weight": 1,
-              "data": {
-                "Name": "minecraft:podzol",
-                "Properties": {
-                  "snowy": "false"
-                }
-              }
             }
           ]
         }

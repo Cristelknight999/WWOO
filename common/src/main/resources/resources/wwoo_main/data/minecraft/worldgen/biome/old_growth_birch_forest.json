@@ -22,6 +22,7 @@
   },
   "features": [
     [
+      "wythers:terrain/local/stone_cliffs",
       "wythers:road/harvest_fields_1",
       "wythers:road/harvest_fields_1b",
       "wythers:road/harvest_fields_2",

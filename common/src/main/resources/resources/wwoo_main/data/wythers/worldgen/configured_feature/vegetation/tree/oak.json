@@ -38,7 +38,7 @@
         "Properties": {
           "axis": "y"
         },
-        "Name": "minecraft:oak_log"
+        "Name": "minecraft:oak_wood"
       },
       "type": "minecraft:simple_state_provider"
     },

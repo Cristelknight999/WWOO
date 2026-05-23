@@ -142,6 +142,12 @@
         "weight": 4
       },
       {
+        "type": "minecraft:camel",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 1
+      },
+      {
         "type": "minecraft:wolf",
         "maxCount": 8,
         "minCount": 4,

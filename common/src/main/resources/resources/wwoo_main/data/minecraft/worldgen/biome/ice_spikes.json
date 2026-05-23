@@ -35,12 +35,6 @@
         "maxCount": 3
       },
       {
-        "type": "minecraft:hoglin",
-        "weight": 8,
-        "minCount": 2,
-        "maxCount": 6
-      },
-      {
         "type": "minecraft:wolf",
         "weight": 2,
         "minCount": 4,

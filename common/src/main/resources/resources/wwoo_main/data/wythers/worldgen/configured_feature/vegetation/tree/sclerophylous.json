@@ -80,7 +80,7 @@
                       },
                       {
                         "type": "minecraft:heightmap",
-                        "heightmap": "WORLD_SURFACE_WG"
+                        "heightmap": "WORLD_SURFACE"
                       },
                       {
                         "type": "minecraft:block_predicate_filter",
@@ -165,7 +165,7 @@
                       },
                       {
                         "type": "minecraft:heightmap",
-                        "heightmap": "WORLD_SURFACE_WG"
+                        "heightmap": "WORLD_SURFACE"
                       },
                       {
                         "type": "minecraft:block_predicate_filter",
@@ -249,7 +249,7 @@
                   },
                   {
                     "type": "minecraft:heightmap",
-                    "heightmap": "WORLD_SURFACE_WG"
+                    "heightmap": "WORLD_SURFACE"
                   },
                   {
                     "type": "minecraft:block_predicate_filter",
@@ -362,7 +362,7 @@
                       },
                       {
                         "type": "minecraft:heightmap",
-                        "heightmap": "WORLD_SURFACE_WG"
+                        "heightmap": "WORLD_SURFACE"
                       },
                       {
                         "type": "minecraft:block_predicate_filter",
@@ -447,7 +447,7 @@
                       },
                       {
                         "type": "minecraft:heightmap",
-                        "heightmap": "WORLD_SURFACE_WG"
+                        "heightmap": "WORLD_SURFACE"
                       },
                       {
                         "type": "minecraft:block_predicate_filter",
@@ -531,7 +531,7 @@
                   },
                   {
                     "type": "minecraft:heightmap",
-                    "heightmap": "WORLD_SURFACE_WG"
+                    "heightmap": "WORLD_SURFACE"
                   },
                   {
                     "type": "minecraft:block_predicate_filter",
@@ -644,7 +644,7 @@
                       },
                       {
                         "type": "minecraft:heightmap",
-                        "heightmap": "WORLD_SURFACE_WG"
+                        "heightmap": "WORLD_SURFACE"
                       },
                       {
                         "type": "minecraft:block_predicate_filter",
@@ -729,7 +729,7 @@
                       },
                       {
                         "type": "minecraft:heightmap",
-                        "heightmap": "WORLD_SURFACE_WG"
+                        "heightmap": "WORLD_SURFACE"
                       },
                       {
                         "type": "minecraft:block_predicate_filter",
@@ -813,7 +813,7 @@
                   },
                   {
                     "type": "minecraft:heightmap",
-                    "heightmap": "WORLD_SURFACE_WG"
+                    "heightmap": "WORLD_SURFACE"
                   },
                   {
                     "type": "minecraft:block_predicate_filter",
@@ -925,7 +925,7 @@
                   },
                   {
                     "type": "minecraft:heightmap",
-                    "heightmap": "WORLD_SURFACE_WG"
+                    "heightmap": "WORLD_SURFACE"
                   },
                   {
                     "type": "minecraft:block_predicate_filter",
@@ -1010,7 +1010,7 @@
                   },
                   {
                     "type": "minecraft:heightmap",
-                    "heightmap": "WORLD_SURFACE_WG"
+                    "heightmap": "WORLD_SURFACE"
                   },
                   {
                     "type": "minecraft:block_predicate_filter",
@@ -1094,7 +1094,7 @@
               },
               {
                 "type": "minecraft:heightmap",
-                "heightmap": "WORLD_SURFACE_WG"
+                "heightmap": "WORLD_SURFACE"
               },
               {
                 "type": "minecraft:block_predicate_filter",
