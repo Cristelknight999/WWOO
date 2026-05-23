@@ -11,6 +11,16 @@
       }
     },
     {
+      "location": "wwoo:resources/cliffs_and_coves_add_on",
+      "display_name": "Cliffs and Coves (WWOO add-on)",
+      "condition": {
+        "type": "config_value",
+        "class_name": "de.cristelknight.wwoo.config.WWOOConfig",
+        "key": "cliffsAndCoves",
+        "expected": true
+      }
+    },
+    {
       "location": "wwoo:resources/towering_tepuis_add_on",
       "display_name": "Towering Tepuis (WWOO add-on)",
       "condition": {
