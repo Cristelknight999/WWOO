@@ -41,6 +41,14 @@
       }
     },
     {
+      "location": "wwoo:resources/vanilla_backport_compat",
+      "display_name": "WWOO x Vanilla Backport Compat",
+      "condition": {
+        "type": "mod_loaded",
+        "modid": "vanillabackport"
+      }
+    },
+    {
       "location": "wwoo:resources/wwoo_main",
       "display_name": "WWOO Main World-gen Pack"
     }
