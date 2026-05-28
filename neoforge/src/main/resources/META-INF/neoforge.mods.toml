@@ -10,7 +10,7 @@ version="${mod_version}" #mandatory
 displayName="${mod_name}"
 authors="William Wythers, Cristelknight"
 displayURL="${homepage}"
-logoFile="pack.png"
+logoFile="resources/wwoo_main/pack.png"
 
 
 # Display Test controls the display for your mod in the server connection screen
