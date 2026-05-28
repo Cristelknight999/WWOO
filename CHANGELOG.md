@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.6.7]
+- Add compat for [Vanilla Backport](https://modrinth.com/mod/vanillabackport)'s Pale Garden
+
+
 ## [2.6.6]
 - update to parity with datapack version
 
