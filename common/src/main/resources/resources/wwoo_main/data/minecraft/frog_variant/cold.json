@@ -1,19 +1,19 @@
 {
-  "asset_id": "minecraft:entity/frog/cold_frog",
+  "asset_id": "minecraft:entity/frog/frog_cold",
   "spawn_conditions": [
     {
       "condition": {
         "type": "minecraft:biome",
         "biomes": [
-    "minecraft:warm_ocean",
-    "minecraft:jungle",
-    "minecraft:sparse_jungle",
-    "minecraft:bamboo_jungle",
-    "minecraft:mangrove_swamp",
-    "minecraft:plains",
-    "minecraft:forest",
-    "minecraft:lush_caves"
-  ]
+          "minecraft:warm_ocean",
+          "minecraft:jungle",
+          "minecraft:sparse_jungle",
+          "minecraft:bamboo_jungle",
+          "minecraft:mangrove_swamp",
+          "minecraft:plains",
+          "minecraft:forest",
+          "minecraft:lush_caves"
+        ]
       },
       "priority": 1
     }

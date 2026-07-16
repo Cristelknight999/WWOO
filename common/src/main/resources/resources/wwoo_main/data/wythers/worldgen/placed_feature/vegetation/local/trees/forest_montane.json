@@ -19,16 +19,16 @@
             ]
           },
           {
-              "type": "minecraft:matching_blocks",
-              "offset": [
-                0,
-                1,
-                0
-              ],
-              "blocks": [
-                "minecraft:dripstone_block"
-              ]
-            }
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "minecraft:dripstone_block"
+            ]
+          }
         ]
       }
     },

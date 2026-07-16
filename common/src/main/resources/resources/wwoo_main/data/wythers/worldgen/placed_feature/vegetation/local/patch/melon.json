@@ -1,5 +1,5 @@
 {
-  "feature": "wythers:vegetation/melon_patch",
+  "feature": "wythers:vegetation/column/melons_and_stems",
   "placement": [
     {
       "type": "minecraft:height_range",
@@ -15,29 +15,29 @@
           {
             "type": "minecraft:all_of",
             "predicates": [
-                  {
-                    "type": "minecraft:matching_blocks",
-                    "blocks": [
-                      "minecraft:bamboo_block",
-                      "minecraft:jungle_wood",
-                      "minecraft:lime_terracotta"
-                    ]
-                  },
-                  {
-                    "type": "minecraft:not",
-                    "predicate": {
-                      "type": "minecraft:matching_blocks",
-                      "offset": [
-                        0,
-                        1,
-                        0
-                      ],
-                      "blocks": [
-                        "minecraft:moss_block"
-                      ]
-                    }
-                  }
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:bamboo_block",
+                  "minecraft:jungle_wood",
+                  "minecraft:lime_terracotta"
                 ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:moss_block"
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
@@ -55,6 +55,38 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 24
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -5,
+        "max": 5,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:bamboo_sapling"
+        }
+      }
     }
   ]
 }

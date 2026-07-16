@@ -35,9 +35,9 @@
       }
     ],
     "default": {
-          "feature": "wythers:vegetation/tree/eucalyptus_deanei_white",
-          "placement": []
-        }
+      "feature": "wythers:vegetation/tree/eucalyptus_deanei_white",
+      "placement": []
+    }
   },
   "type": "minecraft:random_selector"
 }

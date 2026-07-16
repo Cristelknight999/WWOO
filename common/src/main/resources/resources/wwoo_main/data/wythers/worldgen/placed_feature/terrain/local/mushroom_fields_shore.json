@@ -2,6 +2,7 @@
   "feature": {
     "config": {
       "state_provider": {
+        "type": "minecraft:rule_based_state_provider",
         "fallback": {
           "type": "minecraft:simple_state_provider",
           "state": {
@@ -34,7 +35,7 @@
               }
             }
           },
-		  {
+          {
             "if_true": {
               "type": "minecraft:any_of",
               "predicates": [
@@ -97,7 +98,7 @@
           },
           {
             "type": "minecraft:matching_block_tag",
-            "tag": "minecraft:dirt"
+            "tag": "minecraft:substrate_overworld"
           }
         ]
       }

@@ -6,11 +6,54 @@
         {
           "chance": 0.2,
           "feature": {
-            "feature": "wythers:terrain/tuff_spikes_1",
+            "feature": {
+              "type": "minecraft:simple_block",
+              "config": {
+                "to_place": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:tuff"
+                  }
+                }
+              }
+            },
             "placement": [
               {
                 "type": "minecraft:count",
                 "count": 5
+              },
+              {
+                "type": "minecraft:count",
+                "count": 64
+              },
+              {
+                "type": "minecraft:random_offset",
+                "xz_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -5,
+                  "max": 5,
+                  "plateau": 0
+                },
+                "y_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -5,
+                  "max": 5,
+                  "plateau": 0
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:tuff"
+                  ]
+                }
               }
             ]
           }
@@ -18,11 +61,54 @@
         {
           "chance": 0.2,
           "feature": {
-            "feature": "wythers:terrain/tuff_spikes_2",
+            "feature": {
+              "type": "minecraft:simple_block",
+              "config": {
+                "to_place": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:tuff"
+                  }
+                }
+              }
+            },
             "placement": [
               {
                 "type": "minecraft:count",
                 "count": 10
+              },
+              {
+                "type": "minecraft:count",
+                "count": 64
+              },
+              {
+                "type": "minecraft:random_offset",
+                "xz_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -4,
+                  "max": 4,
+                  "plateau": 0
+                },
+                "y_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -7,
+                  "max": 7,
+                  "plateau": 0
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:tuff"
+                  ]
+                }
               }
             ]
           }
@@ -30,11 +116,54 @@
         {
           "chance": 0.2,
           "feature": {
-            "feature": "wythers:terrain/tuff_spikes_3",
+            "feature": {
+              "type": "minecraft:simple_block",
+              "config": {
+                "to_place": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:tuff"
+                  }
+                }
+              }
+            },
             "placement": [
               {
                 "type": "minecraft:count",
                 "count": 20
+              },
+              {
+                "type": "minecraft:count",
+                "count": 64
+              },
+              {
+                "type": "minecraft:random_offset",
+                "xz_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -3,
+                  "max": 3,
+                  "plateau": 0
+                },
+                "y_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -10,
+                  "max": 10,
+                  "plateau": 0
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:tuff"
+                  ]
+                }
               }
             ]
           }
@@ -42,22 +171,108 @@
         {
           "chance": 0.2,
           "feature": {
-            "feature": "wythers:terrain/tuff_spikes_4",
+            "feature": {
+              "type": "minecraft:simple_block",
+              "config": {
+                "to_place": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:tuff"
+                  }
+                }
+              }
+            },
             "placement": [
               {
                 "type": "minecraft:count",
                 "count": 15
+              },
+              {
+                "type": "minecraft:count",
+                "count": 32
+              },
+              {
+                "type": "minecraft:random_offset",
+                "xz_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -2,
+                  "max": 2,
+                  "plateau": 0
+                },
+                "y_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -15,
+                  "max": 15,
+                  "plateau": 0
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:tuff"
+                  ]
+                }
               }
             ]
           }
         }
       ],
       "default": {
-        "feature": "wythers:terrain/tuff_spikes_5",
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:tuff"
+              }
+            }
+          }
+        },
         "placement": [
           {
             "type": "minecraft:count",
             "count": 20
+          },
+          {
+            "type": "minecraft:count",
+            "count": 16
+          },
+          {
+            "type": "minecraft:random_offset",
+            "xz_spread": {
+              "type": "minecraft:trapezoid",
+              "min": -1,
+              "max": 1,
+              "plateau": 0
+            },
+            "y_spread": {
+              "type": "minecraft:trapezoid",
+              "min": -16,
+              "max": 16,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -1,
+                0
+              ],
+              "blocks": [
+                "minecraft:tuff"
+              ]
+            }
           }
         ]
       }

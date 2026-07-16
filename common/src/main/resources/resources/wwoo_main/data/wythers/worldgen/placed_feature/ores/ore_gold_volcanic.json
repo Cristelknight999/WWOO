@@ -1,22 +1,22 @@
 {
   "feature": {
-  "type": "minecraft:ore",
-  "config": {
-    "discard_chance_on_air_exposure": 0.0,
-    "size": 10,
-    "targets": [
-      {
-        "state": {
-          "Name": "minecraft:gilded_blackstone"
-        },
-        "target": {
-          "block": "minecraft:blackstone",
-          "predicate_type": "minecraft:block_match"
+    "type": "minecraft:ore",
+    "config": {
+      "discard_chance_on_air_exposure": 0.0,
+      "size": 10,
+      "targets": [
+        {
+          "state": {
+            "Name": "minecraft:gilded_blackstone"
+          },
+          "target": {
+            "block": "minecraft:blackstone",
+            "predicate_type": "minecraft:block_match"
+          }
         }
-      }
-    ]
-  }
-},
+      ]
+    }
+  },
   "placement": [
     {
       "type": "minecraft:count",

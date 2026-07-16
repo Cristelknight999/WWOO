@@ -1,69 +1,38 @@
 {
   "feature": {
-    "type": "minecraft:flower",
+    "type": "minecraft:simple_block",
     "config": {
-      "tries": 64,
-      "xz_spread": 7,
-      "y_spread": 3,
-      "feature": {
-        "feature": {
-          "type": "minecraft:simple_block",
-          "config": {
-            "to_place": {
-              "type": "minecraft:weighted_state_provider",
-              "entries": [
-                {
-                  "weight": 3,
-                  "data": {
-                    "Name": "minecraft:pink_tulip"
-                  }
-                },
-                {
-                  "weight": 3,
-                  "data": {
-                    "Name": "minecraft:white_tulip"
-                  }
-                },
-                {
-                  "weight": 2,
-                  "data": {
-                    "Name": "minecraft:allium"
-                  }
-                },
-                {
-                  "weight": 1,
-                  "data": {
-                    "Name": "minecraft:oxeye_daisy"
-                  }
-                },
-                {
-                  "weight": 1,
-                  "data": {
-                    "Name": "minecraft:azure_bluet"
-                  }
-                }
-              ]
-            }
-          }
-        },
-        "placement": [
+      "to_place": {
+        "type": "minecraft:weighted_state_provider",
+        "entries": [
           {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "offset": [
-                0,
-                -1,
-                0
-              ],
-              "blocks": "minecraft:grass_block"
+            "weight": 3,
+            "data": {
+              "Name": "minecraft:pink_tulip"
             }
           },
           {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "blocks": "minecraft:air"
+            "weight": 3,
+            "data": {
+              "Name": "minecraft:white_tulip"
+            }
+          },
+          {
+            "weight": 2,
+            "data": {
+              "Name": "minecraft:allium"
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "Name": "minecraft:oxeye_daisy"
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "Name": "minecraft:azure_bluet"
             }
           }
         ]
@@ -81,6 +50,44 @@
     {
       "type": "minecraft:heightmap",
       "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 64
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -7,
+        "max": 7,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": "minecraft:grass_block"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      }
     }
   ]
 }

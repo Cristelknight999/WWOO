@@ -5,50 +5,48 @@
       {
         "chance": 0.35,
         "feature": {
-  "feature": "wythers:vegetation/column/sapling_bamboo",
-  "placement": [
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:would_survive",
-        "state": {
-          "Name": "minecraft:bamboo_sapling"
+          "feature": "wythers:vegetation/column/sapling_bamboo",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:bamboo_sapling"
+                }
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
         }
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:air"
-      }
-    }
-  ]
-}
-
       }
     ],
     "default": {
-  "feature": "wythers:vegetation/column/thin_jungle_bamboo",
-  "placement": [
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:would_survive",
-        "state": {
-          "Name": "minecraft:bamboo_sapling"
+      "feature": "wythers:vegetation/column/thin_jungle_bamboo",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "minecraft:bamboo_sapling"
+            }
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
         }
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:air"
-      }
+      ]
     }
-  ]
-}
-
   }
 }

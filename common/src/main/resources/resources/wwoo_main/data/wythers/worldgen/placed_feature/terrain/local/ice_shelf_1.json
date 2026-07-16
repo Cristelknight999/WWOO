@@ -2,6 +2,7 @@
   "feature": {
     "config": {
       "state_provider": {
+        "type": "minecraft:rule_based_state_provider",
         "fallback": {
           "type": "minecraft:simple_state_provider",
           "state": {
@@ -40,11 +41,11 @@
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
-          "type": "minecraft:matching_blocks",
-          "blocks": [
-            "minecraft:blue_ice"
-          ]
-        }
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:blue_ice"
+        ]
+      }
     },
     {
       "type": "minecraft:block_predicate_filter",

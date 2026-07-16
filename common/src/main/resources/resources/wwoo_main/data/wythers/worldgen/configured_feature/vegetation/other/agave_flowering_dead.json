@@ -83,221 +83,210 @@
             "default": {
               "feature": {
                 "config": {
-                  "tries": 64,
-                  "xz_spread": 2,
-                  "y_spread": 0,
-                  "feature": {
-                    "feature": {
-                      "config": {
-                        "features": [
-                          {
-                            "feature": {
-                              "config": {
-                                "to_place": {
-                                  "type": "minecraft:simple_state_provider",
-                                  "state": {
-                                    "Name": "minecraft:bamboo_pressure_plate",
-                                    "Properties": {
-                                      "powered": "false"
-                                    }
-                                  }
-                                },
-                                "schedule_tick": false
-                              },
-                              "type": "minecraft:simple_block"
-                            },
-                            "placement": [
-                              {
-                                "type": "minecraft:block_predicate_filter",
-                                "predicate": {
-                                  "type": "minecraft:all_of",
-                                  "predicates": [
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        1,
-                                        0,
-                                        0
-                                      ],
-                                      "blocks": [
-                                        "minecraft:stripped_bamboo_block"
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        1,
-                                        1,
-                                        0
-                                      ],
-                                      "blocks": [
-                                        "minecraft:bamboo_fence",
-                                        "minecraft:short_dry_grass"
-                                      ]
-                                    }
-                                  ]
-                                }
+                  "features": [
+                    {
+                      "feature": {
+                        "config": {
+                          "to_place": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:bamboo_pressure_plate",
+                              "Properties": {
+                                "powered": "false"
                               }
-                            ]
+                            }
                           },
-                          {
-                            "feature": {
-                              "config": {
-                                "to_place": {
-                                  "type": "minecraft:simple_state_provider",
-                                  "state": {
-                                    "Name": "minecraft:bamboo_pressure_plate",
-                                    "Properties": {
-                                      "powered": "false"
-                                    }
-                                  }
-                                },
-                                "schedule_tick": false
-                              },
-                              "type": "minecraft:simple_block"
-                            },
-                            "placement": [
+                          "schedule_tick": false
+                        },
+                        "type": "minecraft:simple_block"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
                               {
-                                "type": "minecraft:block_predicate_filter",
-                                "predicate": {
-                                  "type": "minecraft:all_of",
-                                  "predicates": [
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        -1,
-                                        0,
-                                        0
-                                      ],
-                                      "blocks": [
-                                        "minecraft:stripped_bamboo_block"
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        -1,
-                                        1,
-                                        0
-                                      ],
-                                      "blocks": [
-                                        "minecraft:bamboo_fence",
-                                        "minecraft:short_dry_grass"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "feature": {
-                              "config": {
-                                "to_place": {
-                                  "type": "minecraft:simple_state_provider",
-                                  "state": {
-                                    "Name": "minecraft:bamboo_pressure_plate",
-                                    "Properties": {
-                                      "powered": "false"
-                                    }
-                                  }
-                                },
-                                "schedule_tick": false
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:stripped_bamboo_block"
+                                ]
                               },
-                              "type": "minecraft:simple_block"
-                            },
-                            "placement": [
                               {
-                                "type": "minecraft:block_predicate_filter",
-                                "predicate": {
-                                  "type": "minecraft:all_of",
-                                  "predicates": [
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        0,
-                                        0,
-                                        1
-                                      ],
-                                      "blocks": [
-                                        "minecraft:stripped_bamboo_block"
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        0,
-                                        1,
-                                        1
-                                      ],
-                                      "blocks": [
-                                        "minecraft:bamboo_fence",
-                                        "minecraft:short_dry_grass"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "feature": {
-                              "config": {
-                                "to_place": {
-                                  "type": "minecraft:simple_state_provider",
-                                  "state": {
-                                    "Name": "minecraft:bamboo_pressure_plate",
-                                    "Properties": {
-                                      "powered": "false"
-                                    }
-                                  }
-                                },
-                                "schedule_tick": false
-                              },
-                              "type": "minecraft:simple_block"
-                            },
-                            "placement": [
-                              {
-                                "type": "minecraft:block_predicate_filter",
-                                "predicate": {
-                                  "type": "minecraft:all_of",
-                                  "predicates": [
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        0,
-                                        0,
-                                        -1
-                                      ],
-                                      "blocks": [
-                                        "minecraft:stripped_bamboo_block"
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        0,
-                                        1,
-                                        -1
-                                      ],
-                                      "blocks": [
-                                        "minecraft:bamboo_fence",
-                                        "minecraft:short_dry_grass"
-                                      ]
-                                    }
-                                  ]
-                                }
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:bamboo_fence",
+                                  "minecraft:short_dry_grass"
+                                ]
                               }
                             ]
                           }
-                        ]
-                      },
-                      "type": "minecraft:simple_random_selector"
+                        }
+                      ]
                     },
-                    "placement": []
-                  }
+                    {
+                      "feature": {
+                        "config": {
+                          "to_place": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:bamboo_pressure_plate",
+                              "Properties": {
+                                "powered": "false"
+                              }
+                            }
+                          },
+                          "schedule_tick": false
+                        },
+                        "type": "minecraft:simple_block"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:stripped_bamboo_block"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:bamboo_fence",
+                                  "minecraft:short_dry_grass"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "feature": {
+                        "config": {
+                          "to_place": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:bamboo_pressure_plate",
+                              "Properties": {
+                                "powered": "false"
+                              }
+                            }
+                          },
+                          "schedule_tick": false
+                        },
+                        "type": "minecraft:simple_block"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:stripped_bamboo_block"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:bamboo_fence",
+                                  "minecraft:short_dry_grass"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "feature": {
+                        "config": {
+                          "to_place": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:bamboo_pressure_plate",
+                              "Properties": {
+                                "powered": "false"
+                              }
+                            }
+                          },
+                          "schedule_tick": false
+                        },
+                        "type": "minecraft:simple_block"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:stripped_bamboo_block"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:bamboo_fence",
+                                  "minecraft:short_dry_grass"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 },
-                "type": "minecraft:random_patch"
+                "type": "minecraft:simple_random_selector"
               },
               "placement": [
                 {
@@ -307,6 +296,23 @@
                     "blocks": [
                       "minecraft:stripped_bamboo_block"
                     ]
+                  }
+                },
+                {
+                  "type": "minecraft:count",
+                  "count": 64
+                },
+                {
+                  "type": "minecraft:random_offset",
+                  "xz_spread": {
+                    "type": "minecraft:trapezoid",
+                    "min": -2,
+                    "max": 2,
+                    "plateau": 0
+                  },
+                  "y_spread": {
+                    "type": "minecraft:constant",
+                    "value": 0
                   }
                 }
               ]

@@ -12,19 +12,12 @@
                   "feature": {
                     "config": {
                       "ignore_vines": true,
-                      "force_dirt": false,
                       "minimum_size": {
                         "type": "minecraft:two_layers_feature_size",
                         "min_clipped_height": 10,
                         "limit": 1,
                         "lower_size": 0,
                         "upper_size": 2
-                      },
-                      "dirt_provider": {
-                        "type": "minecraft:simple_state_provider",
-                        "state": {
-                          "Name": "minecraft:rooted_dirt"
-                        }
                       },
                       "trunk_provider": {
                         "type": "minecraft:simple_state_provider",
@@ -365,7 +358,27 @@
                           "radius": 1,
                           "tries": 75
                         }
-                      ]
+                      ],
+                      "below_trunk_provider": {
+                        "type": "minecraft:rule_based_state_provider",
+                        "rules": [
+                          {
+                            "if_true": {
+                              "type": "minecraft:not",
+                              "predicate": {
+                                "type": "minecraft:matching_block_tag",
+                                "tag": "minecraft:cannot_replace_below_tree_trunk"
+                              }
+                            },
+                            "then": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:rooted_dirt"
+                              }
+                            }
+                          }
+                        ]
+                      }
                     },
                     "type": "minecraft:tree"
                   },
@@ -386,261 +399,250 @@
             "default": {
               "feature": {
                 "config": {
-                  "tries": 64,
-                  "xz_spread": 2,
-                  "y_spread": 0,
-                  "feature": {
-                    "feature": {
-                      "config": {
-                        "features": [
-                          {
-                            "feature": {
-                              "config": {
-                                "direction": "down",
-                                "allowed_placement": {
-                                  "type": "minecraft:true"
-                                },
-                                "prioritize_tip": true,
-                                "layers": [
-                                  {
-                                    "height": {
-                                      "type": "minecraft:uniform",
-                                      "min_inclusive": 3,
-                                      "max_inclusive": 4
-                                    },
-                                    "provider": {
-                                      "type": "minecraft:simple_state_provider",
-                                      "state": {
-                                        "Name": "minecraft:mangrove_leaves"
-                                      }
-                                    }
-                                  }
+                  "features": [
+                    {
+                      "feature": {
+                        "config": {
+                          "direction": "down",
+                          "allowed_placement": {
+                            "type": "minecraft:true"
+                          },
+                          "prioritize_tip": true,
+                          "layers": [
+                            {
+                              "height": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 3,
+                                "max_inclusive": 4
+                              },
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:mangrove_leaves"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": "minecraft:block_column"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:environment_scan",
+                          "direction_of_search": "up",
+                          "max_steps": 10,
+                          "target_condition": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea_leaves"
                                 ]
                               },
-                              "type": "minecraft:block_column"
-                            },
-                            "placement": [
                               {
-                                "type": "minecraft:environment_scan",
-                                "direction_of_search": "up",
-                                "max_steps": 10,
-                                "target_condition": {
-                                  "type": "minecraft:all_of",
-                                  "predicates": [
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        0,
-                                        1,
-                                        0
-                                      ],
-                                      "blocks": [
-                                        "minecraft:azalea_leaves"
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        0,
-                                        0,
-                                        0
-                                      ],
-                                      "blocks": [
-                                        "minecraft:air",
-                                        "minecraft:leaf_litter"
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:any_of",
-                                      "predicates": [
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            1,
-                                            0,
-                                            1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:mangrove_wood"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            1,
-                                            0,
-                                            -1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:mangrove_wood"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            -1,
-                                            0,
-                                            1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:mangrove_wood"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            -1,
-                                            0,
-                                            -1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:mangrove_wood"
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "allowed_search_condition": {
-                                  "type": "minecraft:matching_blocks",
-                                  "blocks": [
-                                    "minecraft:air",
-                                    "minecraft:leaf_litter",
-                                    "minecraft:short_grass",
-                                    "minecraft:tall_grass",
-                                    "minecraft:short_dry_grass",
-                                    "minecraft:tall_dry_grass"
-                                  ]
-                                }
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air",
+                                  "minecraft:leaf_litter"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      0,
+                                      1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:mangrove_wood"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      0,
+                                      -1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:mangrove_wood"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      0,
+                                      1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:mangrove_wood"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      0,
+                                      -1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:mangrove_wood"
+                                    ]
+                                  }
+                                ]
                               }
                             ]
                           },
-                          {
-                            "feature": {
-                              "config": {
-                                "direction": "down",
-                                "allowed_placement": {
-                                  "type": "minecraft:true"
-                                },
-                                "prioritize_tip": true,
-                                "layers": [
-                                  {
-                                    "height": {
-                                      "type": "minecraft:uniform",
-                                      "min_inclusive": 6,
-                                      "max_inclusive": 7
-                                    },
-                                    "provider": {
-                                      "type": "minecraft:simple_state_provider",
-                                      "state": {
-                                        "Name": "minecraft:mangrove_leaves"
-                                      }
-                                    }
-                                  }
-                                ]
-                              },
-                              "type": "minecraft:block_column"
-                            },
-                            "placement": [
-                              {
-                                "type": "minecraft:environment_scan",
-                                "direction_of_search": "up",
-                                "max_steps": 10,
-                                "target_condition": {
-                                  "type": "minecraft:all_of",
-                                  "predicates": [
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        0,
-                                        1,
-                                        0
-                                      ],
-                                      "blocks": [
-                                        "minecraft:azalea_leaves"
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:matching_blocks",
-                                      "offset": [
-                                        0,
-                                        0,
-                                        0
-                                      ],
-                                      "blocks": [
-                                        "minecraft:air",
-                                        "minecraft:leaf_litter"
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:any_of",
-                                      "predicates": [
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            1,
-                                            0,
-                                            0
-                                          ],
-                                          "blocks": [
-                                            "minecraft:mangrove_wood"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            0,
-                                            0,
-                                            1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:mangrove_wood"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            0,
-                                            0,
-                                            -1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:mangrove_wood"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            -1,
-                                            0,
-                                            0
-                                          ],
-                                          "blocks": [
-                                            "minecraft:mangrove_wood"
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "allowed_search_condition": {
-                                  "type": "minecraft:matching_blocks",
-                                  "blocks": [
-                                    "minecraft:air",
-                                    "minecraft:leaf_litter"
-                                  ]
-                                }
-                              }
+                          "allowed_search_condition": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": [
+                              "minecraft:air",
+                              "minecraft:leaf_litter",
+                              "minecraft:short_grass",
+                              "minecraft:tall_grass",
+                              "minecraft:short_dry_grass",
+                              "minecraft:tall_dry_grass"
                             ]
                           }
-                        ]
-                      },
-                      "type": "minecraft:simple_random_selector"
+                        }
+                      ]
                     },
-                    "placement": []
-                  }
+                    {
+                      "feature": {
+                        "config": {
+                          "direction": "down",
+                          "allowed_placement": {
+                            "type": "minecraft:true"
+                          },
+                          "prioritize_tip": true,
+                          "layers": [
+                            {
+                              "height": {
+                                "type": "minecraft:uniform",
+                                "min_inclusive": 6,
+                                "max_inclusive": 7
+                              },
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:mangrove_leaves"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": "minecraft:block_column"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:environment_scan",
+                          "direction_of_search": "up",
+                          "max_steps": 10,
+                          "target_condition": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:azalea_leaves"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:air",
+                                  "minecraft:leaf_litter"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      0,
+                                      0
+                                    ],
+                                    "blocks": [
+                                      "minecraft:mangrove_wood"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:mangrove_wood"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      -1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:mangrove_wood"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      0,
+                                      0
+                                    ],
+                                    "blocks": [
+                                      "minecraft:mangrove_wood"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          "allowed_search_condition": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": [
+                              "minecraft:air",
+                              "minecraft:leaf_litter"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 },
-                "type": "minecraft:random_patch"
+                "type": "minecraft:simple_random_selector"
               },
               "placement": [
                 {
@@ -650,6 +652,23 @@
                     "blocks": [
                       "minecraft:mangrove_wood"
                     ]
+                  }
+                },
+                {
+                  "type": "minecraft:count",
+                  "count": 64
+                },
+                {
+                  "type": "minecraft:random_offset",
+                  "xz_spread": {
+                    "type": "minecraft:trapezoid",
+                    "min": -2,
+                    "max": 2,
+                    "plateau": 0
+                  },
+                  "y_spread": {
+                    "type": "minecraft:constant",
+                    "value": 0
                   }
                 }
               ]

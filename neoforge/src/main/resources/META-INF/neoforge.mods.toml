@@ -1,11 +1,11 @@
 modLoader="javafml" #mandatory
-loaderVersion="${neo_loader_version_range}" #mandatory
-license="${mod_license}"
+loaderVersion="${neoforge_loader_version_range}" #mandatory
+license="${license}"
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
 
 [[mods]] #mandatory
 modId="${mod_id}" #mandatory
-version="${mod_version}" #mandatory
+version="${version}" #mandatory
 
 displayName="${mod_name}"
 authors="William Wythers, Cristelknight"
@@ -21,12 +21,12 @@ logoFile="pack.png"
 # IMPORTANT NOTE: this is NOT an instruction as to which environments (CLIENT or DEDICATED SERVER) your mod loads on. Your mod should load (and maybe do nothing!) whereever it finds itself.
 displayTest="IGNORE_ALL_VERSION"
 
-description= '''${mod_description}'''
+description= '''${description}'''
 
 [[dependencies.${mod_id}]]
 modId="neoforge"
 type="required"
-versionRange="${neo_version_range}"
+versionRange="${neoforge_version_range}"
 ordering="NONE"
 side="BOTH"
 

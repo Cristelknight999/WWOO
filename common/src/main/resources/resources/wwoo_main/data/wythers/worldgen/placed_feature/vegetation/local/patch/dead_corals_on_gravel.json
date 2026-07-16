@@ -1,5 +1,32 @@
 {
-  "feature": "wythers:vegetation/patch_dead_corals_on_gravel",
+  "feature": {
+    "type": "minecraft:simple_block",
+    "config": {
+      "to_place": {
+        "type": "minecraft:weighted_state_provider",
+        "entries": [
+          {
+            "weight": 1,
+            "data": {
+              "Name": "minecraft:dead_brain_coral",
+              "Properties": {
+                "waterlogged": "false"
+              }
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "Name": "minecraft:dead_fire_coral",
+              "Properties": {
+                "waterlogged": "false"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
   "placement": [
     {
       "type": "minecraft:in_square"
@@ -10,6 +37,46 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 32
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -7,
+        "max": 7,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:gravel"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      }
     }
   ]
 }

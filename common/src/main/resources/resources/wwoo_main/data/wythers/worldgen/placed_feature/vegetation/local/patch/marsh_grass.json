@@ -5,21 +5,130 @@
         {
           "chance": 0.2,
           "feature": {
-            "feature": "minecraft:patch_bush",
-            "placement": []
+            "feature": "minecraft:bush",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 24
+              },
+              {
+                "type": "minecraft:random_offset",
+                "xz_spread": {
+                  "type": "minecraft:trapezoid",
+                  "max": 5,
+                  "min": -5,
+                  "plateau": 0
+                },
+                "y_spread": {
+                  "type": "minecraft:trapezoid",
+                  "max": 3,
+                  "min": -3,
+                  "plateau": 0
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:matching_block_tag",
+                  "tag": "minecraft:air"
+                }
+              }
+            ]
           }
         },
         {
           "chance": 0.1,
           "feature": {
-            "feature": "minecraft:patch_firefly_bush",
+            "feature": "minecraft:firefly_bush",
             "placement": []
           }
         }
       ],
       "default": {
-        "feature": "wythers:vegetation/patch/grass_marsh",
-        "placement": []
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 0,
+                  "data": {
+                    "Name": "minecraft:short_grass"
+                  }
+                },
+                {
+                  "weight": 6,
+                  "data": {
+                    "Name": "minecraft:tall_grass"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "minecraft:dead_bush"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "bush"
+                  }
+                },
+                {
+                  "weight": 0,
+                  "data": {
+                    "Name": "minecraft:firefly_bush"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 32
+          },
+          {
+            "type": "minecraft:random_offset",
+            "xz_spread": {
+              "type": "minecraft:trapezoid",
+              "min": -7,
+              "max": 7,
+              "plateau": 0
+            },
+            "y_spread": {
+              "type": "minecraft:trapezoid",
+              "min": -3,
+              "max": 3,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -1,
+                0
+              ],
+              "blocks": [
+                "dirt",
+                "minecraft:grass_block",
+                "rooted_dirt"
+              ]
+            }
+          }
+        ]
       }
     },
     "type": "minecraft:random_selector"

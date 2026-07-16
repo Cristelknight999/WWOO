@@ -7,44 +7,44 @@
           "feature": {
             "feature": "wythers:vegetation/patch/floating_leaves_with_pink_petals",
             "placement": [
-            {
-              "type": "minecraft:block_predicate_filter",
-              "predicate": {
-                "type": "minecraft:not",
+              {
+                "type": "minecraft:block_predicate_filter",
                 "predicate": {
-                  "type": "minecraft:matching_fluids",
-                  "offset": [
-                    0,
-                    -4,
-                    0
-                  ],
-                  "fluids": "minecraft:water"
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_fluids",
+                    "offset": [
+                      0,
+                      -4,
+                      0
+                    ],
+                    "fluids": "minecraft:water"
+                  }
                 }
               }
-            }
-          ]
+            ]
           }
         }
       ],
       "default": {
         "feature": "wythers:vegetation/patch/floating_leaves_with_pink_petals",
         "placement": [
-            {
-              "type": "minecraft:block_predicate_filter",
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:not",
               "predicate": {
-                "type": "minecraft:not",
-                "predicate": {
-                  "type": "minecraft:matching_fluids",
-                  "offset": [
-                    0,
-                    -6,
-                    0
-                  ],
-                  "fluids": "minecraft:water"
-                }
+                "type": "minecraft:matching_fluids",
+                "offset": [
+                  0,
+                  -6,
+                  0
+                ],
+                "fluids": "minecraft:water"
               }
             }
-          ]
+          }
+        ]
       }
     },
     "type": "minecraft:random_selector"

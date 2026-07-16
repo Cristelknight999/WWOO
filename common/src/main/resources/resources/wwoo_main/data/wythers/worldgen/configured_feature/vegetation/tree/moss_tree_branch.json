@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      "wythers:tree/mosswood/branches"
+    ]
+  }
+}

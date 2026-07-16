@@ -108,13 +108,6 @@
       }
     ],
     "ignore_vines": true,
-    "force_dirt": false,
-    "dirt_provider": {
-      "state": {
-        "Name": "minecraft:air"
-      },
-      "type": "minecraft:simple_state_provider"
-    },
     "minimum_size": {
       "limit": 0,
       "lower_size": 0,
@@ -152,6 +145,10 @@
       "offset": 0,
       "height": 1,
       "type": "minecraft:blob_foliage_placer"
+    },
+    "below_trunk_provider": {
+      "type": "minecraft:rule_based_state_provider",
+      "rules": []
     }
   },
   "type": "minecraft:tree"

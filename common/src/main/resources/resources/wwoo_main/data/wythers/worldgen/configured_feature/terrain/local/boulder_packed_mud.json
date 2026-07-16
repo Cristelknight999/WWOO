@@ -28,7 +28,7 @@
               {
                 "target": {
                   "predicate_type": "minecraft:tag_match",
-                  "tag": "minecraft:dirt"
+                  "tag": "minecraft:substrate_overworld"
                 },
                 "state": {
                   "Name": "minecraft:packed_mud"
@@ -67,7 +67,7 @@
               {
                 "target": {
                   "predicate_type": "minecraft:tag_match",
-                  "tag": "minecraft:dirt"
+                  "tag": "minecraft:substrate_overworld"
                 },
                 "state": {
                   "Name": "minecraft:packed_mud"
@@ -106,7 +106,7 @@
               {
                 "target": {
                   "predicate_type": "minecraft:tag_match",
-                  "tag": "minecraft:dirt"
+                  "tag": "minecraft:substrate_overworld"
                 },
                 "state": {
                   "Name": "minecraft:packed_mud"
@@ -145,7 +145,7 @@
               {
                 "target": {
                   "predicate_type": "minecraft:tag_match",
-                  "tag": "minecraft:dirt"
+                  "tag": "minecraft:substrate_overworld"
                 },
                 "state": {
                   "Name": "minecraft:packed_mud"
@@ -184,7 +184,7 @@
               {
                 "target": {
                   "predicate_type": "minecraft:tag_match",
-                  "tag": "minecraft:dirt"
+                  "tag": "minecraft:substrate_overworld"
                 },
                 "state": {
                   "Name": "minecraft:packed_mud"

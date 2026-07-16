@@ -1,5 +1,32 @@
 {
-  "feature": "wythers:vegetation/patch/grass_sudd_marsh",
+  "feature": {
+    "type": "minecraft:simple_block",
+    "config": {
+      "to_place": {
+        "type": "minecraft:weighted_state_provider",
+        "entries": [
+          {
+            "weight": 15,
+            "data": {
+              "Name": "minecraft:short_grass"
+            }
+          },
+          {
+            "weight": 15,
+            "data": {
+              "Name": "bush"
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "Name": "minecraft:firefly_bush"
+            }
+          }
+        ]
+      }
+    }
+  },
   "placement": [
     {
       "type": "minecraft:height_range",
@@ -43,11 +70,49 @@
           -1,
           0
         ],
-        "tag": "minecraft:dirt"
+        "tag": "minecraft:supports_vegetation"
       }
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 64
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -7,
+        "max": 7,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:constant",
+        "value": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:moss_block"
+        ]
+      }
     }
   ]
 }

@@ -1,52 +1,15 @@
 {
   "feature": {
     "config": {
-      "tries": 32,
-      "xz_spread": 3,
-      "y_spread": 0,
-      "feature": {
-        "feature": {
-          "config": {
-            "to_place": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:tall_grass"
-              }
-            },
-            "schedule_tick": true
-          },
-          "type": "minecraft:simple_block"
-        },
-        "placement": [
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:all_of",
-              "predicates": [
-                {
-                  "type": "minecraft:matching_blocks",
-                  "blocks": [
-                    "air"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    -1,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:packed_mud"
-                  ]
-                }
-              ]
-            }
-          }
-        ]
-      }
+      "to_place": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:tall_grass"
+        }
+      },
+      "schedule_tick": true
     },
-    "type": "minecraft:random_patch"
+    "type": "minecraft:simple_block"
   },
   "placement": [
     {
@@ -102,6 +65,48 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 32
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:constant",
+        "value": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "air"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:packed_mud"
+            ]
+          }
+        ]
+      }
     }
   ]
 }

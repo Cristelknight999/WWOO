@@ -22,16 +22,16 @@
                 ]
               },
               {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    2,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:sculk"
-                  ]
-                }
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  2,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:sculk"
+                ]
+              }
             ]
           }
         ]

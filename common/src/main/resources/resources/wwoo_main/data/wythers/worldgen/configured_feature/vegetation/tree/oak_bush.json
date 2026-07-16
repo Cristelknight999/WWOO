@@ -2,13 +2,6 @@
   "config": {
     "decorators": [],
     "ignore_vines": false,
-    "force_dirt": true,
-    "dirt_provider": {
-      "state": {
-        "Name": "minecraft:dirt"
-      },
-      "type": "minecraft:simple_state_provider"
-    },
     "minimum_size": {
       "limit": 0,
       "lower_size": 0,
@@ -46,6 +39,12 @@
       "height_rand_a": 0,
       "height_rand_b": 0,
       "type": "minecraft:straight_trunk_placer"
+    },
+    "below_trunk_provider": {
+      "state": {
+        "Name": "minecraft:dirt"
+      },
+      "type": "minecraft:simple_state_provider"
     }
   },
   "type": "minecraft:tree"

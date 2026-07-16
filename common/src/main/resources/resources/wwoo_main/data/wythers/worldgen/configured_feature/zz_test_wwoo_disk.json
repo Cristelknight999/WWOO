@@ -1,0 +1,119 @@
+{
+ "type": "minecraft:disk",
+ "config": {
+  "state_provider": {
+   "type": "minecraft:rule_based_state_provider",
+   "fallback": {
+    "type": "minecraft:weighted_state_provider",
+    "entries": [
+     {
+      "weight": 4,
+      "data": {
+       "Name": "rooted_dirt"
+      }
+     },
+     {
+      "weight": 1,
+      "data": {
+       "Name": "coarse_dirt"
+      }
+     }
+    ]
+   },
+   "rules": [
+    {
+     "if_true": {
+      "type": "minecraft:not",
+      "predicate": {
+       "type": "minecraft:matching_blocks",
+       "blocks": [
+        "minecraft:grass_block"
+       ]
+      }
+     },
+     "then": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+       "Name": "rooted_dirt"
+      }
+     }
+    }
+   ]
+  },
+  "radius": {
+   "type": "minecraft:uniform",
+   "min_inclusive": 3,
+   "max_inclusive": 5
+  },
+  "half_height": 3,
+  "target": {
+   "type": "minecraft:any_of",
+   "predicates": [
+    {
+     "type": "minecraft:all_of",
+     "predicates": [
+      {
+       "type": "minecraft:matching_blocks",
+       "blocks": [
+        "minecraft:grass_block"
+       ]
+      },
+      {
+       "type": "minecraft:matching_blocks",
+       "offset": [
+        0,
+        -1,
+        0
+       ],
+       "blocks": [
+        "dirt"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "minecraft:all_of",
+     "predicates": [
+      {
+       "type": "minecraft:any_of",
+       "predicates": [
+        {
+         "type": "minecraft:matching_blocks",
+         "offset": [
+          0,
+          1,
+          0
+         ],
+         "blocks": [
+          "minecraft:grass_block"
+         ]
+        },
+        {
+         "type": "minecraft:matching_block_tag",
+         "offset": [
+          0,
+          2,
+          0
+         ],
+         "tag": "wythers:air_and_plants"
+        }
+       ]
+      },
+      {
+       "type": "minecraft:any_of",
+       "predicates": [
+        {
+         "type": "minecraft:matching_blocks",
+         "blocks": [
+          "minecraft:dirt",
+          "minecraft:grass_block"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

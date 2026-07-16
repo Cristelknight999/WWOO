@@ -3,6 +3,7 @@
     "type": "minecraft:disk",
     "config": {
       "state_provider": {
+        "type": "minecraft:rule_based_state_provider",
         "fallback": {
           "type": "minecraft:simple_state_provider",
           "state": {
@@ -145,7 +146,7 @@
                           0,
                           0
                         ],
-                        "tag": "minecraft:dirt"
+                        "tag": "minecraft:substrate_overworld"
                       },
                       {
                         "type": "minecraft:matching_block_tag",
@@ -177,7 +178,7 @@
                           0,
                           0
                         ],
-                        "tag": "minecraft:dirt"
+                        "tag": "minecraft:substrate_overworld"
                       },
                       {
                         "type": "minecraft:matching_block_tag",
@@ -209,7 +210,7 @@
                           0,
                           1
                         ],
-                        "tag": "minecraft:dirt"
+                        "tag": "minecraft:substrate_overworld"
                       },
                       {
                         "type": "minecraft:matching_block_tag",
@@ -241,7 +242,7 @@
                           0,
                           -1
                         ],
-                        "tag": "minecraft:dirt"
+                        "tag": "minecraft:substrate_overworld"
                       },
                       {
                         "type": "minecraft:matching_block_tag",
@@ -272,7 +273,7 @@
               },
               {
                 "type": "minecraft:matching_block_tag",
-                "tag": "minecraft:dirt"
+                "tag": "minecraft:substrate_overworld"
               }
             ]
           },

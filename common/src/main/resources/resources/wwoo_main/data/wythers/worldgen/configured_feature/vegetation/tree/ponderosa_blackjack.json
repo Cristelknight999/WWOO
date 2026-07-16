@@ -13,12 +13,6 @@
                     "type": "minecraft:tree",
                     "config": {
                       "decorators": [],
-                      "dirt_provider": {
-                        "type": "minecraft:simple_state_provider",
-                        "state": {
-                          "Name": "minecraft:dirt"
-                        }
-                      },
                       "foliage_placer": {
                         "type": "minecraft:mega_pine_foliage_placer",
                         "offset": 0,
@@ -40,7 +34,6 @@
                           }
                         }
                       },
-                      "force_dirt": false,
                       "ignore_vines": true,
                       "minimum_size": {
                         "type": "minecraft:two_layers_feature_size",
@@ -62,6 +55,26 @@
                             "axis": "y"
                           }
                         }
+                      },
+                      "below_trunk_provider": {
+                        "type": "minecraft:rule_based_state_provider",
+                        "rules": [
+                          {
+                            "if_true": {
+                              "type": "minecraft:not",
+                              "predicate": {
+                                "type": "minecraft:matching_block_tag",
+                                "tag": "minecraft:cannot_replace_below_tree_trunk"
+                              }
+                            },
+                            "then": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:dirt"
+                              }
+                            }
+                          }
+                        ]
                       }
                     }
                   },
@@ -74,12 +87,6 @@
                 "type": "minecraft:tree",
                 "config": {
                   "decorators": [],
-                  "dirt_provider": {
-                    "type": "minecraft:simple_state_provider",
-                    "state": {
-                      "Name": "minecraft:dirt"
-                    }
-                  },
                   "foliage_placer": {
                     "type": "minecraft:pine_foliage_placer",
                     "offset": 0,
@@ -101,7 +108,6 @@
                       }
                     }
                   },
-                  "force_dirt": false,
                   "ignore_vines": true,
                   "minimum_size": {
                     "type": "minecraft:two_layers_feature_size",
@@ -123,6 +129,26 @@
                         "axis": "y"
                       }
                     }
+                  },
+                  "below_trunk_provider": {
+                    "type": "minecraft:rule_based_state_provider",
+                    "rules": [
+                      {
+                        "if_true": {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "minecraft:cannot_replace_below_tree_trunk"
+                          }
+                        },
+                        "then": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:dirt"
+                          }
+                        }
+                      }
+                    ]
                   }
                 }
               },

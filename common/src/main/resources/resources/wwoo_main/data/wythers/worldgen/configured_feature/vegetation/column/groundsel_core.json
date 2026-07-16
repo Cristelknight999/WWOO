@@ -9,36 +9,36 @@
     },
     "prioritize_tip": false,
     "layers": [
-                        {
-                          "height": {
-                            "type": "minecraft:uniform",
-                            "min_inclusive": 2,
-                            "max_inclusive": 5
-                          },
-                          "provider": {
-                            "type": "minecraft:simple_state_provider",
-                            "state": {
-                              "Name": "minecraft:mangrove_wood",
-                              "Properties": {
-                                "axis": "y"
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "height": {
-                            "type": "minecraft:uniform",
-                            "min_inclusive": 1,
-                            "max_inclusive": 1
-                          },
-                          "provider": {
-                            "type": "minecraft:simple_state_provider",
-                            "state": {
-                              "Name": "minecraft:mangrove_roots"
-                            }
-                          }
-                        }
-                      ]
+      {
+        "height": {
+          "type": "minecraft:uniform",
+          "min_inclusive": 2,
+          "max_inclusive": 5
+        },
+        "provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:mangrove_wood",
+            "Properties": {
+              "axis": "y"
+            }
+          }
+        }
+      },
+      {
+        "height": {
+          "type": "minecraft:uniform",
+          "min_inclusive": 1,
+          "max_inclusive": 1
+        },
+        "provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:mangrove_roots"
+          }
+        }
+      }
+    ]
   },
   "type": "minecraft:block_column"
 }

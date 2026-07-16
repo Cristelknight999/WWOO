@@ -1,96 +1,21 @@
 {
   "feature": {
     "config": {
-      "tries": 5,
-      "xz_spread": 8,
-      "y_spread": 8,
-      "feature": {
-        "feature": {
-          "config": {
-            "features": [
-              {
-                "chance": 0.3,
-                "feature": {
-                  "feature": "wythers:vegetation/bush/birch",
-                  "placement": []
-                }
-              }
-            ],
-            "default": {
-              "feature": "wythers:vegetation/bush/desert",
-              "placement": []
-            }
-          },
-          "type": "minecraft:random_selector"
-        },
-        "placement": [
-          {
-            "type": "minecraft:heightmap",
-            "heightmap": "MOTION_BLOCKING"
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "offset": [
-                0,
-                -1,
-                0
-              ],
-              "blocks": "minecraft:sand"
-            }
-          },
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:not",
-              "predicate": {
-                "type": "minecraft:any_of",
-                "predicates": [
-                  {
-                    "type": "minecraft:matching_blocks",
-                    "offset": [
-                      1,
-                      0,
-                      0
-                    ],
-                    "blocks": "minecraft:sand"
-                  },
-                  {
-                    "type": "minecraft:matching_blocks",
-                    "offset": [
-                      -1,
-                      0,
-                      0
-                    ],
-                    "blocks": "minecraft:sand"
-                  },
-                  {
-                    "type": "minecraft:matching_blocks",
-                    "offset": [
-                      0,
-                      0,
-                      1
-                    ],
-                    "blocks": "minecraft:sand"
-                  },
-                  {
-                    "type": "minecraft:matching_blocks",
-                    "offset": [
-                      0,
-                      0,
-                      -1
-                    ],
-                    "blocks": "minecraft:sand"
-                  }
-                ]
-              }
-            }
+      "features": [
+        {
+          "chance": 0.3,
+          "feature": {
+            "feature": "wythers:vegetation/bush/birch",
+            "placement": []
           }
-        ]
+        }
+      ],
+      "default": {
+        "feature": "wythers:vegetation/bush/desert",
+        "placement": []
       }
     },
-    "type": "minecraft:random_patch"
+    "type": "minecraft:random_selector"
   },
   "placement": [
     {
@@ -139,6 +64,88 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 5
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -8,
+        "max": 8,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -8,
+        "max": 8,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": "minecraft:sand"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "blocks": "minecraft:sand"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "blocks": "minecraft:sand"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "blocks": "minecraft:sand"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                -1
+              ],
+              "blocks": "minecraft:sand"
+            }
+          ]
+        }
+      }
     }
   ]
 }

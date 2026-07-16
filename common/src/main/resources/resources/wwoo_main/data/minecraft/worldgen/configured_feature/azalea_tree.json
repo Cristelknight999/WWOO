@@ -9,12 +9,6 @@
                 "feature": {
                   "config": {
                     "decorators": [],
-                    "dirt_provider": {
-                      "type": "minecraft:simple_state_provider",
-                      "state": {
-                        "Name": "minecraft:rooted_dirt"
-                      }
-                    },
                     "foliage_placer": {
                       "type": "minecraft:random_spread_foliage_placer",
                       "foliage_height": 2,
@@ -49,7 +43,6 @@
                         }
                       ]
                     },
-                    "force_dirt": true,
                     "ignore_vines": false,
                     "minimum_size": {
                       "type": "minecraft:two_layers_feature_size",
@@ -76,6 +69,12 @@
                         "Properties": {
                           "axis": "y"
                         }
+                      }
+                    },
+                    "below_trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:rooted_dirt"
                       }
                     }
                   },

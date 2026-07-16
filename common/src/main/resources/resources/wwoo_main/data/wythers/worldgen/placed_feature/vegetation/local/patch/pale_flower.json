@@ -1,57 +1,24 @@
 {
   "feature": {
-    "type": "minecraft:random_patch",
+    "type": "minecraft:simple_block",
     "config": {
-      "feature": {
-        "feature": {
-          "type": "minecraft:simple_block",
-          "config": {
-            "to_place": {
-              "type": "minecraft:weighted_state_provider",
-              "entries": [
-                {
-                  "data": {
-                    "Name": "minecraft:closed_eyeblossom"
-                  },
-                  "weight": 3
-                },
-                {
-                  "data": {
-                    "Name": "minecraft:pale_oak_sapling"
-                  },
-                  "weight": 1
-                }
-              ]
-            }
-          }
-        },
-        "placement": [
+      "to_place": {
+        "type": "minecraft:weighted_state_provider",
+        "entries": [
           {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:all_of",
-              "predicates": [
-                {
-                  "type": "minecraft:matching_blocks",
-                  "blocks": "minecraft:cave_air"
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "blocks": "minecraft:mycelium",
-                  "offset": [
-                    0,
-                    -1,
-                    0
-                  ]
-                }
-              ]
-            }
+            "data": {
+              "Name": "minecraft:closed_eyeblossom"
+            },
+            "weight": 3
+          },
+          {
+            "data": {
+              "Name": "minecraft:pale_oak_sapling"
+            },
+            "weight": 1
           }
         ]
-      },
-      "tries": 16,
-      "xz_spread": 4,
-      "y_spread": 3
+      }
     }
   },
   "placement": [
@@ -68,6 +35,46 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 16
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -4,
+        "max": 4,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:cave_air"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:mycelium",
+            "offset": [
+              0,
+              -1,
+              0
+            ]
+          }
+        ]
+      }
     }
   ]
 }

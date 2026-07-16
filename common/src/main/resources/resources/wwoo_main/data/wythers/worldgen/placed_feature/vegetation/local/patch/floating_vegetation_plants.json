@@ -1,5 +1,5 @@
 {
-  "feature": "wythers:vegetation/floating_vegetation_plants",
+  "feature": "wythers:vegetation/column/mix_floating_vegetation_plants",
   "placement": [
     {
       "type": "minecraft:noise_based_count",
@@ -42,6 +42,45 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 48
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 62
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "blocks": [
+          "minecraft:azalea_leaves"
+        ]
+      }
     }
   ]
 }

@@ -10,6 +10,7 @@
                 "feature": {
                   "config": {
                     "state_provider": {
+                      "type": "minecraft:rule_based_state_provider",
                       "fallback": {
                         "type": "minecraft:simple_state_provider",
                         "state": {
@@ -151,161 +152,18 @@
               {
                 "feature": {
                   "config": {
-                    "tries": 64,
-                    "xz_spread": 4,
-                    "y_spread": 0,
-                    "feature": {
-                      "feature": {
-                        "config": {
-                          "to_place": {
-                            "type": "minecraft:simple_state_provider",
-                            "state": {
-                              "Name": "light",
-                              "Properties": {
-                                "level": "0",
-                                "waterlogged": "true"
-                              }
-                            }
-                          }
-                        },
-                        "type": "minecraft:simple_block"
-                      },
-                      "placement": [
-                        {
-                          "type": "minecraft:block_predicate_filter",
-                          "predicate": {
-                            "type": "minecraft:all_of",
-                            "predicates": [
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  0,
-                                  1,
-                                  0
-                                ],
-                                "blocks": [
-                                  "air"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "blocks": [
-                                  "sand",
-                                  "minecraft:smooth_sandstone"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  1,
-                                  0,
-                                  0
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "light",
-                                  "minecraft:smooth_sandstone",
-                                  "minecraft:small_dripleaf"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  -1,
-                                  0,
-                                  0
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "light",
-                                  "minecraft:smooth_sandstone",
-                                  "minecraft:small_dripleaf"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  0,
-                                  0,
-                                  1
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "light",
-                                  "minecraft:smooth_sandstone",
-                                  "minecraft:small_dripleaf"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  0,
-                                  0,
-                                  -1
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "light",
-                                  "minecraft:smooth_sandstone",
-                                  "minecraft:small_dripleaf"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:any_of",
-                                "predicates": [
-                                  {
-                                    "type": "minecraft:matching_blocks",
-                                    "offset": [
-                                      1,
-                                      0,
-                                      0
-                                    ],
-                                    "blocks": [
-                                      "light"
-                                    ]
-                                  },
-                                  {
-                                    "type": "minecraft:matching_blocks",
-                                    "offset": [
-                                      -1,
-                                      0,
-                                      0
-                                    ],
-                                    "blocks": [
-                                      "light"
-                                    ]
-                                  },
-                                  {
-                                    "type": "minecraft:matching_blocks",
-                                    "offset": [
-                                      0,
-                                      0,
-                                      1
-                                    ],
-                                    "blocks": [
-                                      "light"
-                                    ]
-                                  },
-                                  {
-                                    "type": "minecraft:matching_blocks",
-                                    "offset": [
-                                      0,
-                                      0,
-                                      -1
-                                    ],
-                                    "blocks": [
-                                      "light"
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
+                    "to_place": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "light",
+                        "Properties": {
+                          "level": "0",
+                          "waterlogged": "true"
                         }
-                      ]
+                      }
                     }
                   },
-                  "type": "minecraft:random_patch"
+                  "type": "minecraft:simple_block"
                 },
                 "placement": [
                   {
@@ -316,6 +174,154 @@
                         "light"
                       ]
                     }
+                  },
+                  {
+                    "type": "minecraft:count",
+                    "count": 64
+                  },
+                  {
+                    "type": "minecraft:random_offset",
+                    "xz_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -4,
+                      "max": 4,
+                      "plateau": 0
+                    },
+                    "y_spread": {
+                      "type": "minecraft:constant",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            1,
+                            0
+                          ],
+                          "blocks": [
+                            "air"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "sand",
+                            "minecraft:smooth_sandstone"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "blocks": [
+                            "sand",
+                            "light",
+                            "minecraft:smooth_sandstone",
+                            "minecraft:small_dripleaf"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            0
+                          ],
+                          "blocks": [
+                            "sand",
+                            "light",
+                            "minecraft:smooth_sandstone",
+                            "minecraft:small_dripleaf"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            1
+                          ],
+                          "blocks": [
+                            "sand",
+                            "light",
+                            "minecraft:smooth_sandstone",
+                            "minecraft:small_dripleaf"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            -1
+                          ],
+                          "blocks": [
+                            "sand",
+                            "light",
+                            "minecraft:smooth_sandstone",
+                            "minecraft:small_dripleaf"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                1,
+                                0,
+                                0
+                              ],
+                              "blocks": [
+                                "light"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                -1,
+                                0,
+                                0
+                              ],
+                              "blocks": [
+                                "light"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                0,
+                                1
+                              ],
+                              "blocks": [
+                                "light"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                0,
+                                -1
+                              ],
+                              "blocks": [
+                                "light"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   }
                 ]
               },
@@ -323,6 +329,7 @@
                 "feature": {
                   "config": {
                     "state_provider": {
+                      "type": "minecraft:rule_based_state_provider",
                       "fallback": {
                         "type": "minecraft:simple_state_provider",
                         "state": {
@@ -357,150 +364,21 @@
               {
                 "feature": {
                   "config": {
-                    "tries": 64,
-                    "xz_spread": 6,
-                    "y_spread": 0,
-                    "feature": {
-                      "feature": {
-                        "config": {
-                          "features": [
-                            {
-                              "chance": 0.3,
-                              "feature": {
-                                "feature": "wythers:vegetation/tree/desert_fan_palm_tall",
-                                "placement": []
-                              }
-                            }
-                          ],
-                          "default": {
-                            "feature": "wythers:vegetation/tree/desert_fan_palm",
-                            "placement": []
-                          }
-                        },
-                        "type": "minecraft:random_selector"
-                      },
-                      "placement": [
-                        {
-                          "type": "minecraft:heightmap",
-                          "heightmap": "MOTION_BLOCKING"
-                        },
-                        {
-                          "type": "minecraft:block_predicate_filter",
-                          "predicate": {
-                            "type": "minecraft:would_survive",
-                            "state": {
-                              "Name": "minecraft:short_dry_grass"
-                            }
-                          }
-                        },
-                        {
-                          "type": "minecraft:block_predicate_filter",
-                          "predicate": {
-                            "type": "minecraft:all_of",
-                            "predicates": [
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  1,
-                                  -1,
-                                  1
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "suspicious_sand"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  1,
-                                  -1,
-                                  0
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "suspicious_sand"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  1,
-                                  -1,
-                                  -1
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "suspicious_sand"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  0,
-                                  -1,
-                                  1
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "suspicious_sand"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  0,
-                                  -1,
-                                  -1
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "suspicious_sand"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  -1,
-                                  -1,
-                                  1
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "suspicious_sand"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  -1,
-                                  -1,
-                                  0
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "suspicious_sand"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  -1,
-                                  -1,
-                                  -1
-                                ],
-                                "blocks": [
-                                  "sand",
-                                  "suspicious_sand"
-                                ]
-                              }
-                            ]
-                          }
+                    "features": [
+                      {
+                        "chance": 0.3,
+                        "feature": {
+                          "feature": "wythers:vegetation/tree/desert_fan_palm_tall",
+                          "placement": []
                         }
-                      ]
+                      }
+                    ],
+                    "default": {
+                      "feature": "wythers:vegetation/tree/desert_fan_palm",
+                      "placement": []
                     }
                   },
-                  "type": "minecraft:random_patch"
+                  "type": "minecraft:random_selector"
                 },
                 "placement": [
                   {
@@ -511,157 +389,161 @@
                         "light"
                       ]
                     }
-                  }
-                ]
-              },
-              {
-                "feature": {
-                  "config": {
-                    "tries": 5,
-                    "xz_spread": 6,
-                    "feature": {
-                      "feature": {
-                        "config": {
-                          "features": [
-                            {
-                              "chance": 0.2,
-                              "feature": {
-                                "feature": "wythers:vegetation/patch/sand_reeds",
-                                "placement": []
-                              }
-                            }
-                          ],
-                          "default": {
-                            "feature": "wythers:vegetation/patch/sand_grass_short",
-                            "placement": []
-                          }
-                        },
-                        "type": "minecraft:random_selector"
-                      },
-                      "placement": [
-                        {
-                          "type": "minecraft:heightmap",
-                          "heightmap": "WORLD_SURFACE_WG"
-                        }
-                      ]
+                  },
+                  {
+                    "type": "minecraft:count",
+                    "count": 64
+                  },
+                  {
+                    "type": "minecraft:random_offset",
+                    "xz_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -6,
+                      "max": 6,
+                      "plateau": 0
+                    },
+                    "y_spread": {
+                      "type": "minecraft:constant",
+                      "value": 0
                     }
                   },
-                  "type": "minecraft:random_patch"
-                },
-                "placement": [
+                  {
+                    "type": "minecraft:heightmap",
+                    "heightmap": "MOTION_BLOCKING"
+                  },
                   {
                     "type": "minecraft:block_predicate_filter",
                     "predicate": {
-                      "type": "minecraft:matching_blocks",
-                      "blocks": [
-                        "light"
-                      ]
+                      "type": "minecraft:would_survive",
+                      "state": {
+                        "Name": "minecraft:short_dry_grass"
+                      }
                     }
-                  }
-                ]
-              },
-              {
-                "feature": {
-                  "config": {
-                    "tries": 8,
-                    "xz_spread": 4,
-                    "y_spread": 0,
-                    "feature": {
-                      "feature": {
-                        "config": {
-                          "features": [
-                            {
-                              "feature": {
-                                "config": {
-                                  "to_place": {
-                                    "type": "minecraft:weighted_state_provider",
-                                    "entries": [
-                                      {
-                                        "weight": 1,
-                                        "data": {
-                                          "Name": "minecraft:small_dripleaf",
-                                          "Properties": {
-                                            "facing": "north",
-                                            "half": "lower",
-                                            "waterlogged": "true"
-                                          }
-                                        }
-                                      },
-                                      {
-                                        "weight": 1,
-                                        "data": {
-                                          "Name": "minecraft:small_dripleaf",
-                                          "Properties": {
-                                            "facing": "south",
-                                            "half": "lower",
-                                            "waterlogged": "true"
-                                          }
-                                        }
-                                      },
-                                      {
-                                        "weight": 1,
-                                        "data": {
-                                          "Name": "minecraft:small_dripleaf",
-                                          "Properties": {
-                                            "facing": "west",
-                                            "half": "lower",
-                                            "waterlogged": "true"
-                                          }
-                                        }
-                                      },
-                                      {
-                                        "weight": 1,
-                                        "data": {
-                                          "Name": "minecraft:small_dripleaf",
-                                          "Properties": {
-                                            "facing": "east",
-                                            "half": "lower",
-                                            "waterlogged": "true"
-                                          }
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  "schedule_tick": true
-                                },
-                                "type": "minecraft:simple_block"
-                              },
-                              "placement": []
-                            }
+                  },
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            -1,
+                            1
+                          ],
+                          "blocks": [
+                            "sand",
+                            "suspicious_sand"
                           ]
                         },
-                        "type": "minecraft:simple_random_selector"
-                      },
-                      "placement": [
                         {
-                          "type": "minecraft:block_predicate_filter",
-                          "predicate": {
-                            "type": "minecraft:all_of",
-                            "predicates": [
-                              {
-                                "type": "minecraft:matching_fluids",
-                                "fluids": [
-                                  "water"
-                                ]
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  0,
-                                  1,
-                                  0
-                                ],
-                                "blocks": [
-                                  "air"
-                                ]
-                              }
-                            ]
-                          }
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "sand",
+                            "suspicious_sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            -1,
+                            -1
+                          ],
+                          "blocks": [
+                            "sand",
+                            "suspicious_sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            1
+                          ],
+                          "blocks": [
+                            "sand",
+                            "suspicious_sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            -1
+                          ],
+                          "blocks": [
+                            "sand",
+                            "suspicious_sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            -1,
+                            1
+                          ],
+                          "blocks": [
+                            "sand",
+                            "suspicious_sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            -1,
+                            0
+                          ],
+                          "blocks": [
+                            "sand",
+                            "suspicious_sand"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            -1,
+                            -1
+                          ],
+                          "blocks": [
+                            "sand",
+                            "suspicious_sand"
+                          ]
                         }
                       ]
                     }
+                  }
+                ]
+              },
+              {
+                "feature": {
+                  "config": {
+                    "features": [
+                      {
+                        "chance": 0.2,
+                        "feature": {
+                          "feature": "wythers:vegetation/patch/sand_reeds",
+                          "placement": []
+                        }
+                      }
+                    ],
+                    "default": {
+                      "feature": "wythers:vegetation/patch/sand_grass_short",
+                      "placement": []
+                    }
                   },
-                  "type": "minecraft:random_patch"
+                  "type": "minecraft:random_selector"
                 },
                 "placement": [
                   {
@@ -670,6 +552,149 @@
                       "type": "minecraft:matching_blocks",
                       "blocks": [
                         "light"
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:count",
+                    "count": 5
+                  },
+                  {
+                    "type": "minecraft:random_offset",
+                    "xz_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -6,
+                      "max": 6,
+                      "plateau": 0
+                    },
+                    "y_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -3,
+                      "max": 3,
+                      "plateau": 0
+                    }
+                  },
+                  {
+                    "type": "minecraft:heightmap",
+                    "heightmap": "WORLD_SURFACE_WG"
+                  }
+                ]
+              },
+              {
+                "feature": {
+                  "config": {
+                    "features": [
+                      {
+                        "feature": {
+                          "config": {
+                            "to_place": {
+                              "type": "minecraft:weighted_state_provider",
+                              "entries": [
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:small_dripleaf",
+                                    "Properties": {
+                                      "facing": "north",
+                                      "half": "lower",
+                                      "waterlogged": "true"
+                                    }
+                                  }
+                                },
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:small_dripleaf",
+                                    "Properties": {
+                                      "facing": "south",
+                                      "half": "lower",
+                                      "waterlogged": "true"
+                                    }
+                                  }
+                                },
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:small_dripleaf",
+                                    "Properties": {
+                                      "facing": "west",
+                                      "half": "lower",
+                                      "waterlogged": "true"
+                                    }
+                                  }
+                                },
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:small_dripleaf",
+                                    "Properties": {
+                                      "facing": "east",
+                                      "half": "lower",
+                                      "waterlogged": "true"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "schedule_tick": true
+                          },
+                          "type": "minecraft:simple_block"
+                        },
+                        "placement": []
+                      }
+                    ]
+                  },
+                  "type": "minecraft:simple_random_selector"
+                },
+                "placement": [
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": [
+                        "light"
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:count",
+                    "count": 8
+                  },
+                  {
+                    "type": "minecraft:random_offset",
+                    "xz_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -4,
+                      "max": 4,
+                      "plateau": 0
+                    },
+                    "y_spread": {
+                      "type": "minecraft:constant",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_fluids",
+                          "fluids": [
+                            "water"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            1,
+                            0
+                          ],
+                          "blocks": [
+                            "air"
+                          ]
+                        }
                       ]
                     }
                   }

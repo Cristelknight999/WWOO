@@ -1,112 +1,52 @@
 plugins {
-    id 'com.gradleup.shadow'
-    id 'com.hypherionmc.modutils.modpublisher'
-}
-
-architectury {
-    platformSetupLoomIde()
-    fabric()
-}
-
-configurations {
-    common {
-        canBeResolved = true
-        canBeConsumed = false
-    }
-    compileClasspath.extendsFrom common
-    runtimeClasspath.extendsFrom common
-    developmentFabric.extendsFrom common
-
-    // Files in this configuration will be bundled into your mod using the Shadow plugin.
-    // Don't use the `shadow` configuration from the plugin itself as it's meant for excluding files.
-    shadowBundle {
-        canBeResolved = true
-        canBeConsumed = false
-    }
+    id 'multiloader-loader'
+    id 'net.fabricmc.fabric-loom'
 }
 
 dependencies {
-    modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
-
-    modImplementation "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_api_version"
-    modImplementation "maven.modrinth:cristel-lib:fabric-${rootProject.minecraft_version}-${rootProject.cristellib_version}"
-
-    common(project(path: ':common', configuration: 'namedElements')) { transitive = false }
-    shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
+    minecraft("com.mojang:minecraft:${minecraft_version}")
+    implementation("net.fabricmc:fabric-loader:${fabric_loader_version}")
+    implementation("net.fabricmc.fabric-api:fabric-api:${fabric_api_version}")
+    implementation "maven.modrinth:cristel-lib:fabric-${minecraft_version}-${cristellib_version}"
+    implementation "blue.endless:jankson:${jankson_version}"
 }
 
-
-shadowJar {
-    configurations = [project.configurations.shadowBundle]
-    archiveClassifier = 'dev-shadow'
+loom {
+    def aw = project(':common').file("src/main/resources/${mod_id}.accesswidener")
+    if (aw.exists()) {
+        accessWidenerPath.set(aw)
+    }
+    runs {
+        client {
+            client()
+            setConfigName('Fabric Client')
+            ideConfigGenerated(true)
+            runDir('runs/client')
+        }
+        server {
+            server()
+            setConfigName('Fabric Server')
+            ideConfigGenerated(true)
+            runDir('runs/server')
+        }
+    }
 }
 
-remapJar {
-    input.set shadowJar.archiveFile
+// Implement mcgradleconventions loader attribute
+def loaderAttribute = Attribute.of('io.github.mcgradleconventions.loader', String)
+['apiElements', 'runtimeElements', 'sourcesElements', /*'javadocElements',*/ 'includeInternal', 'modCompileClasspath'].each { variant ->
+    configurations.named(variant) {
+        attributes {
+            attribute(loaderAttribute, 'fabric')
+        }
+    }
 }
-
-publisher {
-    // Setup the required API keys. You only need to define the keys for
-    // the platforms you plan on uploading to
-    apiKeys {
-        modrinth (providers.gradleProperty("modrinthToken").orElse(System.getenv("MODRINTH_TOKEN")).get())
-        curseforge (providers.gradleProperty("curseToken").orElse(System.getenv("CURSE_TOKEN")).get())
+sourceSets.configureEach {
+    [it.compileClasspathConfigurationName, it.runtimeClasspathConfigurationName].each { variant->
+        configurations.named(variant) {
+            attributes {
+                attribute(loaderAttribute, 'fabric')
+            }
+        }
     }
-
-    // Enable Debug mode. When enabled, no files will actually be uploaded
-    setDebug(false)
-
-    // Curseforge Project ID
-    setCurseID("921022")
-
-    // Modrinth Project ID
-    setModrinthID("II7t6llZ")
-
-    // Type of release. beta, alpha or release
-    // You can also use VersionType.BETA, VersionType.ALPHA or VersionType.RELEASE
-    setVersionType("release")
-
-    // Required for Modrinth/GitHub
-    setProjectVersion("${project.version}")
-
-    // Fancy display name for the upload.
-    // Will default to the project version if not set
-    setDisplayName("WWOO ${project.version}")
-
-    // The supported game versions
-    setGameVersions("${project.minecraft_version}")
-
-    // The modloaders your upload supports.
-    // This can also be an Enum from ModLoader,
-    // like setLoaders(ModLoader.FABRIC, ModLoader.FORGE)
-    setLoaders("fabric", "quilt")
-
-    // The new Curseforge Environment tag. Optional
-    // Valid values are "server", "client" or "both"
-    // You can also use CurseEnvironment.BOTH, or CurseEnvironment.SERVER or CurseEnvironment.CLIENT
-    setCurseEnvironment("both")
-
-    // Upload the release, but keep it "private" until you are ready
-    // Unreleased feature on CurseForge, working on Modrinth
-    setIsManualRelease(false)
-
-    // The file to be uploaded. This can be a file, task, or string.
-    // setArtifact("build/libs/mymod.jar")
-    // setArtifact(jar.getArchiveFile().get())
-    // If this is a task, the task specified will be executed before publishing
-    setArtifact(tasks.remapJar)
-
-    // Disable the built in Fractureizer scanner
-    setDisableMalwareScanner(true)
-
-    curseDepends {
-        required "fabric-api", "cristel-lib"
-    }
-    modrinthDepends {
-        required "fabric-api", "cristel-lib"
-    }
-
-    // Add supported java versions. Currently only used by CurseForge
-    // Supports anything that can be parsed using JavaVersion.toVersion()
-    setJavaVersions([JavaVersion.VERSION_21])
 }

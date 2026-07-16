@@ -6,19 +6,12 @@
         "feature": {
           "config": {
             "ignore_vines": true,
-            "force_dirt": true,
             "minimum_size": {
               "type": "minecraft:two_layers_feature_size",
               "min_clipped_height": 1,
               "limit": 1,
               "lower_size": 1,
               "upper_size": 1
-            },
-            "dirt_provider": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:rooted_dirt"
-              }
             },
             "trunk_provider": {
               "type": "minecraft:simple_state_provider",
@@ -44,7 +37,13 @@
               "offset": 0,
               "height": 2
             },
-            "decorators": []
+            "decorators": [],
+            "below_trunk_provider": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:rooted_dirt"
+              }
+            }
           },
           "type": "minecraft:tree"
         },
@@ -117,89 +116,117 @@
             "default": {
               "feature": {
                 "config": {
-                  "tries": 8,
-                  "xz_spread": 1,
-                  "y_spread": 0,
-                  "feature": {
+                  "features": [
+                    {
+                      "chance": 0.3,
+                      "feature": {
+                        "feature": {
+                          "config": {
+                            "ignore_vines": true,
+                            "minimum_size": {
+                              "type": "minecraft:two_layers_feature_size",
+                              "min_clipped_height": 1,
+                              "limit": 1,
+                              "lower_size": 1,
+                              "upper_size": 1
+                            },
+                            "trunk_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:birch_wood"
+                              }
+                            },
+                            "foliage_provider": {
+                              "type": "minecraft:simple_state_provider",
+                              "state": {
+                                "Name": "minecraft:birch_leaves"
+                              }
+                            },
+                            "trunk_placer": {
+                              "type": "minecraft:forking_trunk_placer",
+                              "base_height": 5,
+                              "height_rand_a": 2,
+                              "height_rand_b": 2
+                            },
+                            "foliage_placer": {
+                              "type": "minecraft:fancy_foliage_placer",
+                              "radius": 2,
+                              "offset": 0,
+                              "height": 2
+                            },
+                            "decorators": [],
+                            "below_trunk_provider": {
+                              "type": "minecraft:weighted_state_provider",
+                              "entries": [
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:birch_wood"
+                                  }
+                                },
+                                {
+                                  "weight": 1,
+                                  "data": {
+                                    "Name": "minecraft:air"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "type": "minecraft:tree"
+                        },
+                        "placement": []
+                      }
+                    }
+                  ],
+                  "default": {
                     "feature": {
                       "config": {
-                        "features": [
-                          {
-                            "chance": 0.3,
-                            "feature": {
-                              "feature": {
-                                "config": {
-                                  "ignore_vines": true,
-                                  "force_dirt": true,
-                                  "minimum_size": {
-                                    "type": "minecraft:two_layers_feature_size",
-                                    "min_clipped_height": 1,
-                                    "limit": 1,
-                                    "lower_size": 1,
-                                    "upper_size": 1
-                                  },
-                                  "dirt_provider": {
-                                    "type": "minecraft:weighted_state_provider",
-                                    "entries": [
-                                      {
-                                        "weight": 1,
-                                        "data": {
-                                          "Name": "minecraft:birch_wood"
-                                        }
-                                      },
-                                      {
-                                        "weight": 1,
-                                        "data": {
-                                          "Name": "minecraft:air"
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  "trunk_provider": {
-                                    "type": "minecraft:simple_state_provider",
-                                    "state": {
-                                      "Name": "minecraft:birch_wood"
-                                    }
-                                  },
-                                  "foliage_provider": {
-                                    "type": "minecraft:simple_state_provider",
-                                    "state": {
-                                      "Name": "minecraft:birch_leaves"
-                                    }
-                                  },
-                                  "trunk_placer": {
-                                    "type": "minecraft:forking_trunk_placer",
-                                    "base_height": 5,
-                                    "height_rand_a": 2,
-                                    "height_rand_b": 2
-                                  },
-                                  "foliage_placer": {
-                                    "type": "minecraft:fancy_foliage_placer",
-                                    "radius": 2,
-                                    "offset": 0,
-                                    "height": 2
-                                  },
-                                  "decorators": []
-                                },
-                                "type": "minecraft:tree"
-                              },
-                              "placement": []
-                            }
+                        "ignore_vines": true,
+                        "minimum_size": {
+                          "type": "minecraft:two_layers_feature_size",
+                          "min_clipped_height": 1,
+                          "limit": 1,
+                          "lower_size": 1,
+                          "upper_size": 1
+                        },
+                        "trunk_provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:birch_wood"
                           }
-                        ],
-                        "default": {
-                          "feature": {
-                            "config": {
-                              "ignore_vines": true,
-                              "force_dirt": false,
-                              "minimum_size": {
-                                "type": "minecraft:two_layers_feature_size",
-                                "min_clipped_height": 1,
-                                "limit": 1,
-                                "lower_size": 1,
-                                "upper_size": 1
+                        },
+                        "foliage_provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:birch_leaves"
+                          }
+                        },
+                        "trunk_placer": {
+                          "type": "minecraft:straight_trunk_placer",
+                          "base_height": 3,
+                          "height_rand_a": 2,
+                          "height_rand_b": 3
+                        },
+                        "foliage_placer": {
+                          "type": "minecraft:fancy_foliage_placer",
+                          "radius": 2,
+                          "offset": 0,
+                          "height": 2
+                        },
+                        "decorators": [],
+                        "below_trunk_provider": {
+                          "type": "minecraft:rule_based_state_provider",
+                          "rules": [
+                            {
+                              "if_true": {
+                                "type": "minecraft:not",
+                                "predicate": {
+                                  "type": "minecraft:matching_block_tag",
+                                  "tag": "minecraft:cannot_replace_below_tree_trunk"
+                                }
                               },
-                              "dirt_provider": {
+                              "then": {
                                 "type": "minecraft:weighted_state_provider",
                                 "entries": [
                                   {
@@ -215,137 +242,17 @@
                                     }
                                   }
                                 ]
-                              },
-                              "trunk_provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:birch_wood"
-                                }
-                              },
-                              "foliage_provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:birch_leaves"
-                                }
-                              },
-                              "trunk_placer": {
-                                "type": "minecraft:straight_trunk_placer",
-                                "base_height": 3,
-                                "height_rand_a": 2,
-                                "height_rand_b": 3
-                              },
-                              "foliage_placer": {
-                                "type": "minecraft:fancy_foliage_placer",
-                                "radius": 2,
-                                "offset": 0,
-                                "height": 2
-                              },
-                              "decorators": []
-                            },
-                            "type": "minecraft:tree"
-                          },
-                          "placement": []
+                              }
+                            }
+                          ]
                         }
                       },
-                      "type": "minecraft:random_selector"
+                      "type": "minecraft:tree"
                     },
-                    "placement": [
-                      {
-                        "type": "minecraft:block_predicate_filter",
-                        "predicate": {
-                          "type": "minecraft:not",
-                          "predicate": {
-                            "type": "minecraft:any_of",
-                            "predicates": [
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  0,
-                                  -1,
-                                  0
-                                ],
-                                "blocks": "minecraft:birch_wood"
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  1,
-                                  0,
-                                  1
-                                ],
-                                "blocks": "minecraft:birch_wood"
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  1,
-                                  0,
-                                  0
-                                ],
-                                "blocks": "minecraft:birch_wood"
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  1,
-                                  0,
-                                  -1
-                                ],
-                                "blocks": "minecraft:birch_wood"
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  0,
-                                  0,
-                                  1
-                                ],
-                                "blocks": "minecraft:birch_wood"
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  0,
-                                  0,
-                                  -1
-                                ],
-                                "blocks": "minecraft:birch_wood"
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  -1,
-                                  0,
-                                  1
-                                ],
-                                "blocks": "minecraft:birch_wood"
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  -1,
-                                  0,
-                                  0
-                                ],
-                                "blocks": "minecraft:birch_wood"
-                              },
-                              {
-                                "type": "minecraft:matching_blocks",
-                                "offset": [
-                                  -1,
-                                  0,
-                                  -1
-                                ],
-                                "blocks": "minecraft:birch_wood"
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    "placement": []
                   }
                 },
-                "type": "minecraft:random_patch"
+                "type": "minecraft:random_selector"
               },
               "placement": [
                 {
@@ -381,6 +288,115 @@
                   },
                   "allowed_search_condition": {
                     "type": "minecraft:true"
+                  }
+                },
+                {
+                  "type": "minecraft:count",
+                  "count": 8
+                },
+                {
+                  "type": "minecraft:random_offset",
+                  "xz_spread": {
+                    "type": "minecraft:trapezoid",
+                    "min": -1,
+                    "max": 1,
+                    "plateau": 0
+                  },
+                  "y_spread": {
+                    "type": "minecraft:constant",
+                    "value": 0
+                  }
+                },
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:any_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": "minecraft:birch_wood"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:birch_wood"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "blocks": "minecraft:birch_wood"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            1,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:birch_wood"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:birch_wood"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:birch_wood"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            1
+                          ],
+                          "blocks": "minecraft:birch_wood"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            0
+                          ],
+                          "blocks": "minecraft:birch_wood"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            -1,
+                            0,
+                            -1
+                          ],
+                          "blocks": "minecraft:birch_wood"
+                        }
+                      ]
+                    }
                   }
                 }
               ]

@@ -6,19 +6,12 @@
         "feature": {
           "config": {
             "ignore_vines": true,
-            "force_dirt": true,
             "minimum_size": {
               "type": "minecraft:two_layers_feature_size",
               "min_clipped_height": 1,
               "limit": 1,
               "lower_size": 1,
               "upper_size": 1
-            },
-            "dirt_provider": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:rooted_dirt"
-              }
             },
             "trunk_provider": {
               "type": "minecraft:simple_state_provider",
@@ -45,30 +38,36 @@
               "height": 2
             },
             "decorators": [
-      {
-        "type": "minecraft:place_on_ground",
-        "tries": 30,
-        "radius": 1,
-        "height": 2,
-        "block_state_provider": {
-          "type": "minecraft:weighted_state_provider",
-          "entries": [
-            {
-              "weight": 3,
-              "data": {
-                "Name": "fern"
+              {
+                "type": "minecraft:place_on_ground",
+                "tries": 30,
+                "radius": 1,
+                "height": 2,
+                "block_state_provider": {
+                  "type": "minecraft:weighted_state_provider",
+                  "entries": [
+                    {
+                      "weight": 3,
+                      "data": {
+                        "Name": "fern"
+                      }
+                    },
+                    {
+                      "weight": 1,
+                      "data": {
+                        "Name": "minecraft:brown_mushroom"
+                      }
+                    }
+                  ]
+                }
               }
-            },
-            {
-              "weight": 1,
-              "data": {
-                "Name": "minecraft:brown_mushroom"
+            ],
+            "below_trunk_provider": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:rooted_dirt"
               }
             }
-          ]
-        }
-      }
-    ]
           },
           "type": "minecraft:tree"
         },

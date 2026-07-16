@@ -388,567 +388,556 @@
             "default": {
               "feature": {
                 "config": {
-                  "tries": 64,
-                  "xz_spread": 1,
-                  "y_spread": 0,
-                  "feature": {
-                    "feature": {
-                      "config": {
-                        "features": [
-                          {
-                            "feature": {
-                              "config": {
-                                "direction": "up",
-                                "allowed_placement": {
-                                  "type": "minecraft:matching_blocks",
-                                  "blocks": [
-                                    "minecraft:air"
-                                  ]
-                                },
-                                "prioritize_tip": false,
-                                "layers": [
+                  "features": [
+                    {
+                      "feature": {
+                        "config": {
+                          "direction": "up",
+                          "allowed_placement": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": [
+                              "minecraft:air"
+                            ]
+                          },
+                          "prioritize_tip": false,
+                          "layers": [
+                            {
+                              "height": 1,
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:bamboo_block",
+                                  "Properties": {
+                                    "axis": "y"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "height": {
+                                "type": "minecraft:weighted_list",
+                                "distribution": [
                                   {
-                                    "height": 1,
-                                    "provider": {
-                                      "type": "minecraft:simple_state_provider",
-                                      "state": {
-                                        "Name": "minecraft:bamboo_block",
-                                        "Properties": {
-                                          "axis": "y"
-                                        }
-                                      }
-                                    }
+                                    "weight": 1,
+                                    "data": 1
                                   },
                                   {
-                                    "height": {
-                                      "type": "minecraft:weighted_list",
-                                      "distribution": [
-                                        {
-                                          "weight": 1,
-                                          "data": 1
-                                        },
-                                        {
-                                          "weight": 4,
-                                          "data": 2
-                                        },
-                                        {
-                                          "weight": 3,
-                                          "data": 3
-                                        }
-                                      ]
-                                    },
-                                    "provider": {
-                                      "type": "minecraft:simple_state_provider",
-                                      "state": {
-                                        "Name": "minecraft:cactus"
-                                      }
-                                    }
+                                    "weight": 4,
+                                    "data": 2
                                   },
                                   {
-                                    "height": 1,
-                                    "provider": {
-                                      "type": "minecraft:weighted_state_provider",
-                                      "entries": [
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "north",
-                                              "flower_amount": "1"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "north",
-                                              "flower_amount": "2"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "north",
-                                              "flower_amount": "3"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "north",
-                                              "flower_amount": "4"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "south",
-                                              "flower_amount": "1"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "south",
-                                              "flower_amount": "2"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "south",
-                                              "flower_amount": "3"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "south",
-                                              "flower_amount": "4"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "east",
-                                              "flower_amount": "1"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "east",
-                                              "flower_amount": "2"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "east",
-                                              "flower_amount": "3"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "east",
-                                              "flower_amount": "4"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "west",
-                                              "flower_amount": "1"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "west",
-                                              "flower_amount": "2"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "west",
-                                              "flower_amount": "3"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:wildflowers",
-                                            "Properties": {
-                                              "facing": "west",
-                                              "flower_amount": "4"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "north",
-                                              "flower_amount": "1"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "north",
-                                              "flower_amount": "2"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "north",
-                                              "flower_amount": "3"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "north",
-                                              "flower_amount": "4"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "south",
-                                              "flower_amount": "1"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "south",
-                                              "flower_amount": "2"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "south",
-                                              "flower_amount": "3"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "south",
-                                              "flower_amount": "4"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "east",
-                                              "flower_amount": "1"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "east",
-                                              "flower_amount": "2"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "east",
-                                              "flower_amount": "3"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "east",
-                                              "flower_amount": "4"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "west",
-                                              "flower_amount": "1"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "west",
-                                              "flower_amount": "2"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "west",
-                                              "flower_amount": "3"
-                                            }
-                                          }
-                                        },
-                                        {
-                                          "weight": 1,
-                                          "data": {
-                                            "Name": "minecraft:pink_petals",
-                                            "Properties": {
-                                              "facing": "west",
-                                              "flower_amount": "4"
-                                            }
-                                          }
-                                        }
-                                      ]
-                                    }
+                                    "weight": 3,
+                                    "data": 3
                                   }
                                 ]
                               },
-                              "type": "minecraft:block_column"
-                            },
-                            "placement": [
-                              {
-                                "type": "minecraft:environment_scan",
-                                "direction_of_search": "up",
-                                "max_steps": 6,
-                                "target_condition": {
-                                  "type": "minecraft:any_of",
-                                  "predicates": [
-                                    {
-                                      "type": "minecraft:all_of",
-                                      "predicates": [
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            0,
-                                            0,
-                                            0
-                                          ],
-                                          "blocks": [
-                                            "minecraft:air"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            1,
-                                            0,
-                                            1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:bamboo_block"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            1,
-                                            2,
-                                            1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:cactus"
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:all_of",
-                                      "predicates": [
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            0,
-                                            0,
-                                            0
-                                          ],
-                                          "blocks": [
-                                            "minecraft:air"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            1,
-                                            0,
-                                            -1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:bamboo_block"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            1,
-                                            1,
-                                            -1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:cactus"
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:all_of",
-                                      "predicates": [
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            0,
-                                            0,
-                                            0
-                                          ],
-                                          "blocks": [
-                                            "minecraft:air"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            -1,
-                                            0,
-                                            1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:bamboo_block"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            -1,
-                                            1,
-                                            1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:cactus"
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "minecraft:all_of",
-                                      "predicates": [
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            0,
-                                            0,
-                                            0
-                                          ],
-                                          "blocks": [
-                                            "minecraft:air"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            -1,
-                                            0,
-                                            -1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:bamboo_block"
-                                          ]
-                                        },
-                                        {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            -1,
-                                            2,
-                                            -1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:cactus"
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:cactus"
                                 }
+                              }
+                            },
+                            {
+                              "height": 1,
+                              "provider": {
+                                "type": "minecraft:weighted_state_provider",
+                                "entries": [
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "flower_amount": "1"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "flower_amount": "2"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "flower_amount": "3"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "flower_amount": "4"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "flower_amount": "1"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "flower_amount": "2"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "flower_amount": "3"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "flower_amount": "4"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "flower_amount": "1"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "flower_amount": "2"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "flower_amount": "3"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "flower_amount": "4"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "flower_amount": "1"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "flower_amount": "2"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "flower_amount": "3"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:wildflowers",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "flower_amount": "4"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "flower_amount": "1"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "flower_amount": "2"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "flower_amount": "3"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "north",
+                                        "flower_amount": "4"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "flower_amount": "1"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "flower_amount": "2"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "flower_amount": "3"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "south",
+                                        "flower_amount": "4"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "flower_amount": "1"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "flower_amount": "2"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "flower_amount": "3"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "east",
+                                        "flower_amount": "4"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "flower_amount": "1"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "flower_amount": "2"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "flower_amount": "3"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "weight": 1,
+                                    "data": {
+                                      "Name": "minecraft:pink_petals",
+                                      "Properties": {
+                                        "facing": "west",
+                                        "flower_amount": "4"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        "type": "minecraft:block_column"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:environment_scan",
+                          "direction_of_search": "up",
+                          "max_steps": 6,
+                          "target_condition": {
+                            "type": "minecraft:any_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:all_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      0
+                                    ],
+                                    "blocks": [
+                                      "minecraft:air"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      0,
+                                      1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:bamboo_block"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      2,
+                                      1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:cactus"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "minecraft:all_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      0
+                                    ],
+                                    "blocks": [
+                                      "minecraft:air"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      0,
+                                      -1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:bamboo_block"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      1,
+                                      -1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:cactus"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "minecraft:all_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      0
+                                    ],
+                                    "blocks": [
+                                      "minecraft:air"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      0,
+                                      1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:bamboo_block"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      1,
+                                      1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:cactus"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "minecraft:all_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      0
+                                    ],
+                                    "blocks": [
+                                      "minecraft:air"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      0,
+                                      -1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:bamboo_block"
+                                    ]
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      2,
+                                      -1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:cactus"
+                                    ]
+                                  }
+                                ]
                               }
                             ]
                           }
-                        ]
-                      },
-                      "type": "minecraft:simple_random_selector"
-                    },
-                    "placement": []
-                  }
+                        }
+                      ]
+                    }
+                  ]
                 },
-                "type": "minecraft:random_patch"
+                "type": "minecraft:simple_random_selector"
               },
               "placement": [
                 {
@@ -958,6 +947,23 @@
                     "blocks": [
                       "minecraft:bamboo_block"
                     ]
+                  }
+                },
+                {
+                  "type": "minecraft:count",
+                  "count": 64
+                },
+                {
+                  "type": "minecraft:random_offset",
+                  "xz_spread": {
+                    "type": "minecraft:trapezoid",
+                    "min": -1,
+                    "max": 1,
+                    "plateau": 0
+                  },
+                  "y_spread": {
+                    "type": "minecraft:constant",
+                    "value": 0
                   }
                 }
               ]

@@ -1,24 +1,50 @@
 {
-  "feature": "minecraft:flower_meadow",
-  "placement": [
-    {
-      "type": "minecraft:count",
-      "count": 40
+ "feature": "minecraft:flower_meadow",
+ "placement": [
+  {
+   "type": "minecraft:count",
+   "count": 40
+  },
+  {
+   "type": "minecraft:in_square"
+  },
+  {
+   "type": "minecraft:height_range",
+   "height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+     "absolute": 64
     },
-    {
-      "type": "minecraft:in_square"
-    },
-    {
-      "type": "minecraft:height_range",
-      "height": {
-        "type": "minecraft:uniform",
-        "min_inclusive": {
-          "absolute": 64
-        },
-        "max_inclusive": {
-          "absolute": 160
-        }
-      }
+    "max_inclusive": {
+     "absolute": 160
     }
-  ]
+   }
+  },
+  {
+   "type": "minecraft:count",
+   "count": 96
+  },
+  {
+   "type": "minecraft:random_offset",
+   "xz_spread": {
+    "type": "minecraft:trapezoid",
+    "min": -6,
+    "max": 6,
+    "plateau": 0
+   },
+   "y_spread": {
+    "type": "minecraft:trapezoid",
+    "min": -2,
+    "max": 2,
+    "plateau": 0
+   }
+  },
+  {
+   "type": "minecraft:block_predicate_filter",
+   "predicate": {
+    "type": "minecraft:matching_block_tag",
+    "tag": "minecraft:air"
+   }
+  }
+ ]
 }

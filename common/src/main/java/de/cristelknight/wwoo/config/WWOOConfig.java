@@ -6,7 +6,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import de.cristelknight.cristellib.config.simple.ConfigRegistry;
 import de.cristelknight.cristellib.config.simple.ConfigSettings;
 import de.cristelknight.cristellib.config.simple.datafixer.DataFixer;
-import de.cristelknight.wwoo.WWOO;
+import de.cristelknight.wwoo.Constants;
 import net.minecraft.util.Util;
 
 import java.util.HashMap;
@@ -30,7 +30,7 @@ public record WWOOConfig(
     public static final ConfigSettings<WWOOConfig> SETTINGS = new ConfigSettings<>() {
         @Override
         public String getSubPath() {
-            return WWOO.MOD_ID + "/config";
+            return Constants.MOD_ID + "/config";
         }
 
         @Override
@@ -80,6 +80,6 @@ public record WWOOConfig(
         });
 
         ConfigRegistry.registerWithScreen(WWOOConfig.class, SETTINGS,
-                WWOO.MOD_ID, "Auto-config", () -> {});
+                Constants.MOD_ID, "Auto-config", () -> {});
     }
 }

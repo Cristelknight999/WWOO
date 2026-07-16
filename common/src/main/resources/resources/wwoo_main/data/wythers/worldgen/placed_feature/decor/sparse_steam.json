@@ -1,141 +1,18 @@
 {
   "feature": {
-    "type": "minecraft:random_patch",
+    "type": "minecraft:simple_block",
     "config": {
-      "tries": 10,
-      "xz_spread": 5,
-      "y_spread": 5,
-      "feature": {
-        "feature": {
-          "type": "minecraft:simple_block",
-          "config": {
-            "to_place": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:campfire",
-                "Properties": {
-                  "facing": "east",
-                  "lit": "true",
-                  "signal_fire": "false",
-                  "waterlogged": "true"
-                }
-              }
-            }
+      "to_place": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:campfire",
+          "Properties": {
+            "facing": "east",
+            "lit": "true",
+            "signal_fire": "false",
+            "waterlogged": "true"
           }
-        },
-        "placement": [
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:all_of",
-              "predicates": [
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    1,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:yellow_terracotta",
-                    "minecraft:blackstone",
-                    "minecraft:diorite"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    2,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:water",
-                    "minecraft:lava"
-                  ]
-                },
-                {
-                  "type": "minecraft:not",
-                  "predicate": {
-                    "type": "minecraft:matching_blocks",
-                    "offset": [
-                      1,
-                      0,
-                      0
-                    ],
-                    "blocks": [
-                      "minecraft:water",
-                      "minecraft:air"
-                    ]
-                  }
-                },
-                {
-                  "type": "minecraft:not",
-                  "predicate": {
-                    "type": "minecraft:matching_blocks",
-                    "offset": [
-                      -1,
-                      0,
-                      0
-                    ],
-                    "blocks": [
-                      "minecraft:water",
-                      "minecraft:air"
-                    ]
-                  }
-                },
-                {
-                  "type": "minecraft:not",
-                  "predicate": {
-                    "type": "minecraft:matching_blocks",
-                    "offset": [
-                      0,
-                      0,
-                      1
-                    ],
-                    "blocks": [
-                      "minecraft:water",
-                      "minecraft:air"
-                    ]
-                  }
-                },
-                {
-                  "type": "minecraft:not",
-                  "predicate": {
-                    "type": "minecraft:matching_blocks",
-                    "offset": [
-                      0,
-                      0,
-                      -1
-                    ],
-                    "blocks": [
-                      "minecraft:water",
-                      "minecraft:air"
-                    ]
-                  }
-                },
-                {
-                  "type": "minecraft:has_sturdy_face",
-                  "offset": [
-                    0,
-                    -1,
-                    0
-                  ],
-                  "direction": "up"
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    4,
-                    0
-                  ],
-                  "blocks": "minecraft:air"
-                }
-              ]
-            }
-          }
-        ]
+        }
       }
     }
   },
@@ -153,6 +30,136 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -5,
+        "max": 5,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -5,
+        "max": 5,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "minecraft:yellow_terracotta",
+              "minecraft:blackstone",
+              "minecraft:diorite"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              2,
+              0
+            ],
+            "blocks": [
+              "minecraft:water",
+              "minecraft:lava"
+            ]
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "blocks": [
+                "minecraft:water",
+                "minecraft:air"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "blocks": [
+                "minecraft:water",
+                "minecraft:air"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "blocks": [
+                "minecraft:water",
+                "minecraft:air"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                -1
+              ],
+              "blocks": [
+                "minecraft:water",
+                "minecraft:air"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:has_sturdy_face",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "direction": "up"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              4,
+              0
+            ],
+            "blocks": "minecraft:air"
+          }
+        ]
+      }
     }
   ]
 }

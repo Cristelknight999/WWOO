@@ -20,8 +20,41 @@
       {
         "chance": 0.0,
         "feature": {
-          "feature": "wythers:vegetation/melon_patch",
-          "placement": []
+          "feature": "wythers:vegetation/column/melons_and_stems",
+          "placement": [
+            {
+              "type": "minecraft:count",
+              "count": 24
+            },
+            {
+              "type": "minecraft:random_offset",
+              "xz_spread": {
+                "type": "minecraft:trapezoid",
+                "min": -5,
+                "max": 5,
+                "plateau": 0
+              },
+              "y_spread": {
+                "type": "minecraft:trapezoid",
+                "min": -3,
+                "max": 3,
+                "plateau": 0
+              }
+            },
+            {
+              "type": "minecraft:heightmap",
+              "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:bamboo_sapling"
+                }
+              }
+            }
+          ]
         }
       },
       {

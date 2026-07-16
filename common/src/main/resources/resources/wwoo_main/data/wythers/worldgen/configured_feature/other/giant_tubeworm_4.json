@@ -271,6 +271,7 @@
                 "feature": {
                   "config": {
                     "state_provider": {
+                      "type": "minecraft:rule_based_state_provider",
                       "fallback": {
                         "type": "minecraft:simple_state_provider",
                         "state": {
@@ -339,6 +340,7 @@
                 "feature": {
                   "config": {
                     "state_provider": {
+                      "type": "minecraft:rule_based_state_provider",
                       "fallback": {
                         "type": "minecraft:simple_state_provider",
                         "state": {
@@ -444,172 +446,87 @@
               {
                 "feature": {
                   "config": {
-                    "tries": 256,
-                    "xz_spread": 1,
-                    "y_spread": 0,
-                    "feature": {
-                      "feature": {
-                        "config": {
-                          "direction": "up",
-                          "allowed_placement": {
-                            "type": "minecraft:true"
-                          },
-                          "prioritize_tip": true,
-                          "layers": [
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:diorite"
-                                }
-                              }
-                            },
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:magma_block"
-                                }
-                              }
-                            },
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:water",
-                                  "Properties": {
-                                    "level": "0"
-                                  }
-                                }
-                              }
-                            },
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:diorite"
-                                }
-                              }
-                            },
-                            {
-                              "height": 9,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:stripped_pale_oak_log",
-                                  "Properties": {
-                                    "axis": "y"
-                                  }
-                                }
-                              }
-                            },
-                            {
-                              "height": 3,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:fire_coral_block"
-                                }
-                              }
-                            },
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:fire_coral",
-                                  "Properties": {
-                                    "waterlogged": "true"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "type": "minecraft:block_column"
-                      },
-                      "placement": [
-                        {
-                          "type": "minecraft:block_predicate_filter",
-                          "predicate": {
-                            "type": "minecraft:all_of",
-                            "predicates": [
-                              {
-                                "type": "minecraft:any_of",
-                                "predicates": [
-                                  {
-                                    "type": "minecraft:all_of",
-                                    "predicates": [
-                                      {
-                                        "type": "minecraft:matching_blocks",
-                                        "offset": [
-                                          1,
-                                          0,
-                                          0
-                                        ],
-                                        "blocks": [
-                                          "minecraft:andesite"
-                                        ]
-                                      },
-                                      {
-                                        "type": "minecraft:not",
-                                        "predicate": {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            -1,
-                                            0,
-                                            0
-                                          ],
-                                          "blocks": [
-                                            "minecraft:andesite"
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "type": "minecraft:all_of",
-                                    "predicates": [
-                                      {
-                                        "type": "minecraft:matching_blocks",
-                                        "offset": [
-                                          -1,
-                                          0,
-                                          0
-                                        ],
-                                        "blocks": [
-                                          "minecraft:andesite"
-                                        ]
-                                      },
-                                      {
-                                        "type": "minecraft:not",
-                                        "predicate": {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            1,
-                                            0,
-                                            0
-                                          ],
-                                          "blocks": [
-                                            "minecraft:andesite"
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
+                    "direction": "up",
+                    "allowed_placement": {
+                      "type": "minecraft:true"
+                    },
+                    "prioritize_tip": true,
+                    "layers": [
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:diorite"
                           }
                         }
-                      ]
-                    }
+                      },
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:magma_block"
+                          }
+                        }
+                      },
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:water",
+                            "Properties": {
+                              "level": "0"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:diorite"
+                          }
+                        }
+                      },
+                      {
+                        "height": 9,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:stripped_pale_oak_log",
+                            "Properties": {
+                              "axis": "y"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "height": 3,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:fire_coral_block"
+                          }
+                        }
+                      },
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:fire_coral",
+                            "Properties": {
+                              "waterlogged": "true"
+                            }
+                          }
+                        }
+                      }
+                    ]
                   },
-                  "type": "minecraft:random_patch"
+                  "type": "minecraft:block_column"
                 },
                 "placement": [
                   {
@@ -634,6 +551,96 @@
                           ],
                           "blocks": [
                             "minecraft:magma_block"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:count",
+                    "count": 256
+                  },
+                  {
+                    "type": "minecraft:random_offset",
+                    "xz_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -1,
+                      "max": 1,
+                      "plateau": 0
+                    },
+                    "y_spread": {
+                      "type": "minecraft:constant",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:andesite"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:not",
+                                  "predicate": {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      0,
+                                      0
+                                    ],
+                                    "blocks": [
+                                      "minecraft:andesite"
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                  ],
+                                  "blocks": [
+                                    "minecraft:andesite"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:not",
+                                  "predicate": {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      0,
+                                      0
+                                    ],
+                                    "blocks": [
+                                      "minecraft:andesite"
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -644,172 +651,87 @@
               {
                 "feature": {
                   "config": {
-                    "tries": 256,
-                    "xz_spread": 1,
-                    "y_spread": 0,
-                    "feature": {
-                      "feature": {
-                        "config": {
-                          "direction": "up",
-                          "allowed_placement": {
-                            "type": "minecraft:true"
-                          },
-                          "prioritize_tip": true,
-                          "layers": [
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:diorite"
-                                }
-                              }
-                            },
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:magma_block"
-                                }
-                              }
-                            },
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:water",
-                                  "Properties": {
-                                    "level": "0"
-                                  }
-                                }
-                              }
-                            },
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:diorite"
-                                }
-                              }
-                            },
-                            {
-                              "height": 8,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:stripped_pale_oak_log",
-                                  "Properties": {
-                                    "axis": "y"
-                                  }
-                                }
-                              }
-                            },
-                            {
-                              "height": 3,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:fire_coral_block"
-                                }
-                              }
-                            },
-                            {
-                              "height": 1,
-                              "provider": {
-                                "type": "minecraft:simple_state_provider",
-                                "state": {
-                                  "Name": "minecraft:fire_coral",
-                                  "Properties": {
-                                    "waterlogged": "true"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "type": "minecraft:block_column"
-                      },
-                      "placement": [
-                        {
-                          "type": "minecraft:block_predicate_filter",
-                          "predicate": {
-                            "type": "minecraft:all_of",
-                            "predicates": [
-                              {
-                                "type": "minecraft:any_of",
-                                "predicates": [
-                                  {
-                                    "type": "minecraft:all_of",
-                                    "predicates": [
-                                      {
-                                        "type": "minecraft:matching_blocks",
-                                        "offset": [
-                                          0,
-                                          0,
-                                          1
-                                        ],
-                                        "blocks": [
-                                          "minecraft:andesite"
-                                        ]
-                                      },
-                                      {
-                                        "type": "minecraft:not",
-                                        "predicate": {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            0,
-                                            0,
-                                            -1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:andesite"
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "type": "minecraft:all_of",
-                                    "predicates": [
-                                      {
-                                        "type": "minecraft:matching_blocks",
-                                        "offset": [
-                                          0,
-                                          0,
-                                          -1
-                                        ],
-                                        "blocks": [
-                                          "minecraft:andesite"
-                                        ]
-                                      },
-                                      {
-                                        "type": "minecraft:not",
-                                        "predicate": {
-                                          "type": "minecraft:matching_blocks",
-                                          "offset": [
-                                            0,
-                                            0,
-                                            1
-                                          ],
-                                          "blocks": [
-                                            "minecraft:andesite"
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
+                    "direction": "up",
+                    "allowed_placement": {
+                      "type": "minecraft:true"
+                    },
+                    "prioritize_tip": true,
+                    "layers": [
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:diorite"
                           }
                         }
-                      ]
-                    }
+                      },
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:magma_block"
+                          }
+                        }
+                      },
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:water",
+                            "Properties": {
+                              "level": "0"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:diorite"
+                          }
+                        }
+                      },
+                      {
+                        "height": 8,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:stripped_pale_oak_log",
+                            "Properties": {
+                              "axis": "y"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "height": 3,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:fire_coral_block"
+                          }
+                        }
+                      },
+                      {
+                        "height": 1,
+                        "provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:fire_coral",
+                            "Properties": {
+                              "waterlogged": "true"
+                            }
+                          }
+                        }
+                      }
+                    ]
                   },
-                  "type": "minecraft:random_patch"
+                  "type": "minecraft:block_column"
                 },
                 "placement": [
                   {
@@ -834,6 +756,96 @@
                           ],
                           "blocks": [
                             "minecraft:magma_block"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:count",
+                    "count": 256
+                  },
+                  {
+                    "type": "minecraft:random_offset",
+                    "xz_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -1,
+                      "max": 1,
+                      "plateau": 0
+                    },
+                    "y_spread": {
+                      "type": "minecraft:constant",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:andesite"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:not",
+                                  "predicate": {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      -1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:andesite"
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                  ],
+                                  "blocks": [
+                                    "minecraft:andesite"
+                                  ]
+                                },
+                                {
+                                  "type": "minecraft:not",
+                                  "predicate": {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      0,
+                                      1
+                                    ],
+                                    "blocks": [
+                                      "minecraft:andesite"
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
                           ]
                         }
                       ]

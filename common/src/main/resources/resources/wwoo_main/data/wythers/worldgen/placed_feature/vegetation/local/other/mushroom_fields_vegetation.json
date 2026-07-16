@@ -20,15 +20,541 @@
         {
           "chance": 0.15,
           "feature": {
-            "feature": "wythers:vegetation/fungus/patch_morel",
-            "placement": []
+            "feature": "wythers:vegetation/fungus/giant_morel",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 12
+              },
+              {
+                "type": "minecraft:random_offset",
+                "xz_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -6,
+                  "max": 6,
+                  "plateau": 0
+                },
+                "y_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -3,
+                  "max": 3,
+                  "plateau": 0
+                }
+              },
+              {
+                "type": "minecraft:heightmap",
+                "heightmap": "WORLD_SURFACE_WG"
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "Name": "minecraft:fern"
+                  }
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:air"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:air"
+                    }
+                  ]
+                }
+              }
+            ]
           }
         },
         {
           "chance": 0.1,
           "feature": {
-            "feature": "wythers:vegetation/fungus/patch_enoki",
-            "placement": []
+            "feature": {
+              "type": "minecraft:random_selector",
+              "config": {
+                "features": [
+                  {
+                    "chance": 0.1,
+                    "feature": {
+                      "feature": {
+                        "type": "minecraft:tree",
+                        "config": {
+                          "ignore_vines": true,
+                          "minimum_size": {
+                            "type": "minecraft:two_layers_feature_size",
+                            "limit": 0,
+                            "lower_size": 0,
+                            "upper_size": 0
+                          },
+                          "trunk_provider": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:stripped_pale_oak_log",
+                              "Properties": {
+                                "axis": "y"
+                              }
+                            }
+                          },
+                          "foliage_provider": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:mushroom_stem",
+                              "Properties": {
+                                "down": "false",
+                                "east": "true",
+                                "north": "true",
+                                "south": "true",
+                                "up": "true",
+                                "west": "true"
+                              }
+                            }
+                          },
+                          "trunk_placer": {
+                            "type": "minecraft:straight_trunk_placer",
+                            "base_height": 11,
+                            "height_rand_a": 11,
+                            "height_rand_b": 3
+                          },
+                          "foliage_placer": {
+                            "type": "minecraft:fancy_foliage_placer",
+                            "radius": 2,
+                            "offset": 1,
+                            "height": 3
+                          },
+                          "decorators": [
+                            {
+                              "type": "minecraft:attached_to_leaves",
+                              "probability": 1,
+                              "exclusion_radius_xz": 0,
+                              "exclusion_radius_y": 0,
+                              "required_empty_blocks": 1,
+                              "block_provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:glow_lichen",
+                                  "Properties": {
+                                    "down": "false",
+                                    "east": "false",
+                                    "north": "false",
+                                    "south": "false",
+                                    "up": "true",
+                                    "waterlogged": "false",
+                                    "west": "false"
+                                  }
+                                }
+                              },
+                              "directions": [
+                                "down"
+                              ]
+                            }
+                          ],
+                          "below_trunk_provider": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:stripped_pale_oak_log",
+                              "Properties": {
+                                "axis": "y"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:environment_scan",
+                          "direction_of_search": "down",
+                          "max_steps": 8,
+                          "target_condition": {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  -1,
+                                  0
+                                ],
+                                "blocks": "minecraft:mycelium"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:air"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": "minecraft:air"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:air"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:air"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "blocks": "minecraft:air"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:air"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  1
+                                ],
+                                "blocks": "minecraft:air"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": "minecraft:air"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": "minecraft:air"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "default": {
+                  "feature": {
+                    "type": "minecraft:tree",
+                    "config": {
+                      "ignore_vines": true,
+                      "minimum_size": {
+                        "type": "minecraft:two_layers_feature_size",
+                        "limit": 0,
+                        "lower_size": 0,
+                        "upper_size": 0
+                      },
+                      "trunk_provider": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "minecraft:mushroom_stem",
+                          "Properties": {
+                            "down": "false",
+                            "up": "false",
+                            "east": "true",
+                            "north": "true",
+                            "south": "true",
+                            "west": "true"
+                          }
+                        }
+                      },
+                      "foliage_provider": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "minecraft:mushroom_stem",
+                          "Properties": {
+                            "down": "false",
+                            "east": "true",
+                            "north": "true",
+                            "south": "true",
+                            "up": "true",
+                            "west": "true"
+                          }
+                        }
+                      },
+                      "trunk_placer": {
+                        "type": "minecraft:straight_trunk_placer",
+                        "base_height": 4,
+                        "height_rand_a": 11,
+                        "height_rand_b": 3
+                      },
+                      "foliage_placer": {
+                        "type": "minecraft:fancy_foliage_placer",
+                        "radius": 1,
+                        "offset": 1,
+                        "height": 3
+                      },
+                      "decorators": [
+                        {
+                          "type": "minecraft:attached_to_leaves",
+                          "probability": 1,
+                          "exclusion_radius_xz": 0,
+                          "exclusion_radius_y": 0,
+                          "required_empty_blocks": 1,
+                          "block_provider": {
+                            "type": "minecraft:simple_state_provider",
+                            "state": {
+                              "Name": "minecraft:glow_lichen",
+                              "Properties": {
+                                "down": "false",
+                                "east": "false",
+                                "north": "false",
+                                "south": "false",
+                                "up": "true",
+                                "waterlogged": "false",
+                                "west": "false"
+                              }
+                            }
+                          },
+                          "directions": [
+                            "down"
+                          ]
+                        }
+                      ],
+                      "below_trunk_provider": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                          "Name": "minecraft:mushroom_stem",
+                          "Properties": {
+                            "down": "false",
+                            "up": "false",
+                            "east": "true",
+                            "north": "true",
+                            "south": "true",
+                            "west": "true"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 8,
+                      "target_condition": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": "minecraft:mycelium"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              1,
+                              0,
+                              1
+                            ],
+                            "blocks": "minecraft:air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              1,
+                              0,
+                              0
+                            ],
+                            "blocks": "minecraft:air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              1,
+                              0,
+                              -1
+                            ],
+                            "blocks": "minecraft:air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              1
+                            ],
+                            "blocks": "minecraft:air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              0
+                            ],
+                            "blocks": "minecraft:air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              -1
+                            ],
+                            "blocks": "minecraft:air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              0,
+                              1
+                            ],
+                            "blocks": "minecraft:air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              0,
+                              0
+                            ],
+                            "blocks": "minecraft:air"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              0,
+                              -1
+                            ],
+                            "blocks": "minecraft:air"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 16
+              },
+              {
+                "type": "minecraft:random_offset",
+                "xz_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -6,
+                  "max": 6,
+                  "plateau": 0
+                },
+                "y_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -4,
+                  "max": 4,
+                  "plateau": 0
+                }
+              }
+            ]
           }
         },
         {

@@ -11,21 +11,11 @@
                   "type": "minecraft:tree",
                   "config": {
                     "ignore_vines": true,
-                    "force_dirt": true,
                     "minimum_size": {
                       "type": "minecraft:two_layers_feature_size",
                       "limit": 1,
                       "lower_size": 0,
                       "upper_size": 1
-                    },
-                    "dirt_provider": {
-                      "type": "minecraft:simple_state_provider",
-                      "state": {
-                        "Name": "minecraft:oak_wood",
-                        "Properties": {
-                          "axis": "y"
-                        }
-                      }
                     },
                     "trunk_provider": {
                       "type": "minecraft:simple_state_provider",
@@ -45,7 +35,7 @@
                             "Name": "minecraft:azalea_leaves",
                             "Properties": {
                               "distance": "7",
-                              "persistent": "true",
+                              "persistent": "false",
                               "waterlogged": "false"
                             }
                           }
@@ -116,7 +106,7 @@
                             "Name": "minecraft:azalea_leaves",
                             "Properties": {
                               "distance": "7",
-                              "persistent": "true",
+                              "persistent": "false",
                               "waterlogged": "false"
                             }
                           }
@@ -125,7 +115,16 @@
                           "down"
                         ]
                       }
-                    ]
+                    ],
+                    "below_trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:oak_wood",
+                        "Properties": {
+                          "axis": "y"
+                        }
+                      }
+                    }
                   }
                 },
                 "placement": []
@@ -135,21 +134,11 @@
                   "type": "minecraft:tree",
                   "config": {
                     "ignore_vines": true,
-                    "force_dirt": true,
                     "minimum_size": {
                       "type": "minecraft:two_layers_feature_size",
                       "limit": 1,
                       "lower_size": 0,
                       "upper_size": 1
-                    },
-                    "dirt_provider": {
-                      "type": "minecraft:simple_state_provider",
-                      "state": {
-                        "Name": "minecraft:oak_wood",
-                        "Properties": {
-                          "axis": "y"
-                        }
-                      }
                     },
                     "trunk_provider": {
                       "type": "minecraft:simple_state_provider",
@@ -169,7 +158,7 @@
                             "Name": "minecraft:azalea_leaves",
                             "Properties": {
                               "distance": "7",
-                              "persistent": "true",
+                              "persistent": "false",
                               "waterlogged": "false"
                             }
                           }
@@ -209,7 +198,7 @@
                             "Name": "minecraft:azalea_leaves",
                             "Properties": {
                               "distance": "7",
-                              "persistent": "true",
+                              "persistent": "false",
                               "waterlogged": "false"
                             }
                           }
@@ -218,7 +207,16 @@
                           "down"
                         ]
                       }
-                    ]
+                    ],
+                    "below_trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:oak_wood",
+                        "Properties": {
+                          "axis": "y"
+                        }
+                      }
+                    }
                   }
                 },
                 "placement": []

@@ -12,19 +12,12 @@
                   "feature": {
                     "config": {
                       "ignore_vines": true,
-                      "force_dirt": false,
                       "minimum_size": {
                         "type": "minecraft:two_layers_feature_size",
                         "min_clipped_height": 10,
                         "limit": 1,
                         "lower_size": 0,
                         "upper_size": 2
-                      },
-                      "dirt_provider": {
-                        "type": "minecraft:simple_state_provider",
-                        "state": {
-                          "Name": "minecraft:air"
-                        }
                       },
                       "trunk_provider": {
                         "type": "minecraft:simple_state_provider",
@@ -62,7 +55,11 @@
                         "hanging_leaves_chance": 0.5,
                         "hanging_leaves_extension_chance": 1
                       },
-                      "decorators": []
+                      "decorators": [],
+                      "below_trunk_provider": {
+                        "type": "minecraft:rule_based_state_provider",
+                        "rules": []
+                      }
                     },
                     "type": "minecraft:tree"
                   },
@@ -162,598 +159,600 @@
                     {
                       "feature": {
                         "config": {
-                          "tries": 128,
-                          "xz_spread": 2,
-                          "y_spread": 2,
-                          "feature": {
-                            "feature": {
-                              "config": {
-                                "direction": "down",
-                                "allowed_placement": {
-                                  "type": "minecraft:matching_block_tag",
-                                  "tag": "wythers:palm_tree_replaceable"
-                                },
-                                "prioritize_tip": false,
-                                "layers": [
-                                  {
-                                    "height": 3,
-                                    "provider": {
-                                      "type": "minecraft:simple_state_provider",
-                                      "state": {
-                                        "Name": "minecraft:air"
-                                      }
-                                    }
-                                  },
-                                  {
-                                    "height": 4,
-                                    "provider": {
-                                      "type": "minecraft:simple_state_provider",
-                                      "state": {
-                                        "Name": "minecraft:jungle_wood",
-                                        "Properties": {
-                                          "axis": "y"
-                                        }
-                                      }
-                                    }
-                                  }
-                                ]
-                              },
-                              "type": "minecraft:block_column"
-                            },
-                            "placement": [
-                              {
-                                "type": "minecraft:block_predicate_filter",
-                                "predicate": {
-                                  "type": "minecraft:matching_blocks",
-                                  "offset": [
-                                    0,
-                                    1,
-                                    0
-                                  ],
-                                  "blocks": [
-                                    "minecraft:azalea_leaves"
-                                  ]
-                                }
-                              },
-                              {
-                                "type": "minecraft:block_predicate_filter",
-                                "predicate": {
-                                  "type": "minecraft:matching_blocks",
-                                  "offset": [
-                                    -1,
-                                    1,
-                                    0
-                                  ],
-                                  "blocks": [
-                                    "jungle_wood"
-                                  ]
+                          "direction": "down",
+                          "allowed_placement": {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:palm_tree_replaceable"
+                          },
+                          "prioritize_tip": false,
+                          "layers": [
+                            {
+                              "height": 3,
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:air"
                                 }
                               }
+                            },
+                            {
+                              "height": 4,
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:jungle_wood",
+                                  "Properties": {
+                                    "axis": "y"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": "minecraft:block_column"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:count",
+                          "count": 128
+                        },
+                        {
+                          "type": "minecraft:random_offset",
+                          "xz_spread": {
+                            "type": "minecraft:trapezoid",
+                            "min": -2,
+                            "max": 2,
+                            "plateau": 0
+                          },
+                          "y_spread": {
+                            "type": "minecraft:trapezoid",
+                            "min": -2,
+                            "max": 2,
+                            "plateau": 0
+                          }
+                        },
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:azalea_leaves"
                             ]
                           }
                         },
-                        "type": "minecraft:random_patch"
-                      },
-                      "placement": []
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              1,
+                              0
+                            ],
+                            "blocks": [
+                              "jungle_wood"
+                            ]
+                          }
+                        }
+                      ]
                     },
                     {
                       "feature": {
                         "config": {
-                          "tries": 256,
-                          "xz_spread": 3,
-                          "y_spread": 2,
-                          "feature": {
-                            "feature": {
-                              "config": {
-                                "direction": "down",
-                                "allowed_placement": {
-                                  "type": "minecraft:matching_block_tag",
-                                  "blocks": [
-                                    "wythers:palm_tree_replaceable"
-                                  ],
-                                  "tag": "wythers:palm_tree_replaceable"
-                                },
-                                "prioritize_tip": false,
-                                "layers": [
-                                  {
-                                    "height": 7,
-                                    "provider": {
-                                      "type": "minecraft:simple_state_provider",
-                                      "state": {
-                                        "Name": "minecraft:air"
-                                      }
-                                    }
-                                  },
-                                  {
-                                    "height": 3,
-                                    "provider": {
-                                      "type": "minecraft:simple_state_provider",
-                                      "state": {
-                                        "Name": "minecraft:jungle_wood",
-                                        "Properties": {
-                                          "axis": "y"
-                                        }
-                                      }
-                                    }
-                                  }
-                                ]
-                              },
-                              "type": "minecraft:block_column"
-                            },
-                            "placement": [
-                              {
-                                "type": "minecraft:block_predicate_filter",
-                                "predicate": {
-                                  "type": "minecraft:matching_blocks",
-                                  "offset": [
-                                    -1,
-                                    1,
-                                    0
-                                  ],
-                                  "blocks": [
-                                    "minecraft:azalea_leaves"
-                                  ]
-                                }
-                              },
-                              {
-                                "type": "minecraft:block_predicate_filter",
-                                "predicate": {
-                                  "type": "minecraft:matching_blocks",
-                                  "offset": [
-                                    -2,
-                                    1,
-                                    0
-                                  ],
-                                  "blocks": [
-                                    "minecraft:jungle_wood"
-                                  ]
+                          "direction": "down",
+                          "allowed_placement": {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:palm_tree_replaceable"
+                          },
+                          "prioritize_tip": false,
+                          "layers": [
+                            {
+                              "height": 7,
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:air"
                                 }
                               }
+                            },
+                            {
+                              "height": 3,
+                              "provider": {
+                                "type": "minecraft:simple_state_provider",
+                                "state": {
+                                  "Name": "minecraft:jungle_wood",
+                                  "Properties": {
+                                    "axis": "y"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": "minecraft:block_column"
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:count",
+                          "count": 256
+                        },
+                        {
+                          "type": "minecraft:random_offset",
+                          "xz_spread": {
+                            "type": "minecraft:trapezoid",
+                            "min": -3,
+                            "max": 3,
+                            "plateau": 0
+                          },
+                          "y_spread": {
+                            "type": "minecraft:trapezoid",
+                            "min": -2,
+                            "max": 2,
+                            "plateau": 0
+                          }
+                        },
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:azalea_leaves"
                             ]
                           }
                         },
-                        "type": "minecraft:random_patch"
-                      },
-                      "placement": []
+                        {
+                          "type": "minecraft:block_predicate_filter",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -2,
+                              1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:jungle_wood"
+                            ]
+                          }
+                        }
+                      ]
                     },
                     {
                       "feature": {
                         "config": {
-                          "tries": 64,
-                          "xz_spread": 2,
-                          "y_spread": 0,
-                          "feature": {
-                            "feature": {
-                              "config": {
-                                "features": [
-                                  {
-                                    "feature": {
-                                      "config": {
-                                        "to_place": {
-                                          "type": "minecraft:weighted_state_provider",
-                                          "entries": [
-                                            {
-                                              "weight": 3,
-                                              "data": {
-                                                "Name": "minecraft:void_air"
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "0",
-                                                  "facing": "east"
-                                                }
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "1",
-                                                  "facing": "east"
-                                                }
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "2",
-                                                  "facing": "east"
-                                                }
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        "schedule_tick": false
-                                      },
-                                      "type": "minecraft:simple_block"
-                                    },
-                                    "placement": [
+                          "features": [
+                            {
+                              "feature": {
+                                "config": {
+                                  "to_place": {
+                                    "type": "minecraft:weighted_state_provider",
+                                    "entries": [
                                       {
-                                        "type": "minecraft:environment_scan",
-                                        "direction_of_search": "up",
-                                        "max_steps": 10,
-                                        "target_condition": {
-                                          "type": "minecraft:all_of",
-                                          "predicates": [
-                                            {
-                                              "type": "minecraft:matching_blocks",
-                                              "offset": [
-                                                0,
-                                                1,
-                                                0
-                                              ],
-                                              "blocks": [
-                                                "minecraft:azalea_leaves"
-                                              ]
-                                            },
-                                            {
-                                              "type": "minecraft:matching_blocks",
-                                              "offset": [
-                                                0,
-                                                0,
-                                                0
-                                              ],
-                                              "blocks": [
-                                                "minecraft:air"
-                                              ]
-                                            },
-                                            {
-                                              "type": "minecraft:any_of",
-                                              "predicates": [
-                                                {
-                                                  "type": "minecraft:matching_blocks",
-                                                  "offset": [
-                                                    1,
-                                                    0,
-                                                    0
-                                                  ],
-                                                  "blocks": [
-                                                    "minecraft:jungle_wood"
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        "allowed_search_condition": {
-                                          "type": "minecraft:matching_blocks",
-                                          "blocks": [
-                                            "minecraft:air"
-                                          ]
+                                        "weight": 3,
+                                        "data": {
+                                          "Name": "minecraft:void_air"
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "0",
+                                            "facing": "east"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "1",
+                                            "facing": "east"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "2",
+                                            "facing": "east"
+                                          }
                                         }
                                       }
                                     ]
                                   },
-                                  {
-                                    "feature": {
-                                      "config": {
-                                        "to_place": {
-                                          "type": "minecraft:weighted_state_provider",
-                                          "entries": [
-                                            {
-                                              "weight": 3,
-                                              "data": {
-                                                "Name": "minecraft:void_air"
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "0",
-                                                  "facing": "west"
-                                                }
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "1",
-                                                  "facing": "west"
-                                                }
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "2",
-                                                  "facing": "west"
-                                                }
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        "schedule_tick": false
-                                      },
-                                      "type": "minecraft:simple_block"
-                                    },
-                                    "placement": [
+                                  "schedule_tick": false
+                                },
+                                "type": "minecraft:simple_block"
+                              },
+                              "placement": [
+                                {
+                                  "type": "minecraft:environment_scan",
+                                  "direction_of_search": "up",
+                                  "max_steps": 10,
+                                  "target_condition": {
+                                    "type": "minecraft:all_of",
+                                    "predicates": [
                                       {
-                                        "type": "minecraft:environment_scan",
-                                        "direction_of_search": "up",
-                                        "max_steps": 10,
-                                        "target_condition": {
-                                          "type": "minecraft:all_of",
-                                          "predicates": [
-                                            {
-                                              "type": "minecraft:matching_blocks",
-                                              "offset": [
-                                                0,
-                                                1,
-                                                0
-                                              ],
-                                              "blocks": [
-                                                "minecraft:azalea_leaves"
-                                              ]
-                                            },
-                                            {
-                                              "type": "minecraft:matching_blocks",
-                                              "offset": [
-                                                0,
-                                                0,
-                                                0
-                                              ],
-                                              "blocks": [
-                                                "minecraft:air"
-                                              ]
-                                            },
-                                            {
-                                              "type": "minecraft:any_of",
-                                              "predicates": [
-                                                {
-                                                  "type": "minecraft:matching_blocks",
-                                                  "offset": [
-                                                    -1,
-                                                    0,
-                                                    0
-                                                  ],
-                                                  "blocks": [
-                                                    "minecraft:jungle_wood"
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        "allowed_search_condition": {
-                                          "type": "minecraft:matching_blocks",
-                                          "blocks": [
-                                            "minecraft:air"
-                                          ]
-                                        }
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          1,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:azalea_leaves"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          0,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:air"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:any_of",
+                                        "predicates": [
+                                          {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                              1,
+                                              0,
+                                              0
+                                            ],
+                                            "blocks": [
+                                              "minecraft:jungle_wood"
+                                            ]
+                                          }
+                                        ]
                                       }
                                     ]
                                   },
-                                  {
-                                    "feature": {
-                                      "config": {
-                                        "to_place": {
-                                          "type": "minecraft:weighted_state_provider",
-                                          "entries": [
-                                            {
-                                              "weight": 3,
-                                              "data": {
-                                                "Name": "minecraft:void_air"
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "0",
-                                                  "facing": "south"
-                                                }
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "1",
-                                                  "facing": "south"
-                                                }
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "2",
-                                                  "facing": "south"
-                                                }
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        "schedule_tick": false
-                                      },
-                                      "type": "minecraft:simple_block"
-                                    },
-                                    "placement": [
-                                      {
-                                        "type": "minecraft:environment_scan",
-                                        "direction_of_search": "up",
-                                        "max_steps": 10,
-                                        "target_condition": {
-                                          "type": "minecraft:all_of",
-                                          "predicates": [
-                                            {
-                                              "type": "minecraft:matching_blocks",
-                                              "offset": [
-                                                0,
-                                                1,
-                                                0
-                                              ],
-                                              "blocks": [
-                                                "minecraft:azalea_leaves"
-                                              ]
-                                            },
-                                            {
-                                              "type": "minecraft:matching_blocks",
-                                              "offset": [
-                                                0,
-                                                0,
-                                                0
-                                              ],
-                                              "blocks": [
-                                                "minecraft:air"
-                                              ]
-                                            },
-                                            {
-                                              "type": "minecraft:any_of",
-                                              "predicates": [
-                                                {
-                                                  "type": "minecraft:matching_blocks",
-                                                  "offset": [
-                                                    0,
-                                                    0,
-                                                    1
-                                                  ],
-                                                  "blocks": [
-                                                    "minecraft:jungle_wood"
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        "allowed_search_condition": {
-                                          "type": "minecraft:matching_blocks",
-                                          "blocks": [
-                                            "minecraft:air"
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "feature": {
-                                      "config": {
-                                        "to_place": {
-                                          "type": "minecraft:weighted_state_provider",
-                                          "entries": [
-                                            {
-                                              "weight": 3,
-                                              "data": {
-                                                "Name": "minecraft:void_air"
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "0",
-                                                  "facing": "north"
-                                                }
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "1",
-                                                  "facing": "north"
-                                                }
-                                              }
-                                            },
-                                            {
-                                              "weight": 1,
-                                              "data": {
-                                                "Name": "minecraft:cocoa",
-                                                "Properties": {
-                                                  "age": "2",
-                                                  "facing": "north"
-                                                }
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        "schedule_tick": false
-                                      },
-                                      "type": "minecraft:simple_block"
-                                    },
-                                    "placement": [
-                                      {
-                                        "type": "minecraft:environment_scan",
-                                        "direction_of_search": "up",
-                                        "max_steps": 10,
-                                        "target_condition": {
-                                          "type": "minecraft:all_of",
-                                          "predicates": [
-                                            {
-                                              "type": "minecraft:matching_blocks",
-                                              "offset": [
-                                                0,
-                                                1,
-                                                0
-                                              ],
-                                              "blocks": [
-                                                "minecraft:azalea_leaves"
-                                              ]
-                                            },
-                                            {
-                                              "type": "minecraft:matching_blocks",
-                                              "offset": [
-                                                0,
-                                                0,
-                                                0
-                                              ],
-                                              "blocks": [
-                                                "minecraft:air"
-                                              ]
-                                            },
-                                            {
-                                              "type": "minecraft:any_of",
-                                              "predicates": [
-                                                {
-                                                  "type": "minecraft:matching_blocks",
-                                                  "offset": [
-                                                    0,
-                                                    0,
-                                                    -1
-                                                  ],
-                                                  "blocks": [
-                                                    "minecraft:jungle_wood"
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        "allowed_search_condition": {
-                                          "type": "minecraft:matching_blocks",
-                                          "blocks": [
-                                            "minecraft:air"
-                                          ]
-                                        }
-                                      }
+                                  "allowed_search_condition": {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": [
+                                      "minecraft:air"
                                     ]
                                   }
-                                ]
-                              },
-                              "type": "minecraft:simple_random_selector"
+                                }
+                              ]
                             },
-                            "placement": []
-                          }
+                            {
+                              "feature": {
+                                "config": {
+                                  "to_place": {
+                                    "type": "minecraft:weighted_state_provider",
+                                    "entries": [
+                                      {
+                                        "weight": 3,
+                                        "data": {
+                                          "Name": "minecraft:void_air"
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "0",
+                                            "facing": "west"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "1",
+                                            "facing": "west"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "2",
+                                            "facing": "west"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "schedule_tick": false
+                                },
+                                "type": "minecraft:simple_block"
+                              },
+                              "placement": [
+                                {
+                                  "type": "minecraft:environment_scan",
+                                  "direction_of_search": "up",
+                                  "max_steps": 10,
+                                  "target_condition": {
+                                    "type": "minecraft:all_of",
+                                    "predicates": [
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          1,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:azalea_leaves"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          0,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:air"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:any_of",
+                                        "predicates": [
+                                          {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                              -1,
+                                              0,
+                                              0
+                                            ],
+                                            "blocks": [
+                                              "minecraft:jungle_wood"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "allowed_search_condition": {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": [
+                                      "minecraft:air"
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "feature": {
+                                "config": {
+                                  "to_place": {
+                                    "type": "minecraft:weighted_state_provider",
+                                    "entries": [
+                                      {
+                                        "weight": 3,
+                                        "data": {
+                                          "Name": "minecraft:void_air"
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "0",
+                                            "facing": "south"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "1",
+                                            "facing": "south"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "2",
+                                            "facing": "south"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "schedule_tick": false
+                                },
+                                "type": "minecraft:simple_block"
+                              },
+                              "placement": [
+                                {
+                                  "type": "minecraft:environment_scan",
+                                  "direction_of_search": "up",
+                                  "max_steps": 10,
+                                  "target_condition": {
+                                    "type": "minecraft:all_of",
+                                    "predicates": [
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          1,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:azalea_leaves"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          0,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:air"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:any_of",
+                                        "predicates": [
+                                          {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                              0,
+                                              0,
+                                              1
+                                            ],
+                                            "blocks": [
+                                              "minecraft:jungle_wood"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "allowed_search_condition": {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": [
+                                      "minecraft:air"
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "feature": {
+                                "config": {
+                                  "to_place": {
+                                    "type": "minecraft:weighted_state_provider",
+                                    "entries": [
+                                      {
+                                        "weight": 3,
+                                        "data": {
+                                          "Name": "minecraft:void_air"
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "0",
+                                            "facing": "north"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "1",
+                                            "facing": "north"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "weight": 1,
+                                        "data": {
+                                          "Name": "minecraft:cocoa",
+                                          "Properties": {
+                                            "age": "2",
+                                            "facing": "north"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "schedule_tick": false
+                                },
+                                "type": "minecraft:simple_block"
+                              },
+                              "placement": [
+                                {
+                                  "type": "minecraft:environment_scan",
+                                  "direction_of_search": "up",
+                                  "max_steps": 10,
+                                  "target_condition": {
+                                    "type": "minecraft:all_of",
+                                    "predicates": [
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          1,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:azalea_leaves"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "offset": [
+                                          0,
+                                          0,
+                                          0
+                                        ],
+                                        "blocks": [
+                                          "minecraft:air"
+                                        ]
+                                      },
+                                      {
+                                        "type": "minecraft:any_of",
+                                        "predicates": [
+                                          {
+                                            "type": "minecraft:matching_blocks",
+                                            "offset": [
+                                              0,
+                                              0,
+                                              -1
+                                            ],
+                                            "blocks": [
+                                              "minecraft:jungle_wood"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "allowed_search_condition": {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": [
+                                      "minecraft:air"
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
                         },
-                        "type": "minecraft:random_patch"
+                        "type": "minecraft:simple_random_selector"
                       },
                       "placement": [
                         {
@@ -763,6 +762,23 @@
                             "blocks": [
                               "minecraft:jungle_wood"
                             ]
+                          }
+                        },
+                        {
+                          "type": "minecraft:count",
+                          "count": 64
+                        },
+                        {
+                          "type": "minecraft:random_offset",
+                          "xz_spread": {
+                            "type": "minecraft:trapezoid",
+                            "min": -2,
+                            "max": 2,
+                            "plateau": 0
+                          },
+                          "y_spread": {
+                            "type": "minecraft:constant",
+                            "value": 0
                           }
                         }
                       ]

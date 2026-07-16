@@ -2,7 +2,7 @@
   "values": [
     "#minecraft:flowers",
     "#minecraft:saplings",
-    "#minecraft:dirt",
+    "#minecraft:supports_vegetation",
     "#minecraft:base_stone_overworld",
     "minecraft:air",
     "minecraft:short_grass",

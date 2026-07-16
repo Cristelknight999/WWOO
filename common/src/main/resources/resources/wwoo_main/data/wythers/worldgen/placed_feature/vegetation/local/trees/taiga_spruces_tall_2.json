@@ -48,14 +48,14 @@
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
-              "type": "minecraft:matching_blocks",
-              "offset": [
-                0,
-                1,
-                0
-              ],
-              "blocks": "minecraft:dripstone_block"
-            }
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+        "blocks": "minecraft:dripstone_block"
+      }
     },
     {
       "type": "minecraft:noise_based_count",

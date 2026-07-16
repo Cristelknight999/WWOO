@@ -1,47 +1,63 @@
 {
+  "type": "minecraft:simple_random_selector",
   "config": {
-    "feature": {
-      "feature": {
-        "config": {
-          "to_place": {
-            "state": {
-              "Name": "minecraft:rooted_dirt"
-            },
-            "type": "minecraft:simple_state_provider"
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:rooted_dirt"
+              }
+            }
           }
         },
-        "type": "minecraft:simple_block"
-      },
-      "placement": [
-        {
-          "predicate": {
-            "predicates": [
-              {
-                "blocks": "#wythers:dirt",
-                "type": "minecraft:matching_blocks"
-              },
-              {
-                "predicate": {
-                  "blocks": "#wythers:dirt",
-                  "offset": [
-                    0,
-                    1,
-                    0
-                  ],
-                  "type": "minecraft:matching_blocks"
-                },
-                "type": "minecraft:not"
-              }
-            ],
-            "type": "minecraft:all_of"
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 3
           },
-          "type": "minecraft:block_predicate_filter"
-        }
-      ]
-    },
-    "tries": 3,
-    "xz_spread": 1,
-    "y_spread": 1
-  },
-  "type": "minecraft:random_patch"
+          {
+            "type": "minecraft:random_offset",
+            "xz_spread": {
+              "type": "minecraft:uniform",
+              "min_inclusive": -1,
+              "max_inclusive": 1
+            },
+            "y_spread": {
+              "type": "minecraft:uniform",
+              "min_inclusive": -1,
+              "max_inclusive": 0
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "#wythers:dirt"
+                },
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "#wythers:dirt",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

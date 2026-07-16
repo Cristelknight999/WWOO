@@ -5,8 +5,44 @@
       {
         "chance": 0.01,
         "feature": {
-          "feature": "wythers:vegetation/thin_jungle_bamboo_patch",
-          "placement": []
+          "feature": "wythers:vegetation/column/mix_thin_jungle_bamboo",
+          "placement": [
+            {
+              "type": "minecraft:count",
+              "count": 48
+            },
+            {
+              "type": "minecraft:random_offset",
+              "xz_spread": {
+                "type": "minecraft:trapezoid",
+                "min": -3,
+                "max": 3,
+                "plateau": 0
+              },
+              "y_spread": {
+                "type": "minecraft:trapezoid",
+                "min": -3,
+                "max": 3,
+                "plateau": 0
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "minecraft:bamboo_sapling"
+                }
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
         }
       },
       {

@@ -7,7 +7,7 @@
     "#minecraft:iron_ores",
     "#minecraft:copper_ores",
     "#minecraft:coal_ores",
-    "#minecraft:dry_vegetation_may_place_on",
+    "#minecraft:supports_dry_vegetation",
     "minecraft:dripstone_block",
     "minecraft:water",
     "minecraft:gravel",

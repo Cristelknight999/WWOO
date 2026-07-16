@@ -1,0 +1,57 @@
+{
+ "type": "minecraft:disk",
+ "config": {
+  "state_provider": {
+   "type": "minecraft:rule_based_state_provider",
+   "fallback": {
+    "type": "minecraft:weighted_state_provider",
+    "entries": [
+     {
+      "weight": 4,
+      "data": {
+       "Name": "rooted_dirt"
+      }
+     },
+     {
+      "weight": 1,
+      "data": {
+       "Name": "coarse_dirt"
+      }
+     }
+    ]
+   },
+   "rules": [
+    {
+     "if_true": {
+      "type": "minecraft:not",
+      "predicate": {
+       "type": "minecraft:matching_blocks",
+       "blocks": [
+        "minecraft:grass_block"
+       ]
+      }
+     },
+     "then": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+       "Name": "rooted_dirt"
+      }
+     }
+    }
+   ]
+  },
+  "radius": {
+   "type": "minecraft:uniform",
+   "min_inclusive": 3,
+   "max_inclusive": 5
+  },
+  "half_height": 1,
+  "target": {
+   "type": "minecraft:matching_blocks",
+   "blocks": [
+    "minecraft:dirt",
+    "minecraft:grass_block"
+   ]
+  }
+ }
+}

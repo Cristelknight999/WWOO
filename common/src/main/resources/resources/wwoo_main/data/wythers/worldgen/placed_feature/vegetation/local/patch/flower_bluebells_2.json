@@ -1,39 +1,20 @@
 {
   "feature": {
-  "config": {
-    "tries": 64,
-    "xz_spread": 7,
-    "y_spread": 3,
-    "feature": {
-      "feature": {
-        "config": {
-          "to_place": {
-            "entries": [
-              {
-                "data": {
-                  "Name": "minecraft:cornflower"
-                },
-                "weight": 1
-              }
-            ],
-            "type": "minecraft:weighted_state_provider"
+    "config": {
+      "to_place": {
+        "entries": [
+          {
+            "data": {
+              "Name": "minecraft:cornflower"
+            },
+            "weight": 1
           }
-        },
-        "type": "minecraft:simple_block"
-      },
-      "placement": [
-        {
-          "predicate": {
-            "blocks": "minecraft:air",
-            "type": "minecraft:matching_blocks"
-          },
-          "type": "minecraft:block_predicate_filter"
-        }
-      ]
-    }
+        ],
+        "type": "minecraft:weighted_state_provider"
+      }
+    },
+    "type": "minecraft:simple_block"
   },
-  "type": "minecraft:flower"
-},
   "placement": [
     {
       "type": "minecraft:noise_based_count",
@@ -77,6 +58,32 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 64
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -7,
+        "max": 7,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "predicate": {
+        "blocks": "minecraft:air",
+        "type": "minecraft:matching_blocks"
+      },
+      "type": "minecraft:block_predicate_filter"
     }
   ]
 }

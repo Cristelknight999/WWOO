@@ -5,167 +5,175 @@
         {
           "feature": {
             "config": {
-              "tries": 8,
-              "xz_spread": 8,
-              "y_spread": 4,
-              "feature": {
-                "feature": {
-                  "config": {
-                    "features": [
-                      {
-                        "chance": 0.7,
-                        "feature": {
-                          "feature": "wythers:vegetation/other/agave_spiking_large",
-                          "placement": []
-                        }
-                      },
-                      {
-                        "chance": 0,
-                        "feature": {
-                          "feature": "wythers:vegetation/other/agave_spiking",
-                          "placement": []
-                        }
-                      },
-                      {
-                        "chance": 0.2,
-                        "feature": {
-                          "feature": "wythers:vegetation/other/agave_flowering_large",
-                          "placement": []
-                        }
-                      }
-                    ],
-                    "default": {
-                      "feature": "wythers:vegetation/other/agave_flowering",
-                      "placement": []
-                    }
-                  },
-                  "type": "minecraft:random_selector"
+              "features": [
+                {
+                  "chance": 0.7,
+                  "feature": {
+                    "feature": "wythers:vegetation/other/agave_spiking_large",
+                    "placement": []
+                  }
                 },
-                "placement": [
+                {
+                  "chance": 0,
+                  "feature": {
+                    "feature": "wythers:vegetation/other/agave_spiking",
+                    "placement": []
+                  }
+                },
+                {
+                  "chance": 0.2,
+                  "feature": {
+                    "feature": "wythers:vegetation/other/agave_flowering_large",
+                    "placement": []
+                  }
+                }
+              ],
+              "default": {
+                "feature": "wythers:vegetation/other/agave_flowering",
+                "placement": []
+              }
+            },
+            "type": "minecraft:random_selector"
+          },
+          "placement": [
+            {
+              "type": "minecraft:count",
+              "count": 8
+            },
+            {
+              "type": "minecraft:random_offset",
+              "xz_spread": {
+                "type": "minecraft:trapezoid",
+                "min": -8,
+                "max": 8,
+                "plateau": 0
+              },
+              "y_spread": {
+                "type": "minecraft:trapezoid",
+                "min": -4,
+                "max": 4,
+                "plateau": 0
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:all_of",
+                "predicates": [
                   {
-                    "type": "minecraft:block_predicate_filter",
-                    "predicate": {
-                      "type": "minecraft:all_of",
-                      "predicates": [
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            1,
-                            0,
-                            0
-                          ],
-                          "blocks": [
-                            "air"
-                          ]
-                        },
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            0,
-                            0,
-                            0
-                          ],
-                          "blocks": [
-                            "air"
-                          ]
-                        },
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            -1,
-                            0,
-                            0
-                          ],
-                          "blocks": [
-                            "air"
-                          ]
-                        },
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            0,
-                            0,
-                            1
-                          ],
-                          "blocks": [
-                            "air"
-                          ]
-                        },
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            0,
-                            0,
-                            -1
-                          ],
-                          "blocks": [
-                            "air"
-                          ]
-                        },
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            1,
-                            -1,
-                            0
-                          ],
-                          "blocks": [
-                            "sand"
-                          ]
-                        },
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            0,
-                            -1,
-                            0
-                          ],
-                          "blocks": [
-                            "sand"
-                          ]
-                        },
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            -1,
-                            -1,
-                            0
-                          ],
-                          "blocks": [
-                            "sand"
-                          ]
-                        },
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            0,
-                            -1,
-                            1
-                          ],
-                          "blocks": [
-                            "sand"
-                          ]
-                        },
-                        {
-                          "type": "minecraft:matching_blocks",
-                          "offset": [
-                            0,
-                            -1,
-                            -1
-                          ],
-                          "blocks": [
-                            "sand"
-                          ]
-                        }
-                      ]
-                    }
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "air"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "air"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "air"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "air"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "air"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      -1,
+                      0
+                    ],
+                    "blocks": [
+                      "sand"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      0
+                    ],
+                    "blocks": [
+                      "sand"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      -1,
+                      0
+                    ],
+                    "blocks": [
+                      "sand"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      1
+                    ],
+                    "blocks": [
+                      "sand"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      -1
+                    ],
+                    "blocks": [
+                      "sand"
+                    ]
                   }
                 ]
               }
-            },
-            "type": "minecraft:random_patch"
-          },
-          "placement": []
+            }
+          ]
         }
       ]
     },

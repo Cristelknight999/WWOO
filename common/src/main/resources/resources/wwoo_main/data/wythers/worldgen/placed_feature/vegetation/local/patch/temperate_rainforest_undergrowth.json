@@ -1,61 +1,41 @@
 {
   "feature": {
-  "type": "minecraft:random_patch",
-  "config": {
-    "tries": 32,
-    "xz_spread": 7,
-    "y_spread": 3,
-    "feature": {
-      "feature": {
-        "type": "minecraft:simple_block",
-        "config": {
-          "to_place": {
-            "type": "minecraft:weighted_state_provider",
-            "entries": [
-              {
-                "weight": 100,
-                "data": {
-                  "Name": "minecraft:fern"
-                }
-              },
-              {
-                "weight": 50,
-                "data": {
-                  "Name": "minecraft:large_fern",
-                  "Properties": {
-                    "half": "lower"
-                  }
-                }
-              },
-              {
-                "weight": 5,
-                "data": {
-                  "Name": "minecraft:azalea"
-                }
-              },
-              {
-                "weight": 1,
-                "data": {
-                  "Name": "minecraft:flowering_azalea"
-                }
+    "type": "minecraft:simple_block",
+    "config": {
+      "to_place": {
+        "type": "minecraft:weighted_state_provider",
+        "entries": [
+          {
+            "weight": 100,
+            "data": {
+              "Name": "minecraft:fern"
+            }
+          },
+          {
+            "weight": 50,
+            "data": {
+              "Name": "minecraft:large_fern",
+              "Properties": {
+                "half": "lower"
               }
-            ]
+            }
+          },
+          {
+            "weight": 5,
+            "data": {
+              "Name": "minecraft:azalea"
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "Name": "minecraft:flowering_azalea"
+            }
           }
-        }
-      },
-      "placement": [
-        {
-          "type": "minecraft:block_predicate_filter",
-          "predicate": {
-            "type": "minecraft:matching_blocks",
-            "blocks": "minecraft:air"
-          }
-        }
-      ]
+        ]
+      }
     }
-  }
-}
-,
+  },
   "placement": [
     {
       "type": "minecraft:count",
@@ -70,6 +50,32 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 32
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -7,
+        "max": 7,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      }
     }
   ]
 }

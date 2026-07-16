@@ -3,6 +3,7 @@
     "type": "minecraft:disk",
     "config": {
       "state_provider": {
+        "type": "minecraft:rule_based_state_provider",
         "fallback": {
           "type": "minecraft:simple_state_provider",
           "state": {
@@ -92,22 +93,22 @@
         "type": "minecraft:all_of",
         "predicates": [
           {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:stripped_mangrove_wood"
-              ]
-            },
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:stripped_mangrove_wood"
+            ]
+          },
           {
-              "type": "minecraft:matching_blocks",
-              "offset": [
-                0,
-                1,
-                0
-              ],
-              "blocks": [
-                "minecraft:moss_block"
-              ]
-            }
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "minecraft:moss_block"
+            ]
+          }
         ]
       }
     },

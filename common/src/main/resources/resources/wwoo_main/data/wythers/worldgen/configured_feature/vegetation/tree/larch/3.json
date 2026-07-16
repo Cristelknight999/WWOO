@@ -17,18 +17,11 @@
                           "type": "minecraft:tree",
                           "config": {
                             "ignore_vines": true,
-                            "force_dirt": false,
                             "minimum_size": {
                               "type": "minecraft:two_layers_feature_size",
                               "limit": 1,
                               "lower_size": 0,
                               "upper_size": 0
-                            },
-                            "dirt_provider": {
-                              "type": "minecraft:simple_state_provider",
-                              "state": {
-                                "Name": "minecraft:rooted_dirt"
-                              }
                             },
                             "trunk_provider": {
                               "type": "minecraft:simple_state_provider",
@@ -62,7 +55,27 @@
                               "offset": 3,
                               "height": 5
                             },
-                            "decorators": []
+                            "decorators": [],
+                            "below_trunk_provider": {
+                              "type": "minecraft:rule_based_state_provider",
+                              "rules": [
+                                {
+                                  "if_true": {
+                                    "type": "minecraft:not",
+                                    "predicate": {
+                                      "type": "minecraft:matching_block_tag",
+                                      "tag": "minecraft:cannot_replace_below_tree_trunk"
+                                    }
+                                  },
+                                  "then": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:rooted_dirt"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
                           }
                         },
                         "placement": []
@@ -72,18 +85,11 @@
                           "type": "minecraft:tree",
                           "config": {
                             "ignore_vines": true,
-                            "force_dirt": false,
                             "minimum_size": {
                               "type": "minecraft:two_layers_feature_size",
                               "limit": 1,
                               "lower_size": 0,
                               "upper_size": 0
-                            },
-                            "dirt_provider": {
-                              "type": "minecraft:simple_state_provider",
-                              "state": {
-                                "Name": "minecraft:rooted_dirt"
-                              }
                             },
                             "trunk_provider": {
                               "type": "minecraft:simple_state_provider",
@@ -139,7 +145,27 @@
                                   "down"
                                 ]
                               }
-                            ]
+                            ],
+                            "below_trunk_provider": {
+                              "type": "minecraft:rule_based_state_provider",
+                              "rules": [
+                                {
+                                  "if_true": {
+                                    "type": "minecraft:not",
+                                    "predicate": {
+                                      "type": "minecraft:matching_block_tag",
+                                      "tag": "minecraft:cannot_replace_below_tree_trunk"
+                                    }
+                                  },
+                                  "then": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:rooted_dirt"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
                           }
                         },
                         "placement": []
@@ -149,18 +175,11 @@
                           "type": "minecraft:tree",
                           "config": {
                             "ignore_vines": true,
-                            "force_dirt": false,
                             "minimum_size": {
                               "type": "minecraft:two_layers_feature_size",
                               "limit": 1,
                               "lower_size": 0,
                               "upper_size": 0
-                            },
-                            "dirt_provider": {
-                              "type": "minecraft:simple_state_provider",
-                              "state": {
-                                "Name": "minecraft:rooted_dirt"
-                              }
                             },
                             "trunk_provider": {
                               "type": "minecraft:simple_state_provider",
@@ -216,7 +235,27 @@
                                   "down"
                                 ]
                               }
-                            ]
+                            ],
+                            "below_trunk_provider": {
+                              "type": "minecraft:rule_based_state_provider",
+                              "rules": [
+                                {
+                                  "if_true": {
+                                    "type": "minecraft:not",
+                                    "predicate": {
+                                      "type": "minecraft:matching_block_tag",
+                                      "tag": "minecraft:cannot_replace_below_tree_trunk"
+                                    }
+                                  },
+                                  "then": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:rooted_dirt"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
                           }
                         },
                         "placement": []
@@ -226,18 +265,11 @@
                           "type": "minecraft:tree",
                           "config": {
                             "ignore_vines": true,
-                            "force_dirt": false,
                             "minimum_size": {
                               "type": "minecraft:two_layers_feature_size",
                               "limit": 1,
                               "lower_size": 0,
                               "upper_size": 0
-                            },
-                            "dirt_provider": {
-                              "type": "minecraft:simple_state_provider",
-                              "state": {
-                                "Name": "minecraft:rooted_dirt"
-                              }
                             },
                             "trunk_provider": {
                               "type": "minecraft:simple_state_provider",
@@ -293,7 +325,27 @@
                                   "down"
                                 ]
                               }
-                            ]
+                            ],
+                            "below_trunk_provider": {
+                              "type": "minecraft:rule_based_state_provider",
+                              "rules": [
+                                {
+                                  "if_true": {
+                                    "type": "minecraft:not",
+                                    "predicate": {
+                                      "type": "minecraft:matching_block_tag",
+                                      "tag": "minecraft:cannot_replace_below_tree_trunk"
+                                    }
+                                  },
+                                  "then": {
+                                    "type": "minecraft:simple_state_provider",
+                                    "state": {
+                                      "Name": "minecraft:rooted_dirt"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
                           }
                         },
                         "placement": []
@@ -408,14 +460,84 @@
                 ]
               },
               {
-                "feature": "wythers:vegetation/tree/spruce/rooted_dirt",
+                "feature": {
+                  "config": {
+                    "to_place": {
+                      "state": {
+                        "Name": "minecraft:rooted_dirt"
+                      },
+                      "type": "minecraft:simple_state_provider"
+                    }
+                  },
+                  "type": "minecraft:simple_block"
+                },
                 "placement": [
                   {
                     "type": "minecraft:block_predicate_filter",
                     "predicate": {
-                      "type": "minecraft:matching_blocks",
-                      "blocks": "minecraft:oak_log"
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": "minecraft:oak_log"
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:oak_log",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ]
+                          }
+                        }
+                      ]
                     }
+                  },
+                  {
+                    "type": "minecraft:count",
+                    "count": 3
+                  },
+                  {
+                    "type": "minecraft:random_offset",
+                    "xz_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -1,
+                      "max": 1,
+                      "plateau": 0
+                    },
+                    "y_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -1,
+                      "max": 0,
+                      "plateau": 0
+                    }
+                  },
+                  {
+                    "predicate": {
+                      "predicates": [
+                        {
+                          "blocks": "#wythers:dirt",
+                          "type": "minecraft:matching_blocks"
+                        },
+                        {
+                          "predicate": {
+                            "blocks": "#wythers:dirt",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "type": "minecraft:matching_blocks"
+                          },
+                          "type": "minecraft:not"
+                        }
+                      ],
+                      "type": "minecraft:all_of"
+                    },
+                    "type": "minecraft:block_predicate_filter"
                   }
                 ]
               }

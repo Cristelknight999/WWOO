@@ -10,26 +10,11 @@
               "type": "minecraft:tree",
               "config": {
                 "ignore_vines": true,
-                "force_dirt": true,
                 "minimum_size": {
                   "type": "minecraft:two_layers_feature_size",
                   "limit": 0,
                   "lower_size": 0,
                   "upper_size": 0
-                },
-                "dirt_provider": {
-                  "type": "minecraft:simple_state_provider",
-                  "state": {
-                    "Name": "minecraft:mushroom_stem",
-                    "Properties": {
-                      "down": "false",
-                      "up": "false",
-                      "east": "true",
-                      "north": "true",
-                      "south": "true",
-                      "west": "true"
-                    }
-                  }
                 },
                 "trunk_provider": {
                   "type": "minecraft:simple_state_provider",
@@ -97,7 +82,21 @@
                       "down"
                     ]
                   }
-                ]
+                ],
+                "below_trunk_provider": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:mushroom_stem",
+                    "Properties": {
+                      "down": "false",
+                      "up": "false",
+                      "east": "true",
+                      "north": "true",
+                      "south": "true",
+                      "west": "true"
+                    }
+                  }
+                }
               }
             },
             "placement": []
@@ -109,26 +108,11 @@
           "type": "minecraft:tree",
           "config": {
             "ignore_vines": true,
-            "force_dirt": true,
             "minimum_size": {
               "type": "minecraft:two_layers_feature_size",
               "limit": 0,
               "lower_size": 0,
               "upper_size": 0
-            },
-            "dirt_provider": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:mushroom_stem",
-                "Properties": {
-                  "down": "false",
-                  "up": "false",
-                  "east": "true",
-                  "north": "true",
-                  "south": "true",
-                  "west": "true"
-                }
-              }
             },
             "trunk_provider": {
               "type": "minecraft:simple_state_provider",
@@ -171,32 +155,46 @@
               "height": 3
             },
             "decorators": [
-                  {
-                    "type": "minecraft:attached_to_leaves",
-                    "probability": 1,
-                    "exclusion_radius_xz": 0,
-                    "exclusion_radius_y": 0,
-                    "required_empty_blocks": 1,
-                    "block_provider": {
-                      "type": "minecraft:simple_state_provider",
-                      "state": {
-                        "Name": "minecraft:glow_lichen",
-                        "Properties": {
-                          "down": "false",
-                          "east": "false",
-                          "north": "false",
-                          "south": "false",
-                          "up": "true",
-                          "waterlogged": "false",
-                          "west": "false"
-                        }
-                      }
-                    },
-                    "directions": [
-                      "down"
-                    ]
+              {
+                "type": "minecraft:attached_to_leaves",
+                "probability": 1,
+                "exclusion_radius_xz": 0,
+                "exclusion_radius_y": 0,
+                "required_empty_blocks": 1,
+                "block_provider": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:glow_lichen",
+                    "Properties": {
+                      "down": "false",
+                      "east": "false",
+                      "north": "false",
+                      "south": "false",
+                      "up": "true",
+                      "waterlogged": "false",
+                      "west": "false"
+                    }
                   }
+                },
+                "directions": [
+                  "down"
                 ]
+              }
+            ],
+            "below_trunk_provider": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:mushroom_stem",
+                "Properties": {
+                  "down": "false",
+                  "up": "false",
+                  "east": "true",
+                  "north": "true",
+                  "south": "true",
+                  "west": "true"
+                }
+              }
+            }
           }
         },
         "placement": []

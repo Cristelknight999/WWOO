@@ -1,194 +1,5 @@
 {
-  "feature": {
-    "type": "minecraft:random_patch",
-    "config": {
-      "tries": 5,
-      "xz_spread": 6,
-      "y_spread": 3,
-      "feature": {
-        "feature": "wythers:vegetation/giant_groundsel",
-        "placement": [
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:all_of",
-              "predicates": [
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    -1,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:grass_block",
-                    "minecraft:mud",
-                    "minecraft:muddy_mangrove_roots"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    2,
-                    0,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    -2,
-                    0,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    0,
-                    2
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    0,
-                    -2
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    1,
-                    0,
-                    1
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    1,
-                    0,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    1,
-                    1,
-                    -1
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    0,
-                    1
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    0,
-                    -1
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    -1,
-                    0,
-                    1
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    -1,
-                    0,
-                    0
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    -1,
-                    0,
-                    -1
-                  ],
-                  "blocks": [
-                    "minecraft:air",
-                    "minecraft:short_grass"
-                  ]
-                }
-              ]
-            }
-          }
-        ]
-      }
-    }
-  },
+  "feature": "wythers:vegetation/giant_groundsel",
   "placement": [
     {
       "type": "minecraft:height_range",
@@ -220,6 +31,202 @@
     {
       "type": "minecraft:heightmap",
       "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 5
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -6,
+        "max": 6,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:grass_block",
+              "minecraft:mud",
+              "minecraft:muddy_mangrove_roots"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              2,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -2,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              2
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -2
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              1,
+              -1
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:air",
+              "minecraft:short_grass"
+            ]
+          }
+        ]
+      }
     }
   ]
 }

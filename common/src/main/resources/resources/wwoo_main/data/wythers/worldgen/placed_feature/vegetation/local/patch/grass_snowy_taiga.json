@@ -1,51 +1,18 @@
 {
   "feature": {
-    "type": "minecraft:random_patch",
+    "type": "minecraft:simple_block",
     "config": {
-      "feature": {
-        "feature": {
-          "type": "minecraft:simple_block",
-          "config": {
-            "to_place": {
-              "type": "minecraft:weighted_state_provider",
-              "entries": [
-                {
-                  "data": {
-                    "Name": "minecraft:short_grass"
-                  },
-                  "weight": 3
-                }
-              ]
-            }
-          }
-        },
-        "placement": [
+      "to_place": {
+        "type": "minecraft:weighted_state_provider",
+        "entries": [
           {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:all_of",
-              "predicates": [
-                {
-                  "type": "minecraft:matching_blocks",
-                  "blocks": "minecraft:air"
-                },
-                {
-                  "type": "minecraft:matching_blocks",
-                  "offset": [
-                    0,
-                    -1,
-                    0
-                  ],
-                  "blocks": "minecraft:grass_block"
-                }
-              ]
-            }
+            "data": {
+              "Name": "minecraft:short_grass"
+            },
+            "weight": 3
           }
         ]
-      },
-      "tries": 32,
-      "xz_spread": 2,
-      "y_spread": 2
+      }
     }
   },
   "placement": [
@@ -58,16 +25,16 @@
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
-          "type": "minecraft:matching_blocks",
-          "offset": [
-            0,
-            1,
-            0
-          ],
-          "blocks": [
-            "minecraft:moss_block"
-          ]
-        }
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+        "blocks": [
+          "minecraft:moss_block"
+        ]
+      }
     },
     {
       "type": "minecraft:count",
@@ -82,6 +49,46 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 32
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -2,
+        "max": 2,
+        "plateau": 0
+      },
+      "y_spread": {
+        "type": "minecraft:trapezoid",
+        "min": -2,
+        "max": 2,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:grass_block"
+          }
+        ]
+      }
     }
   ]
 }
