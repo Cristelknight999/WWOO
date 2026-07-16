@@ -3,13 +3,10 @@
     "type": "minecraft:disk",
     "config": {
       "state_provider": {
-        "fallback": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:air"
-          }
-        },
-        "rules": []
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:air"
+        }
       },
       "target": {
         "type": "minecraft:all_of",

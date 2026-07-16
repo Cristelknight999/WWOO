@@ -3,16 +3,13 @@
     "type": "minecraft:disk",
     "config": {
       "state_provider": {
-        "fallback": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:water",
-            "Properties": {
-              "level": "0"
-            }
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:water",
+          "Properties": {
+            "level": "0"
           }
-        },
-        "rules": []
+        }
       },
       "target": {
         "type": "minecraft:all_of",
