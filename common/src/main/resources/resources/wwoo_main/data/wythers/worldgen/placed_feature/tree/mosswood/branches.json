@@ -1,113 +1,115 @@
 {
-  "feature": {
-    "config": {
-      "ignore_vines": true,
-      "minimum_size": {
-        "type": "minecraft:two_layers_feature_size",
-        "min_clipped_height": 1,
-        "limit": 1,
-        "lower_size": 1,
-        "upper_size": 1
-      },
-      "trunk_provider": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "minecraft:mangrove_wood"
-        }
-      },
-      "foliage_provider": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "minecraft:spruce_leaves"
-        }
-      },
-      "trunk_placer": {
-        "type": "minecraft:straight_trunk_placer",
-        "base_height": 4,
-        "height_rand_a": 4,
-        "height_rand_b": 0
-      },
-      "foliage_placer": {
-        "type": "minecraft:spruce_foliage_placer",
-        "radius": 2,
-        "offset": 2,
-        "trunk_height": {
-          "type": "minecraft:uniform",
-          "min_inclusive": 1,
-          "max_inclusive": 3
-        }
-      },
-      "decorators": [
-        {
-          "type": "minecraft:trunk_vine"
-        },
-        {
-          "type": "minecraft:place_on_ground",
-          "tries": 300,
-          "radius": 4,
-          "height": 4,
-          "block_state_provider": {
-            "type": "minecraft:simple_state_provider",
-            "state": {
-              "Name": "minecraft:moss_carpet"
-            }
-          }
-        }
-      ],
-      "below_trunk_provider": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "minecraft:mangrove_wood"
-        }
-      }
-    },
-    "type": "minecraft:tree"
-  },
-  "placement": [
-    {
-      "type": "minecraft:count",
-      "count": 128
-    },
-    {
-      "type": "minecraft:random_offset",
-      "xz_spread": {
-        "type": "minecraft:trapezoid",
-        "min": -8,
-        "max": 8,
-        "plateau": 0
-      },
-      "y_spread": {
-        "type": "minecraft:constant",
-        "value": 0
-      }
-    },
-    {
-      "type": "minecraft:environment_scan",
-      "direction_of_search": "up",
-      "max_steps": 20,
-      "target_condition": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "mangrove_log"
-            ]
-          },
-          {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
-              1,
-              0
-            ],
-            "blocks": [
-              "air",
-              "moss_carpet"
-            ]
-          }
-        ]
-      }
-    }
-  ]
-}
+                "feature": {
+                  "config": {
+                    "ignore_vines": true,
+                    "minimum_size": {
+                      "type": "minecraft:two_layers_feature_size",
+                      "min_clipped_height": 1,
+                      "limit": 1,
+                      "lower_size": 1,
+                      "upper_size": 1
+                    },
+                    "trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:mangrove_wood"
+                      }
+                    },
+                    "foliage_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:spruce_leaves"
+                      }
+                    },
+                    "trunk_placer": {
+                      "type": "minecraft:straight_trunk_placer",
+                      "base_height": 4,
+                      "height_rand_a": 4,
+                      "height_rand_b": 0
+                    },
+                    "foliage_placer": {
+                      "type": "minecraft:spruce_foliage_placer",
+                      "radius": 2,
+                      "offset": 2,
+                      "trunk_height": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": 1,
+                        "max_inclusive": 3
+                      }
+                    },
+                    "decorators": [
+                      {
+                        "type": "minecraft:trunk_vine"
+                      },
+                      {
+                        "type": "minecraft:place_on_ground",
+                        "tries": 300,
+                        "radius": 4,
+                        "height": 4,
+                        "block_state_provider": {
+                          "type": "minecraft:simple_state_provider",
+                          "state": {
+                            "Name": "minecraft:moss_carpet"
+                          }
+                        }
+                      }
+                    ],
+                    "below_trunk_provider": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:mangrove_wood"
+                      }
+                    }
+                  },
+                  "type": "minecraft:tree"
+                },
+                "placement": [
+                  {
+                    "type": "minecraft:count",
+                    "count": 128
+                  },
+                  {
+                    "type": "minecraft:random_offset",
+                    "xz_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -8,
+                      "max": 8,
+                      "plateau": 0
+                    },
+                    "y_spread": {
+                      "type": "minecraft:trapezoid",
+                      "min": -8,
+                      "max": 8,
+                      "plateau": 0
+                    }
+                  },
+                  {
+                    "type": "minecraft:environment_scan",
+                    "direction_of_search": "up",
+                    "max_steps": 20,
+                    "target_condition": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "mangrove_log"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            1,
+                            0
+                          ],
+                          "blocks": [
+                            "air",
+                            "moss_carpet"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }

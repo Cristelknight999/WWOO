@@ -288,18 +288,6 @@
                     "count": 32
                   }
                 ]
-              },
-              {
-                "feature": "wythers:vegetation/tree/spruce/rooted_dirt",
-                "placement": [
-                  {
-                    "type": "minecraft:block_predicate_filter",
-                    "predicate": {
-                      "type": "minecraft:matching_blocks",
-                      "blocks": "minecraft:spruce_log"
-                    }
-                  }
-                ]
               }
             ]
           }

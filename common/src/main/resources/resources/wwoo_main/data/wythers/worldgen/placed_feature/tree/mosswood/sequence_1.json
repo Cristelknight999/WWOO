@@ -1,0 +1,12 @@
+{
+  "feature": {
+    "config": {
+      "features": [
+        "wythers:tree/mosswood/trunk",
+        "wythers:tree/mosswood/branches"
+      ]
+    },
+    "type": "minecraft:sequence"
+  },
+  "placement": []
+}

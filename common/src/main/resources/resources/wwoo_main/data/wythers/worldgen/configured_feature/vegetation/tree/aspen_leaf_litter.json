@@ -2,7 +2,6 @@
   "type": "minecraft:tree",
   "config": {
     "ignore_vines": true,
-    
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size",
       "min_clipped_height": 4,

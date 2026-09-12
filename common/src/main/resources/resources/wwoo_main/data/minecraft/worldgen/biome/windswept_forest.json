@@ -208,8 +208,7 @@
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/trees/mosswoods_trunk",
-	    "wythers:vegetation/local/trees/mosswoods_branch",
+      "wythers:vegetation/local/trees/mosswoods",
       "wythers:vegetation/local/patch/grass_standard",
       "wythers:vegetation/local/patch/windswept_forest_flowers",
       "minecraft:brown_mushroom_normal",

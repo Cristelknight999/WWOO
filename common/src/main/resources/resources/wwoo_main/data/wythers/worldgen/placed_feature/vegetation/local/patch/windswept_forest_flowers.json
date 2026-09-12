@@ -1,123 +1,123 @@
 {
- "feature": {
-  "type": "minecraft:random_selector",
-  "config": {
-   "features": [
-    {
-     "chance": 0.2,
-     "feature": {
-      "feature": {
-       "config": {
-        "to_place": {
-         "type": "minecraft:simple_state_provider",
-         "state": {
-          "Name": "minecraft:azalea"
-         }
+  "feature": {
+    "type": "minecraft:random_selector",
+    "config": {
+      "features": [
+        {
+          "chance": 0.2,
+          "feature": {
+            "feature": {
+              "config": {
+                "to_place": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:azalea"
+                  }
+                }
+              },
+              "type": "minecraft:simple_block"
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 12
+              },
+              {
+                "type": "minecraft:random_offset",
+                "xz_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -4,
+                  "max": 4,
+                  "plateau": 0
+                },
+                "y_spread": {
+                  "type": "minecraft:trapezoid",
+                  "min": -4,
+                  "max": 4,
+                  "plateau": 0
+                }
+              },
+              {
+                "type": "minecraft:heightmap",
+                "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "Name": "fern"
+                  }
+                }
+              }
+            ]
+          }
         }
-       },
-       "type": "minecraft:simple_block"
-      },
-      "placement": [
-       {
-        "type": "minecraft:count",
-        "count": 12
-       },
-       {
-        "type": "minecraft:random_offset",
-        "xz_spread": {
-         "type": "minecraft:trapezoid",
-         "min": -4,
-         "max": 4,
-         "plateau": 0
+      ],
+      "default": {
+        "feature": {
+          "config": {
+            "to_place": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:lily_of_the_valley"
+              }
+            },
+            "schedule_tick": false
+          },
+          "type": "minecraft:simple_block"
         },
-        "y_spread": {
-         "type": "minecraft:trapezoid",
-         "min": -4,
-         "max": 4,
-         "plateau": 0
-        }
-       },
-       {
-        "type": "minecraft:heightmap",
-        "heightmap": "MOTION_BLOCKING_NO_LEAVES"
-       },
-       {
-        "type": "minecraft:block_predicate_filter",
-        "predicate": {
-         "type": "minecraft:would_survive",
-         "state": {
-          "Name": "fern"
-         }
-        }
-       }
-      ]
-     }
-    }
-   ],
-   "default": {
-    "feature": {
-     "config": {
-      "to_place": {
-       "type": "minecraft:simple_state_provider",
-       "state": {
-        "Name": "minecraft:lily_of_the_valley"
-       }
-      },
-      "schedule_tick": false
-     },
-     "type": "minecraft:simple_block"
-    },
-    "placement": [
-     {
-      "type": "minecraft:count",
-      "count": 32
-     },
-     {
-      "type": "minecraft:random_offset",
-      "xz_spread": {
-       "type": "minecraft:trapezoid",
-       "min": -4,
-       "max": 4,
-       "plateau": 0
-      },
-      "y_spread": {
-       "type": "minecraft:trapezoid",
-       "min": -4,
-       "max": 4,
-       "plateau": 0
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 32
+          },
+          {
+            "type": "minecraft:random_offset",
+            "xz_spread": {
+              "type": "minecraft:trapezoid",
+              "min": -4,
+              "max": 4,
+              "plateau": 0
+            },
+            "y_spread": {
+              "type": "minecraft:trapezoid",
+              "min": -4,
+              "max": 4,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:would_survive",
+              "state": {
+                "Name": "fern"
+              }
+            }
+          }
+        ]
       }
-     },
-     {
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
       "type": "minecraft:heightmap",
       "heightmap": "MOTION_BLOCKING_NO_LEAVES"
-     },
-     {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-       "type": "minecraft:would_survive",
-       "state": {
-        "Name": "fern"
-       }
-      }
-     }
-    ]
-   }
-  }
- },
- "placement": [
-  {
-   "type": "minecraft:rarity_filter",
-   "chance": 2
-  },
-  {
-   "type": "minecraft:in_square"
-  },
-  {
-   "type": "minecraft:heightmap",
-   "heightmap": "MOTION_BLOCKING_NO_LEAVES"
-  },
-  {
-   "type": "minecraft:biome"
-  }
- ]
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
 }

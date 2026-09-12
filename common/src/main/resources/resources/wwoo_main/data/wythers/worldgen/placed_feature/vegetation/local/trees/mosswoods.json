@@ -1,9 +1,9 @@
 {
-  "feature": "wythers:vegetation/tree/moss_tree_branch",
+  "feature": "wythers:vegetation/tree/moss_tree",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 20
+      "count": 10
     },
     {
       "type": "minecraft:height_range",
