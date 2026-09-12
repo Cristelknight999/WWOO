@@ -80,6 +80,6 @@ public record WWOOConfig(
         });
 
         ConfigRegistry.registerWithScreen(WWOOConfig.class, SETTINGS,
-                Constants.MOD_ID, "Auto-config", () -> {});
+                Constants.MOD_ID, "WWOO Config", () -> {});
     }
 }
